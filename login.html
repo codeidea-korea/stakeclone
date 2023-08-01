@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/c_logo.svg" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>삼성계기공업 관리자</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <div class="w-full bg-slate-50">
+            <div class="xl:grid grid-cols-1 gap-4 justify-center">
+                <!-- BEGIN: Login Form -->
+                <div class="h-screen flex py-5">
+                    <div class="my-auto mx-auto bg-white px-5 py-8 rounded-md shadow-xl w-[450px]">
+                        <h2 class="intro-x font-semibold text-2xl text-center">관리자 로그인</h2>
+
+                        <div class="login_box">
+                            <form onsubmit="return false">
+                                <div class="intro-x mt-8">
+                                    <input type="text" class="intro-x login__input form-control py-3 px-4 block" placeholder="아이디" />
+                                    <input type="password" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="비밀번호" />
+                                </div>
+
+                                <div class="intro-x mt-5 text-center">
+                                    <button type="submit" class="btn btn-primary py-3 px-4 w-full align-top" id="btnLoginC">로그인</button>
+                                    <div class="mt-5 text-danger text-left text-xs error-text">※ 일치하는 정보가 없습니다. 다시 한번 확인해주세요</div>
+                                    <div class="mt-1 text-danger text-left text-xs error-text">※ 관리자 계정으로만 로그인이 가능합니다.</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Login Form -->
+            </div>
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+        <!-- ** JS 끝 ** -->
+    </body>
+</html>
