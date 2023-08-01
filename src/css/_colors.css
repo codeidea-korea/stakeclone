@@ -8,7 +8,7 @@
     --color-pending: theme("colors.rgb.orange.500");
     --color-danger: theme("colors.rgb.red.800");
     --color-light: theme("colors.rgb.slate.100");
-    --color-dark: theme("colors.rgb.slate.700");
+    --color-dark: theme("colors.rgb.slate.800");
     --color-stone: theme("colors.rgb.stone.950");
     --color-green: theme("colors.rgb.green.700");
     --color-slate-50: theme("colors.rgb.slate.50");
