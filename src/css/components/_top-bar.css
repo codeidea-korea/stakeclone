@@ -1,6 +1,5 @@
 .top-bar {
     height: 60px;
-    padding: 0 3vw;
     z-index: 100;
     box-shadow: #0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px;
     @apply flex items-center relative;

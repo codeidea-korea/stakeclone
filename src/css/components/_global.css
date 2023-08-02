@@ -1,5 +1,5 @@
 html {
-    min-width: 768px !important;
+    /* min-width: 768px !important; */
     overflow-x: auto !important;
     @apply bg-white;
     &.dark {
@@ -14,7 +14,7 @@ html {
         }
     }
     body {
-        @apply antialiased overflow-x-hidden font-pretendard text-sm text-slate-800 overflow-y-hidden;
+        @apply antialiased overflow-x-hidden font-pretendard text-sm text-slate-100 overflow-y-hidden;
         background: var(--color-grey-600);
         /* @include media-breakpoint-down(sm) {
             @apply px-3;

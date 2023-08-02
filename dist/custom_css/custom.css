@@ -13,16 +13,24 @@
         리셋
 #=========================================#
 */
-
 .container {
     width: 100%;
     max-width: 1200px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 svg {
     fill: currentColor;
     stroke: currentColor;
     width: 1em;
     height: 1em;
+}
+
+@media all and (max-width: calc(767px)) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
 }
 /*
 #=========================================#
@@ -50,11 +58,26 @@ svg {
 */
 
 .logo {
-    max-width: 66.95px;
+    width: 66.95px;
 }
-.logo svg {
-    width: 100%;
-    height: auto;
+/* 로그인 후 > 지갑 */
+.top-bar .wallet_box {
+    position: relative;
+}
+.top-bar .wallet_box .dropdown button {
+    height: 47px;
+    padding-right: 65px;
+    border-radius: 5px 0 0 5px;
+    border: 0 none;
+}
+.top-bar .wallet_box .btn {
+    height: 47px;
+    border-radius: 0 5px 5px 0;
+}
+.top-bar .wallet_box .wallet_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /*
@@ -63,17 +86,46 @@ svg {
 #=========================================#
 */
 .side-nav {
+    overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
     border-right: 1px solid rgb(var(--color-dark) / 0.08);
     padding: 0;
     transition: all 0.3s;
     box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.side-nav .scroll-section {
+    overflow-y: auto;
+    height: calc(100% - 64px);
+}
+.scroll-section::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+.scroll-section::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-400);
+    border-radius: 2px;
 }
 .side-nav .side-menu {
     transition: all 0.5s;
     border-radius: 0.25rem;
     margin-bottom: 0;
 }
-.side-nav > ul > li > .side-menu.side-menu--active {
+.side-nav .side-menu:hover {
+    background-color: var(--color-grey-500);
+}
+.side-nav .side-menu svg {
+    transition: all 0.5s;
+}
+.side-nav .scroll-section > ul {
+    margin: 0 12px;
+    background-color: var(--color-grey-600);
+}
+.side-nav .scroll-section > ul + ul {
+    margin-top: 10px;
+}
+.side-nav .scroll-section > ul > li > .side-menu.side-menu--active {
     background-color: var(--color-grey-500);
     color: var(--color-grey-100);
 }
@@ -84,7 +136,7 @@ svg {
     color: #fff;
 }
 .side-nav .side-menu,
-.side-nav > ul ul li a:not(.side-menu--active) {
+.side-nav .scroll-section > ul ul li a:not(.side-menu--active) {
     color: rgb(var(--color-slate-500));
 }
 .side-menu:active {
@@ -98,20 +150,17 @@ svg {
 }
 
 .side-nav.fold {
-    width: 85px;
+    width: 60px;
 }
-.side-nav.fold .logo_lg {
-    display: none;
-}
-.side-nav.fold .logo_sm {
-    display: flex;
+.side-nav.fold .scroll-section > ul {
+    margin: 0 6px;
 }
 .side-nav.fold .side-menu {
     justify-content: center;
     padding-left: 1px;
     padding-right: 1px;
 }
-.side-nav.fold > ul > li > .side-menu.side-menu--active {
+.side-nav.fold .scroll-section > ul > li > .side-menu.side-menu--active {
     justify-content: center;
     padding-left: 1px;
     padding-right: 1px;
@@ -185,15 +234,13 @@ svg {
     background: url(../custom_img/sports-balls-orange.jpg) center center no-repeat;
     background-size: cover;
 }
-.side-nav.fold > ul > li {
-}
 @media all and (max-width: calc(1279px)) {
     .side-nav {
         z-index: 101;
         position: absolute;
         left: 0;
         top: 0;
-        width: 230px;
+        width: 240px;
         height: 100%;
     }
     .side-nav.fold {
@@ -201,15 +248,9 @@ svg {
         padding-left: 0;
         padding-right: 0;
     }
-    .side-nav + .content .fold_btn {
-        margin-left: 160px;
-        transition: margin 0.3s;
-    }
-    .side-nav.fold + .content .fold_btn {
-        margin-left: 0px;
-    }
+
     .content {
-        margin-left: 70px;
+        margin-left: 60px;
     }
     .side-nav .side-menu {
         padding-left: 1.25rem;
@@ -218,10 +259,58 @@ svg {
         display: flex;
     }
     .side-nav .side-menu .side-menu__title .side-menu__sub-icon {
-        display: block;
+        display: flex;
     }
-    .side-nav > ul > li > .side-menu.side-menu--active {
+    .side-nav .scroll-section > ul > li > .side-menu.side-menu--active {
         padding-left: 1.25rem;
+    }
+}
+
+.content {
+    margin-left: 240px;
+    transition: margin 0.3s;
+}
+.content.fold {
+    margin-left: 60px;
+}
+
+@media all and (max-width: calc(767px)) {
+    .side-nav {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/*
+#=========================================#
+        우측 사이드메뉴
+#=========================================#
+*/
+.right-sidebar {
+    display: grid;
+    width: 0;
+    background: var(--color-grey-800);
+    transition: all 0.4s;
+}
+.right-sidebar.on {
+    width: 370px;
+}
+.right-sidebar .header {
+    height: 60px;
+}
+.right-sidebar .right_content {
+    overflow-y: auto;
+}
+.right-sidebar .footer {
+}
+
+@media all and (max-width: calc(1024px)) {
+    .right-sidebar.on {
+        width: 320px;
     }
 }
 
@@ -231,62 +320,68 @@ svg {
 #=========================================#
 */
 
-.mobile-menu {
-    margin: auto;
-    background-color: rgb(255 255 255);
+.mo_quick {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 10px;
+    background-color: #0f212e;
+    text-align: center;
 }
-
-.mobile-menu .scrollable {
-    background-color: rgb(255 255 255);
+.mo_quick li {
+    position: relative;
+    width: 20%;
+    height: 100%;
 }
-.mobile-menu .menu {
-    color: black;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.mo_quick li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 700;
 }
-.mobile-menu .menu.menu--active {
-    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
-    border-radius: 0.5rem;
+.mo_quick li.on:before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 0;
+    width: 70%;
+    height: 4px;
+    background-color: #4391e7;
 }
-.mobile-menu .menu.menu--active .menu__icon {
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.mobile-menu .menu.menu--active .menu__title {
-    font-weight: 500;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.mobile-menu ul li.side-nav__devider {
-    width: 90%;
-    height: 1px;
-    background-color: rgb(var(--color-dark) / 0.08);
-}
-.mobile-menu ul li ul {
-    margin: 0;
-    background-color: rgb(var(--color-slate-50) / var(--tw-bg-opacity));
-}
-.mobile-menu ul li ul ul {
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+.mo_quick li.on svg {
+    color: #4391e7;
 }
 
 @media all and (max-width: calc(767px)) {
-    /* 모바일 검색 */
-    .search-result {
-        width: 300px;
+    .mo_quick {
+        display: block;
     }
+}
+/*
+#=========================================#
+        컨텐츠
+#=========================================#
+*/
+.content_title {
+    height: 115px;
+    background-color: #213743;
 }
 
 /*
 #=========================================#
-        버튼
+        푸터
 #=========================================#
 */
-
-.btn-dark {
-    --tw-border-opacity: 1;
-    border-color: rgb(var(--color-dark) / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-dark) / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+.footer .sitemap a svg {
+    display: inline-block;
+    width: 15px;
+}
+.footer .img_box img {
+    width: 133px;
 }

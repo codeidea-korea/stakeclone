@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>삼성계기공업 관리자</title>
+	<title>스테이크</title>
 	<meta http-equiv="imagetoolbar" content="no">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -66,7 +66,8 @@ echo txtRecord('./@record/');
 	<ul class="page-link" style="width:100%;margin-bottom:-50px">
 		<li class="" data-label="stakeclone">
 			<ul>
-				<li><a href="main.html" target="_blank" class="">로그인</a></li>
+				<li><a href="index.html" target="_blank" class="">로그인</a></li>
+				<li><a href="/casino/home.html" target="_blank" class="">로그인</a></li>
 			</ul>
 		</li>
 	</ul>

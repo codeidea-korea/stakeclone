@@ -1,8 +1,10 @@
 //=======================================================
 //   left menu
 //=======================================================
+// html load
 
-fetch("/_svg_reset.html")
+// 아이콘 로드
+fetch("/stakeclone/_svg_reset.html")
     .then((response) => response.text())
     .then((html) => {
         $("body").prepend(html);
@@ -11,12 +13,44 @@ fetch("/_svg_reset.html")
         console.log(error);
     });
 
-fetch("/_casino_left.html")
+// 왼쪽메뉴 로드
+fetch("/stakeclone/_casino_left.html")
     .then((response) => response.text())
-    .then((html) => {
-        $(".side-nav").html(html);
+    .then((htmlData) => {
+        const left = document.querySelector(".left_sidebar");
+        left.innerHTML = htmlData;
 
         leftMenuHandle();
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// 탑바 로드
+fetch("/stakeclone/_top_bar.html")
+    .then((response) => response.text())
+    .then((html) => {
+        $(".content").prepend(html);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// 오른쪽 바 로드
+fetch("/stakeclone/_right_bar.html")
+    .then((response) => response.text())
+    .then((html) => {
+        $(".right-sidebar").html(html);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// 푸터 로드
+fetch("/stakeclone/_footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+        $(".content").append(html);
     })
     .catch((error) => {
         console.log(error);
@@ -28,6 +62,9 @@ const leftMenuHandle = () => {
     function toggleSideNav() {
         const sideNav = document.querySelector(".side-nav");
         sideNav.classList.toggle("fold");
+
+        const content = document.querySelector(".content");
+        content.classList.toggle("fold");
 
         // fold 클래스 변경 체크 함수 호출
         checkFold();
@@ -58,6 +95,50 @@ const leftMenuHandle = () => {
 
     // 페이지 로드 시 fold 클래스 변경 체크 함수 호출
     checkFold();
+
+    // 2depth
+    $(".side-menu").on("click", function () {
+        if ($(this).parent().find("ul").length) {
+            if ($(this).parent().find("ul").first()[0].offsetParent !== null) {
+                $(this).find(".side-menu__sub-icon").removeClass("transform rotate-90 bg-blue-600");
+                $(this).find(".side-menu__sub-icon").addClass("bg-grey-400");
+                $(this).removeClass("side-menu--open");
+                $(this)
+                    .parent()
+                    .find("ul")
+                    .first()
+                    .slideUp(300, function () {
+                        $(this).removeClass("side-menu__sub-open");
+                    });
+            } else {
+                $(this).find(".side-menu__sub-icon").addClass("transform rotate-90 bg-blue-600");
+                $(this).find(".side-menu__sub-icon").removeClass("bg-grey-400");
+                $(this).addClass("side-menu--open");
+                $(this)
+                    .parent()
+                    .find("ul")
+                    .first()
+                    .slideDown(300, function () {
+                        $(this).addClass("side-menu__sub-open");
+                    });
+            }
+        }
+    });
+
+    if ($(window).innerWidth() < 1280) {
+        $(".side-nav").addClass("fold");
+    }
+
+    // const sidenavFold = () => {
+    //     const wsize = window.innerWidth;
+    //     if (wsize < 1280) {
+    //         document.querySelector(".side-nav").classList.add("fold");
+    //     } else {
+    //         return false;
+    //     }
+    // };
+
+    // window.addEventListener("load", sidenavFold);
 };
 
 // 메뉴 접었다 펴기
@@ -74,41 +155,10 @@ const leftMenuHandle = () => {
 //=======================================================
 //   화면 줄어들면 메뉴 접기
 //=======================================================
-const sidenavFold = () => {
-    const wsize = window.innerWidth;
-    if (wsize < 1280) {
-        document.querySelector(".side-nav").classList.add("fold");
-    } else {
-        return false;
-    }
-};
 
-window.addEventListener("resize", sidenavFold);
-window.addEventListener("load", sidenavFold);
-
-//=======================================================
-//   검색 영역 - 초기화
-//=======================================================
-const formResetHandle = () => {
-    const form = document.querySelector("form.search_form");
-    form.reset();
-};
-
-//=======================================================
-//   검색 영역 - 숨기기,열기
-//=======================================================
-const searchToggleHandle = () => {
-    const openBox = document.querySelector(".search_open_box");
-    const closeBox = document.querySelector(".search_close_box");
-    if (openBox.classList.contains("hidden")) {
-        // 열기
-        openBox.classList.remove("hidden");
-        closeBox.classList.add("hidden");
-    } else {
-        // 닫기
-        openBox.classList.add("hidden");
-        closeBox.classList.remove("hidden");
-    }
+const rightClick = () => {
+    const rightSidebar = document.querySelector(".right-sidebar");
+    rightSidebar.classList.toggle("on");
 };
 
 //=======================================================

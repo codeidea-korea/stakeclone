@@ -1,0 +1,154 @@
+<div class="top-bar flex items-center justify-between">
+    <div class="container flex items-center justify-between">
+        <a href="javascript:;" class="logo text-white">
+            <img src="/stakeclone/dist/custom_img/logo.svg" alt="" />
+        </a>
+
+        <!-- 로그인 전 : S -->
+        <!-- <div>
+            <button class="btn btn-dark text-white w-24 mr-1">로그인</button>
+            <button class="btn btn-primary w-24">가입하기</button>
+        </div> -->
+        <!-- 로그인 전 : E -->
+
+        <!-- 로그인 후 : S -->
+        <div class="flex wallet_box">
+            <div class="dropdown inline-block" data-tw-placement="bottom-start">
+                <button class="dropdown-toggle btn bg-[#071d2a] font-bold" aria-expanded="false" data-tw-toggle="dropdown">
+                    0.00000000
+                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
+                    <svg class="svg-icon" style="transform: rotate(0deg)"><use xlink:href="#icon-arrowdown"></use></svg>
+                </button>
+                <div class="dropdown-menu font-bold">
+                    <div class="dropdown-content text-gray-700">
+                        <div class="p-1">
+                            <input type="text" class="form-control" placeholder="통화 검색" />
+                        </div>
+                        <div class="overflow-y-auto max-h-80">
+                            <div class="flex justify-between p-1 hover:bg-dark">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
+                                    BTC
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-dark">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
+                                    BTC
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="wallet_btn btn btn-primary font-bold">지갑</button>
+        </div>
+        <div class="flex gap-5 items-center justify-center">
+            <button class="flex gap-1 items-center">
+                <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg> 검색
+            </button>
+            <div class="dropdown" data-tw-placement="bottom">
+                <button class="dropdown-toggle py-2" aria-expanded="false" data-tw-toggle="dropdown">
+                    <svg class="svg-icon"><use xlink:href="#icon-user"></use></svg>
+                </button>
+                <div class="dropdown-menu w-36">
+                    <ul class="dropdown-content text-gray-700 font-bold">
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-coins"></use></svg>
+                                지갑
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-vault"></use></svg>
+                                금고
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-trophy"></use></svg>
+                                VIP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-affiliate"></use></svg>
+                                제휴
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-stats"></use></svg>
+                                통계
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-list"></use></svg>
+                                거래
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-sports"></use></svg>
+                                스포츠 베팅
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-gear"></use></svg>
+                                설정
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-verify"></use></svg>
+                                Stake 세이프
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-support"></use></svg>
+                                실시간 지원
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-exit"></use></svg>
+                                로그아웃
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="rightClick()">
+                <svg class="svg-icon"><use xlink:href="#icon-notification"></use></svg>
+            </button>
+            <div class="dropdown" data-tw-placement="bottom">
+                <button class="dropdown-toggle py-2" aria-expanded="false" data-tw-toggle="dropdown">
+                    <svg class="svg-icon"><use xlink:href="#icon-sidebar-select"></use></svg>
+                </button>
+                <div class="dropdown-menu w-32">
+                    <ul class="dropdown-content text-gray-700 font-bold">
+                        <li>
+                            <a href="javascript:;" class="dropdown-item" onclick="rightClick()">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-chat"></use></svg>
+                                채팅
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="dropdown-item">
+                                <svg class="svg-icon mr-2"><use xlink:href="#icon-betslip"></use></svg>
+                                베팅 슬립
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 로그인 후 : E -->
+    </div>
+</div>
