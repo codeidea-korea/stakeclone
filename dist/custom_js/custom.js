@@ -186,17 +186,18 @@ const topbarHandle = () => {
 
     // search 모달
     $(".search_btn").on("click", function () {
-        $(".search_modal_bg").show();
+        $("#search_modal .search_modal_bg").show();
         $("#search_modal").fadeIn();
     });
-    $(".search_modal_close , .search_modal_bg").on("click", function () {
-        $(".search_modal_bg").hide();
+
+    $(document).on("click", ".search_modal_close , .search_modal_bg", function () {
+        $("#search_modal .search_modal_bg").hide();
         $("#search_modal").hide();
-        $(".result_search_box").hide();
+        $("#search_modal .result_search_box").hide();
     });
     // search 포커스 시 결과창
-    $("#search_modal .search_form input").on("focus", () => {
-        $(".result_search_box").show();
+    $("#search_modal .search_form input").on("focus", function () {
+        $("#search_modal .result_search_box").show();
     });
 };
 
@@ -269,17 +270,25 @@ window.addEventListener("load", function () {
 });
 
 //=======================================================
-//   셀렉트 옵션여부 box 활성화
+//   커스텀 js
 //=======================================================
-function handleDangerArea() {
-    const siteSelect = document.querySelector(".site_select");
-    const dangerArea = document.querySelector(".danger_area");
+// 검색 커스텀
+$(".container_wrap .search_form input").on("focus", function () {
+    $(".container_wrap .search_wrap .search_modal_bg").show();
+    $(".container_wrap .search_wrap .no_search_box").show();
+    $(".container_wrap .search_wrap .search_close").show();
+});
+$(".container_wrap .search_wrap .search_modal_bg , .container_wrap .search_wrap .search_close").on("click", function () {
+    $(".container_wrap .search_wrap .no_search_box").hide();
+    $(".container_wrap .search_wrap .result_search_box").hide();
+    $(".container_wrap .search_wrap .search_modal_bg").hide();
+    $(".container_wrap .search_wrap .search_close").hide();
+});
 
-    if (siteSelect.selectedIndex === 0) {
-        // .site_select의 첫 번째 옵션을 선택한 경우
-        dangerArea.classList.add("box_disabled");
+$(".container_wrap .search_form input").on("keyup", function (e) {
+    if (e.target.value.length > 0) {
+        $(".container_wrap .search_wrap .result_search_box").show();
     } else {
-        // .site_select의 첫 번째 옵션을 제외한 다른 옵션을 선택한 경우
-        dangerArea.classList.remove("box_disabled");
+        $(".container_wrap .search_wrap .result_search_box").hide();
     }
-}
+});
