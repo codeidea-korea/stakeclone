@@ -50,7 +50,7 @@ fetch("/stakeclone/_right_bar.html")
 fetch("/stakeclone/_footer.html")
     .then((response) => response.text())
     .then((html) => {
-        $(".content").append(html);
+        $(".container_wrap").append(html);
     })
     .catch((error) => {
         console.log(error);
