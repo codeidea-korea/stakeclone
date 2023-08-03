@@ -1,69 +1,146 @@
-.w-\[max-182px\] {
-  max-width: 182px;
-}
+/*  ============= 공통 ============= */
 
-html {
-  overflow: hidden;
-}
+    .w-\[max-182px\] {
+        max-width: 182px;
+    }
+    .h-\[228px\] {
+        height: 228px;
+    }
+    .h-\[200px\] {
+        height: 200px;
+    }
+    .h-\[60px\] {
+        height: 60px;
+    }
+    html {
+        overflow: hidden;
+    }
+    .container_wrap{
+        height:calc(100vh - 60px);
+    }
+    .scale:active{
+        scale: 0.95;
+    }
+    .scale svg{
+        transition: all 0.5s;
+        color: var(--color-grey-200);   
+    }
+    .scale:hover svg{
+        color:#fff;
+    }
 
-.dailyraces {
-  background: url(../custom_img/casino_img/DailyRaces.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.weeklygivaway {
-  background: url(../custom_img/casino_img/WeeklyGiveaway.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.conquerthcasino {
-  background: url(../custom_img/casino_img/ConQuertheCasino.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.stakevseddie {
-  background: url(../custom_img/casino_img/StakevsEddie.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.thelevelup {
-  background: url(../custom_img/casino_img/TheLevelUp.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.multiplierrace {
-  background: url(../custom_img/casino_img/MultiplierRace.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.chaoscollector {
-  background: url(../custom_img/casino_img/ChaosCollector.webp) 0 0 no-repeat;
-  background-size: cover;
-}
-.header_roll {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 228px;
-  position: relative;
-}
-.swiper {
-  max-width: 1200px;
-  height: 100%;
-}
-.swiper-slide a{
-    transition: all 0.5s;
-}
-.swiper-slide a:hover{
-    opacity: 0.87;
-}
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-}
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: var(--swiper-navigation-sides-offset, -30px);
-  left: auto;
-}
+    /*
+    #=========================================#
+            스와이퍼 커스터마이징
+    #=========================================#
+    */
+    .swiper_area {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .swiper{
+        max-width: 1200px;
+        height: 100%;
+    }
+    .swiper-slide{
+        transition: all 0.5s;
+    }
+    .swiper-slide a {
+        transition: all 0.2s;
+    }
+    .swiper-slide a:hover {
+        opacity: 0.87;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, -30px);
+        left: auto;
+    }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, -30px);
+        right: auto;
+    }
+    .next_btn, .prev_btn{
+        border-color:var(--color-grey-400);
+    }
+    .next_btn:hover, .prev_btn:hover{
+        border-color:var(--color-grey-400);
+    }
+    .next_btn:hover svg, .prev_btn:hover svg{
+        scale:1.1;
+    }
+    .next_btn:active svg, .prev_btn:active svg{
+        scale:0.95;
+    }
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: var(--swiper-navigation-sides-offset, -30px);
-  right: auto;
-}
+    /*
+    #=========================================#
+            탭 메뉴 커스터마이징
+    #=========================================#
+    */
+    .nav-boxed-tabs{
+        background-color: var(--color-grey-800);
+    }
+    .nav.nav-boxed-tabs .nav-item .nav-link.active{
+        background-color: var(--color-grey-400);
+    }
+    .nav.nav-boxed-tabs .nav-item .nav-link{
+        border-radius: 99999px;
+        transition:all 0.3s;
+    }
+    .nav.nav-boxed-tabs .nav-item .nav-link span{
+        font-weight: 600;
+        color: var(--color-grey-100);
+    }
+    .nav.nav-boxed-tabs .nav-item .nav-link:active span{
+        scale: 0.95;
+    }
+    .nav.nav-boxed-tabs .nav-item .nav-link:hover{
+        background-color: var(--color-grey-400);
+    }
+
+
+
+/*  ============= casino > home 시작 ============= */
+
+    /*
+    #=========================================#
+            상단 스와이퍼 이미지
+    #=========================================#
+    */
+    .dailyraces {
+    background: url(../custom_img/casino_img/DailyRaces.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .weeklygivaway {
+    background: url(../custom_img/casino_img/WeeklyGiveaway.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .conquerthcasino {
+    background: url(../custom_img/casino_img/ConQuertheCasino.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .stakevseddie {
+    background: url(../custom_img/casino_img/StakevsEddie.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .thelevelup {
+    background: url(../custom_img/casino_img/TheLevelUp.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .multiplierrace {
+    background: url(../custom_img/casino_img/MultiplierRace.webp) 0 0 no-repeat;
+    background-size: cover;
+    }
+    .chaoscollector {
+    background: url(../custom_img/casino_img/ChaosCollector.webp) 0 0 no-repeat;
+    background-size: cover;
+    }

@@ -49,14 +49,14 @@
                 <!-- ** 탑바 끝 ** -->
 
                 <!-- ** 내용시작 ** -->
-                <div class="container_wrap h-screen overflow-y-scroll">
+                <div class="container_wrap overflow-y-scroll">
                     <!-- <div class="flex items-center content_title">
                         <div class="container">
                             <h3 class="text-2xl font-bold">Stake 오리지널</h3>
                         </div>
                     </div> -->
-                    <div class="header_roll">
-                        <div class="swiper mt-6">
+                    <div class="swiper_area h-[228px]">
+                        <div class="swiper headerSwiper mt-6">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -212,11 +212,384 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-                    
-                    <div class="container flex items-center justify-between gap-10 mt-6">
-                        
-                       
+
+                    <!--  ** 검색 영역 ** -->
+                    <div class="container mt-8">
+                        <div class="rounded-md border border-dashed text-center p-5">
+                            검색 추가예정
+                        </div>
                     </div>
+                    <!--  ** 검색 영역 끝 ** -->
+                    
+                    <!--  ** 게임 탭 영역 ** -->
+                    <div class="container flex gap-10 mt-8">
+                        <div>
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="tab01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 active" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls=tab_con01" aria-selected="true"><span class="flex items-center gap-1 "><svg><use xlink:href="#icon-third-games"></use></svg>로비</span></button>
+                                </li>
+                                <li id="tab02" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false"><span class="flex items-center gap-1"><svg><use xlink:href="#icon-provider-live-dealers"></use></svg>실시간 카지노</span></button>
+                                </li>
+                                <li id="tab03" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false"><span class="flex items-center gap-1"><svg><use xlink:href="#icon-provider-slots"></use></svg>주요 슬롯</span></button>
+                                </li>
+                                <li id="tab04" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04" aria-selected="false"><span class="flex items-center gap-1"><svg><use xlink:href="#icon-rewards"></use></svg>게임 쇼</span></button>
+                                </li>
+                                <li id="tab05" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05" aria-selected="false"><span class="flex items-center gap-1"><svg><use xlink:href="#icon-fire"></use></svg>Stake 오리지널</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  ** 게임 탭 영역 끝 ** -->
+
+                    <!--  ** 게임 탭 컨텐츠 영역 ** -->
+                    <div class="container mt-8">
+                        <div class="tab-content">
+                            <div id="tab_con01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab01">
+                                
+                                <div>
+                                    <div class="flex items-center pb-3">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-fire"></use></svg>Stake 오리지널</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="gam-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="gam-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper gamSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/dice.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/crash.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/plinko.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/mines.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/limbo.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/blackjack.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/blackjack.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/hilo.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/mines.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/limbo.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/plinko.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/mines.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/limbo.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/blackjack.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/blackjack.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-provider-slots"></use></svg>슬롯</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/mines.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-group-providers"></use></svg>제공자</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[60px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/pragmatic.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-provider-live-dealers"></use></svg>실시간 카지노</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/blackjack_live.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-rewards"></use></svg>게임 쇼</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/crazytime_live.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-provider-table-game"></use></svg>테이블 게임</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/roulette.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div class="flex items-center pb-2">
+                                        <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;" class="inline-flex items-center gap-2 scale"><svg><use xlink:href="#icon-vip-boost"></use></svg>신규 출시</a></h2>
+                                        <div class="flex items-center ml-auto">
+                                            <div class="slot-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                                <svg><use xlink:href="#icon-backward"></use></svg>
+                                            </div>
+                                            <div class="slot-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                                <svg><use xlink:href="#icon-forward"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper_area h-[200px]">
+                                        <div class="swiper slotSwiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;" class="w-full">
+                                                        <div class="w-full h-full rounded-md overflow-hidden">
+                                                            <img src="../dist/custom_img/casino_img/monsters.avif" alt="">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_con02" class="tab-pane intro-y leading-relaxed" role="tabpanel" aria-labelledby="tab02">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--  ** 게임 탭 컨텐츠 영역 꿑 ** -->
+
+                    <!--  ** 배팅 탭 영역 ** -->
+                    <div class="container flex gap-10 mt-8">
+                        <div>
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="tab06" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 active" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls=tab_con06" aria-selected="true"><span class="flex items-center gap-1 ">내배팅</span></button>
+                                </li>
+                                <li id="tab07" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07" aria-selected="false"><span class="flex items-center gap-1">모든배팅</span></button>
+                                </li>
+                                <li id="tab08" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08" aria-selected="false"><span class="flex items-center gap-1">고액 배팅</span></button>
+                                </li>
+                                <li id="tab09" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con09" type="button" role="tab" aria-controls="tab_con09" aria-selected="false"><span class="flex items-center gap-1">레이스 랭킹</span></button>
+                                </li>
+                                <li id="tab10" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con10" type="button" role="tab" aria-controls="tab_con10" aria-selected="false"><span class="flex items-center gap-1">Stake 오리지널 <span class="w-2 h-2 rounded-full bg-green-400"></span></span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  ** 배팅 탭 영역 끝 ** -->
+
+
                 </div>
                 <!-- ** 내용 끝 ** -->
 
@@ -240,7 +613,7 @@
         <script src="../dist/js/jquery-1.12.4.js"></script>
 
         <script>
-            const swiper = new Swiper('.swiper', {
+            const swiper = new Swiper('.headerSwiper', {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
                 spaceBetween: 20,
@@ -251,6 +624,70 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+
+            function setOpacity(swiper, opacity) {
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.opacity = 1;
+                }
+
+                const lastVisibleSlideIndex = Math.floor(swiper.activeIndex + swiper.params.slidesPerView - 1);
+
+                if (lastVisibleSlideIndex >= swiper.slides.length - 1) {
+                    return;
+                }
+
+                const eighthVisibleSlideIndex = swiper.activeIndex + 7;
+                if (eighthVisibleSlideIndex < swiper.slides.length) {
+                    swiper.slides[eighthVisibleSlideIndex].style.opacity = opacity;
+                }
+                }
+
+                function updateNavigationButtons(swiper, nextButtonClass, prevButtonClass) {
+                const nextButton = document.querySelector(nextButtonClass);
+                const prevButton = document.querySelector(prevButtonClass);
+
+                if (swiper.isBeginning) {
+                    prevButton.style.opacity = 0.5;
+                } else {
+                    prevButton.style.opacity = 1;
+                }
+
+                if (swiper.isEnd) {
+                    nextButton.style.opacity = 0.5;
+                } else {
+                    nextButton.style.opacity = 1;
+                }
+                }
+
+                function createSwiper(containerClass, nextButtonClass, prevButtonClass) {
+                return new Swiper(containerClass, {
+                    slidesPerView: 7.5,
+                    slidesPerGroup: 7.5,
+                    spaceBetween: 10,
+                    freeMode: true,
+                    navigation: {
+                    nextEl: nextButtonClass,
+                    prevEl: prevButtonClass,
+                    },
+                    on: {
+                    init: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    },
+                    slideChangeTransitionStart: function () {
+                        setOpacity(this, 1);
+                    },
+                    slideChangeTransitionEnd: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    }
+                    }
+                });
+            }
+
+            const gamSwiper = createSwiper('.gamSwiper', '.gam-swiper-button-next', '.gam-swiper-button-prev');
+            const slotSwiper = createSwiper('.slotSwiper', '.slot-swiper-button-next', '.slot-swiper-button-prev');
+
         </script>
     </body>
 </html>
