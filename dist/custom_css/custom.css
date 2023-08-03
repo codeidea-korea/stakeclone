@@ -17,7 +17,7 @@
 */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: calc(1200px + 5rem);
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
@@ -42,6 +42,11 @@ svg {
 *::-webkit-scrollbar-thumb {
     background-color: var(--color-grey-400);
     border-radius: 2px;
+}
+
+input:focus,
+select:focus {
+    box-shadow: none !important;
 }
 
 /*
@@ -82,6 +87,12 @@ svg {
     border-radius: 5px 0 0 5px;
     border: 0 none;
 }
+.top-bar .wallet_box .dropdown button:active span {
+    transform: scale(0.95);
+}
+.top-bar .wallet_box .dropdown button.on > svg {
+    transform: rotate(180deg);
+}
 .top-bar .wallet_box .btn {
     height: 47px;
     border-radius: 0 5px 5px 0;
@@ -90,6 +101,122 @@ svg {
     position: absolute;
     right: 0;
     top: 0;
+}
+.dropdown-menu .dropdown-content.wallet_menu {
+    width: 210px;
+    padding: 0;
+}
+.wallet_search {
+    overflow-y: auto;
+    height: 280px;
+}
+.wallet_search::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-200);
+    border-radius: 10px;
+}
+.wallet_search > div {
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+}
+.wallet_search > div:active p {
+    transform: scale(0.95);
+}
+.wallet_search p:last-of-type {
+    min-width: 70px;
+}
+.wallet_search p:last-of-type svg {
+    stroke-width: 0;
+}
+
+/*
+#=========================================#
+        검색모달
+#=========================================#
+*/
+.search_modal_bg {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 46, 56, 0.7);
+}
+#search_modal {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    left: 2.5rem;
+    top: 70px;
+    width: calc(100% - 5rem);
+}
+#search_modal .search_form {
+    overflow: hidden;
+    width: 100%;
+    border: 2px solid #2f4553;
+    background: #0f212e;
+    border-radius: 20px;
+    color: #557086;
+}
+#search_modal .search_form > * {
+    height: 40px;
+    background-color: transparent;
+}
+
+#search_modal .search_form select {
+    border: 0 none;
+    border-right: 2px solid #2f4553;
+    color: #fff;
+}
+#search_modal .search_form input {
+    width: 100%;
+    height: 40px;
+    border: 0 none;
+    padding: 0 10px;
+    background-color: transparent;
+    color: #fff;
+}
+#search_modal .search_form button {
+    width: 40px;
+}
+#search_modal .no_search_box {
+    background: #0f212e;
+    border-radius: 5px;
+    color: #b1bad3;
+}
+#search_modal .no_search_box .tag {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    background-color: #2f4553;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#search_modal .no_search_box .tag a {
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+#search_modal .result_search_box {
+    display: none;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 52px;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    background-color: #0f212e;
+    border-radius: 5px;
+}
+
+@media all and (max-width: calc(767px)) {
+    #search_modal {
+        left: 0.75rem;
+        width: calc(100% - 1.5rem);
+    }
 }
 
 /*
@@ -283,6 +410,9 @@ svg {
     .side-nav {
         display: none;
     }
+    .content.fold {
+        margin-left: 0;
+    }
     .content {
         margin-left: 0;
         padding-left: 0;
@@ -376,6 +506,40 @@ svg {
 .content_title {
     height: 115px;
     background-color: #213743;
+}
+
+.item_list {
+    display: grid;
+    gap: 32px 16px;
+    grid-template-columns: repeat(8, 1fr);
+}
+.item_list a img {
+    border-radius: 10px;
+}
+@media all and (max-width: calc(1294px)) {
+    .item_list {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+@media all and (max-width: calc(1135px)) {
+    .item_list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media all and (max-width: calc(974px)) {
+    .item_list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media all and (max-width: calc(815px)) {
+    .item_list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media all and (max-width: calc(547px)) {
+    .item_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /*

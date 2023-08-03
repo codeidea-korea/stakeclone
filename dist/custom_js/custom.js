@@ -31,6 +31,8 @@ fetch("/stakeclone/_top_bar.html")
     .then((response) => response.text())
     .then((html) => {
         $(".content").prepend(html);
+
+        topbarHandle();
     })
     .catch((error) => {
         console.log(error);
@@ -56,7 +58,9 @@ fetch("/stakeclone/_footer.html")
         console.log(error);
     });
 
-// 메뉴 스크립트 모음
+//=======================================================
+//   왼쪽메뉴 스크립트
+//=======================================================
 const leftMenuHandle = () => {
     // fold
     function toggleSideNav() {
@@ -127,6 +131,7 @@ const leftMenuHandle = () => {
 
     if ($(window).innerWidth() < 1280) {
         $(".side-nav").addClass("fold");
+        $(".content").addClass("fold");
     }
 
     // const sidenavFold = () => {
@@ -139,6 +144,60 @@ const leftMenuHandle = () => {
     // };
 
     // window.addEventListener("load", sidenavFold);
+};
+
+//=======================================================
+//   탑바 스크립트
+//=======================================================
+const topbarHandle = () => {
+    // 클릭시 화살표 rotate
+    const walletBtn = document.querySelector(".wallet_box .dropdown-toggle");
+    walletBtn.addEventListener("click", (e) => {
+        e.currentTarget.classList.toggle("on");
+    });
+
+    document.addEventListener("click", (e) => {
+        const wallet = document.querySelector(".wallet_box");
+        const walletDrop = document.querySelector(".walletDropdown");
+        if (wallet && !wallet.contains(e.target) && walletDrop && !walletDrop.contains(e.target)) {
+            walletBtn.classList.remove("on");
+        }
+    });
+
+    // 지갑 dropdown-menu 리스트 클릭
+    const walletItem = document.querySelectorAll(".wallet_search > div");
+    const walletClick = (e) => {
+        const cash = e.currentTarget.children[0].innerText;
+        const svg = e.currentTarget.children[1].children[0].innerHTML;
+
+        const wallet = document.querySelector(".wallet_box button span.wallet_txt");
+        wallet.innerHTML = cash + `<svg class="svg-icon ml-1 mr-2">${svg}</svg>`;
+
+        setTimeout(function () {
+            var el = document.querySelector(".walletDropdown");
+            var dropdown = tailwind.Dropdown.getOrCreateInstance(el);
+            dropdown.hide();
+            walletBtn.classList.remove("on");
+        }, 100);
+    };
+    walletItem.forEach((item) => {
+        item.addEventListener("click", walletClick);
+    });
+
+    // search 모달
+    $(".search_btn").on("click", function () {
+        $(".search_modal_bg").show();
+        $("#search_modal").fadeIn();
+    });
+    $(".search_modal_close , .search_modal_bg").on("click", function () {
+        $(".search_modal_bg").hide();
+        $("#search_modal").hide();
+        $(".result_search_box").hide();
+    });
+    // search 포커스 시 결과창
+    $("#search_modal .search_form input").on("focus", () => {
+        $(".result_search_box").show();
+    });
 };
 
 // 메뉴 접었다 펴기

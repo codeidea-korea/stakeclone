@@ -1,5 +1,5 @@
 <div class="top-bar flex items-center justify-between">
-    <div class="container flex items-center justify-between">
+    <div class="container relative flex items-center justify-between">
         <a href="javascript:;" class="logo text-white">
             <img src="/stakeclone/dist/custom_img/logo.svg" alt="" />
         </a>
@@ -15,30 +15,199 @@
         <div class="flex wallet_box">
             <div class="dropdown inline-block" data-tw-placement="bottom-start">
                 <button class="dropdown-toggle btn bg-[#071d2a] font-bold" aria-expanded="false" data-tw-toggle="dropdown">
-                    0.00000000
-                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                    <svg class="svg-icon" style="transform: rotate(0deg)"><use xlink:href="#icon-arrowdown"></use></svg>
+                    <span class="flex justify-center items-center wallet_txt">
+                        0.00000000
+                        <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
+                    </span>
+                    <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
                 </button>
-                <div class="dropdown-menu font-bold">
-                    <div class="dropdown-content text-gray-700">
+                <div class="dropdown-menu font-medium walletDropdown">
+                    <div class="dropdown-content wallet_menu text-gray-700">
                         <div class="p-1">
                             <input type="text" class="form-control" placeholder="통화 검색" />
                         </div>
-                        <div class="overflow-y-auto max-h-80">
-                            <div class="flex justify-between p-1 hover:bg-dark">
+                        <div class="overflow-y-auto max-h-80 wallet_search">
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
                                 <p>0.00000000</p>
                                 <p class="flex items-center">
                                     <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
                                     BTC
                                 </p>
                             </div>
-                            <div class="flex justify-between p-1 hover:bg-dark">
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
                                 <p>0.00000000</p>
                                 <p class="flex items-center">
-                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                                    BTC
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    ETH
                                 </p>
                             </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                    LTC
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                    USDT
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-doge"></use></svg>
+                                    DOGE
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-bch"></use></svg>
+                                    BCH
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                    XRP
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-eos"></use></svg>
+                                    EOS
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-trx"></use></svg>
+                                    TRX
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                    BNB
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                    USDC
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-ape"></use></svg>
+                                    APE
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-busd"></use></svg>
+                                    BUSD
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-cro"></use></svg>
+                                    CRO
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-dai"></use></svg>
+                                    DAI
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-link"></use></svg>
+                                    LINK
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-sand"></use></svg>
+                                    SAND
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-shib"></use></svg>
+                                    SHIB
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-uni"></use></svg>
+                                    UNI
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>0.00000000</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-matic"></use></svg>
+                                    MATIC
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>€0.00</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-eur"></use></svg>
+                                    EUR
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>¥0.00</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                    JPY
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>R$0.00</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-brl"></use></svg>
+                                    BRL
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>CA$0.00</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-cad"></use></svg>
+                                    CAD
+                                </p>
+                            </div>
+                            <div class="flex justify-between p-1 hover:bg-gray-300">
+                                <p>₹0.00</p>
+                                <p class="flex items-center">
+                                    <svg class="svg-icon ml-1 mr-2"><use xlink:href="#icon-currency-inr"></use></svg>
+                                    INR
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-1 border-t-2 border-grey-200">
+                            <button class="flex p-2 w-full items-center justify-center hover:bg-gray-300">
+                                <svg class="svg-icon mr-1"><use xlink:href="#icon-wallet-settings"></use></svg>
+                                지갑 설정
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +215,7 @@
             <button class="wallet_btn btn btn-primary font-bold">지갑</button>
         </div>
         <div class="flex gap-5 items-center justify-center">
-            <button class="flex gap-1 items-center">
+            <button class="flex gap-1 items-center search_btn">
                 <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg> 검색
             </button>
             <div class="dropdown" data-tw-placement="bottom">
@@ -150,5 +319,135 @@
             </div>
         </div>
         <!-- 로그인 후 : E -->
+
+        <!-- 검색 : S -->
+        <div class="search_modal_bg"></div>
+        <div id="search_modal">
+            <div class="search_form flex items-center justify-between text-sm">
+                <select data-placeholder="Select your favorite actors" class="tom-select text-sm font-semibold">
+                    <option value="1">카지노</option>
+                    <option value="2">스포츠</option>
+                </select>
+                <span class="w-[40px] p-2.5">
+                    <svg class="svg-icon mx-auto text-lg"><use xlink:href="#icon-search"></use></svg>
+                </span>
+                <div class="w-full">
+                    <input type="text" class="text-sm font-semibold" placeholder="게임 검색" />
+                </div>
+                <button class="search_modal_close">
+                    <svg class="svg-icon mx-auto"><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="no_search_box mt-2 p-4">
+                <div class="py-4 text-center font-bold">검색하려면 최소 3글자 이상 작성해 주세요.</div>
+                <div class="mt-2 flex justify-between items-center font-semibold">
+                    <span> Recent Searches </span>
+                    <button>Clear Search (5)</button>
+                </div>
+                <div class="flex flex-wrap items-center mt-4">
+                    <div class="tag">
+                        <a href="javascript:;">sweet</a>
+                        <button>
+                            <svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="tag">
+                        <a href="javascript:;">Crazy Time</a>
+                        <button>
+                            <svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="tag">
+                        <a href="javascript:;">Monopoly</a>
+                        <button>
+                            <svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="tag">
+                        <a href="javascript:;">Sweet Bonanza</a>
+                        <button>
+                            <svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="result_search_box">
+                <ul class="item_list">
+                    <li>
+                        <a href="javascript:;"
+                            ><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                            <div class="hover_box">
+                                <p></p>
+                                <span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 검색 : E -->
     </div>
 </div>
