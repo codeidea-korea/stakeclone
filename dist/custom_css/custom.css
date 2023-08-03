@@ -134,8 +134,8 @@ select:focus {
 #=========================================#
 */
 .search_modal_bg {
-    display: none;
-    z-index: 99;
+    /* display: none; */
+    z-index: 10;
     position: fixed;
     left: 0;
     top: 0;
@@ -145,13 +145,21 @@ select:focus {
 }
 #search_modal {
     display: none;
-    z-index: 100;
+    z-index: 102;
     position: absolute;
     left: 2.5rem;
     top: 70px;
     width: calc(100% - 5rem);
 }
-#search_modal .search_form {
+.search_wrap {
+    position: relative;
+    width: 100%;
+}
+.search_wrap > * {
+    z-index: 11;
+}
+.search_wrap .search_form {
+    position: relative;
     overflow: hidden;
     width: 100%;
     border: 2px solid #2f4553;
@@ -159,17 +167,17 @@ select:focus {
     border-radius: 20px;
     color: #557086;
 }
-#search_modal .search_form > * {
+.search_wrap .search_form > * {
     height: 40px;
     background-color: transparent;
 }
 
-#search_modal .search_form select {
+.search_wrap .search_form select {
     border: 0 none;
     border-right: 2px solid #2f4553;
     color: #fff;
 }
-#search_modal .search_form input {
+.search_wrap .search_form input {
     width: 100%;
     height: 40px;
     border: 0 none;
@@ -177,15 +185,23 @@ select:focus {
     background-color: transparent;
     color: #fff;
 }
-#search_modal .search_form button {
+.search_wrap .search_form button {
     width: 40px;
 }
-#search_modal .no_search_box {
+#search_modal .search_wrap .no_search_box {
+    display: block;
+}
+.search_wrap .no_search_box {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    display: none;
     background: #0f212e;
     border-radius: 5px;
     color: #b1bad3;
 }
-#search_modal .no_search_box .tag {
+.search_wrap .no_search_box .tag {
     display: flex;
     align-items: center;
     padding: 3px 10px;
@@ -194,17 +210,18 @@ select:focus {
     margin-left: 10px;
     margin-bottom: 10px;
 }
-#search_modal .no_search_box .tag a {
+.search_wrap .no_search_box .tag a {
     margin-right: 5px;
     font-size: 12px;
     font-weight: 500;
 }
-#search_modal .result_search_box {
-    display: none;
-    overflow-y: auto;
+.search_wrap .result_search_box {
     position: absolute;
     left: 0;
-    top: 52px;
+    top: 50px;
+    width: 100%;
+    display: none;
+    overflow-y: auto;
     width: 100%;
     height: 400px;
     padding: 10px;
