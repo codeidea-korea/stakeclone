@@ -1,3 +1,66 @@
-html{
-    overflow: hidden;
+.w-\[max-182px\] {
+  max-width: 182px;
+}
+
+html {
+  overflow: hidden;
+}
+
+.dailyraces {
+  background: url(../custom_img/casino_img/DailyRaces.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.weeklygivaway {
+  background: url(../custom_img/casino_img/WeeklyGiveaway.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.conquerthcasino {
+  background: url(../custom_img/casino_img/ConQuertheCasino.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.stakevseddie {
+  background: url(../custom_img/casino_img/StakevsEddie.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.thelevelup {
+  background: url(../custom_img/casino_img/TheLevelUp.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.multiplierrace {
+  background: url(../custom_img/casino_img/MultiplierRace.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.chaoscollector {
+  background: url(../custom_img/casino_img/ChaosCollector.webp) 0 0 no-repeat;
+  background-size: cover;
+}
+.header_roll {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 228px;
+  position: relative;
+}
+.swiper {
+  max-width: 1200px;
+  height: 100%;
+}
+.swiper-slide a:hover{
+    opacity: 0.8;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, -30px);
+  left: auto;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, -30px);
+  right: auto;
 }
