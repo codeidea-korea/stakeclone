@@ -34,6 +34,16 @@ svg {
         padding-right: 0.75rem;
     }
 }
+
+*::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-400);
+    border-radius: 2px;
+}
+
 /*
 #=========================================#
         로딩
@@ -101,14 +111,7 @@ svg {
     overflow-y: auto;
     height: calc(100% - 64px);
 }
-.scroll-section::-webkit-scrollbar {
-    width: 5px;
-    background-color: transparent;
-}
-.scroll-section::-webkit-scrollbar-thumb {
-    background-color: var(--color-grey-400);
-    border-radius: 2px;
-}
+
 .side-nav .side-menu {
     transition: all 0.5s;
     border-radius: 0.25rem;
