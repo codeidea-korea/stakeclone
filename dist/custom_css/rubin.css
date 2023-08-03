@@ -44,8 +44,11 @@ html {
   max-width: 1200px;
   height: 100%;
 }
+.swiper-slide a{
+    transition: all 0.5s;
+}
 .swiper-slide a:hover{
-    opacity: 0.8;
+    opacity: 0.87;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
