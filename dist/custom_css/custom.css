@@ -51,6 +51,7 @@ svg {
 
 *::-webkit-scrollbar {
     width: 5px;
+    height:5px;
     background-color: transparent;
 }
 *::-webkit-scrollbar-thumb {
@@ -842,7 +843,7 @@ button.off {
 /* 공통 : 아이템리스트 */
 .poster_list_box {
     display: grid;
-    gap: 32px 16px;
+    gap: 16px 16px;
     grid-template-columns: repeat(8, 1fr);
 }
 .poster_list a {

@@ -3,15 +3,22 @@
     .w-\[max-182px\] {
         max-width: 182px;
     }
-    .h-\[228px\] {
+    /* .h-\[228px\] {
         height: 228px;
     }
-    .h-\[200px\] {
-        height: 200px;
+    .h-\[486px\] {
+        height: 486px;
     }
-    .h-\[60px\] {
-        height: 60px;
+    .h-\[541px\] {
+        height: 541px;
     }
+    .h-\[220px\] {
+        height: 220px;
+    }
+
+    .h-\[80px\] {
+        height: 80px;
+    } */
     html {
         overflow: hidden;
     }
@@ -28,6 +35,100 @@
     .scale:hover svg{
         color:#fff;
     }
+    .scale:hover span{
+        color:#fff;
+    }
+
+    /* selec */
+    .form-select.custom{
+        background-color:var(--color-grey-700);
+        background-image: url(../custom_img/arrow.svg);
+        background-size: 14px;
+        line-height:1.2rem;
+        padding-right: 1.5rem;
+        padding-left: 0.6rem;
+        font-weight: 600;
+        border-color: var(--color-grey-300);
+        color:var(--color-grey-200);
+        border-radius: 0.2rem;
+    }
+    .form-select.custom:focus{
+        border-color:var(--color-grey-300);
+    }
+    
+
+    /* table */
+    .table.table-striped{
+        color:var(--color-grey-200);
+    }
+    .table.table-striped th{
+        font-weight: 700;
+        border:unset;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        padding-right:1rem;
+        padding-left:1rem;
+    }
+    .table.table-striped td{
+        padding-top:1rem;
+        padding-bottom:1rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        border:unset;
+    }
+    .table.table-striped tr td:first-child{
+        border-radius:0.25rem 0 0 0.25rem ;
+    }
+    .table.table-striped tr td:last-child{
+        border-radius:0 0.25rem 0.25rem 0;
+    }
+    .table.table-striped tr:nth-of-type(odd) td{
+        background-color: var(--color-grey-500);
+    }
+    .table.table-striped tr:nth-of-type(even) td{
+        background-color: var(--color-grey-600);  
+    }
+    
+    /* 툴팁 */
+    .tippy-box{
+        border-radius: 0.2rem;
+    }
+    .tippy-content{
+        font-weight:700;
+    }
+    .tippy-svg-arrow>svg{
+        width: 15px;
+        height: 6px;
+        color: #fff;
+    }
+
+    /* 모달 */
+    .modal-content{
+        background-color: var(--color-grey-600);
+        color:var(--color-grey-200);
+    }
+    .modal-header{
+        border-bottom: unset;
+    }
+    .modal-header h2{
+        color:#fff;
+    }
+    .modal-header h2 svg{
+        color:var(--color-grey-200);
+    }
+    .modal-body{
+        border-top:unset;
+        padding:1rem;
+    }
+    .modal-body .table td span{
+        word-spacing:-1px;
+    }
+    @media (min-width: 640px){
+        .modal .modal-dialog{
+            width:500px;
+        }
+    }
+    
 
     /*
     #=========================================#
@@ -48,9 +149,6 @@
     }
     .swiper-slide a {
         transition: all 0.2s;
-    }
-    .swiper-slide a:hover {
-        opacity: 0.87;
     }
     .swiper-button-next:after,
     .swiper-button-prev:after {
@@ -80,6 +178,13 @@
     .next_btn:active svg, .prev_btn:active svg{
         scale:0.95;
     }
+
+    @media (max-width: 1024px){
+        .swiper-button-next{display: none!important;}
+        .swiper-button-prev{display: none!important;}
+    }
+   
+
 
     /*
     #=========================================#
@@ -116,26 +221,26 @@
             상단 스와이퍼 이미지
     #=========================================#
     */
-    .dailyraces {
+    /* .dailyraces {
     background: url(../custom_img/casino_img/DailyRaces.webp) 0 0 no-repeat;
     background-size: cover;
-    }
-    .weeklygivaway {
+    } */
+    /* .weeklygivaway {
     background: url(../custom_img/casino_img/WeeklyGiveaway.webp) 0 0 no-repeat;
     background-size: cover;
-    }
-    .conquerthcasino {
+    } */
+    /* .conquerthcasino {
     background: url(../custom_img/casino_img/ConQuertheCasino.webp) 0 0 no-repeat;
     background-size: cover;
-    }
-    .stakevseddie {
+    } */
+    /* .stakevseddie {
     background: url(../custom_img/casino_img/StakevsEddie.webp) 0 0 no-repeat;
     background-size: cover;
     }
     .thelevelup {
     background: url(../custom_img/casino_img/TheLevelUp.webp) 0 0 no-repeat;
     background-size: cover;
-    }
+    } */
     .multiplierrace {
     background: url(../custom_img/casino_img/MultiplierRace.webp) 0 0 no-repeat;
     background-size: cover;

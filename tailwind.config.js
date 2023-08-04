@@ -61,6 +61,16 @@ module.exports = {
                 'grey-700': '#0f212e',
                 'grey-800': '#071d2a',
                 'grey-800': '#071824',
+
+                'green-100': '#ccffcc',
+                'green-200': '#8fff8f',
+                'green-300': '#57ff57',
+                'green-400': '#1fff20',
+                'green-500': '#00e701',
+                'green-600': '#00b801',
+                'green-700': '#008a01',
+                'green-800': '#004d00',
+                'green-900': '#013e01',
                 
                 primary: withOpacityValue("--color-primary"),
                 secondary: withOpacityValue("--color-secondary"),
