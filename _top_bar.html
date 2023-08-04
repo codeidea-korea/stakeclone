@@ -212,11 +212,15 @@
                     </div>
                 </div>
             </div>
-            <button class="wallet_btn btn btn-primary font-bold">지갑</button>
+            <button class="wallet_btn btn btn-primary font-bold">
+                <span> 지갑</span>
+                <svg class="svg-icon"><use xlink:href="#icon-coins"></use></svg>
+            </button>
         </div>
         <div class="flex gap-5 items-center justify-center">
             <button class="flex gap-1 items-center search_btn">
-                <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg> 검색
+                <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
+                <span>검색</span>
             </button>
             <div class="dropdown" data-tw-placement="bottom">
                 <button class="dropdown-toggle py-2" aria-expanded="false" data-tw-toggle="dropdown">
@@ -293,23 +297,23 @@
                     </ul>
                 </div>
             </div>
-            <button onclick="rightClick()">
+            <button onclick="rightClick('notifi_right')">
                 <svg class="svg-icon"><use xlink:href="#icon-notification"></use></svg>
             </button>
-            <div class="dropdown" data-tw-placement="bottom">
+            <div class="dropdown chat_btn" data-tw-placement="bottom">
                 <button class="dropdown-toggle py-2" aria-expanded="false" data-tw-toggle="dropdown">
                     <svg class="svg-icon"><use xlink:href="#icon-sidebar-select"></use></svg>
                 </button>
-                <div class="dropdown-menu w-32">
+                <div class="dropdown-menu w-32 chattingDropdown">
                     <ul class="dropdown-content text-gray-700 font-bold">
                         <li>
-                            <a href="javascript:;" class="dropdown-item" onclick="rightClick()">
+                            <a href="javascript:;" class="dropdown-item" onclick="rightClick('chatting_right')">
                                 <svg class="svg-icon mr-2"><use xlink:href="#icon-chat"></use></svg>
                                 채팅
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="dropdown-item">
+                            <a href="javascript:;" class="dropdown-item" onclick="rightClick('batting_right')">
                                 <svg class="svg-icon mr-2"><use xlink:href="#icon-betslip"></use></svg>
                                 베팅 슬립
                             </a>
@@ -325,10 +329,26 @@
             <div class="search_modal_bg"></div>
             <div class="search_wrap">
                 <div class="search_form flex items-center justify-between text-sm">
-                    <select data-placeholder="Select your favorite actors" class="tom-select text-sm font-semibold">
-                        <option value="1">카지노</option>
-                        <option value="2">스포츠</option>
-                    </select>
+                    <div class="select_custom">
+                        <button class="select_toggle_btn">
+                            <p>
+                                <span>카지노</span>
+                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                            </p>
+                        </button>
+                        <div class="option_box click_option">
+                            <button>
+                                <p>
+                                    <span>카지노</span>
+                                </p>
+                            </button>
+                            <button>
+                                <p>
+                                    <span>스포츠</span>
+                                </p>
+                            </button>
+                        </div>
+                    </div>
                     <span class="w-[40px] p-2.5">
                         <svg class="svg-icon mx-auto text-lg"><use xlink:href="#icon-search"></use></svg>
                     </span>
