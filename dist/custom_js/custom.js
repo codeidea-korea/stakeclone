@@ -292,3 +292,68 @@ $(".container_wrap .search_form input").on("keyup", function (e) {
         $(".container_wrap .search_wrap .result_search_box").hide();
     }
 });
+
+// select 커스텀
+// option_box toggle
+$(".select_custom .select_toggle_btn").on("click", function (e) {
+    $(".select_custom .option_box").hide();
+    $(".select_custom .select_toggle_btn").removeClass("active");
+
+    $(this).next(".option_box").toggle();
+    $(this).toggleClass("active");
+});
+
+// 바깥 클릭했을때 option 닫기
+$("body").on("click", function (e) {
+    if (!$(e.target).closest(".select_custom").length) {
+        $(".select_custom .option_box").hide();
+        $(".select_custom .select_toggle_btn").removeClass("active");
+    }
+});
+
+// option 클릭했을때 값 변경, option_box 닫기
+$(".select_custom .click_option.option_box button").on("click", function () {
+    const value = $(this).find("span").text();
+    $(this).parents(".select_custom").find(".select_toggle_btn span").text(value);
+    $(this).addClass("active").siblings().removeClass("active");
+    $(this).parents(".option_box").hide();
+    $(this).parents(".select_custom").find(".select_toggle_btn").removeClass("active");
+});
+
+// input check 했을 때,
+$(".select_custom .input_option.option_box input").on("change", function () {
+    if ($(this).prop("checked")) {
+        $(this).parents("button").addClass("active");
+        $(this).parents("button").siblings().addClass("off");
+    } else {
+        $(this).parents("button").removeClass("active");
+    }
+
+    let checked = 0;
+    $(this)
+        .parents(".option_box")
+        .find("button")
+        .each(function (index, item) {
+            if ($(item).find("input").prop("checked")) {
+                checked += 1;
+            }
+        });
+    if (checked > 0) {
+        $(this).parents(".select_custom").find(".select_toggle_btn span i").addClass("on").text(checked);
+    } else {
+        $(this).parents(".select_custom").find(".select_toggle_btn span i").removeClass("on");
+    }
+});
+
+$(".select_custom .input_option.option_box .clear_btn").on("click", function () {
+    $(this).parents(".select_custom").find(".select_toggle_btn").removeClass("active");
+    $(this).parents(".select_custom").find(".select_toggle_btn span i").removeClass("on").text("");
+    $(this).parents(".select_custom").find(".option_box").hide();
+    $(this)
+        .parents(".option_box")
+        .find("button")
+        .each(function (index, item) {
+            $(item).removeClass("active off");
+            $(item).find("input").prop("checked", false);
+        });
+});

@@ -227,7 +227,7 @@ select:focus {
     overflow-y: auto;
     width: 100%;
     height: 400px;
-    padding: 10px;
+    padding: 20px 10px;
     background-color: #0f212e;
     border-radius: 5px;
 }
@@ -531,40 +531,250 @@ select:focus {
     background-color: #213743;
 }
 
-.item_list {
+/* 공통 : 아이템리스트 */
+.poster_list_box {
     display: grid;
     gap: 32px 16px;
     grid-template-columns: repeat(8, 1fr);
 }
-.item_list a img {
+.poster_list a {
+    overflow: hidden;
+    position: relative;
+    display: block;
     border-radius: 10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.poster_list a img {
+    width: 100%;
+}
+.poster_list a:hover {
+    -webkit-transform: translateY(-4%);
+    -moz-transform: translateY(-4%);
+    -ms-transform: translateY(-4%);
+    transform: translateY(-4%);
+}
+.poster_list a .hover_box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #4391e7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.poster_list a:hover .hover_box {
+    opacity: 0.9;
+}
+.poster_list a .hover_box p {
+    font-size: 24px;
+    font-weight: 500;
+}
+.poster_list a .hover_box svg {
+    width: 30px;
+    height: 30px;
+}
+.poster_list a .hover_box span {
+    font-size: 16px;
 }
 @media all and (max-width: calc(1294px)) {
-    .item_list {
+    .poster_list_box {
         grid-template-columns: repeat(7, 1fr);
     }
 }
 @media all and (max-width: calc(1135px)) {
-    .item_list {
+    .poster_list_box {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 @media all and (max-width: calc(974px)) {
-    .item_list {
+    .poster_list_box {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 @media all and (max-width: calc(815px)) {
-    .item_list {
+    .poster_list_box {
+        gap: 16px 8px;
         grid-template-columns: repeat(4, 1fr);
+    }
+    .poster_list a:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    .poster_list a:active {
+        transform: scale(0.98);
+    }
+    .poster_list a:hover .hover_box {
+        opacity: 0;
     }
 }
 @media all and (max-width: calc(547px)) {
-    .item_list {
+    .poster_list_box {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+/* 공통 : select 커스텀 */
+.select_custom {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+}
+.select_custom .select_toggle_btn {
+    width: auto;
+    height: 44px;
+    padding: 13px 16px;
+    border-radius: 3px;
+    background-color: #0f212e;
+}
+.select_custom .select_toggle_btn p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-weight: bold;
+}
+.select_custom .select_toggle_btn p i {
+    display: none;
+    justify-content: center;
+    height: 22px;
+    min-width: 22px;
+    margin-left: 5px;
+    padding: 0 5px;
+    background-color: #4391e7;
+    color: #04172d;
+    border-radius: 20px;
+    font-style: normal;
+}
+.select_custom .select_toggle_btn p i.on {
+    display: inline-flex;
+}
+.select_custom .select_toggle_btn:active p {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+.select_custom .select_toggle_btn svg {
+    font-size: 18px;
+    color: #b1bad3;
+}
+.select_custom .select_toggle_btn.active svg {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.select_custom .option_box {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    min-width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #2f4553;
+    padding: 5px 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.select_custom .option_box:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: 100%;
+    width: 14px;
+    height: 7px;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.select_custom .option_box.input_option button {
+    white-space: nowrap;
+}
+.select_custom .option_box button {
+    width: 100%;
+}
+.select_custom .option_box:not(.input_option) button:hover {
+    background-color: #b1bad3;
+    color: #05080a;
+}
+.select_custom .option_box button.active {
+    color: #1475e1;
+}
+.select_custom .option_box:not(.input_option) button:active p {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.select_custom .option_box p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px 12px;
+    font-weight: 600;
+}
+.select_custom .option_box.input_option p {
+    cursor: pointer;
+    justify-content: left;
+    gap: 7px;
+}
+.select_custom .option_box.input_option button.clear_btn {
+    border-top: 1px solid #d5dceb;
+}
+.select_custom .option_box.input_option button.clear_btn p {
+    justify-content: center;
+}
+.select_custom .option_box.input_option i {
+    display: inline-flex;
+    justify-content: center;
+    height: 22px;
+    min-width: 22px;
+    margin-left: 5px;
+    padding: 0 5px;
+    background-color: #4391e7;
+    color: #04172d;
+    border-radius: 20px;
+    font-style: normal;
+}
+.select_custom .option_box.input_option .off.active i {
+    background-color: #4391e7;
+    color: #04172d;
+}
+.select_custom .option_box.input_option .off i {
+    background-color: #071824;
+    color: #b1bad3;
+}
+.select_custom .option_box.input_option input[type="checkbox"] {
+    display: none;
+}
+.select_custom .option_box.input_option input[type="checkbox"] + b {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #2f4553;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+.select_custom .option_box.input_option input[type="checkbox"]:checked + b {
+    background: #2f4553 url("/stakeclone/dist/custom_img/check_icon.svg") no-repeat center center / 75%;
+}
 /*
 #=========================================#
         푸터
