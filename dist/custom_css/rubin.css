@@ -129,6 +129,39 @@
         }
     }
     
+    /* 얼럿 */
+    .ghost_alert{
+        top: 74px;
+        left:-300px;
+        background:var(--color-grey-500);
+        padding:0;
+        border:none;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 0.5s;
+        position:fixed;
+    }
+    .ghost_alert.show{
+        position:fixed;
+        top: 74px;
+        left: 10px;
+    }
+
+    /* 퍼센테이지 바 */
+    .percentage{
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background: var(--color-grey-400);
+        overflow: hidden;
+        border-radius:10px;
+    }
+    .percentage-bar{
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
 
     /*
     #=========================================#

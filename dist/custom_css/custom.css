@@ -846,6 +846,9 @@ button.off {
     gap: 16px 16px;
     grid-template-columns: repeat(8, 1fr);
 }
+.poster_list_box.seven{
+    grid-template-columns: repeat(7, 1fr);
+}
 .poster_list a {
     overflow: hidden;
     position: relative;
@@ -855,6 +858,7 @@ button.off {
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     transition: all 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(27, 23, 23, .2), 0 2px 4px -1px rgba(0, 0, 0, .12);
 }
 .poster_list a img {
     width: 100%;

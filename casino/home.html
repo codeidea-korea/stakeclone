@@ -47,7 +47,6 @@
     <div class="flex relative">
         <!--  ** 사이드 메뉴 시작 ** -->
         <div class="left_sidebar"></div>
-
         <!--  ** 사이드 메뉴 끝 ** -->
 
         <!--  ** 메인 보드 시작 ** -->
@@ -1579,8 +1578,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="hidden md:flex items-center ml-auto ">
-                            <button class="p-4 tooltip" data-theme="light" title="유령모드 시작"><span class=""><svg>
+                        <div class="hidden md:flex items-center ml-auto">
+                            <button class="ghost_mode p-4 tooltip" data-theme="light" title="유령모드 시작"><span class=""><svg>
                                         <use xlink:href="#icon-ghost-mode"></use>
                                     </svg></span></button>
                             <select name="" id="" class="form-select custom">
@@ -1778,7 +1777,9 @@
                                                     <svg class="svg-icon svelte-kjfvep">
                                                         <use xlink:href="#icon-stake-game-keno"></use>
                                                     </svg>
-                                                    <span class="text-white font-semibold">Keno</span>
+                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
+                                                        <span class="text-white font-semibold">Keno</span>
+                                                    </a>
                                                 </div>
                                             </td>
                                             <td>
@@ -1825,7 +1826,9 @@
                                                     <svg class="svg-icon svelte-kjfvep">
                                                         <use xlink:href="#icon-stake-game-keno"></use>
                                                     </svg>
-                                                    <span class="text-white font-semibold">Keno</span>
+                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
+                                                        <span class="text-white font-semibold">Keno</span>
+                                                    </a>
                                                 </div>
                                             </td>
                                             <td>
@@ -2153,6 +2156,7 @@
         <!--  ** 오른쪽 보드 끝 ** -->
 
         <!--  ** 모달영역 시작 ** -->
+        <!-- 유저모달 -->
         <div id="user_modal" class="modal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content"> <!-- BEGIN: Modal Header -->
@@ -2163,9 +2167,7 @@
                             </svg>
                             SyztmzTV
                         </h2>
-                        <button><svg class="svg-icon svelte-kjfvep">
-                                <use xlink:href="#icon-cross"></use>
-                            </svg></button>
+                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
                     </div>
                     <div class="modal-body">
                         <div class="flex items-center justify-center">
@@ -2181,7 +2183,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="text-center text-xs font-semibold mt-3">가입 날짜 2020년 8월 31일</div>
+                        <div class="text-center text-xs font-semibold mt-2">가입 날짜 2020년 8월 31일</div>
                         <div class="flex items-center justify-center gap-1">
                             <button class="scale p-4">
                                 <svg>
@@ -2365,14 +2367,7 @@
                                     <button><span class="font-semibold text-white">다음</span></button>
                                 </div>
                             </div>
-                            <div id="tab_con12" class="tab-pane leading-relaxed" role="tabpanel"
-                                aria-labelledby="tab12">
-                                <div class="flex items-center justify-center">
-                                    <select name="" id="" class="form-select custom w-28">
-                                        <option value="">최고의 행운</option>
-                                        <option value="">가장 큰</option>
-                                    </select>
-                                </div>
+                            <div id="tab_con12" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab12">
                                 <div class="overflow-x-scroll">
                                     <table class="table table-striped">
                                         <thead class="whitespace-nowrap">
@@ -2432,10 +2427,97 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="modal-footer">
-                            <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
-                            <button type="button" class="btn btn-primary w-20">Send</button>
-                        </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 게임 모달 -->
+        <div id="game_modal" class="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"> <!-- BEGIN: Modal Header -->
+                    <div class="modal-header">
+                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                            <svg class="svg-icon svelte-kjfvep">
+                                <use xlink:href="#icon-list"></use>
+                            </svg>
+                            베팅
+                        </h2>
+                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="flex justify-center font-bold text-white text-base">
+                            Keno
+                        </div>
+                        <div class="flex justify-center gap-2">
+                            <span class="font-bold text-white text-base">ID 172,830,473,102</span>
+                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사되었습니다,채팅창에 공유해보세요!"><svg><use xlink:href="#icon-copy"></use></svg></button>
+                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사하고 온라인에 공유해보세요"><svg><use xlink:href="#icon-hyperlink"></use></svg></button>
+                        </div>
+                        <div class="flex items-center justify-center mt-3">
+                            <div class="flex items-center gap-1">
+                                <svg class="tooltip" data-theme="light" title="Platinum III">
+                                    <use xlink:href="#icon-vip-platinum-3"></use>
+                                </svg>
+                                <svg class="tooltip" data-theme="light" title="Highroller">
+                                    <use xlink:href="#icon-emoji-highroller"></use>
+                                </svg>
+                                <div class="flex items-center">
+                                    <button class="scale">
+                                        <span class="font-semibold">asket8888</span>
+                                    </button>
+                                    <span>에 의해 배치되었습니다</span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="text-center mt-1">에 2023. 8. 6. 에서 오후 7:50</div>
+                        <div class="p-3 bg-grey-700 rounded-md mt-3">
+                            <div class="flex items-center justify-center">
+                                <div class="flex flex-col justify-center items-center p-2 w-full">
+                                    <span class="font-semibold">배팅</span>
+                                    <div class="flex items-center justify-center gap-1">
+                                        <span class="text-white font-semibold">11343.912345</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-center items-center border-l border-r border-gray-600 p-2 w-full">
+                                    <span class="font-semibold">승수</span>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-white font-semibold">3.35×</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-center items-center p-2 w-full">
+                                    <span class="font-semibold">지불금</span>
+                                    <div class="flex items-center justify-center gap-1">
+                                        <span class="text-green-400 font-semibold">37985.424132</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-3">
+                            <button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition text-white scale"><span>Keno 플레이</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 유령모드 얼럿 -->
+        <div class="ghost_alert alert flex items-center mb-2" id="Ghost_alert">
+            <div class="p-4">
+                <svg class=" text-green-400"><use xlink:href="#icon-ghost-mode"></use></svg>
+            </div>
+           
+            <div class="bg-grey-400">
+                <div class="flex items-center">
+                    <div class="p-4">
+                        <p class="font-semibold">유령모드</p>
+                        <p>베팅이 현재 비공개 상태입니다.</p>
+                        <!-- <p>베팅이 현재 공개 상태입니다.</p> -->
+                    </div>
+                    <button type="button" class="ghost-btn-close text-white ml-auto p-4">
+                        <i data-lucide="x" class="w-4 h-4"></i> 
+                    </button> 
                 </div>
             </div>
         </div>
@@ -2505,14 +2587,16 @@
 
         function setOpacity(swiper, opacity) {
             // 모든 슬라이드의 투명도를 기본값 1로 설정
-            for (let i = 0; i < swiper.slides.length; i++) {
-                swiper.slides[i].style.opacity = 1;
+            if (swiper && swiper.slides && swiper.slides.length) {
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.opacity = 1;
+                }
             }
 
             // 끝에 도달하지 않았으면, 마지막 보이는 슬라이드의 투명도를 설정
             // 단, 화면 크기가 768 이하일 때는 투명도를 항상 1로 설정
             if (!swiper.isEnd && window.innerWidth > 769) {
-                if (swiper.slides && swiper.slides.length && swiper.params && swiper.params.slidesPerView) {
+                if (swiper && swiper.slides && swiper.slides.length && swiper.params && swiper.params.slidesPerView) {
                     const lastVisibleSlideIndex = Math.floor(swiper.activeIndex + swiper.params.slidesPerView - 0.5);
                     if (lastVisibleSlideIndex < swiper.slides.length) {
                         swiper.slides[lastVisibleSlideIndex].style.opacity = opacity;
@@ -2597,7 +2681,16 @@
             });
         }
 
+        $(document).ready(function() {
+            $('.ghost_mode').click(function() {
+                $('#Ghost_alert').addClass('show');
+            });
+            $('.ghost-btn-close').click(function(){
+                $('#Ghost_alert').removeClass('show');
+            });
+        });
 
+        
     </script>
 </body>
 

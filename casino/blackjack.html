@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="../dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <title>StakeClone</title>
+    <!-- ** css 시작 ** -->
+    <link rel="stylesheet" href="../dist/css/app.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- 커스텀 css 추가 -->
+    <link rel="stylesheet" href="../dist/custom_css/custom.css" />
+    <!-- ** css 끝 ** -->
+</head>
+
+<body>
+    <!-- ** 페이지 로딩 ** -->
+    <div id="loadingContainer">
+        <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+            <circle cx="15" cy="15" r="15">
+                <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear"
+                    repeatCount="indefinite"></animate>
+                <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+                    calcMode="linear" repeatCount="indefinite"></animate>
+            </circle>
+            <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear"
+                    repeatCount="indefinite"></animate>
+                <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5"
+                    calcMode="linear" repeatCount="indefinite"></animate>
+            </circle>
+            <circle cx="105" cy="15" r="15">
+                <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear"
+                    repeatCount="indefinite"></animate>
+                <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+                    calcMode="linear" repeatCount="indefinite"></animate>
+            </circle>
+        </svg>
+    </div>
+    <!-- ** 페이지 로딩 끝 ** -->
+
+    <div class="flex relative">
+        <!--  ** 사이드 메뉴 시작 ** -->
+        <div class="left_sidebar"></div>
+
+        <!--  ** 사이드 메뉴 끝 ** -->
+
+        <!--  ** 메인 보드 시작 ** -->
+        <div class="content">
+            <!-- ** 탑바 시작 ** -->
+            <!-- ** 탑바 끝 ** -->
+
+            <!-- ** 내용시작 ** -->
+            <div class="container_wrap overflow-y-scroll">
+                <div class="flex items-center content_title">
+                    <div class="container flex items-center">
+                        <h3 class="text-2xl font-bold">블랙잭</h3>
+                        <img class="ml-auto" src="../dist/custom_img/casino_img/blackjack_banner.png" alt="">
+                    </div>
+                </div>
+                <!--  ** 검색 영역 ** -->
+                <div class="container mt-6">
+                    <!-- 공통 : 검색 시작 -->
+                    <div class="search_wrap">
+                        <div class="search_modal_bg"></div>
+                        <div class="search_form flex items-center justify-between text-sm">
+                            <span class="w-[40px] p-2.5">
+                                <svg class="svg-icon mx-auto text-lg">
+                                    <use xlink:href="#icon-search"></use>
+                                </svg>
+                            </span>
+                            <div class="w-full">
+                                <input type="text" class="text-sm font-semibold" placeholder="게임 검색" />
+                            </div>
+                            <button class="search_close">
+                                <svg class="svg-icon mx-auto">
+                                    <use xlink:href="#icon-cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="no_search_box mt-2 p-4">
+                            <div class="py-4 text-center font-bold">검색하려면 최소 3글자 이상 작성해 주세요.</div>
+                            <div class="mt-2 flex justify-between items-center font-semibold">
+                                <span> Recent Searches </span>
+                                <button>Clear Search (5)</button>
+                            </div>
+                            <div class="flex flex-wrap items-center mt-4">
+                                <div class="tag">
+                                    <a href="javascript:;">sweet</a>
+                                    <button>
+                                        <svg class="svg-icon">
+                                            <use xlink:href="#icon-cross"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="tag">
+                                    <a href="javascript:;">Crazy Time</a>
+                                    <button>
+                                        <svg class="svg-icon">
+                                            <use xlink:href="#icon-cross"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="tag">
+                                    <a href="javascript:;">Monopoly</a>
+                                    <button>
+                                        <svg class="svg-icon">
+                                            <use xlink:href="#icon-cross"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="tag">
+                                    <a href="javascript:;">Sweet Bonanza</a>
+                                    <button>
+                                        <svg class="svg-icon">
+                                            <use xlink:href="#icon-cross"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result_search_box">
+                            <ul class="poster_list_box">
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="poster_list">
+                                    <a href="javascript:;">
+                                        <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                        <div class="hover_box">
+                                            <p>Sweet Win</p>
+                                            <svg class="svg-icon mx-auto">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <span>Spinomenal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 공통 : 검색 끝 -->
+                </div>
+                <!--  ** 검색 영역 끝 ** -->
+
+                <!-- 공통 : select 커스텀 시작 -->
+                <div class="container mt-6">
+                    <div class="flex items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-1">
+                                <span><svg><use xlink:href="#icon-filter"></use></svg></span>
+                                <span class="font-bold text-white">정렬기준</span>
+                            </div>
+                            <div class="select_custom">
+                                <button class="select_toggle_btn">
+                                    <p>
+                                        <span>제공자 <i></i></span>
+                                        <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                    </p>
+                                </button>
+                                <div class="option_box input_option">
+                                    <button>
+                                        <label>
+                                            <p>
+                                                <input type="checkbox" />
+                                                <b></b>
+                                                <span>BGaming <i>2</i></span>
+                                            </p>
+                                        </label>
+                                    </button>
+                                    <button>
+                                        <label>
+                                            <p>
+                                                <input type="checkbox" />
+                                                <b></b>
+                                                <span>Booming Games <i>2</i></span>
+                                            </p>
+                                        </label>
+                                    </button>
+                                    <button>
+                                        <label>
+                                            <p>
+                                                <input type="checkbox" />
+                                                <b></b>
+                                                <span>OneTouch <i>1</i></span>
+                                            </p>
+                                        </label>
+                                    </button>
+                                    <button>
+                                        <label>
+                                            <p>
+                                                <input type="checkbox" />
+                                                <b></b>
+                                                <span>Pragmatic Play <i>44</i></span>
+                                            </p>
+                                        </label>
+                                    </button>
+                                    <button class="clear_btn"><p>모두 지우기</p></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 ml-auto">
+                            <div class="flex items-center gap-1">
+                                <span><svg><use xlink:href="#icon-filter"></use></svg></span>
+                                <span class="font-bold text-white">다음으로 정렬</span>
+                            </div>
+                            <div class="select_custom">
+                                <button class="select_toggle_btn">
+                                    <p>
+                                        <span>특징</span>
+                                        <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                    </p>
+                                </button>
+                                <div class="option_box click_option">
+                                    <button>
+                                        <p>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-a-z"></use></svg>
+                                            <span>A-Z</span>
+                                        </p>
+                                    </button>
+                                    <button>
+                                        <p>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-a-z"></use></svg>
+                                            <span>Z-A</span>
+                                        </p>
+                                    </button>
+                                    <button>
+                                        <p>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-popular"></use></svg>
+                                            <span>인기</span>
+                                        </p>
+                                    </button>
+                                    <button class="active">
+                                        <p>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-provider-slots"></use></svg>
+                                            <span>특징</span>
+                                        </p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- 공통 : select 커스텀 끝 -->
+
+                <div class="container mt-4">
+                    <div>
+                        <ul class="poster_list_box py-3">
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="poster_list">
+                                <a href="javascript:;">
+                                    <img src="/stakeclone/dist/custom_img/casino_menu/sample_img.avif" alt="" />
+                                    <div class="hover_box">
+                                        <p>Sweet Win</p>
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-play"></use></svg>
+                                        <span>Spinomenal</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex flex-col items-center justify-center gap-2 mt-3">
+                            <div class="percentage" style="width:100px;">
+                                <div class="percentage-bar bg-blue-500" style="width:100%;"></div>
+                            </div>
+                            <span>18 게임 중 18 표시</span>
+                        </div>
+                        <div class="flex justify-center mt-3">
+                            <button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition">더 불러오기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="mt-6">
+                        <div class="flex items-center">
+                            <h2 class="text-lg font-semibold gap-2"> <a href="javascript:;"
+                                    class="inline-flex items-center gap-2 scale"><svg>
+                                        <use xlink:href="#icon-group-providers"></use>
+                                    </svg>제공자</a></h2>
+                            <div class="flex items-center ml-auto">
+                                <div
+                                    class="providers-swiper-button-prev prev_btn border rounded-l-full py-2 px-4 cursor-pointer">
+                                    <svg>
+                                        <use xlink:href="#icon-backward"></use>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="providers-swiper-button-next next_btn border rounded-r-full py-2 px-4 -ml-0.5 cursor-pointer">
+                                    <svg>
+                                        <use xlink:href="#icon-forward"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper_area">
+                            <div class="swiper providersSwiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper pt-3">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="poster_list">
+                                            <a href="javascript:;">
+                                                <img src="../dist/custom_img/casino_img/pragmatic.avif"
+                                                    alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  ** 배팅 탭 영역 ** -->
+                <div class="container flex gap-10 mt-6">
+                    <div class="flex items-center w-full">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="tab06" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
+                                        data-tw-target="#tab_con06" type="button" role="tab" aria-controls=tab_con06"
+                                        aria-selected="false"><span
+                                            class="flex items-center gap-1 "></svg>내배팅</span></button>
+                                </li>
+                                <li id="tab07" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
+                                        data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07"
+                                        aria-selected="false"><span
+                                            class="flex items-center gap-1"></svg>모든배팅</span></button>
+                                </li>
+                                <li id="tab08" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill"
+                                        data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08"
+                                        aria-selected="true"><span class="flex items-center gap-1">고액배팅</span></button>
+                                </li>
+                                <li id="tab09" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
+                                        data-tw-target="#tab_con09" type="button" role="tab" aria-controls="tab_con09"
+                                        aria-selected="false"><span class="flex items-center gap-1">레이스 랭킹<span
+                                                class="w-2 h-2 rounded-full bg-green-400"></span></span></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden md:flex items-center ml-auto">
+                            <button class="ghost_mode p-4 tooltip" data-theme="light" title="유령모드 시작"><span class=""><svg>
+                                        <use xlink:href="#icon-ghost-mode"></use>
+                                    </svg></span></button>
+                            <select name="" id="" class="form-select custom">
+                                <option value="">0</option>
+                                <option value="">10</option>
+                                <option value="">20</option>
+                                <option value="">30</option>
+                                <option value="">40</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--  ** 배팅 탭 영역 끝 ** -->
+
+                <div class="container">
+                    <div class="tab-content">
+                        <div id="tab_con06" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab06">
+                            <div class="overflow-x-scroll">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">게임</th>
+                                            <th class="text-center">시간</th>
+                                            <th class="text-right">배팅금액</th>
+                                            <th class="text-right">승수</th>
+                                            <th class="text-right">지불금</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-end">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="tab_con07" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab07">
+                            <div class="overflow-x-scroll">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">게임</th>
+                                            <th class="text-center">사용자</th>
+                                            <th class="text-center">시간</th>
+                                            <th class="text-right">배팅금액</th>
+                                            <th class="text-right">승수</th>
+                                            <th class="text-right">지불금</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    </svg>
+                                                    <span class="text-white font-semibold">Keno</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <span>오후 2:29</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-end">
+                                                    <span>2001.99999800</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    </svg>
+                                                    <span class="text-white font-semibold">Keno</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <span class="text-white font-semibold">SyztmzTV</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <span>오후 2:29</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-end">
+                                                    <span>2001.99999800</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="text-green-400">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="tab_con08" class="tab-pane leading-relaxed active" role="tabpanel"
+                            aria-labelledby="tab08">
+                            <div class="overflow-x-scroll">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">게임</th>
+                                            <th class="text-center">사용자</th>
+                                            <th class="text-center">시간</th>
+                                            <th class="text-right">배팅금액</th>
+                                            <th class="text-right">승수</th>
+                                            <th class="text-right">지불금</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    </svg>
+                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
+                                                        <span class="text-white font-semibold">Keno</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <span>오후 2:29</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-end">
+                                                    <span>2001.99999800</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    </svg>
+                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
+                                                        <span class="text-white font-semibold">Keno</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal"
+                                                        data-tw-target="#user_modal">
+                                                        <span class="text-white font-semibold">SyztmzTV</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <span>오후 2:29</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-end">
+                                                    <span>2001.99999800</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="text-green-400">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="tab_con09" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab09">
+                            <div class="overflow-x-scroll">
+                                <div class="flex items-center p-3 border-b border-grey-400">
+                                    <button class="flex items-center gap-2 scale">
+                                        <svg>
+                                            <use xlink:href="#icon-races"></use>
+                                        </svg>
+                                        <span class="font-bold">$100,000 레이스 - 24시간</span>
+                                    </button>
+                                    <button class="flex items-center gap-2 ml-auto scale">
+                                        <svg>
+                                            <use xlink:href="#icon-stats"></use>
+                                        </svg>
+                                        <span class="font-bold">끝 7시간 후</span>
+                                    </button>
+                                </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">랭크</th>
+                                            <th class="text-center">사용자</th>
+                                            <th>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <span class="curosr-help text-grey-200 tooltip" data-theme="light"
+                                                        title="해당 배팅에서 모든 통화는 레이스 통화로 규격화됩니다."><svg class="">
+                                                            <use xlink:href="#icon-info"></use>
+                                                        </svg></span>
+                                                    <span>배팅</span>
+                                                </div>
+                                            </th>
+                                            <th class="text-right">상금</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <img src="../dist/custom_img/rank_1.svg" alt="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <span class="font-semibold text-white">SyztmzTV</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-center">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-end">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1"
+                                                        title="This is awesome tooltip example!">
+                                                        <span class="">US$21,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$21,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <img src="../dist/custom_img/rank_2.svg" alt="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-center">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-end">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <img src="../dist/custom_img/rank_3.svg" alt="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-center">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-end">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center gap-1 justify-start">
+                                                    <span>4th</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-center">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$15,373,40</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex justify-end">
+                                                    <a href="javascript:;" data-theme="light"
+                                                        data-tooltip-content="#custom-content-tooltip"
+                                                        class="tooltip inline-flex items-center gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </a>
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    <div id="custom-content-tooltip"
+                                                        class="relative flex items-center py-1 gap-1">
+                                                        <span class="">US$25,000.00</span>
+                                                        <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                <use xlink:href="#icon-currency-usd"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- ** 내용 끝 ** -->
+
+            <!-- ** 푸터 시작 ** -->
+            <!-- ** 푸터 끝 ** -->
+        </div>
+        <!--  ** 메인 보드 끝 ** -->
+
+        <!--  ** 오른쪽 보드 시작 ** -->
+        <div class="right-sidebar text-white"></div>
+        <!--  ** 오른쪽 보드 끝 ** -->
+
+        <!--  ** 모달영역 시작 ** -->
+        <!-- 유저모달 -->
+        <div id="user_modal" class="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"> <!-- BEGIN: Modal Header -->
+                    <div class="modal-header">
+                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                            <svg class="svg-icon svelte-kjfvep">
+                                <use xlink:href="#icon-list"></use>
+                            </svg>
+                            SyztmzTV
+                        </h2>
+                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="flex items-center justify-center">
+                            <div class="flex items-center gap-1">
+                                <svg class="tooltip" data-theme="light" title="Platinum III">
+                                    <use xlink:href="#icon-vip-platinum-3"></use>
+                                </svg>
+                                <svg class="tooltip" data-theme="light" title="Highroller">
+                                    <use xlink:href="#icon-emoji-highroller"></use>
+                                </svg>
+                                <button class="scale">
+                                    <span class="font-semibold">asket8888</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-center text-xs font-semibold mt-2">가입 날짜 2020년 8월 31일</div>
+                        <div class="flex items-center justify-center gap-1">
+                            <button class="scale p-4">
+                                <svg>
+                                    <use xlink:href="#icon-coins"></use>
+                                </svg>
+                            </button>
+                            <button class="scale p-4">
+                                <svg>
+                                    <use xlink:href="#icon-friend-ignored"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                        <li id="tab10" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill"
+                                                data-tw-target="#tab_con10" type="button" role="tab"
+                                                aria-controls=tab_con10" aria-selected="true"><span
+                                                    class="flex items-center gap-1 "></svg>통계</span></button>
+                                        </li>
+                                        <li id="tab11" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
+                                                data-tw-target="#tab_con11" type="button" role="tab"
+                                                aria-controls="tab_con11" aria-selected="false"><span
+                                                    class="flex items-center gap-1"></svg>트로피</span></button>
+                                        </li>
+                                        <li id="tab12" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
+                                                data-tw-target="#tab_con12" type="button" role="tab"
+                                                aria-controls="tab_con12" aria-selected="false"><span
+                                                    class="flex items-center gap-1">레이스</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content mt-3">
+                            <div id="tab_con10" class="tab-pane leading-relaxed active" role="tabpanel"
+                                aria-labelledby="tab10">
+                                <div class="overflow-x-scroll">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">배팅</th>
+                                                <th class="text-center">승리</th>
+                                                <th class="text-center">손실</th>
+                                                <th class="text-right">배팅</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex items-center gap-1 justify-start">
+                                                        <span>45,000</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>5,327</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center">
+                                                        <span>39,408</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center gap-1 justify-end">
+                                                        <span>2001.99999800</span>
+                                                        <span title="btc" style="max-width: 12ch;"><svg
+                                                                class="svg-icon svelte-kjfvep">
+                                                                <use xlink:href="#icon-currency-btc"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex items-center gap-1 justify-start">
+                                                        <span>45,000</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>5,327</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center">
+                                                        <span>39,408</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center gap-1 justify-end">
+                                                        <span>2001.99999800</span>
+                                                        <span title="btc" style="max-width: 12ch;"><svg
+                                                                class="svg-icon svelte-kjfvep">
+                                                                <use xlink:href="#icon-currency-btc"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="tab_con11" class="tab-pane leading-relaxed" role="tabpanel"
+                                aria-labelledby="tab11">
+                                <div class="flex items-center justify-center">
+                                    <select name="" id="" class="form-select custom w-28">
+                                        <option value="">최고의 행운</option>
+                                        <option value="">가장 큰</option>
+                                    </select>
+                                </div>
+                                <div class="overflow-x-scroll">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">게임</th>
+                                                <th class="text-center">제공자</th>
+                                                <th class="text-right">트로피</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="javascript:;">
+                                                        <div class="flex items-center gap-1 justify-start scale">
+                                                            <span><svg class="w-5 h-5">
+                                                                    <use xlink:href="#icon-provider-slots"></use>
+                                                                </svg></span>
+                                                            <span class="font-semibold text-white">Rome Rise of an
+                                                                Empire</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>Epicmedia</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center">
+                                                        <span><svg>
+                                                                <use xlink:href="#icon-trophy-1"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="javascript:;">
+                                                        <div class="flex items-center gap-1 justify-start scale">
+                                                            <span><svg class="w-5 h-5">
+                                                                    <use xlink:href="#icon-provider-slots"></use>
+                                                                </svg></span>
+                                                            <span class="font-semibold text-white">Dino P.D.</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>Pushgaming</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center">
+                                                        <span><svg>
+                                                                <use xlink:href="#icon-trophy-2"></use>
+                                                            </svg></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="flex items-center justify-center gap-5 mt-4">
+                                    <button><span class="font-semibold">이전</span></button>
+                                    <button><span class="font-semibold text-white">다음</span></button>
+                                </div>
+                            </div>
+                            <div id="tab_con12" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab12">
+                                <div class="overflow-x-scroll">
+                                    <table class="table table-striped">
+                                        <thead class="whitespace-nowrap">
+                                            <tr>
+                                                <th class="text-left">레이스 이름</th>
+                                                <th class="text-center">날짜</th>
+                                                <th class="text-center">포지션</th>
+                                                <th class="text-right">상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="whitespace-nowrap">
+                                            <tr>
+                                                <td>
+                                                    <div class="flex items-center gap-1 justify-start">
+                                                        <span>$100,000 레이스 - 24시간</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>2023. 8. 3.</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        <span>25th</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex justify-end">
+                                                        <a href="javascript:;" data-theme="light"
+                                                            data-tooltip-content="#custom-content-tooltip"
+                                                            class="tooltip inline-flex items-center gap-1">
+                                                            <span class="">US$200.00</span>
+                                                            <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                    <use xlink:href="#icon-currency-usd"></use>
+                                                                </svg></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="tooltip-content">
+                                                        <div id="custom-content-tooltip"
+                                                            class="relative flex items-center py-1 gap-1">
+                                                            <span class="">US$200.00</span>
+                                                            <span title="usd" style="max-width: 12ch;"><svg class="">
+                                                                    <use xlink:href="#icon-currency-usd"></use>
+                                                                </svg></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="flex items-center justify-center gap-5 mt-4">
+                                    <button><span class="font-semibold">이전</span></button>
+                                    <button><span class="font-semibold text-white">다음</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 게임 모달 -->
+        <div id="game_modal" class="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"> <!-- BEGIN: Modal Header -->
+                    <div class="modal-header">
+                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                            <svg class="svg-icon svelte-kjfvep">
+                                <use xlink:href="#icon-list"></use>
+                            </svg>
+                            베팅
+                        </h2>
+                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="flex justify-center font-bold text-white text-base">
+                            Keno
+                        </div>
+                        <div class="flex justify-center gap-2">
+                            <span class="font-bold text-white text-base">ID 172,830,473,102</span>
+                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사되었습니다,채팅창에 공유해보세요!"><svg><use xlink:href="#icon-copy"></use></svg></button>
+                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사하고 온라인에 공유해보세요"><svg><use xlink:href="#icon-hyperlink"></use></svg></button>
+                        </div>
+                        <div class="flex items-center justify-center mt-3">
+                            <div class="flex items-center gap-1">
+                                <svg class="tooltip" data-theme="light" title="Platinum III">
+                                    <use xlink:href="#icon-vip-platinum-3"></use>
+                                </svg>
+                                <svg class="tooltip" data-theme="light" title="Highroller">
+                                    <use xlink:href="#icon-emoji-highroller"></use>
+                                </svg>
+                                <div class="flex items-center">
+                                    <button class="scale">
+                                        <span class="font-semibold">asket8888</span>
+                                    </button>
+                                    <span>에 의해 배치되었습니다</span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="text-center mt-1">에 2023. 8. 6. 에서 오후 7:50</div>
+                        <div class="p-3 bg-grey-700 rounded-md mt-3">
+                            <div class="flex items-center justify-center">
+                                <div class="flex flex-col justify-center items-center p-2 w-full">
+                                    <span class="font-semibold">배팅</span>
+                                    <div class="flex items-center justify-center gap-1">
+                                        <span class="text-white font-semibold">11343.912345</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-center items-center border-l border-r border-gray-600 p-2 w-full">
+                                    <span class="font-semibold">승수</span>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-white font-semibold">3.35×</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-center items-center p-2 w-full">
+                                    <span class="font-semibold">지불금</span>
+                                    <div class="flex items-center justify-center gap-1">
+                                        <span class="text-green-400 font-semibold">37985.424132</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-3">
+                            <button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition text-white scale"><span>Keno 플레이</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 유령모드 얼럿 -->
+        <div class="ghost_alert alert flex items-center mb-2" id="Ghost_alert">
+            <div class="p-4">
+                <svg class=" text-green-400"><use xlink:href="#icon-ghost-mode"></use></svg>
+            </div>
+           
+            <div class="bg-grey-400">
+                <div class="flex items-center">
+                    <div class="p-4">
+                        <p class="font-semibold">유령모드</p>
+                        <p>베팅이 현재 비공개 상태입니다.</p>
+                        <!-- <p>베팅이 현재 공개 상태입니다.</p> -->
+                    </div>
+                    <button type="button" class="ghost-btn-close text-white ml-auto p-4">
+                        <i data-lucide="x" class="w-4 h-4"></i> 
+                    </button> 
+                </div>
+            </div>
+        </div>
+        <!--  ** 모달영역 끝 ** -->
+
+    </div>
+    <!-- ** JS 시작 ** -->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="../dist/js/app.js"></script>
+    <script src="../dist/custom_js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- ** 테이블 - slickGrid 시작 ** -->
+    <!-- 필수 jquery library -->
+    <script src="../dist/js/jquery-1.12.4.js"></script>
+
+    <script>
+        const swiper = new Swiper('.headerSwiper', {
+            slidesPerView: 1.1,
+            slidesPerGroup: 1.1,
+            spaceBetween: 20,
+            freeMode: true,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.1,
+                    slidesPerGroup: 2.1,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 2.1,
+                    slidesPerGroup: 2.1,
+                    spaceBetween: 20
+                },
+                1280: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20
+                }
+            }
+        });
+
+        const gamSwiper = createSwiper('.gamSwiper', '.gam-swiper-button-next', '.gam-swiper-button-prev');
+        const slotSwiper = createSwiper('.slotSwiper', '.slot-swiper-button-next', '.slot-swiper-button-prev');
+        const providersSwiper = createSwiper('.providersSwiper', '.providers-swiper-button-next', '.providers-swiper-button-prev');
+        const livecasinoSwiper = createSwiper('.livecasinoSwiper', '.livecasino-swiper-button-next', '.livecasino-swiper-button-prev');
+        const gameshowsSwiper = createSwiper('.gameshowsSwiper', '.gameshows-swiper-button-next', '.gameshows-swiper-button-prev');
+        const tablegamesSwiper = createSwiper('.tablegamesSwiper', '.tablegames-swiper-button-next', '.tablegames-swiper-button-prev');
+        const newreleasesSwiper = createSwiper('.newreleasesSwiper', '.newreleases-swiper-button-next', '.newreleases-swiper-button-prev');
+
+        const swipers = [
+            gamSwiper, slotSwiper, providersSwiper, livecasinoSwiper,
+            gameshowsSwiper, tablegamesSwiper, newreleasesSwiper
+        ];
+
+        // 초기 투명도 설정
+        updateSwipersOpacity(swipers, 0.3);
+
+        // 화면 크기가 변경될 때마다 투명도 업데이트
+        window.addEventListener('resize', () => {
+            updateSwipersOpacity(swipers, 0.3);
+        });
+
+        function setOpacity(swiper, opacity) {
+            // 모든 슬라이드의 투명도를 기본값 1로 설정
+            if (swiper && swiper.slides && swiper.slides.length) {
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.opacity = 1;
+                }
+            }
+
+            // 끝에 도달하지 않았으면, 마지막 보이는 슬라이드의 투명도를 설정
+            // 단, 화면 크기가 768 이하일 때는 투명도를 항상 1로 설정
+            if (!swiper.isEnd && window.innerWidth > 769) {
+                if (swiper && swiper.slides && swiper.slides.length && swiper.params && swiper.params.slidesPerView) {
+                    const lastVisibleSlideIndex = Math.floor(swiper.activeIndex + swiper.params.slidesPerView - 0.5);
+                    if (lastVisibleSlideIndex < swiper.slides.length) {
+                        swiper.slides[lastVisibleSlideIndex].style.opacity = opacity;
+                    }
+                }
+            }
+        }
+
+        function updateSwipersOpacity(swipers, opacity) {
+            swipers.forEach(swiper => {
+                setOpacity(swiper, opacity);
+            });
+        }
+
+        // 초기 투명도 설정
+        updateSwipersOpacity(swipers, 0.3);
+
+        // 화면 크기가 변경될 때마다 투명도 업데이트
+        window.addEventListener('resize', () => {
+            updateSwipersOpacity(swipers, 0.3);
+        });
+
+
+        function updateNavigationButtons(swiper, nextButtonClass, prevButtonClass) {
+            const nextButton = document.querySelector(nextButtonClass);
+            const prevButton = document.querySelector(prevButtonClass);
+
+            if (swiper.isBeginning) {
+                prevButton.style.opacity = 0.3;
+            } else {
+                prevButton.style.opacity = 1;
+            }
+
+            if (swiper.isEnd) {
+                nextButton.style.opacity = 0.3;
+            } else {
+                nextButton.style.opacity = 1;
+            }
+        }
+
+        function createSwiper(containerClass, nextButtonClass, prevButtonClass) {
+            return new Swiper(containerClass, {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 10,
+                freeMode: true,
+                navigation: {
+                    nextEl: nextButtonClass,
+                    prevEl: prevButtonClass,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5.5,
+                        slidesPerGroup: 5.5,
+                        spaceBetween: 20
+                    },
+                    1280: {
+                        slidesPerView: 7.5,
+                        slidesPerGroup: 7.5,
+                        spaceBetween: 20
+                    }
+                },
+
+                on: {
+                    init: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    },
+                    slideChangeTransitionStart: function () {
+                        setOpacity(this, 1);
+                    },
+                    slideChangeTransitionEnd: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    }
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $('.ghost_mode').click(function() {
+                $('#Ghost_alert').addClass('show');
+            });
+            $('.ghost-btn-close').click(function(){
+                $('#Ghost_alert').removeClass('show');
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>

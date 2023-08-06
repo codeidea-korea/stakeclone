@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>스테이크</title>
+	<title>stakeclone</title>
 	<meta http-equiv="imagetoolbar" content="no">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -66,8 +66,27 @@ echo txtRecord('./@record/');
 	<ul class="page-link" style="width:100%;margin-bottom:-50px">
 		<li class="" data-label="stakeclone">
 			<ul>
-				<li><a href="index.html" target="_blank" class="">로그인</a></li>
-				<li><a href="/casino/home.html" target="_blank" class="">로그인</a></li>
+				<li><a href="#" target="_blank" class="">메인</a></li>
+			</ul>
+		</li>
+		<li class="mt50" data-label="casino">
+			<ul>
+				<li><a href="../stakeclone/casino/home.html" target="_blank" class="">카지노 홈</a></li>
+
+				<li class="mt30"><a href="../stakeclone/casino/stake-originals.html" target="_blank" class="">Stake 오리지널</a></li>
+				<li><a href="../stakeclone/casino/stake-exclusives.html" target="_blank" class="">Stake 독점</a></li>
+				<li><a href="../stakeclone/casino/slots.html" target="_blank" class="">슬롯</a></li>
+				<li><a href="../stakeclone/casino/live-casino.html" target="_blank" class="">실시간 카지노</a></li>
+				<li><a href="../stakeclone/casino/game-shows.html" target="_blank" class="">게임 쇼</a></li>
+				<li><a href="../stakeclone/casino/new-releases.html" target="_blank" class="">신규 출시</a></li>
+				<li><a href="../stakeclone/casino/feature-buy-in.html" target="_blank" class="">바이 인 기능</a></li>
+				<li><a href="../stakeclone/casino/enhanced-rtp.html" target="_blank" class="">향상된 RTP</a></li>
+				<li><a href="../stakeclone/casino/table-games.html" target="_blank" class="">테이블 게임</a></li>
+				<li><a href="../stakeclone/casino/blackjack.html" target="_blank" class="">블랙잭</a></li>
+				<li><a href="../stakeclone/casino/baccarat.html" target="_blank" class="">바카라</a></li>
+				<li><a href="../stakeclone/casino/roulette.html" target="_blank" class="">룰렛</a></li>
+
+				<li class="mt30"><a href="../stakeclone/casino/provider.html" target="_blank" class="">제공자</a></li>
 			</ul>
 		</li>
 	</ul>
