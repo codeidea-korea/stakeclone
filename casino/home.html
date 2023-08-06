@@ -1882,7 +1882,7 @@
                                         </svg>
                                         <span class="font-bold">$100,000 레이스 - 24시간</span>
                                     </button>
-                                    <button class="flex items-center gap-2 ml-auto scale">
+                                    <button class="flex items-center gap-2 ml-auto scale draggable_modal_open">
                                         <svg>
                                             <use xlink:href="#icon-stats"></use>
                                         </svg>
@@ -2500,7 +2500,6 @@
             </div>
         </div>
 
-
         <!-- 유령모드 얼럿 -->
         <div class="ghost_alert alert flex items-center mb-2" id="Ghost_alert">
             <div class="p-4">
@@ -2520,6 +2519,69 @@
                 </div>
             </div>
         </div>
+
+        <!-- 실시간 통계 모달 -->
+        <div class="draggable_modal w-[280px] transition-all">
+            <div class="draggable_modal_header px-3 py-2 flex items-center bg-grey-600 rounded-t-md">
+                <div class="flex items-center gap-1">
+                    <span><svg><use xlink:href="#icon-stats"></use></svg></span>
+                    <span>실시간 통계</span>
+                </div>
+                <button class="draggable_modal_close ml-auto"><svg><use xlink:href="#icon-cross"></use></svg></button>
+            </div>
+            <div class="bg-grey-400 rounded-b-md p-3">
+                <div class="select_custom" style="z-index: 10;">
+                    <button class="select_toggle_btn">
+                        <p>
+                            <span>레이스</span>
+                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                        </p>
+                    </button>
+                    <div class="option_box click_option">
+                        <button>
+                            <p>
+                                <span>모두</span>
+                            </p>
+                        </button>
+                        <button>
+                            <p>
+                                <span>배팅</span>
+                            </p>
+                        </button>
+                        <button class="active">
+                            <p>
+                                <span>레이스</span>
+                            </p>
+                        </button>
+                        <button >
+                            <p>
+                                <span>hide</span>
+                            </p>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-3 bg-grey-700 p-3 rounded-md">
+                    <div class="select_custom">
+                        <button class="select_toggle_btn" style="padding:0;height:auto;">
+                            <p>
+                                <span class="text-sm">$100,000 레이스 - 24시간</span>
+                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                            </p>
+                        </button>
+                        <div class="option_box click_option">
+                            <button class="active">
+                                <p>
+                                    <span>$100,000 레이스 - 24시간</span>
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-3 h-[93px] flex justify-center items-center">
+                        <span class="font-bold text-grey-200">레이스에 참가하려면 베팅하세요!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--  ** 모달영역 끝 ** -->
 
     </div>
@@ -2530,8 +2592,10 @@
     <script src="../dist/custom_js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- ** 테이블 - slickGrid 시작 ** -->
+
     <!-- 필수 jquery library -->
     <script src="../dist/js/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script>
         const swiper = new Swiper('.headerSwiper', {
@@ -2689,6 +2753,24 @@
             });
         });
 
+        
+        // 드래그
+        $(document).ready(function() {
+            const DraggModal = $(".draggable_modal");
+            $('.draggable_modal_open').on('click', function() {
+                DraggModal.addClass('show');
+                
+                // show 클래스가 추가된 후 300ms 지연
+                setTimeout(function() {
+                    DraggModal.removeClass('transition-all');
+                }, 200);
+            });
+            DraggModal.draggable({ handle: ".draggable_modal_header" });
+            $('.draggable_modal_close').on('click', function() {
+                DraggModal.removeClass('show');
+                DraggModal.addClass('transition-all');
+            });
+        });
         
     </script>
 </body>
