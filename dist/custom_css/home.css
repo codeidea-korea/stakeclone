@@ -91,12 +91,6 @@
     background-color: #071824;
 }
 
-svg.nostroke {
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-}
-
 .setting_right_wrap > div {
     width: 100% !important;
 }
@@ -119,4 +113,76 @@ svg.nostroke {
     .content .setting_left_tab + div {
         display: block;
     }
+}
+
+/*
+#=========================================#
+        아코디언 수정
+#=========================================#
+*/
+.accordion .accordion-item {
+    border-bottom: 0 none;
+    padding: 0px;
+    margin-top: 0 !important;
+    margin-bottom: 8px;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+    background-color: #213743;
+    color: #d5dceb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.04);
+    border-radius: 3px;
+}
+.accordion .accordion-item .accordion-header .accordion-button svg {
+    width: 18px;
+    height: 18px;
+    transform: rotate(90deg);
+}
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    color: #d5dceb;
+}
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) svg {
+    transform: rotate(0);
+}
+.accordion .accordion-collapse {
+    margin-top: 0;
+    background-color: #213743;
+    border-top: 2px solid #2f4553;
+    padding: 1rem;
+    color: #b1bad3;
+}
+/*
+#=========================================#
+        file_input
+#=========================================#
+*/
+.file_input_custom {
+    position: relative;
+}
+.file_input_custom input {
+    padding: 5px 0;
+    color: #fff;
+}
+.file_input_custom span {
+    position: absolute;
+    left: 2px;
+    top: 6px;
+    width: 71px;
+    height: 35px;
+    background-color: #0f212e;
+    border-radius: 3px 0 0 3px;
+    text-align: Center;
+    line-height: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+.file_input_custom svg {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 7px);
 }

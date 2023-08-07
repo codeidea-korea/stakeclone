@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="container py-6">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-bold flex items-center">
+                                <svg class="svg-icon text-grey-200 mr-2"><use xlink:href="#icon-gear"></use></svg> 설정
+                            </h2>
+                            <a href="/stakeclone/casino/home.html">
+                                <svg class="svg-icon text-grey-200"><use xlink:href="#icon-cross"></use></svg>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-6 mt-4">
+                            <div class="col-span-12 md:col-span-3 lg:col-span-2 setting_left_wrap">
+                                <ul class="bg-grey-700 py-2 rounded font-semibold setting_left_tab" role="tablist">
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">일반</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false">보안</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false">환경 설정</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04" aria-selected="false">API</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05" aria-selected="false">세션</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls="tab_con06" aria-selected="false">무시된 사용자</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07" aria-selected="false">인증</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08" aria-selected="false">제안</button>
+                                    </li>
+                                </ul>
+                                <div class="hidden">
+                                    <button class="bg-grey-700 text-center w-11 h-11 rounded" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-arrowleft"></use></svg>
+                                    </button>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>일반</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option">
+                                            <button class="text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                                <p>
+                                                    <span>일반</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="true">
+                                                <p>
+                                                    <span>보안</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="true">
+                                                <p>
+                                                    <span>환경 설정</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04" aria-selected="true">
+                                                <p>
+                                                    <span>API</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05" aria-selected="true">
+                                                <p>
+                                                    <span>세션</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls="tab_con06" aria-selected="true">
+                                                <p>
+                                                    <span>무시된 사용자</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07" aria-selected="true">
+                                                <p>
+                                                    <span>인증</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08" aria-selected="true">
+                                                <p>
+                                                    <span>제안</span>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-12 md:col-span-9 lg:col-span-10">
+                                <div class="tab-content setting_right_wrap">
+                                    <div id="tab_con01" class="tab-pane leading-relaxed active w-full" role="tabpanel" aria-labelledby="tab01">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">이메일 <span class="ml-2 py-0.5 px-2 bg-[#00e701] rounded-xl text-xs text-black font-normal">인증되었습니다</span></h3>
+                                                    <div class="border-t border-gray-700 my-6"></div>
+                                                    <p class="text-sm font-semibold">이메일 <span class="text-[#ED4163]">*</span></p>
+                                                    <input type="text" class="half input mt-1 form-control pr-10 font-semibold bgfull" value="codd@gmail.com" />
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <div class="text-sm mr-2 font-semibold">이메일 재전송</div>
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">저장</button>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-10">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">전화번호</h3>
+                                                    <p class="mt-2 text-sm">사용 가능한 국가 코드 목록에 포함된 지역만 서비스됩니다.</p>
+                                                    <div class="border-t border-gray-700 my-6"></div>
+                                                    <p class="text-sm font-semibold">국가 코드 <span class="text-[#ED4163]">*</span></p>
+                                                    <select name="" id="" class="form-select half mt-1">
+                                                        <option value="">+1 Canada</option>
+                                                        <option value="">+82 Korea (republic of)</option>
+                                                    </select>
+                                                    <p class="text-sm font-semibold mt-3">전화번호 <span class="text-[#ED4163]">*</span></p>
+                                                    <input type="text" class="half input mt-1 form-control pr-10 font-semibold" />
+                                                    <p class="text-xs flex items-center text-rose-400 mt-1">
+                                                        <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                                        <span> 전화번호가 유효하지 않습니다</span>
+                                                    </p>
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">제출</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab02">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="text-xl text-white font-bold">이중 인증</h3>
+                                                    <p class="mt-4 text-sm">계정을 더욱 안전하게 유지하려면 2단계 인증을 활성화하세요.</p>
+                                                    <div class="border-t border-gray-700 my-2"></div>
+                                                    <p class="text-sm font-semibold">인증 앱에 해당 코드를 복사하세요</p>
+                                                    <div class="input-group mt-2 w-full md:w-1/2">
+                                                        <input type="text" class="form-control bgfull font-semibold" value="AWKLASIBNWERLISDF4ADSG1ABZXD54ASDFBINLOKNBIJ" />
+                                                        <button class="btn-gray px-3">
+                                                            <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <p class="text-sm font-semibold mt-4">아무도 보여주지 마세요!</p>
+                                                    <div class="inline-block p-2 bg-white rounded mt-2"><img width="128" src="./dist/custom_img/setting_code_img.png" alt="" /></div>
+                                                    <p class="text-sm font-semibold mt-3">이중 인증 코드 <span class="text-[#ED4163]">*</span></p>
+                                                    <input type="text" class="half input mt-1 form-control pr-10 font-semibold" />
+                                                </div>
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <button class="btn btn-primary text-sm p-4 font-semibold">
+                                                        <svg class="svg-icon mr-2"><use xlink:href="#icon-google"></use></svg>
+                                                        다음으로 다시 인증 구글
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab03">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">프라이버시</h3>
+                                                    <p class="mt-4 text-sm">Stake는 사용자의 개인 정보 보호를 가장 중요하게 생각합니다. 해당 설정을 사용하면 타 플레이어에게 익명으로 보이게 됩니다.</p>
+                                                    <div class="border-t border-gray-700 my-6"></div>
+                                                    <div>
+                                                        <div class="form-check form-switch flex items-center gap-2">
+                                                            <input id="checkbox-switch-1" class="form-check-input" type="checkbox" />
+                                                            <label class="form-check-label" for="checkbox-switch-1">
+                                                                <b class="block text-sm">유령 모드 활성화</b>
+                                                                <span class="text-sm text-[#557086]">귀하의 베팅은 공개 베팅 피드 및 베팅 미리보기에 표시되지 않습니다.</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check form-switch flex items-center gap-2 mt-2">
+                                                            <input id="checkbox-switch-2" class="form-check-input" type="checkbox" />
+                                                            <label class="form-check-label" for="checkbox-switch-2">
+                                                                <b class="block text-sm">모든 통계 숨기기</b>
+                                                                <span class="text-sm text-[#557086]">다른 사용자는 귀하의 승, 패, 베팅 통계를 볼 수 없습니다. </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check form-switch flex items-center gap-2 mt-2">
+                                                            <input id="checkbox-switch-3" class="form-check-input" type="checkbox" />
+                                                            <label class="form-check-label" for="checkbox-switch-3">
+                                                                <b class="block text-sm">모든 레이스 통계 숨기기</b>
+                                                                <span class="text-sm text-[#557086]">다른 사용자는 귀하의 레이스 통계를 볼 수 없습니다.</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                    <div class="text-sm mr-2 font-normal">업데이트가 적용될 때까지 최대 30초 정도 기다리세요.</div>
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">저장</button>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-10">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">커뮤니티</h3>
+                                                    <div class="border-t border-gray-700 my-6"></div>
+                                                    <div>
+                                                        <div class="form-check form-switch flex items-center gap-2">
+                                                            <input id="checkbox-switch-4" class="form-check-input" type="checkbox" />
+                                                            <label class="form-check-label" for="checkbox-switch-4">
+                                                                <b class="block text-sm">레인 제외 </b>
+                                                                <span class="text-sm text-[#557086]">채팅에서 레인 수신 차단</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                    <div class="text-sm mr-2 font-normal">업데이트가 적용될 때까지 최대 30초 정도 기다리세요.</div>
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">저장</button>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-10">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">마케팅</h3>
+                                                    <div class="border-t border-gray-700 my-6"></div>
+                                                    <div>
+                                                        <div class="form-check form-switch flex items-center gap-2">
+                                                            <input id="checkbox-switch-5" class="form-check-input" type="checkbox" />
+                                                            <label class="form-check-label" for="checkbox-switch-5">
+                                                                <b class="block text-sm">광고 이메일 수신 </b>
+                                                                <span class="text-sm text-[#557086]">마케팅 이메일 또는 제안 수신 거부</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">저장</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con04" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab04">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">토큰 생성</h3>
+                                                    <p class="mt-4 text-sm">면책 조항: Stake.com 지원팀에서는 해당 토큰에 대한 어떠한 사항도 묻지 않습니다. 해당 토큰을 다른 사람들에게 제공한다면, 이는 본인 계정에 대한 전체 액세스 권한을 부여하게 됩니다.</p>
+                                                    <div class="border-t border-gray-700 my-4"></div>
+                                                    <p class="text-sm font-semibold">토큰</p>
+                                                    <div class="input-group mt-2 w-full md:w-1/2">
+                                                        <input type="text" class="form-control bgfull font-semibold" value="*****************************" />
+                                                        <button class="btn-gray px-3">
+                                                            <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                    <div class="text-sm mr-2 font-semibold text-white">절대 공유하지 마세요!</div>
+                                                    <button class="py-3 px-10 btn-gray text-sm p-2 font-semibold">보여주기</button>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-10">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">토큰 활성화</h3>
+                                                    <p class="mt-4 text-sm">
+                                                        Stake는 현재 폐쇄형 API로 운영되고 있으며, 이러한 토큰 사용 방식은 매우 제한적입니다. "토큰 생성" 형식으로 새 API 토큰을 공개할 때마다 새로운 독립 세션을 시작할 수 있습니다. 클릭하여 모든 토큰을
+                                                        비활성화할 때까지 이전 토큰은 비활성화되지 않습니다.
+                                                    </p>
+                                                    <div class="border-t border-gray-700 my-4"></div>
+                                                    <div class="text-center py-2">
+                                                        <svg class="svg-icon w-24 h-24 mx-auto nostroke"><use xlink:href="#icon-no-stats"></use></svg>
+                                                        <span class="text-sm">활성화된 API 토큰이 없습니다</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con05" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab05">
+                                        <div class="bg-grey-700 text-grey-200 p-6">
+                                            <p>세션 필터</p>
+                                            <select class="form-select" style="width: auto">
+                                                <option value="">모두</option>
+                                                <option value="">활성화</option>
+                                                <option value="">비활성화</option>
+                                            </select>
+                                            <div class="overflow-x-scroll">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">브라우저</th>
+                                                            <th class="text-center">근처</th>
+                                                            <th class="text-center">IP주소</th>
+                                                            <th class="text-center">최근 사용</th>
+                                                            <th class="text-right">액션</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left">Chrome (Unknown)</td>
+                                                            <td class="text-center">KR, Deungchon-dong</td>
+                                                            <td class="text-center">123.123.1.123</td>
+                                                            <td class="text-center">11분 전</td>
+                                                            <td class="text-right">현재</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left">Chrome (Unknown)</td>
+                                                            <td class="text-center">KR, Deungchon-dong</td>
+                                                            <td class="text-center">123.123.1.123</td>
+                                                            <td class="text-center">11분 전</td>
+                                                            <td class="text-right">현재</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left">Chrome (Unknown)</td>
+                                                            <td class="text-center">KR, Deungchon-dong</td>
+                                                            <td class="text-center">123.123.1.123</td>
+                                                            <td class="text-center">11분 전</td>
+                                                            <td class="text-right">현재</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left">Chrome (Unknown)</td>
+                                                            <td class="text-center">KR, Deungchon-dong</td>
+                                                            <td class="text-center">123.123.1.123</td>
+                                                            <td class="text-center">11분 전</td>
+                                                            <td class="text-right">현재</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="flex justify-center mt-2 font-semibold">
+                                                <a class="p-2" href="javascript:;">이전</a>
+                                                <a class="p-2" href="javascript:;">다음</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con06" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab06">
+                                        <div class="bg-grey-700 text-grey-200 p-6">
+                                            <div class="overflow-x-scroll">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">액션</th>
+                                                            <th class="text-center">사용자</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center text-rose-500">무시 해제</td>
+                                                            <td class="text-center">
+                                                                <div class="flex items-center justify-center font-semibold gap-1 text-white">
+                                                                    <svg class="svg-icon" style="font-size: var(--text-size-default)"><use xlink:href="#icon-vip-platinum-3"></use></svg>
+                                                                    <span style="color: rgb(49, 121, 246); font-size: 14px; font-weight: bold">M</span>
+                                                                    asbdwt
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="flex justify-center mt-2 font-semibold">
+                                                <a class="p-2" href="javascript:;">이전</a>
+                                                <a class="p-2" href="javascript:;">다음</a>
+                                            </div>
+                                            <div class="text-center py-4">
+                                                <svg class="svg-icon nostroke w-24 h-24 mx-auto"><use xlink:href="#icon-no-ignored"></use></svg>
+                                                <span class="text-md">표시할 무시된 사용자가 없습니다 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con07" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab07">
+                                        <div class="bg-grey-700 text-grey-200 p-6 py-10">
+                                            <div id="faq-accordion-1" class="accordion">
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-1" class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="true" aria-controls="faq-accordion-collapse-1">
+                                                            1단계
+                                                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-1" class="accordion-collapse collapse show" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                                        <div class="border border-gray-700 bg-grey-600 rounded-lg max-w-[420px]">
+                                                            <div class="p-6">
+                                                                <h3 class="flex items-center text-xl text-white font-bold">인증</h3>
+                                                                <p class="mt-4 text-sm">세부 정보가 변경되면 추후 1단계 인증을 업데이트할 수 있습니다.</p>
+                                                                <div class="border-t border-gray-700 my-4"></div>
+                                                                <div class="flex items-center gap-2">
+                                                                    <div>
+                                                                        <p class="text-sm font-semibold">이름 <span class="text-[#ED4163]">*</span></p>
+                                                                        <input type="text" class="form-control mt-1" />
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="text-sm font-semibold">성 <span class="text-[#ED4163]">*</span></p>
+                                                                        <input type="text" class="form-control mt-1" />
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-sm font-semibold mt-3">생일 <span class="text-[#ED4163]">*</span></p>
+                                                                <div class="flex items-center gap-2 mt-1">
+                                                                    <div class="w-1/3">
+                                                                        <input type="text" class="form-control" placeholder="DD" />
+                                                                    </div>
+                                                                    <div class="w-1/3">
+                                                                        <select name="" id="" class="form-select">
+                                                                            <option value="">월</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="w-1/3">
+                                                                        <input type="text" class="form-control" placeholder="YYYY" />
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-sm font-semibold mt-3">국가 <span class="text-[#ED4163]">*</span></p>
+                                                                <select name="" id="" class="form-select mt-1">
+                                                                    <option value="">월</option>
+                                                                </select>
+                                                                <p class="text-sm font-semibold mt-3">거주지 주소 <span class="text-[#ED4163]">*</span></p>
+                                                                <input type="text" class="form-control mt-1" />
+                                                                <div class="flex items-center gap-2 mt-3">
+                                                                    <div>
+                                                                        <p class="text-sm font-semibold">도시 <span class="text-[#ED4163]">*</span></p>
+                                                                        <input type="text" class="form-control mt-1" />
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="text-sm font-semibold">우편 번호 <span class="text-[#ED4163]">*</span></p>
+                                                                        <input type="text" class="form-control mt-1" />
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-sm font-semibold mt-3">
+                                                                    직업 (직업/직장)
+                                                                    <span class="text-[#ED4163]">*</span>
+                                                                </p>
+                                                                <input type="text" class="form-control mt-1" />
+                                                            </div>
+
+                                                            <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                                <div class="text-sm mr-2 font-normal text-white">모든 데이터는 암호화되며, 안전하게 저장됩니다.</div>
+                                                                <button class="px-8 py-3 btn-green text-sm p-2 font-semibold">제출</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-2" class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-2">
+                                                            2단계
+                                                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-1">
+                                                        <div class="border border-gray-700 bg-grey-600 rounded-lg max-w-[420px]">
+                                                            <div class="p-6">
+                                                                <h3 class="flex items-center text-xl text-white font-bold">인증</h3>
+                                                                <p class="mt-4 text-sm">시작하기 전 최종 단계입니다.</p>
+                                                                <p class="mt-4 text-sm">신원 증명을 업로드하세요. 모든 문서는 평평한 면 위에서 프레임 안에 4개의 모서리가 모두 보이도록 촬영해야 합니다. 모든 내용은 명확하게 식별할 수 있어야 합니다.</p>
+                                                                <div class="border-t border-gray-700 my-4"></div>
+
+                                                                <p class="text-sm font-semibold">신원 증명 (앞면) <span class="text-[#ED4163]">*</span></p>
+                                                                <div class="file_input_custom">
+                                                                    <label for="file_01">
+                                                                        <span>파일 선택</span>
+                                                                        <input type="file" id="file_01" class="form-control mt-1 h-[40px]" />
+                                                                        <svg class="svg-icon" data-test="icon-upload"><use xlink:href="#icon-upload"></use></svg>
+                                                                    </label>
+                                                                </div>
+                                                                <p class="text-sm font-semibold mt-3">신원 증명 (뒷면)</p>
+                                                                <div class="file_input_custom">
+                                                                    <label for="file_02">
+                                                                        <span>파일 선택</span>
+                                                                        <input type="file" id="file_02" class="form-control mt-1 h-[40px]" />
+                                                                        <svg class="svg-icon" data-test="icon-upload"><use xlink:href="#icon-upload"></use></svg>
+                                                                    </label>
+                                                                </div>
+
+                                                                <p class="text-center text-sm text-grey-300 py-2 pt-6">
+                                                                    <i>허용되는 파일 형식은 .png, .jpg, .pdf입니다. </i>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                                <div class="text-sm mr-2 font-normal text-white">모든 데이터는 암호화되며, 안전하게 저장됩니다.</div>
+                                                                <button class="px-8 py-3 btn-green text-sm p-2 font-semibold">제출</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-3" class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-3" aria-expanded="false" aria-controls="faq-accordion-collapse-3">
+                                                            3단계
+                                                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-3" data-tw-parent="#faq-accordion-1">
+                                                        <div class="border border-gray-700 bg-grey-600 rounded-lg max-w-[420px]">
+                                                            <div class="p-6">
+                                                                <h3 class="flex items-center text-xl text-white font-bold">인증</h3>
+                                                                <p class="mt-4 text-sm text-[#ff9d00]">먼저 2단계 인증을 완료하세요.</p>
+                                                                <p class="mt-4 text-sm">신원 증명을 업로드하세요. 모든 문서는 평평한 면 위에서 프레임 안에 4개의 모서리가 모두 보이도록 촬영해야 합니다. 모든 내용은 명확하게 식별할 수 있어야 합니다.</p>
+                                                                <div class="border-t border-gray-700 my-4"></div>
+
+                                                                <p class="text-sm font-semibold">주소 인증 <span class="text-[#ED4163]">*</span></p>
+                                                                <div class="file_input_custom">
+                                                                    <label for="file_03">
+                                                                        <span>파일 선택</span>
+                                                                        <input type="file" id="file_03" class="form-control mt-1 h-[40px]" />
+                                                                        <svg class="svg-icon" data-test="icon-upload"><use xlink:href="#icon-upload"></use></svg>
+                                                                    </label>
+                                                                </div>
+
+                                                                <p class="text-center text-sm text-grey-300 py-2 pt-6">
+                                                                    <i>허용되는 파일 형식은 .png, .jpg, .pdf입니다. </i>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                                <div class="text-sm mr-2 font-normal text-white">모든 데이터는 암호화되며, 안전하게 저장됩니다.</div>
+                                                                <button class="px-8 py-3 btn-green text-sm p-2 font-semibold">제출</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-4" class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-4" aria-expanded="false" aria-controls="faq-accordion-collapse-4">
+                                                            4단계 <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-4" data-tw-parent="#faq-accordion-1">
+                                                        <div class="border border-gray-700 bg-grey-600 rounded-lg max-w-[420px]">
+                                                            <div class="p-6">
+                                                                <h3 class="flex items-center text-xl text-white font-bold">인증</h3>
+                                                                <p class="mt-4 text-sm text-[#ff9d00]">먼저 3단계 인증을 완료하세요.</p>
+                                                                <p class="mt-4 text-sm">
+                                                                    자금 출처를 증빙할 수 있는 서류를 업로드하세요. 문서를 평평한 면에 놓고 네 모서리가 모두 이미지 안에 들어오게 촬영해야 하며, 모든 내용을 명확하게 식별할 수 있어야 합니다.
+                                                                </p>
+                                                                <div class="border-t border-gray-700 my-4"></div>
+
+                                                                <p class="text-sm font-semibold">자금 출처 <span class="text-[#ED4163]">*</span></p>
+                                                                <div class="file_input_custom">
+                                                                    <label for="file_03">
+                                                                        <span>파일 선택</span>
+                                                                        <input type="file" id="file_03" class="form-control mt-1 h-[40px]" />
+                                                                        <svg class="svg-icon" data-test="icon-upload"><use xlink:href="#icon-upload"></use></svg>
+                                                                    </label>
+                                                                </div>
+
+                                                                <p class="text-center text-sm text-grey-300 py-2 pt-6">
+                                                                    <i>허용되는 파일 형식은 .png, .jpg, .pdf입니다. </i>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                                <div class="text-sm mr-2 font-normal text-white">모든 데이터는 암호화되며, 안전하게 저장됩니다.</div>
+                                                                <button class="px-8 py-3 btn-green text-sm p-2 font-semibold">제출</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con08" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab08">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">가입 혜택</h3>
+                                                    <p class="mt-4 text-sm">가입 혜택은 가입 후 처음 24시간 동안만 유효합니다.</p>
+                                                    <div class="border-t border-gray-700 my-4"></div>
+                                                    <p class="text-sm font-semibold">코드 <span class="text-[#ED4163]">*</span></p>
+                                                    <input type="text" class="half input mt-1 form-control pr-10 font-semibold" readonly />
+                                                </div>
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">제출</button>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-10">
+                                                <div class="p-6">
+                                                    <h3 class="flex items-center text-xl text-white font-bold">보너스 드랍 받기</h3>
+                                                    <p class="mt-4 text-sm">당사 SNS(트위터 & 텔레그램)에서 보너스 드랍 코드를 찾아보세요.</p>
+                                                    <div class="border-t border-gray-700 my-4"></div>
+                                                    <p class="text-sm font-semibold">코드 <span class="text-[#ED4163]">*</span></p>
+                                                    <input type="text" class="half input mt-1 form-control pr-10 font-semibold" />
+                                                </div>
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-end">
+                                                    <button class="py-3 px-10 btn-green text-sm p-2 font-semibold opacity-60 hover:opacity-100">제출</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>
