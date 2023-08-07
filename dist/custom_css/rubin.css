@@ -178,6 +178,13 @@
     .draggable_modal_header{
         cursor: move;
     }
+    .toggle_div{
+        display: none;
+    }
+    .statistics_reset{
+        display: none;
+    }
+
     /*
     #=========================================#
             스와이퍼 커스터마이징

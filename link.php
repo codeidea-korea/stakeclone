@@ -76,6 +76,7 @@ echo txtRecord('./@record/');
 				<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#user_modal">유저 모달</button></li>
 				<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#game_modal">게임 모달</button></li>
 				<li><button class="ghost_mode pop-modal">고스트모드 얼럿</button></li>
+				<li><button class="draggable_modal_open pop-modal">실시간통계</button></li>
 			</ul>
 		</li>
 		<li class="mt50" data-label="casino">
@@ -473,10 +474,128 @@ echo txtRecord('./@record/');
 </div>
 <!-- 고스트모드 얼럿 -->
 
+<!-- 실시간 통계 모달 -->
+<div class="draggable_modal w-[280px] transition-all">
+	<div class="draggable_modal_header px-3 py-2 flex items-center bg-grey-600 rounded-t-md">
+		<div class="flex items-center gap-1">
+			<span><svg><use xlink:href="#icon-stats"></use></svg></span>
+			<span>실시간 통계</span>
+		</div>
+		<button class="draggable_modal_close ml-auto"><svg><use xlink:href="#icon-cross"></use></svg></button>
+	</div>
+	<div class="bg-grey-400 rounded-b-md p-3">
+		<div class="flex items-center">
+			<div class="select_custom" style="z-index: 10;">
+				<button class="select_toggle_btn">
+					<p>
+						<span>레이스</span>
+						<svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+					</p>
+				</button>
+				<div class="option_box click_option click_main">
+					<button>
+						<p>
+							<span>모두</span>
+						</p>
+					</button>
+					<button>
+						<p>
+							<span>배팅</span>
+						</p>
+					</button>
+					<button class="active">
+						<p>
+							<span>레이스</span>
+						</p>
+					</button>
+					<button >
+						<p>
+							<span>hide</span>
+						</p>
+					</button>
+				</div>
+			</div>
+			<div class="statistics_reset ml-auto">
+				<button class="tooltip" data-theme="light" title="실시간 통계 초기화"><span><svg><use xlink:href="#icon-rotate"></use></svg></span></button>
+			</div>
+		</div>
+		
+		<div id="toggleDiv1" class="toggle_div">
+			<div class="mt-3">
+				<div class="select_custom w-full">
+					<button class="select_toggle_btn" style="width:100%;">
+						<p class="flex items-center">
+							<span class="text-sm">모두</span>
+							<svg class="svg-icon ml-auto"><use xlink:href="#icon-arrowdown"></use></svg>
+						</p>
+					</button>
+					<div class="option_box click_option">
+						<button class="active">
+							<p>
+								<span>모두</span>
+							</p>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="mt-3 bg-grey-700 rounded-md p-3">
+				<div class="flex items-center justify-center">
+					<div class="flex flex-col gap-1 pr-3 w-full">
+						<span class="font-semibold">이익</span>
+						<div class="flex items-center gap-1">
+							<span class="text-green-400 font-bold">0.00000000</span>
+							<svg><use xlink:href="#icon-currency-btc"></use></svg>
+						</div>
+						<span class="font-semibold">배팅</span>
+						<div class="flex items-center gap-1">
+							<span class="text-white font-bold">0.00000000</span>
+							<svg><use xlink:href="#icon-currency-btc"></use></svg>
+						</div>
+					</div>
+					<div class="border-l border-grey-400 pl-3 flex flex-col w-full gap-1">
+						<span class="font-semibold">승리</span>
+						<span class="text-green-400 font-bold">0</span>
+						<span class="font-semibold">손실</span>
+						<span class="text-red-500 font-bold">0</span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-3 bg-grey-700 rounded-md p-3 h-[220px]">
+
+			</div>
+		</div>
+		<div id="toggleDiv2" class="toggle_div">
+			<div class="mt-3 bg-grey-700 p-3 rounded-md">
+				<div class="select_custom">
+					<button class="select_toggle_btn" style="padding:0;height:auto;">
+						<p>
+							<span class="text-sm">$100,000 레이스 - 24시간</span>
+							<svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+						</p>
+					</button>
+					<div class="option_box click_option">
+						<button class="active">
+							<p>
+								<span>$100,000 레이스 - 24시간</span>
+							</p>
+						</button>
+					</div>
+				</div>
+				<div class="p-3 h-[93px] flex justify-center items-center">
+					<span class="font-bold text-grey-200">레이스에 참가하려면 베팅하세요!</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 실시간 통계 모달 끝-->
+
 <!-- ** 모달 끝 ** -->
 
 <script src='https://design01.codeidea.io/link_script.js'></script>
 <script src="./dist/js/app.js"></script>
+<script src="./dist/js/jquery-ui.js"></script>
+
 <script>
 	jQuery(document).ready(function() {
 		jQuery('.ghost_mode').click(function() {
@@ -484,6 +603,129 @@ echo txtRecord('./@record/');
 		});
 		jQuery('.ghost-btn-close').click(function(){
 			jQuery('#Ghost_alert').removeClass('show');
+		});
+	});
+
+
+	jQuery(".select_custom .select_toggle_btn").on("click", function (e) {
+		jQuery(".select_custom .option_box").hide();
+		jQuery(".select_custom .select_toggle_btn").removeClass("active");
+
+		jQuery(this).next(".option_box").toggle();
+		jQuery(this).toggleClass("active");
+	});
+
+	// 바깥 클릭했을때 option 닫기
+	jQuery("body").on("click", function (e) {
+		if (!jQuery(e.target).closest(".select_custom").length) {
+			jQuery(".select_custom .option_box").hide();
+			jQuery(".select_custom .select_toggle_btn").removeClass("active");
+		}
+	});
+
+	// option 클릭했을때 값 변경, option_box 닫기
+	jQuery(".select_custom .click_option.option_box button").on("click", function () {
+		const value = jQuery(this).find("span").text();
+
+		if (jQuery(this).parents(".option_box").hasClass("language_option")) {
+			// 채팅 > 언어 클릭시
+			const img = jQuery(this).find("i").html();
+			jQuery(this)
+				.parents(".select_custom")
+				.find(".select_toggle_btn span")
+				.html(img + "Stake: " + value);
+		} else {
+			jQuery(this).parents(".select_custom").find(".select_toggle_btn span").text(value);
+		}
+
+		jQuery(this).addClass("active").siblings().removeClass("active");
+		jQuery(this).parents(".option_box").hide();
+		jQuery(this).parents(".select_custom").find(".select_toggle_btn").removeClass("active");
+	});
+
+	// input check 했을 때,
+	jQuery(".select_custom .input_option.option_box input").on("change", function () {
+		if (jQuery(this).prop("checked")) {
+			jQuery(this).parents("button").addClass("active");
+			jQuery(this).parents("button").siblings().addClass("off");
+		} else {
+			jQuery(this).parents("button").removeClass("active");
+		}
+
+		let checked = 0;
+		jQuery(this)
+			.parents(".option_box")
+			.find("button")
+			.each(function (index, item) {
+				if (jQuery(item).find("input").prop("checked")) {
+					checked += 1;
+				}
+			});
+		if (checked > 0) {
+			jQuery(this).parents(".select_custom").find(".select_toggle_btn span i").addClass("on").text(checked);
+		} else {
+			jQuery(this).parents(".select_custom").find(".select_toggle_btn span i").removeClass("on");
+		}
+	});
+
+	jQuery(".select_custom .input_option.option_box .clear_btn").on("click", function () {
+		jQuery(this).parents(".select_custom").find(".select_toggle_btn").removeClass("active");
+		jQuery(this).parents(".select_custom").find(".select_toggle_btn span i").removeClass("on").text("");
+		jQuery(this).parents(".select_custom").find(".option_box").hide();
+		jQuery(this)
+			.parents(".option_box")
+			.find("button")
+			.each(function (index, item) {
+				jQuery(item).removeClass("active off");
+				jQuery(item).find("input").prop("checked", false);
+			});
+	});
+	
+
+	 // 드래그
+	 jQuery(document).ready(function() {
+		const DraggModal = jQuery(".draggable_modal");
+		
+		jQuery('.draggable_modal_open').on('click', function() {
+			DraggModal.addClass('show');
+			jQuery("#toggleDiv2").show();
+
+			// show 클래스가 추가된 후 300ms 지연
+			setTimeout(function() {
+				DraggModal.removeClass('transition-all');
+			}, 200);
+		});
+		
+		DraggModal.draggable({ handle: ".draggable_modal_header" });
+		
+		jQuery('.draggable_modal_close').on('click', function() {
+			DraggModal.removeClass('show');
+			DraggModal.addClass('transition-all');
+		});
+
+		jQuery(".click_main button").click(function(event) {
+			// 클릭된 버튼에 "active" 클래스 추가, 다른 버튼에서 제거
+			jQuery(".click_main button").removeClass("active");
+			jQuery(this).addClass("active");
+
+			var index = jQuery(this).index();
+
+			// 기본적으로 모든 div를 숨깁니다.
+			jQuery("#toggleDiv1, #toggleDiv2, .statistics_reset").hide();
+
+			// index에 따라 필요한 div를 표시합니다.
+			if (index === 0 || index === 1) {
+				jQuery("#toggleDiv1").show();
+				jQuery(".statistics_reset").show();
+			}
+			if (index === 0 || index === 2) {
+				jQuery("#toggleDiv2").show();
+			}
+
+			// 특별한 케이스를 처리합니다.
+			if (index === 3) {
+				DraggModal.removeClass('show');
+			}
 		});
 	});
 </script>
