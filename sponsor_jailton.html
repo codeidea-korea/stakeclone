@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="flex items-center bg-grey-700">
+                        <div class="container flex py-4 lg:py-0 items-center flex-wrap lg:flex-nowrap">
+                            <div class="px-4 lg:px-0">
+                                <h3 class="text-3xl font-bold">자일턴 알메이다</h3>
+                                <h3 class="text-2xl font-medium text-grey-200 mt-2">'Malhadinho'</h3>
+                            </div>
+                            <img class="mx-auto lg:mr-0 lg:ml-auto w-2/3 lg:w-1/3" src="./dist/custom_img/sponsor/jailton_logo.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="container mt-10 text-grey-200">
+                        <div class="flex items-top gap-10 flex-wrap lg:flex-nowrap flex-col-reverse lg:flex-row">
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">화려한 경기력</h5>
+                                <p class="mt-2 text-base">
+                                    UFC와의 스폰서십을 계속 이어나가면서, 항상 가장 훌륭한 재능과 강렬한 개성을 보유하고 있는 선수를 발굴하기 위해 노력하고 있습니다. 이에 브랜드 홍보대사로 자일턴 알메이다를 선정하게 되었습니다. 이 선수는 2022년 UFC에서
+                                    도전자의 모습이 아닌, 마치 챔피언을 기다리는 듯한 화려한 경기력으로 경기를 진행했던 세 경기 모두 1라운드 승리를 기록했습니다.
+                                </p>
+                                <h5 class="text-2xl font-bold text-white mt-6">주목할 만한 선수</h5>
+                                <p class="mt-2 text-base">
+                                    알메이다는 브라질 살바도르에서 태어나 브라질 출신 선수인 다닐로 마르케스를 TKO 승으로 쓰러트리고, 헤비급로 올라가 파커 포터와의 경기에서 1라운드 서브미션 승을 거뒀습니다. UFC 279에서는 안톤 투르칼리와의 경기에서 서브미션
+                                    승을 기록했습니다. 'Malhadinho'는 라이트 헤비급과 헤비급에서 굉장히 주목받는 선수입니다. 우리는 이 선수가 도전하고, 랭킹을 올리는 모든 순간마다 함께하겠습니다.
+                                </p>
+                            </div>
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/jailton_img01.jpeg" alt="" /></div>
+                        </div>
+                        <div class="flex items-top gap-10 mt-10 flex-wrap lg:flex-nowrap">
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/jailton_img02.jpeg" alt="" /></div>
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">거물, 그리고 최강</h5>
+                                <p class="mt-2 text-base">
+                                    이 선수는 2022년 MMA Fighting에서 올해의 신인상을 수상했습니다. 지금까지의 업적을 보면, 그의 경이로운 ko 실력과 어마어마한 속도, 그래플링 능력 때문에 많은 사람들이 2023년에는 순위를 올리고, 스포츠계의 거물들과도 대결하는
+                                    모습을 보고 싶어합니다.
+                                </p>
+                                <h5 class="text-2xl font-bold text-white mt-6">신나는 여정</h5>
+                                <p class="mt-2 text-base">알메이다의 팬 여러분, 당사 플랫폼에 오신 것을 진심으로 환영합니다. 옥타곤에서의 경이로운 에너지를 독점 액세스 및 획기적인 프로모션에 적용하여 점점 더 매력적으로 느끼실 수 있도록 노력하겠습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-grey-700">
+                        <div class="container mt-10 py-8">
+                            <div class="flex items-center justify-around flex-wrap lg:flex-nowrap">
+                                <div class="text-grey-200 text-xl font-medium">놀라운 UFC 시장</div>
+                                <button class="btn btn-gray active_eff h-[48px] text-md px-4 mt-2 lg:mt-0">
+                                    오늘 MMA에 베팅해 보세요
+                                    <svg class="svg-icon ml-1 w-2.5 h-2.5"><use xlink:href="#icon-popout"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>

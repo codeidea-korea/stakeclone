@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="flex items-center bg-grey-700">
+                        <div class="container flex py-4 lg:py-2 items-center flex-wrap lg:flex-nowrap">
+                            <div class="px-4 lg:px-0">
+                                <h3 class="text-3xl font-bold">에버튼 풋볼 클럽</h3>
+                                <h3 class="text-2xl font-medium text-grey-200 mt-2">메인 파트너</h3>
+                            </div>
+                            <img class="mx-auto lg:mr-0 lg:ml-auto w-2/3 lg:w-1/3" src="./dist/custom_img/sponsor/everton_logo.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="container mt-10 text-grey-200">
+                        <div class="flex items-top gap-10 flex-wrap lg:flex-nowrap flex-col-reverse lg:flex-row">
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">메인 파트너</h5>
+                                <p class="mt-2 text-base">
+                                    Stake.com이 에버턴 풋볼 클럽의 메인 파트너가 되었음을 알려드리게 되어 기쁩니다. 이 계약을 통해 앞으로 몇 년동안 클럽의 남성과 여성 셔츠에 Stake 로고를 보게 될 것입니다. 우리는 에버턴이 역사적인 Goodison 파크에서 열리는
+                                    마지막 시즌에 접어들면서 클럽 역사상 중요한 시기에 파트너가 되어 새로운 워터프런트 경기장에서 삶의 미래를 내다보고 있습니다.
+                                </p>
+                                <h5 class="text-2xl font-bold text-white mt-6">레전드 플레이어</h5>
+                                <p class="mt-2 text-base">
+                                    9개의 최고 리그 타이틀, 5개의 FA컵, 그리고 1개의 유러피언 컵 우승컵을 가진 에버턴은 경기에서 가장 상징적인 스토리가 있는 클럽 중 하나입니다. 영국의 가장 전설적인 선수들 중 일부인 Gary Lineker, Paul Gascoigne Wayne Rooney는
+                                    유명한 로열 블루 저지를 입은 가장 빛나는 스타들 중 일부일 뿐입니다. 국제적인 스타들과 자국 내 재능의 흥미로운 조합으로, 토피는 경기장 안팎에서 기대할 수 있는 엄청난 양을 가지고 있습니다. Stake.com은 클럽의 흥미로운 미래에
+                                    빨리 참여하고 싶습니다..
+                                </p>
+                            </div>
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/everton_img01.jpeg" alt="" /></div>
+                        </div>
+                        <div class="flex items-top gap-10 mt-10 flex-wrap lg:flex-nowrap">
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/everton_img02.jpeg" alt="" /></div>
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">엄청난 성장</h5>
+                                <p class="mt-2 text-base">에버턴의 최고 경영자인 Denise Barrett-Baxendale 교수는 다음과 같이 말했습니다: Stake.com은 성장 계획이 인상적인 열정적 조직이며, 이 단계에서 파트너십을 맺게 되어 매우 기쁘게 생각합니다.</p>
+                                <p class="mt-2 text-base">"저는 우리가 이미 Stake.com와 함께 지역 및 국제적인 서포터들을 위한 흥미로운 활동과 콘텐츠에 대해 협력하고 있다는 것을 기쁘게 생각하며, 우리는 곧 이러한 계획에 대해 더 자세히 공유하기를 기대합니다."</p>
+                                <p class="mt-2 text-base">
+                                    Stake.com는 또한 이 파트너십을 자신들의 분야에서 최고가 되려는 높은 야망을 가진 두 엘리트 조직 간의 멋진 매칭으로 보고 있으며, 우리는 다가오는 시즌 동안 에버턴이 그들의 야망을 달성할 수 있도록 돕기 위해 모든 역량을 다할
+                                    것입니다.
+                                </p>
+                                <h5 class="text-2xl mt-4 font-bold text-white">우리는 무엇을 돕나요?</h5>
+                                <p class="mt-2 text-base">
+                                    두 야망에 찬 브랜드들이 함께 모이면서, 우리는 에버턴의 충실한 사람들과 함께 배를 타고 그들의 클럽의 중심부를 향해 더욱 가까워지고 싶습니다. 선수들에 대한 비하인드 더 씬 접근, VIP 경험, 매치데이 기브어웨이, 놀라운 프로모션,
+                                    그리고 훨씬 더 많은 것들로 말이죠. 다가오는 시즌은 에버턴 팬들과 Stake 플레이어들 모두에게 훌륭한 경험이 될 것입니다. 여정은 이제부터 시작됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-grey-700">
+                        <div class="container mt-10 py-8">
+                            <div class="flex items-center justify-around">
+                                <div class="text-grey-200 text-xl font-medium">토피 지원하기</div>
+                                <button class="btn btn-gray active_eff h-[48px] text-md px-4">
+                                    지금 베팅하세요!
+                                    <svg class="svg-icon ml-1 w-2.5 h-2.5"><use xlink:href="#icon-popout"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>

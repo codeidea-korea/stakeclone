@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="flex items-center py-20 bg-grey-700">
+                        <div class="container flex items-center">
+                            <img class="mx-auto" src="./dist/custom_img/sponsor/drake.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <p class="py-10 font-bold text-2xl text-center">플레이어에서 파트너가 되기까지</p>
+                        <ul class="drake_list">
+                            <li>
+                                <a href="javascript:;">
+                                    <video playsinline="" loop="" id="video_obj" src="./dist/custom_img/sponsor/drake_video01.mp4"></video>
+                                    <div class="overlay" onClick="videoHandle('video_obj')">
+                                        <button>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-play"></use></svg>
+                                        </button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <video playsinline="" loop="" id="video_obj2" src="./dist/custom_img/sponsor/drake_video02.mp4"></video>
+                                    <div class="overlay" onClick="videoHandle('video_obj2')">
+                                        <button>
+                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-play"></use></svg>
+                                        </button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="https://mediumrare.imgix.net/drake-story-7.jpg?&dpr=3&format=auto&auto=format&q=50" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="https://mediumrare.imgix.net/drake-story-7.jpg?&dpr=3&format=auto&auto=format&q=50" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="https://mediumrare.imgix.net/drake-story-7.jpg?&dpr=3&format=auto&auto=format&q=50" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="https://mediumrare.imgix.net/drake-story-7.jpg?&dpr=3&format=auto&auto=format&q=50" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="https://mediumrare.imgix.net/drake-story-7.jpg?&dpr=3&format=auto&auto=format&q=50" alt="" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="container mt-10 text-grey-200">
+                        <div class="flex items-center gap-10 flex-wrap lg:flex-nowrap">
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/drake_img01.avif" alt="" /></div>
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">실시간 스트리밍 경품</h5>
+                                <p class="mt-4">Stake와 Drake는 콜라보를 통해 팬 및 유저 모두 Drake와 함께 승리를 거머쥘 수 있도록 상호 연결될 수 있는 저녁 행사를 진행하고, 이를 통해 유저에게 완전히 새로운 게임 경험을 제공하고자 합니다.</p>
+                                <p class="mt-4">해당 이벤트에 참여하려면 <a class="text-white font-bold" href="mailTo:winwiththeboy@stake.com">winwiththeboy@stake.com</a>로 전화번호와 사용자명을 작성하여 이메일을 보내주세요.</p>
+                                <p class="mt-4">역대급 규모의 경품을 확인하실 수 있습니다. 절대 놓치지 마세요. 실시간 스트리밍에 관한 자세한 내용은 곧 공개됩니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-10 mt-10 flex-wrap lg:flex-nowrap">
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">History</h5>
+                                <p class="mt-4">
+                                    힙합계의 센세이션을 불러일으키는 Drake는 Stake 커뮤니티에서 오래 전부터 활동했습니다. Drake는 VIP 프로그램의 랭크를 뒤흔드는 플레이어로 활동하면서, 플랫폼 및 VIP 프로그램과 관련된 특전에 매력을 느꼈습니다. 그때부터
+                                    슈퍼스타와 상품이 서로의 진가를 알아보았고, 이를 바탕으로 파트너십을 형성하게 되었습니다.
+                                </p>
+                            </div>
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/drake_img02.avif" alt="" /></div>
+                        </div>
+                        <div class="my-10">
+                            <h5 class="text-2xl font-bold text-white">Drake의 픽</h5>
+                            <p class="mt-4">Drake가 가장 좋아하는 게임과 스포츠를 찾아보고, Drizzy의 플레이스타일에 빠져보세요.</p>
+                            <div class="flex gap-10 items-center mt-4 flex-wrap lg:flex-nowrap">
+                                <div class="w-full lg:w-1/2">
+                                    <img src="./dist/custom_img/sponsor/drake_img03.avif" alt="" />
+                                    <button class="btn btn-gray w-full mt-2 active_eff h-[48px] font-semibold">Drake가 가장 좋아하는 룰렛</button>
+                                </div>
+                                <div class="w-full lg:w-1/2">
+                                    <img src="./dist/custom_img/sponsor/drake_img04.avif" alt="" />
+                                    <button class="btn btn-gray w-full mt-2 active_eff h-[48px] font-semibold">Drake가 가장 좋아하는 NBA</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <script>
+            // play 버튼 클릭시 영상재생
+            const videoHandle = (item) => {
+                const video = document.getElementById(item);
+                if (video.nextElementSibling.classList.contains("off")) {
+                    video.pause();
+                    video.nextElementSibling.classList.remove("off");
+                } else {
+                    video.play();
+                    video.nextElementSibling.classList.add("off");
+                }
+            };
+        </script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>

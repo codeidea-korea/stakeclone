@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="flex items-center bg-grey-700">
+                        <div class="container flex py-4 lg:py-0 items-center flex-wrap lg:flex-nowrap">
+                            <div class="px-4 lg:px-0">
+                                <h3 class="text-3xl font-bold">Fittipaldi 형제</h3>
+                                <h3 class="text-2xl font-medium text-grey-200 mt-2">Pietro & Enzo Fittipaldi</h3>
+                            </div>
+                            <img class="mx-auto lg:mr-0 lg:ml-auto w-2/3 lg:w-1/3" src="./dist/custom_img/sponsor/fittipaldi_logo.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="container mt-10 text-grey-200">
+                        <div class="flex items-top gap-10 flex-wrap lg:flex-nowrap flex-col-reverse lg:flex-row">
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">전 세계적으로 알려진 선수</h5>
+                                <p class="mt-2 text-base">
+                                    Fittipaldi는 모터스포츠 팬에게 있어 전 세계적으로 유명한 이름이며, 이제 Stake 플레이어도 알게 될 겁니다. Emerson Fittipaldi는 포뮬러 원 세계 챔피언을 두 번이나 따냈으며, 현재는 손자인 Pietro와 Enzo가 이를 이어받아 더 큰
+                                    업적을 이루기 위해 노력하고 있습니다. Stake.com은 Stake의 가족이 된 Pietro와 Enzo 모두를 환영하며, 이들의 통찰력을 당사 플레이어와 함께 공유할 수 있기를 바랍니다.
+                                </p>
+                                <h5 class="text-2xl font-bold text-white mt-6">F1 & 인디 500에서의 경쟁</h5>
+                                <p class="mt-2 text-base">
+                                    Pietro는 부상당한 Romain Grosjean을 대신해 2020년 F1 데뷔전을 치렀습니다. 지난 시즌 이 브라질 선수는 Haas F1 팀 예비 선수로서의 역할과, 텍사스 및 세계적으로 유명한 인디500 모두에서 경쟁하는 2021 인디 카 시리즈에서 성공적인
+                                    시즌을 함께했습니다.
+                                </p>
+                            </div>
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/fittipaldi_img01.jpeg" alt="" /></div>
+                        </div>
+                        <div class="flex items-top gap-10 mt-10 flex-wrap lg:flex-nowrap">
+                            <div class="w-full lg:w-1/2"><img src="./dist/custom_img/sponsor/fittipaldi_img02.jpeg" alt="" /></div>
+                            <div class="w-full lg:w-1/2">
+                                <h5 class="text-2xl font-bold text-white">팬들이 기대할 수 있는 부분은?</h5>
+                                <p class="mt-2 text-base">
+                                    Pietro 및 F2 드라이버인 Enzo는 컨텐츠 공동 제작 및 정기적인 Kick 스트리밍을 통해 그들만의 F1에 대한 특별한 관점을 함께합니다. 이 스트리밍에서는 트랙 안팎에서의 모든 활동을 볼 수 있으며, 환상적인 Formula One 프로모션이
+                                    진행됩니다. 그렇기에, 이번 시즌은 확실히 놀라운 시즌이 될 겁니다. Stake는 브라질뿐만 아니라 전 세계의 모터스포츠 팬을 환영합니다. 여러분도 함께 베팅 커뮤니티를 즐겨 보세요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-grey-700">
+                        <div class="container mt-10 py-8">
+                            <div class="flex items-center justify-around flex-wrap lg:flex-nowrap">
+                                <div class="text-grey-200 text-xl font-medium">Fittipaldi 형제와 함께 모터스포츠에 베팅해 보세요</div>
+                                <button class="btn btn-gray active_eff h-[48px] text-md px-4">
+                                    지금 베팅하세요!
+                                    <svg class="svg-icon ml-1 w-2.5 h-2.5"><use xlink:href="#icon-popout"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>

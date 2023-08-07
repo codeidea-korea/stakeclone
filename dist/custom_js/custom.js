@@ -19,8 +19,6 @@ fetch("/stakeclone/_casino_left.html")
     .then((htmlData) => {
         const left = document.querySelector(".left_sidebar");
         left.innerHTML = htmlData;
-
-        leftMenuHandle();
     })
     .catch((error) => {
         console.log(error);
@@ -44,6 +42,7 @@ fetch("/stakeclone/_right_bar.html")
     .then((response) => response.text())
     .then((html) => {
         $(".right-sidebar").html(html);
+
         customJquery();
         leftMenuHandle();
     })

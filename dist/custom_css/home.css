@@ -1,0 +1,86 @@
+/* 스폰서쉽 */
+.drake_list {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+}
+.drake_list li {
+    position: relative;
+    width: 190px;
+    padding: 50px 0 10px;
+    border-radius: 5px;
+}
+.drake_list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: calc(100% + 30px);
+    height: 1px;
+    background: #2f4553;
+}
+.drake_list li:last-of-type:before {
+    width: 100%;
+}
+.drake_list li:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    background: #2f4553;
+    border-radius: 50%;
+}
+
+.drake_list li a {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border: 2px solid #2f4553;
+    border-radius: 5px;
+}
+.drake_list li .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.drake_list li .overlay.off {
+    opacity: 0;
+}
+.drake_list li .overlay button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+.drake_list li .overlay svg {
+    width: 40px;
+    height: 40px;
+}
+.drake_list li video,
+.drake_list li img {
+    display: block;
+    width: 186px;
+    max-width: 186px;
+}
+
+.video_wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.video_wrapper iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
