@@ -84,3 +84,39 @@
     width: 100%;
     height: 100%;
 }
+
+/* 좌우 분리 */
+.setting_left_tab .active {
+    border-left: 3px solid #1475e1;
+    background-color: #071824;
+}
+
+svg.nostroke {
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.setting_right_wrap > div {
+    width: 100% !important;
+}
+@media all and (max-width: calc(1260px)) {
+    .content.right_open .setting_left_wrap,
+    .content.right_open .setting_left_wrap + div {
+        grid-column: span 12 / span 12;
+    }
+    .content.right_open .setting_left_tab {
+        display: none;
+    }
+    .content.right_open .setting_left_tab + div {
+        display: block;
+    }
+}
+@media all and (max-width: calc(767px)) {
+    .content .setting_left_tab {
+        display: none;
+    }
+    .content .setting_left_tab + div {
+        display: block;
+    }
+}

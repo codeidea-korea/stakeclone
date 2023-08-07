@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="container py-6">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-bold flex items-center">
+                                <svg class="svg-icon text-grey-200 mr-2"><use xlink:href="#icon-verify"></use></svg> 책임질 수 있는 도박
+                            </h2>
+                            <a href="javascript:;">
+                                <svg class="svg-icon text-grey-200"><use xlink:href="#icon-cross"></use></svg>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-6 mt-4">
+                            <div class="col-span-12 md:col-span-3 lg:col-span-2 setting_left_wrap">
+                                <ul class="bg-grey-700 py-2 rounded font-semibold setting_left_tab" role="tablist">
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">Stake 세이프</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false">본인 차단</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false">도박 한도</button>
+                                    </li>
+                                </ul>
+                                <div class="hidden">
+                                    <button class="bg-grey-700 text-center w-11 h-11 rounded" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-arrowleft"></use></svg>
+                                    </button>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>Stake 세이프</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option">
+                                            <button class="text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                                <p>
+                                                    <span>Stake 세이프</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="true">
+                                                <p>
+                                                    <span>본인 차단</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="true">
+                                                <p>
+                                                    <span>도박 한도</span>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-12 md:col-span-9 lg:col-span-10">
+                                <div class="tab-content setting_right_wrap">
+                                    <div id="tab_con01" class="tab-pane leading-relaxed active w-full" role="tabpanel" aria-labelledby="tab01">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <h3 class="text-3xl text-white font-bold">Stake Safe</h3>
+                                            <p class="mt-2">Stake is committed to providing a safe environment for all its players to gamble with us, which is why it’s so important to Stake Safe!</p>
+                                            <p class="mt-2">Online casino gambling should be a form of entertainment that should not cause harm to other areas of your life.</p>
+                                            <p class="mt-3">Stake does this through:</p>
+                                            <p class="mt-2"></p>
+                                            <ul class="list-disc pl-4">
+                                                <li>Providing information to customers regarding their play and spend so they can make informed decisions about their gambling.</li>
+                                                <li class="mt-2">Having safer gambling tools available in (such as limits, breaks and self-exclusions) that are available to all customers to place on their account at any time.</li>
+                                                <li class="mt-2">Providing information regarding external support to assist with preventing gambling harm and problem gambling.</li>
+                                                <li class="mt-2">A Customer Service Team available 24/7 to assist with safer gambling enquiries.</li>
+                                                <li class="mt-2">Ensuring minors are not able to create Stake.com accounts.</li>
+                                            </ul>
+                                            <h3 class="text-3xl text-white font-bold mt-6">What is safe gambling?</h3>
+                                            <p class="mt-2">Understanding about safe gambling is key to making sure you are maximising the Stake.com experience.</p>
+                                            <p class="mt-3">Tips to gambling safely are:</p>
+                                            <ul class="list-disc pl-4">
+                                                <li>Your gambling is balanced with other recreational activities/pastimes you have.</li>
+                                                <li class="mt-2">Before you start to gamble, you have a plan in mind of how much you want to spend gambling, and how long you will be gambling for.</li>
+                                                <li class="mt-2">Betting with money that is affordable to you.</li>
+                                                <li class="mt-2">Taking breaks or stopping gambling for the day.</li>
+                                                <li class="mt-2">Understanding the odds and knowing the risks associated with gambling.</li>
+                                                <li class="mt-2">Not being overly upset and angry by losses when you are gambling.</li>
+                                            </ul>
+                                            <h3 class="text-3xl text-white font-bold mt-6">Knowing the odds</h3>
+                                            <p class="mt-2">There are a lot of myths and misconceptions about gambling - understanding the odds of gambling helps put the chances of winning into perspective.</p>
+                                            <p class="mt-2">Stake offers two products, Casino and Sportsbook.</p>
+                                            <p class="mt-2">Both products have different win rates and probability that players need to be aware of, which will help to understand the risks associated with gaming.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">House Advantage/House Edge</h3>
+                                            <p class="mt-2">Games have a house edge to ensure a percentage of the total amount wagered is returned to the House, which in this case is Stake.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Randomness</h3>
+                                            <p class="mt-2">All gambling has an element of randomness - there is no way to control the outcome of any casino game or sporting event.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Independent Outcomes</h3>
+                                            <p class="mt-2">Games/Spins are not related. Their outcomes are not dependent on how much, or how long, you’ve previously played the game for.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Odds and Probability</h3>
+                                            <p class="mt-2">Odds and probability are ways to describe your chances of winning. Whilst the odds can appear to be low, there are no certainties in betting.</p>
+                                            <h3 class="text-3xl text-white font-bold mt-6">Ways we can help you stay Stake Safe!</h3>
+                                            <p class="mt-2">Stake is committed to promoting players to consider their own activity, whilst providing the tools they need to ensure they are in control, and playing with money they can afford.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Using safer gambling tools on your account</h3>
+                                            <p class="mt-2">Stake has a range of tools that can be applied to your account to set safe limits for you to play within.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Gambling Limits</h3>
+                                            <p class="text-sm mt-6 text-white">Loss limit</p>
+                                            <p class="mt-2">
+                                                A loss limit allows you to set a limit on how much you can afford to lose over your set period of time. The limit can be set over a period of one day, one week or one month. It is a net loss limit. Profits made
+                                                during your set period will not count towards your limit amount. If you are profitable during the set period, you are able to use your profits to continue to wager and bet until you reach your loss limit.
+                                                Unsettled bets count towards the limit. Please check your unsettled bets if you are unable to place bets, as these unsettled bets may be causing you to reach your limit.
+                                            </p>
+                                            <p class="text-sm mt-6 text-white">Wager limit</p>
+                                            <p class="mt-2">
+                                                A wager limit (or betting limit) allows you to set a limit on how much you can wager over your set period of time. The maximum bet limit can be set over a period of one day, one week or one month. The limit is
+                                                not a net limit so profits are excluded. This means, if you are profitable during the period these profits are not offset against your maximum bet limit.
+                                            </p>
+                                            <p class="mt-2">
+                                                To increase or decrease your limits you must remove existing limits and create new limits. Upon removing limits a 24-hour cool off period will commence before you are able to create your new limit.
+                                            </p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Self-Exclusion</h3>
+                                            <p class="mt-2">
+                                                Lock yourself out of your Stake.com for a longer period of time if gambling is becoming a concern for you. You can opt for a 6 month, 1 year, 2 year and 5 year self exclusion. If you would like detailed
+                                                information about how self exclusion works, please click here .
+                                            </p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Gamban</h3>
+                                            <p class="mt-2">
+                                                Gamban is a gambling blocking software that you can elect to install on your devices for the duration of your self exclusion. Eligible customers can receive a complimentary Gamban subscription on us when
+                                                excluding for the periods of 3 months, 6 months or 1 year.
+                                            </p>
+                                            <h3 class="text-3xl text-white font-bold mt-6">What is Problem Gambling?</h3>
+                                            <p class="mt-2">A small population of people who gamble are considered to be problem gamblers. For these people, gambling stops being fun and starts to negatively affect other areas of your personal life such as:</p>
+                                            <ul class="list-disc pl-4">
+                                                <li class="mt-2">Mental wellbeing</li>
+                                                <li class="mt-2">Physical health</li>
+                                                <li class="mt-2">Personal relationships</li>
+                                                <li class="mt-2">Financial situation</li>
+                                            </ul>
+                                            <p class="text-sm mt-6 text-white">Signs you may be developing Problem Gambling:</p>
+                                            <ul class="list-disc pl-4">
+                                                <li class="mt-2">Getting overly upset by losses.</li>
+                                                <li class="mt-2">Chasing your losses back.</li>
+                                                <li class="mt-2">Not being able to stop or cut back gambling.</li>
+                                                <li class="mt-2">Hiding your gambling from others and being defensive about losses or time spent gambling.</li>
+                                                <li class="mt-2">Neglecting responsibilities (financial and personal relationships).</li>
+                                                <li class="mt-2">Using gambling to escape other problems.</li>
+                                            </ul>
+                                            <h3 class="text-xl text-white font-bold mt-4">Additional resources to assist</h3>
+                                            <p class="mt-2">If you are worried about yourself, or if someone you know is having problems managing their gambling, there are several external support agencies that can assist with providing advice.</p>
+                                            <p class="mt-2">Talk to someone you trust about your gambling – such as a close friend or family member, a religious or community leader, doctor, or other health professional.</p>
+                                            <p class="text-sm mt-6 text-white">Gamtalk</p>
+                                            <p class="mt-2">Gamtalk is a peer support forum to chat with others about their gambling histories and support provided. There are also external links for additional support.</p>
+                                            <p class="text-sm mt-6 text-white">Responsiblegambling.org</p>
+                                            <p class="mt-2">This includes resources for the community regarding safe gambling tips and assisting others with a gambling related problem.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Minors</h3>
+                                            <p class="mt-2">Stake.com does not support underage gambling.</p>
+                                            <p class="mt-2">Underage gambling is illegal, and is defined as anyone who is under the age of 18 years old at the time of account registration.</p>
+                                            <p class="mt-2">No winnings should be paid to such players if identified as someone who is underage.</p>
+                                            <h3 class="text-xl text-white font-bold mt-4">Tips for Parents</h3>
+                                            <ul class="list-disc pl-4">
+                                                <li class="mt-2">Do not leave your computer unattended when your casino software is running.</li>
+                                                <li class="mt-2">Password-protect your casino program.</li>
+                                                <li class="mt-2">Do not allow minors to participate in any gambling activity.</li>
+                                                <li class="mt-2">Keep your casino account number and payment card(s) out of reach of minors.</li>
+                                                <li class="mt-2">Do not save passwords onto your computer.</li>
+                                                <li class="mt-2">Limit the amount of time your children spend online and make use of software to prevent your children from accessing inappropriate material.</li>
+                                            </ul>
+                                            <h3 class="text-xl text-white font-bold mt-4">Gambling Bet Blocking and Filtering Tools</h3>
+                                            <p class="mt-2">In order to ensure child safety on the Internet, Stake encourages its players to make use of filtering software to prevent minors from accessing certain online material:</p>
+                                            <ul class="list-disc pl-4">
+                                                <li class="mt-2">Gamcare</li>
+                                                <li class="mt-2">Netnanny</li>
+                                                <li class="mt-2">Betblocker</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab03">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg">
+                                                <div class="p-6">
+                                                    <h3 class="text-xl text-white font-bold">본인차단</h3>
+                                                    <p class="mt-4 text-sm">Stake.com 에서의 활동을 잠시 쉬고 싶으신가요? 자동 본인 차단 과정을 진행하려면 아래 버튼을 클릭하여 이메일로 승인 지침을 받아보세요.</p>
+                                                </div>
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                    <div class="text-sm"><a href="" class="text-white font-semibold"> 본인 차단</a>에 대해 자세히 알아보기</div>
+                                                    <button class="btn btn-gray text-sm p-2 font-semibold">본인 차단 요청</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab01">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="text-center">
+                                                <svg class="svg-icon w-24 h-24 nostroke mx-auto"><use xlink:href="#icon-empty-responsible-gambling"></use></svg>
+                                                <p class="text-sm">표시할 한도 없음</p>
+                                            </div>
+                                            <div class="border border-gray-700 bg-grey-600 rounded-lg mt-6">
+                                                <div class="p-6">
+                                                    <h3 class="text-xl text-white font-bold">베팅 한도 설정</h3>
+                                                    <p class="mt-4 text-sm">
+                                                        Gain control over your play or betting by using loss or wagering limits. These limits allow you to control the maximum loss or wagered amount over your set period of time. Any changes to these limits
+                                                        requires a 24-hour cool off period.
+                                                    </p>
+                                                    <p class="mt-4 text-sm">
+                                                        Further information and details about the limits can be found in
+                                                        <a href="javascript:;" class="text-white font-bold">Stake 세이프</a>
+                                                    </p>
+                                                </div>
+                                                <div class="border-t border-gray-700"></div>
+                                                <div class="px-6 py-2">
+                                                    <p class="text-sm font-semibold mt-2">한도 유형</p>
+                                                    <select class="form-select font-bold mt-2">
+                                                        <option value="">Loss</option>
+                                                        <option value="">Wager</option>
+                                                    </select>
+                                                    <div class="flex items-center justify-between mt-3">
+                                                        <p class="text-sm font-semibold">한도 금액 <span class="text-[#ED4163]">*</span></p>
+                                                        <span class="text-xs font-semibold">US$0.00</span>
+                                                    </div>
+                                                    <div class="relative">
+                                                        <input type="number" class="input mt-1 form-control pr-10 font-semibold" />
+                                                        <svg class="svg-icon absolute top-4 right-4"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                    </div>
+                                                    <p class="text-sm font-semibold mt-3">한도 기간</p>
+                                                    <select class="form-select font-bold mt-1 mb-2">
+                                                        <option value="">Day</option>
+                                                        <option value="">Week</option>
+                                                        <option value="">Month</option>
+                                                    </select>
+                                                </div>
+                                                <div class="px-6 py-4 border-t border-gray-700 flex items-center justify-between">
+                                                    <div class="text-sm">업데이트가 적용될 때까지 최대 30초 정도 기다리세요.</div>
+                                                    <button class="btn btn-gray text-sm p-2 font-semibold">제한 추가</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>
