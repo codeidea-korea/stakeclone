@@ -375,6 +375,10 @@ const customJquery = () => {
                 .parents(".select_custom")
                 .find(".select_toggle_btn span")
                 .html(img + "Stake: " + value);
+        } else if ($(this).parents(".option_box").hasClass("img_option")) {
+            const svg = $(this).find("svg").html();
+            $(this).parents(".select_custom").find(".select_toggle_btn span").text(value);
+            $(this).parents(".select_custom").find(".select_toggle_btn .svg_img").html(svg);
         } else {
             $(this).parents(".select_custom").find(".select_toggle_btn span").text(value);
         }

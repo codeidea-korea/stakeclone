@@ -1945,8 +1945,14 @@ select{
 .h-\[40px\]{
     height: 40px;
 }
+.h-\[300px\]{
+    height: 300px;
+}
 .max-h-80{
     max-height: 20rem;
+}
+.max-h-\[300px\]{
+    max-height: 300px;
 }
 .min-h-screen{
     min-height: 100vh;

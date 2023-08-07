@@ -118,6 +118,11 @@ input.form-control.half,
 select.form-select.half {
     width: 50%;
 }
+input.form-control.light {
+    background-color: #fff;
+    border: 2px solid #d5dceb;
+    box-shadow: 0 none;
+}
 @media all and (max-width: calc(767px)) {
     select.form-select.half,
     input.form-control.half,
@@ -370,6 +375,15 @@ select.form-select.half {
     transform: scale(0.95);
 }
 
+.select_custom .option_box.center p {
+    justify-content: center;
+}
+.select_custom .option_box.img_option p {
+    padding: 5px 12px;
+}
+.select_custom .option_box.img_option p svg {
+    stroke-width: 0;
+}
 .select_custom .option_box p {
     display: flex;
     align-items: center;
