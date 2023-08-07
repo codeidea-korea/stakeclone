@@ -29,9 +29,6 @@ fetch("/stakeclone/_top_bar.html")
     .then((response) => response.text())
     .then((html) => {
         $(".content").prepend(html);
-
-        topbarHandle();
-        customJquery();
     })
     .catch((error) => {
         console.log(error);
@@ -42,9 +39,6 @@ fetch("/stakeclone/_right_bar.html")
     .then((response) => response.text())
     .then((html) => {
         $(".right-sidebar").html(html);
-
-        customJquery();
-        leftMenuHandle();
     })
     .catch((error) => {
         console.log(error);
@@ -55,6 +49,12 @@ fetch("/stakeclone/_footer.html")
     .then((response) => response.text())
     .then((html) => {
         $(".container_wrap").append(html);
+
+        setTimeout(() => {
+            topbarHandle();
+            customJquery();
+            leftMenuHandle();
+        }, 200);
     })
     .catch((error) => {
         console.log(error);
