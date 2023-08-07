@@ -213,7 +213,7 @@
                 </div>
             </div>
             <button class="wallet_btn btn btn-primary font-bold" data-tw-toggle="modal"
-            data-tw-target="#user_modal">
+            data-tw-target="#wallet_modal">
                 <span> 지갑</span>
                 <svg class="svg-icon"><use xlink:href="#icon-coins"></use></svg>
             </button>
@@ -290,7 +290,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="dropdown-item">
+                            <a href="javascript:;" data-tw-toggle="modal" data-tw-target="#logout_modal" class="dropdown-item">
                                 <svg class="svg-icon mr-2"><use xlink:href="#icon-exit"></use></svg>
                                 로그아웃
                             </a>
@@ -502,7 +502,7 @@
         <!-- 검색 : E -->
     </div>
 </div>
-<div id="user_modal" class="modal" tabindex="-1" aria-hidden="true">
+<div id="wallet_modal" class="modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content"> <!-- BEGIN: Modal Header -->
             <div class="modal-header">
@@ -761,4 +761,26 @@
             </div>
         </div>
     </div>
+</div>
+
+<div id="logout_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+		<div class="modal-content"> <!-- BEGIN: Modal Header -->
+			<div class="modal-header">
+				<h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+					<svg><use xlink:href="#icon-exit"></use></svg>
+					로그아웃
+				</h2>
+				<button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
+			</div>
+			<div class="modal-body">
+                <div class="text-center text-grey-200">
+                    종료하기 전에, 다양한 카지노 및 스포츠 프로모션을 꼭 확인해주세요!
+                </div>
+				<div class="flex justify-center mt-3">
+					<button class="hover:bg-red-700 bg-red-600 py-3 px-4 rounded-md font-semibold transition-all text-white scale w-full text-base"><span>로그아웃</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

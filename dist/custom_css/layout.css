@@ -324,12 +324,20 @@
     background: url(../custom_img/casino-poker-cards-small.jpg) center center no-repeat;
     background-size: cover;
 }
+.side-nav.fold .header_casino.active {
+    background: url(../custom_img/casino-poker-cards-small-green.jpg) center center no-repeat;
+    background-size: cover;
+}
 .side-nav.fold .header_casino:hover {
     background: url(../custom_img/casino-poker-cards-small-green.jpg) center center no-repeat;
     background-size: cover;
 }
 .side-nav .header_casino {
     background: url(../custom_img/casino-poker-cards.jpg) center center no-repeat;
+    background-size: cover;
+}
+.side-nav .header_casino.active{
+    background: url(../custom_img/casino-poker-cards-green.jpg) center center no-repeat;
     background-size: cover;
 }
 .side-nav .header_casino:hover {
@@ -341,7 +349,7 @@
     background: url(../custom_img/sports-balls-small.jpg) center center no-repeat;
     background-size: cover;
 }
-.side-nav.fold .header_sports {
+.side-nav.fold .header_sports:hover {
     background: url(../custom_img/sports-balls-small-orange.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -734,6 +742,9 @@
         푸터
 #=========================================#
 */
+.footer{
+    margin-top:32px;
+}
 .footer .sitemap a svg {
     display: inline-block;
     width: 15px;
