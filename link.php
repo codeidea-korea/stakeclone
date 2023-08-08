@@ -68,7 +68,7 @@ echo txtRecord('./@record/');
 	<ul class="page-link" style="width:100%;margin-bottom:-50px">
 		<li class="" data-label="stakeclone">
 			<ul>
-				<li><a href="#" target="_blank" class="">메인</a></li>
+				<li><a href="../stakeclone/index.html" target="_blank" class="">메인</a></li>
 			</ul>
 		</li>
 		<li class="mt50" data-label="모달 팝업">
@@ -133,11 +133,10 @@ echo txtRecord('./@record/');
 
 				<li class="mt30" data-label="프로필">
 					<ul>
-						<li><a href="#">지갑</a></li>
-						<li><a href="#">금고</a></li>
-						<li><a href="#">VIP</a></li>
-						<li><a href="#">통계</a></li>
-						<li><a href="#">스포츠 베팅</a></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#wallet_modal">지갑</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vault_modal">금고</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vip_modal">VIP</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#statistics_modal">통계</button></li>
 						<li><a href="../stakeclone/setting.html">설정</a></li>
 						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#logout_modal">로그아웃</button></li>
 					</ul>
@@ -165,14 +164,20 @@ echo txtRecord('./@record/');
 
 				<li class="mt30" data-label="제휴">
 					<ul>
-						<li><a href="#" target="_blank" class="">제휴</a></li>
+						<li><a href="../stakeclone/affiliate.html" target="_blank" class="">제휴</a></li>
+					</ul>
+				</li>
+
+				<li class="mt30" data-label="VIP 클럽">
+					<ul>
+						<li><a href="../stakeclone/vip_club.html" target="_blank" class="">VIP 클럽</a></li>
 					</ul>
 				</li>
 
 				<li class="mt30" data-label="블로그">
 					<ul>
 						<li>
-							<a href="../stakeclone/blog.html" target="_blank" class="">블로그</a>
+							<a href="../stakeclone/affiliate.html.html" target="_blank" class="">블로그</a>
 							<ul>
 								<li><a href="../stakeclone/blog_sub.html" target="_blank" class="">블로그-sub</a></li>
 								<li><a href="../stakeclone/blog_view.html" target="_blank" class="">블로그-view</a></li>
@@ -200,7 +205,11 @@ echo txtRecord('./@record/');
 					</ul>
 				</li>
 
-				<li class="mt30"><a href="../stakeclone/casino/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
+				<li class="mt30" data-label="Stake 세이프">
+					<ul>
+						<li><a href="../stakeclone/casino/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
+					</ul>
+				</li>
 				
 			</ul>
 		</li>
@@ -1142,6 +1151,2429 @@ echo txtRecord('./@record/');
 	</div>
 </div>
 <!-- 실시간 통계 모달 끝-->
+
+<!-- 지갑 모달 -->
+<div id="wallet_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-coins"></use></svg>
+                    지갑
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0">
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="wallet01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill" data-tw-target="#tab_wallet01" type="button" role="tab" aria-controls="tab_wallet01" aria-selected="true">
+                                        <span class="flex items-center gap-1">입금</span>
+                                    </button>
+                                </li>
+                                <li id="wallet02" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_wallet02" type="button" role="tab" aria-controls="tab_wallet02" aria-selected="false">
+                                        <span class="flex items-center gap-1">출금</span>
+                                    </button>
+                                </li>
+                                <li id="wallet03" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_wallet03" type="button" role="tab" aria-controls="tab_wallet03" aria-selected="false">
+                                        <span class="flex items-center gap-1">암호화폐 구매</span>
+                                    </button>
+                                </li>
+                                <li id="wallet04" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_wallet04" type="button" role="tab" aria-controls="tab_wallet04" aria-selected="false">
+                                        <span class="flex items-center gap-1">팁</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content mt-3">
+                    <div id="tab_wallet01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="wallet01">
+                        <div class="p-4">
+                            <div class="flex align-center justify-center gap-2">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <span>BTC</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option center img_option">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                        <span>BTC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                        <span>ETH</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                        <span>LTC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                        <span>USDT</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                        <span>DOGE</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                        <span>BCH</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                        <span>XRP</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                        <span>EOS</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                        <span>TRX</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                        <span>BNB</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                        <span>USDC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                        <span>APE</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                        <span>BUSD</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                        <span>CRO</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                        <span>DAI</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                        <span>LINK</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                        <span>SAND</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                        <span>SHIB</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                        <span>UNI</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                        <span>MATIC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                        <span>EUR</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                        <span>JPY</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                        <span>BRL</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                        <span>CAD</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                        <span>INR</span>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-medium">네트워크</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>ETH</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option">
+                                            <button>
+                                                <p>
+                                                    <span>ETH</span>
+                                                    <b class="whitespace-nowrap"> - Ethereum (ERC20)</b>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <span>BSC</span>
+                                                    <b class="whitespace-nowrap"> - BNB Smart Chain (BEP20)</b>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <span>POLYGON</span>
+                                                    <b class="whitespace-nowrap"> - Matic</b>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">내 ETH 입금 주소</p>
+                                <div class="input-group mt-2 w-full">
+                                    <input type="text" class="form-control bgfull font-semibold" value="AWKLASIBNWERLISDF4ADSG1ABZXD54ASDFBINLOKNBIJ" />
+                                    <button class="btn-gray px-3 le_no_radius tooltip" data-trigger="click" data-theme="light" title="복사되었습니다">
+                                        <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <div class="inline-block p-2 bg-white rounded mt-2"><img width="128" src="/stakeclone/dist/custom_img/setting_code_img.png" alt="" /></div>
+                                    <p>"이 주소로 ETH만 보내세요. 2 확인번의 확인은 필수입니다."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_wallet02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="wallet02">
+                        <div class="p-4">
+                            <div class="flex align-center justify-center gap-2">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>0.00000000</span>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option img_option between">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <span class="text-left">0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                            <strong>BTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                            <strong>ETH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                            <strong>LTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                            <strong>USDT</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                            <strong>DOGE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                            <strong>BCH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                            <strong>XRP</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                            <strong>EOS</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                            <strong>TRX</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                            <strong>BNB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                            <strong>USDC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                            <strong>APE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                            <strong>BUSD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                            <strong>CRO</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                            <strong>DAI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                            <strong>LINK</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                            <strong>SAND</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                            <strong>SHIB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                            <strong>UNI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                            <strong>MATIC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                            <strong>EUR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                            <strong>JPY</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                            <strong>BRL</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                            <strong>CAD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                            <strong>INR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-medium">네트워크</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>ETH</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option">
+                                            <button>
+                                                <p>
+                                                    <span>ETH</span>
+                                                    <b class="whitespace-nowrap"> - Ethereum (ERC20)</b>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <span>BSC</span>
+                                                    <b class="whitespace-nowrap"> - BNB Smart Chain (BEP20)</b>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <span>POLYGON</span>
+                                                    <b class="whitespace-nowrap"> - Matic</b>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="flex items-center font-medium">
+                                    <svg class="svg-icon mr-1"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    ETH 주소
+                                    <span class="text-[#ED4163]">*</span>
+                                </p>
+                                <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                                <div class="flex justify-between items-center mt-3">
+                                    <p class="font-medium">
+                                        금액
+                                        <span class="text-[#ED4163]">*</span>
+                                    </p>
+                                    <span class="text-xs">US$0.00</span>
+                                </div>
+                                <div class="relative input-group mt-1 w-full">
+                                    <input type="text" class="form-control font-semibold" value="0.000000000" />
+                                    <i class="absolute right-14 top-3 z-10">
+                                        <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    </i>
+                                    <button class="btn-gray px-3 whitespace-nowrap le_no_radius">최대</button>
+                                </div>
+                                <p class="text-xs flex items-center text-rose-400 mt-1">
+                                    <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                    <span> The minimum value is 0.004</span>
+                                </p>
+                                <button class="btn btn-primary w-full mt-4 p-3 text-base font-medium">
+                                    <svg class="svg-icon mr-2"><use xlink:href="#icon-google"></use></svg> 다음으로 다시 인증 구굴
+                                </button>
+                                <p class="mt-2">
+                                    최소 출금 금액은 0.00400000 <svg class="svg-icon mr-1 inline-block"><use xlink:href="#icon-currency-eth"></use></svg> 입니다. 출금 시 잔액에서 트랜잭션 처리 수수료 0.00050000
+                                    <svg class="svg-icon mr-1 inline-block"><use xlink:href="#icon-currency-eth"></use></svg> 가 차감됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_wallet03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="wallet03">
+                        <div class="p-4">
+                            <p class="font-medium">Ethereum 구매하기</p>
+                            <div class="relative input-group mt-1 w-full">
+                                <input type="text" class="form-control font-semibold" value="0.01585892" />
+                                <div class="select_custom">
+                                    <button class="select_toggle_btn gray le_no_radius">
+                                        <p>
+                                            <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                            <span>BTC</span>
+                                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </p>
+                                    </button>
+                                    <div class="option_box click_option center img_option">
+                                        <div class="p-1">
+                                            <input type="text" class="form-control light" placeholder=" 검색" />
+                                        </div>
+                                        <div class="h-[300px] overflow-y-scroll text-center">
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                    <span>BTC</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                    <span>ETH</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                    <span>LTC</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                    <span>USDT</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                    <span>DOGE</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                    <span>BCH</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                    <span>XRP</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                    <span>EOS</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                    <span>TRX</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                    <span>BNB</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                    <span>USDC</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                    <span>APE</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                    <span>BUSD</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                    <span>CRO</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                    <span>DAI</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                    <span>LINK</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                    <span>SAND</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                    <span>SHIB</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                    <span>UNI</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                    <span>MATIC</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                    <span>EUR</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                    <span>JPY</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                    <span>BRL</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                    <span>CAD</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                    <span>INR</span>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="font-medium">USD로 결제</p>
+                            <div class="relative input-group mt-1 w-full">
+                                <input type="text" class="form-control font-semibold" value="30.00" />
+                                <div class="select_custom">
+                                    <button class="select_toggle_btn gray le_no_radius">
+                                        <p>
+                                            <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-usd"></use></svg>
+                                            <span>USD</span>
+                                            <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </p>
+                                    </button>
+                                    <div class="option_box click_option center img_option">
+                                        <div class="h-[300px] overflow-y-scroll text-center">
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                    <span>BRL</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-krw"></use></svg>
+                                                    <span>KRW</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usd"></use></svg>
+                                                    <span>USD</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cop"></use></svg>
+                                                    <span>COP</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                    <span>EUR</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                    <span>JPY</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-idr"></use></svg>
+                                                    <span>IDR</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                    <span>CAD</span>
+                                                </p>
+                                            </button>
+                                            <button>
+                                                <p>
+                                                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cny"></use></svg>
+                                                    <span>CNY</span>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-green w-full mt-4 p-3 text-base font-medium opacity-60 hover:opacity-100">MoonPay</button>
+                            <p class="mt-2">
+                                면책 조항: 위의 제3자 서비스는 Stake에서 플레이하는 데 사용할 수 있는 암호화폐를 구매하는 데 사용할 수 있습니다. 플랫폼에 가입하면 서비스 약관에 동의한 것으로 간주하며, KYC 절차를 통과해야 합니다. 해당 절차는 당사와 별개로
+                                독립적으로 운영되고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="tab_wallet04" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="wallet04">
+                        <div class="p-4">
+                            <div class="flex align-center justify-center gap-2">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>0.00000000</span>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option img_option between">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <span class="text-left">0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                            <strong>BTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                            <strong>ETH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                            <strong>LTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                            <strong>USDT</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                            <strong>DOGE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                            <strong>BCH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                            <strong>XRP</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                            <strong>EOS</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                            <strong>TRX</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                            <strong>BNB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                            <strong>USDC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                            <strong>APE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                            <strong>BUSD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                            <strong>CRO</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                            <strong>DAI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                            <strong>LINK</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                            <strong>SAND</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                            <strong>SHIB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                            <strong>UNI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                            <strong>MATIC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                            <strong>EUR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                            <strong>JPY</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                            <strong>BRL</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                            <strong>CAD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                            <strong>INR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">
+                                    이름
+                                    <span class="text-[#ED4163]">*</span>
+                                </p>
+                                <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                                <div class="flex justify-between items-center mt-3">
+                                    <p class="font-medium">
+                                        금액
+                                        <span class="text-[#ED4163]">*</span>
+                                    </p>
+                                    <span class="text-xs">US$0.00</span>
+                                </div>
+                                <div class="relative input-group mt-1 w-full">
+                                    <input type="text" class="form-control font-semibold" value="0.000000000" />
+                                    <i class="absolute right-14 top-3 z-10">
+                                        <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    </i>
+                                    <button class="btn-gray px-3 whitespace-nowrap le_no_radius">최소</button>
+                                </div>
+                                <p class="text-xs flex items-center text-rose-400 mt-1">
+                                    <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                    <span> 최솟값은 0.000005입니다</span>
+                                </p>
+                                <button class="btn btn-primary w-full mt-4 p-3 text-base font-medium">
+                                    <svg class="svg-icon mr-2"><use xlink:href="#icon-google"></use></svg> 다음으로 다시 인증 구굴
+                                </button>
+                                <div class="form-check form-switch flex items-center gap-2 mt-2">
+                                    <input id="wallet_input" class="form-check-input" type="checkbox" />
+                                    <label class="form-check-label" for="wallet_input">
+                                        <b class="block text-sm">공개</b>
+                                        <span class="text-sm text-[#557086]">팁은 글로벌 채팅에 메시지로 표시됩니다.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="padding: 0; border: 0 none">
+                <div class="text-center bg-grey-700 py-3">
+                    <span class="block">이중 인증으로 계정 보안 강화하기</span>
+                    <button class="btn btn-primary mt-2 py-2 px-4">2FA 활성화</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 금고모달 -->
+<div id="vault_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-vault"></use></svg>
+                    금고
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0">
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="vault01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill" data-tw-target="#tab_vault01" type="button" role="tab" aria-controls="tab_vault01" aria-selected="true">
+                                        <span class="flex items-center gap-1">입금</span>
+                                    </button>
+                                </li>
+                                <li id="vault01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_vault02" type="button" role="tab" aria-controls="tab_vault02" aria-selected="false">
+                                        <span class="flex items-center gap-1">출금</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content mt-3">
+                    <div id="tab_vault01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="vault01">
+                        <div class="p-4">
+                            <div class="flex align-center justify-center gap-2">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>0.00000000</span>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option img_option between">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <span class="text-left">0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                            <strong>BTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                            <strong>ETH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                            <strong>LTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                            <strong>USDT</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                            <strong>DOGE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                            <strong>BCH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                            <strong>XRP</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                            <strong>EOS</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                            <strong>TRX</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                            <strong>BNB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                            <strong>USDC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                            <strong>APE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                            <strong>BUSD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                            <strong>CRO</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                            <strong>DAI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                            <strong>LINK</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                            <strong>SAND</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                            <strong>SHIB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                            <strong>UNI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                            <strong>MATIC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                            <strong>EUR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                            <strong>JPY</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                            <strong>BRL</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                            <strong>CAD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                            <strong>INR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mt-3">
+                                    <p class="font-medium">금액</p>
+                                    <span class="text-xs">US$0.00</span>
+                                </div>
+                                <div class="relative input-group mt-1 w-full">
+                                    <input type="text" class="form-control font-semibold" value="0.000000000" />
+                                    <i class="absolute right-14 top-3 z-10">
+                                        <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    </i>
+                                    <button class="btn-gray px-3 whitespace-nowrap le_no_radius">최대</button>
+                                </div>
+                                <p class="text-xs flex items-center text-rose-400 mt-1">
+                                    <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                    <span>최솟값은 1e-8입니다</span>
+                                </p>
+                                <button class="btn btn-green w-full mt-4 p-3 text-base font-medium">금고에 입금</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_vault02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="vault02">
+                        <div class="p-4">
+                            <div class="flex align-center justify-center gap-2">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>0.00000000</span>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option img_option between">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <span class="text-left">0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                            <strong>BTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                            <strong>ETH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                            <strong>LTC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                            <strong>USDT</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                            <strong>DOGE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                            <strong>BCH</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                            <strong>XRP</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                            <strong>EOS</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                            <strong>TRX</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                            <strong>BNB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                            <strong>USDC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                            <strong>APE</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                            <strong>BUSD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                            <strong>CRO</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                            <strong>DAI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                            <strong>LINK</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                            <strong>SAND</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                            <strong>SHIB</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                            <strong>UNI</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                            <strong>MATIC</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                            <strong>EUR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                            <strong>JPY</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                            <strong>BRL</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                            <strong>CAD</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <span>0.00000000</span>
+                                                        <b class="flex items-center gap-1 min-w-[60px] ml-4">
+                                                            <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                            <strong>INR</strong>
+                                                        </b>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mt-3">
+                                    <p class="font-medium">금액</p>
+                                    <span class="text-xs">US$0.00</span>
+                                </div>
+                                <div class="relative input-group mt-1 w-full">
+                                    <input type="text" class="form-control font-semibold" value="0.000000000" />
+                                    <i class="absolute right-14 top-3 z-10">
+                                        <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-currency-eth"></use></svg>
+                                    </i>
+                                    <button class="btn-gray px-3 whitespace-nowrap le_no_radius">최대</button>
+                                </div>
+                                <p class="text-xs flex items-center text-rose-400 mt-1">
+                                    <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                    <span>최솟값은 1e-8입니다</span>
+                                </p>
+                                <button class="btn btn-primary w-full mt-4 p-3 text-base font-medium">
+                                    <svg class="svg-icon mr-2"><use xlink:href="#icon-google"></use></svg> 다음으로 다시 인증 구굴
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="padding: 0; border: 0 none">
+                <div class="text-center bg-grey-700 py-3">
+                    <span class="block">이중 인증으로 계정 보안 강화하기</span>
+                    <button class="btn btn-primary mt-2 py-2 px-4">2FA 활성화</button>
+                    <a href="javascript:;" class="block mt-2 font-bold hover:text-white">금고에 대해 더 알아보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- VIP -->
+<div id="vip_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-list"></use></svg>
+                    VIP
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0">
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="vip01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill" data-tw-target="#tab_vip01" type="button" role="tab" aria-controls="tab_vip01" aria-selected="true">
+                                        <span class="flex items-center gap-1">진행도</span>
+                                    </button>
+                                </li>
+                                <li id="vip02" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_vip02" type="button" role="tab" aria-controls="tab_vip02" aria-selected="false">
+                                        <span class="flex items-center gap-1">혜택</span>
+                                    </button>
+                                </li>
+                                <li id="vip03" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_vip03" type="button" role="tab" aria-controls="tab_vip03" aria-selected="false">
+                                        <span class="flex items-center gap-1">다시 불러오기</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content mt-3">
+                    <div id="tab_vip01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="vip01">
+                        <div class="p-4">
+                            <img class="max-w-[60%] mx-auto" src="/stakeclone/dist/custom_img/vip_modal_img.avif" alt="" />
+                            <div class="flex justify-between text-white mt-2">
+                                <b>내 VIP 진행도</b>
+                                <b>0.00%</b>
+                            </div>
+                            <div class="progress_bar_wrap my-1">
+                                <div class="bar bg-grey-400 rounded-full">
+                                    <div class="progress_bar bg-green-400" style="right: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-white">
+                                <span class="flex items-center gap-1"
+                                    ><svg class="svg-icon"><use xlink:href="#icon-vip-none"></use></svg>없음</span
+                                >
+                                <span class="flex items-center gap-1"
+                                    ><svg class="svg-icon"><use xlink:href="#icon-vip-bronze"></use></svg>브론즈</span
+                                >
+                            </div>
+                            <p class="mt-4">사용자의 진행도는 당사 카지노와 스포츠북에 베팅한 금액이 누적될수록 증가하게 됩니다. 티어가 증가하면 더 큰 보상과 독점적인 VIP 대우를 받을 수 있습니다.</p>
+                            <p class="bg-grey-700 rounded-md p-2 mt-2 border border-dashed border-gray-300">스포츠북에 정산된 모든 베팅은 진행도에 3배로 반영됩니다. 무효화된 베팅은 제외됩니다.</p>
+                        </div>
+                    </div>
+                    <div id="tab_vip02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="vip02">
+                        <div class="p-4">
+                            <div id="faq-accordion-1" class="accordion mb-2">
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-1" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                                브론즈
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>지원 팀에게 받을 보너스(희망하는 통화)</li>
+                                            <li>레이크백이 활성화되었습니다</li>
+                                            <li>주간 보너스</li>
+                                            <li>월간 보너스</li>
+                                            <li>VIP 텔레그램 채널 액세스</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-2" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-2">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-silver"></use></svg>
+                                                실버
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>지원 팀에게 받을 보너스(희망하는 통화)</li>
+                                            <li>주간 & 월간 보너스 증가</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-3" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-3" aria-expanded="false" aria-controls="faq-accordion-collapse-3">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-gold"></use></svg>
+                                                골드
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-3" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>지원 팀에게 받을 보너스(희망하는 통화)</li>
+                                            <li>주간 & 월간 보너스 증가</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-4" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-4" aria-expanded="false" aria-controls="faq-accordion-collapse-4">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                                플래티넘 I - III
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-4" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>지원 팀에게 받을 보너스(희망하는 통화)</li>
+                                            <li>주간 & 월간 보너스 증가</li>
+                                            <li>14 - 42일, 일일 보너스 (리로드)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-5" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-5" aria-expanded="false" aria-controls="faq-accordion-collapse-5">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                                플래티넘 IV - VI
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-5" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>전용 VIP 호스트</li>
+                                            <li>VIP 호스트로부터 보너스(희망하는 통화)</li>
+                                            <li>주간 & 월간 보너스 증가</li>
+                                            <li>월간 보너스</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div id="faq-accordion-content-6" class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-6" aria-expanded="false" aria-controls="faq-accordion-collapse-6">
+                                            <span class="flex items-center font-bold">
+                                                <svg class="svg-icon w-3 h-3 mr-1"><use xlink:href="#icon-vip-diamond-1"></use></svg>
+                                                다이아몬드
+                                            </span>
+                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="faq-accordion-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-6" data-tw-parent="#faq-accordion-1">
+                                        <ul class="list-disc pl-3">
+                                            <li>VIP 호스트로부터 보너스(희망하는 통화)</li>
+                                            <li>독점적인 커스터마이징 혜택</li>
+                                            <li>주간 & 월간 보너스 증가</li>
+                                            <li>월간 보너스</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_vip03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="vip03">
+                        <div class="p-4">
+                            <div class="flex justify-center">
+                                <div>
+                                    <p class="font-medium">통화</p>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <svg class="svg-icon svg_img mr-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                <span>BTC</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option center img_option">
+                                            <div class="p-1">
+                                                <input type="text" class="form-control light" placeholder=" 검색" />
+                                            </div>
+                                            <div class="h-[300px] overflow-y-scroll text-center">
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                        <span>BTC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eth"></use></svg>
+                                                        <span>ETH</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ltc"></use></svg>
+                                                        <span>LTC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdt"></use></svg>
+                                                        <span>USDT</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-doge"></use></svg>
+                                                        <span>DOGE</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bch"></use></svg>
+                                                        <span>BCH</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-xrp"></use></svg>
+                                                        <span>XRP</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eos"></use></svg>
+                                                        <span>EOS</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-trx"></use></svg>
+                                                        <span>TRX</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-bnb"></use></svg>
+                                                        <span>BNB</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-usdc"></use></svg>
+                                                        <span>USDC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-ape"></use></svg>
+                                                        <span>APE</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-busd"></use></svg>
+                                                        <span>BUSD</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cro"></use></svg>
+                                                        <span>CRO</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-dai"></use></svg>
+                                                        <span>DAI</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-link"></use></svg>
+                                                        <span>LINK</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-sand"></use></svg>
+                                                        <span>SAND</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-shib"></use></svg>
+                                                        <span>SHIB</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-uni"></use></svg>
+                                                        <span>UNI</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-matic"></use></svg>
+                                                        <span>MATIC</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-eur"></use></svg>
+                                                        <span>EUR</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-jpy"></use></svg>
+                                                        <span>JPY</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                        <span>BRL</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                        <span>CAD</span>
+                                                    </p>
+                                                </button>
+                                                <button>
+                                                    <p>
+                                                        <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                        <span>INR</span>
+                                                    </p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-3">
+                                <p class="font-medium">금액</p>
+                                <span class="text-xs">US$0.00</span>
+                            </div>
+                            <div class="relative input-group mt-1 w-full">
+                                <input type="text" class="form-control font-semibold bgfull" value="0.000000000" />
+                                <i class="absolute right-3 top-3 z-10">
+                                    <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-currency-eth"></use></svg>
+                                </i>
+                            </div>
+                            <button class="btn btn-green w-full mt-4 p-3 text-base font-bold">리로드 수령</button>
+                            <p class="mt-2 text-center">리로드가 만료됩니다 오전 5:49 2023. 8. 13.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="padding: 0; border: 0 none">
+                <div class="text-center bg-grey-700 py-3">
+                    <a href="javascript:;" class="block mt-2 font-bold hover:text-white">Stake VIP 더 알아보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 통계 모달 -->
+<div id="statistics_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                    <svg class="svg-icon svelte-kjfvep">
+                        <use xlink:href="#icon-list"></use>
+                    </svg>
+                    SyztmzTV
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center gap-1">
+                        <svg class="tooltip" data-theme="light" title="Platinum III">
+                            <use xlink:href="#icon-vip-platinum-3"></use>
+                        </svg>
+                        <svg class="tooltip" data-theme="light" title="Highroller">
+                            <use xlink:href="#icon-emoji-highroller"></use>
+                        </svg>
+                        <button class="scale">
+                            <span class="font-semibold">asket8888</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center text-xs font-semibold mt-2">가입 날짜 2020년 8월 31일</div>
+                <div class="flex items-center justify-center mt-4">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                <li id="statistics01" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill" data-tw-target="#tab_statistics01" type="button" role="tab" aria-controls="tab_statistics01" aria-selected="true">
+                                        <span class="flex items-center gap-1">통계</span>
+                                    </button>
+                                </li>
+                                <li id="statistics02" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_statistics02" type="button" role="tab" aria-controls="tab_statistics02" aria-selected="false">
+                                        <span class="flex items-center gap-1">트로피</span>
+                                    </button>
+                                </li>
+                                <li id="statistics03" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_statistics03" type="button" role="tab" aria-controls="tab_statistics03" aria-selected="false">
+                                        <span class="flex items-center gap-1">레이스</span>
+                                    </button>
+                                </li>
+                                <li id="statistics04" class="nav-item" role="presentation">
+                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_statistics04" type="button" role="tab" aria-controls="tab_statistics04" aria-selected="false">
+                                        <span class="flex items-center gap-1">경품</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content mt-3">
+                    <div id="tab_statistics01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab10">
+                        <div class="overflow-x-scroll">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">배팅</th>
+                                        <th class="text-center">승리</th>
+                                        <th class="text-center">손실</th>
+                                        <th class="text-right">배팅</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-start">
+                                                <span>45,000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>5,327</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center">
+                                                <span>39,408</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-end">
+                                                <span>2001.99999800</span>
+                                                <span title="btc" style="max-width: 12ch">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-currency-btc"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-start">
+                                                <span>45,000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>5,327</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center">
+                                                <span>39,408</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-end">
+                                                <span>2001.99999800</span>
+                                                <span title="btc" style="max-width: 12ch">
+                                                    <svg class="svg-icon svelte-kjfvep">
+                                                        <use xlink:href="#icon-currency-btc"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tab_statistics02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab11">
+                        <div class="flex items-center justify-center">
+                            <select name="" id="" class="form-select custom w-28">
+                                <option value="">최고의 행운</option>
+                                <option value="">가장 큰</option>
+                            </select>
+                        </div>
+                        <div class="overflow-x-scroll">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">게임</th>
+                                        <th class="text-center">제공자</th>
+                                        <th class="text-right">트로피</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="javascript:;">
+                                                <div class="flex items-center gap-1 justify-start scale">
+                                                    <span>
+                                                        <svg class="w-5 h-5">
+                                                            <use xlink:href="#icon-provider-slots"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="font-semibold text-white">Rome Rise of an Empire</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>Epicmedia</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center">
+                                                <span>
+                                                    <svg>
+                                                        <use xlink:href="#icon-trophy-1"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="javascript:;">
+                                                <div class="flex items-center gap-1 justify-start scale">
+                                                    <span>
+                                                        <svg class="w-5 h-5">
+                                                            <use xlink:href="#icon-provider-slots"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="font-semibold text-white">Dino P.D.</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>Pushgaming</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center">
+                                                <span>
+                                                    <svg>
+                                                        <use xlink:href="#icon-trophy-2"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex items-center justify-center gap-5 mt-4">
+                            <button><span class="font-semibold">이전</span></button>
+                            <button><span class="font-semibold text-white">다음</span></button>
+                        </div>
+                    </div>
+                    <div id="tab_statistics03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab12">
+                        <div class="overflow-x-scroll">
+                            <table class="table table-striped">
+                                <thead class="whitespace-nowrap">
+                                    <tr>
+                                        <th class="text-left">레이스 이름</th>
+                                        <th class="text-center">날짜</th>
+                                        <th class="text-center">포지션</th>
+                                        <th class="text-right">상금</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="whitespace-nowrap">
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-start">
+                                                <span>$100,000 레이스 - 24시간</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>2023. 8. 3.</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>25th</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex justify-end">
+                                                <a href="javascript:;" data-theme="light" data-tooltip-content="#custom-content-tooltip" class="tooltip inline-flex items-center gap-1">
+                                                    <span class="">US$200.00</span>
+                                                    <span title="usd" style="max-width: 12ch">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-currency-usd"></use>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="tooltip-content">
+                                                <div id="custom-content-tooltip" class="relative flex items-center py-1 gap-1">
+                                                    <span class="">US$200.00</span>
+                                                    <span title="usd" style="max-width: 12ch">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-currency-usd"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex items-center justify-center gap-5 mt-4">
+                            <button><span class="font-semibold">이전</span></button>
+                            <button><span class="font-semibold text-white">다음</span></button>
+                        </div>
+                    </div>
+                    <div id="tab_statistics04" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab12">
+                        <div class="overflow-x-scroll">
+                            <table class="table table-striped">
+                                <thead class="whitespace-nowrap">
+                                    <tr>
+                                        <th class="text-left">경품 이름</th>
+                                        <th class="text-center">날짜</th>
+                                        <th class="text-center">포지션</th>
+                                        <th class="text-right">상금</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="whitespace-nowrap">
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-1 justify-start">
+                                                <span>$100,000 레이스 - 24시간</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>2023. 8. 3.</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex items-center justify-center gap-1">
+                                                <span>25th</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="flex justify-end">
+                                                <a href="javascript:;" data-theme="light" data-tooltip-content="#custom-content-tooltip" class="tooltip inline-flex items-center gap-1">
+                                                    <span class="">US$200.00</span>
+                                                    <span title="usd" style="max-width: 12ch">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-currency-usd"></use>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="tooltip-content">
+                                                <div id="custom-content-tooltip" class="relative flex items-center py-1 gap-1">
+                                                    <span class="">US$200.00</span>
+                                                    <span title="usd" style="max-width: 12ch">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-currency-usd"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex items-center justify-center gap-5 mt-4">
+                            <button><span class="font-semibold">이전</span></button>
+                            <button><span class="font-semibold text-white">다음</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- 로그아웃 모달 -->
 <div id="logout_modal" class="modal" tabindex="-1" aria-hidden="true">
