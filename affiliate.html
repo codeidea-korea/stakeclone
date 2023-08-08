@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="container py-6">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-bold flex items-center">
+                                <svg class="svg-icon text-grey-200 mr-2"><use xlink:href="#icon-affiliate"></use></svg> 제휴 프로그램
+                            </h2>
+                            <a href="/stakeclone/casino/home.html">
+                                <svg class="svg-icon text-grey-200"><use xlink:href="#icon-cross"></use></svg>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-6 mt-4">
+                            <div class="col-span-12 md:col-span-3 lg:col-span-2 setting_left_wrap">
+                                <ul class="bg-grey-700 py-2 rounded font-semibold setting_left_tab" role="tablist">
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">개요</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false">리텐션 프로그램</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false">수수료</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04" aria-selected="false">자금</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05" aria-selected="false">추천한 사용자</button>
+                                    </li>
+                                    <li>
+                                        <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls="tab_con06" aria-selected="false">캠페인</button>
+                                    </li>
+                                </ul>
+                                <div class="hidden">
+                                    <button class="bg-grey-700 text-center w-11 h-11 rounded" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                        <svg class="svg-icon mx-auto"><use xlink:href="#icon-arrowleft"></use></svg>
+                                    </button>
+                                    <div class="select_custom">
+                                        <button class="select_toggle_btn">
+                                            <p>
+                                                <span>개요</span>
+                                                <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                            </p>
+                                        </button>
+                                        <div class="option_box click_option">
+                                            <button class="text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                                <p>
+                                                    <span>개요</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="true">
+                                                <p>
+                                                    <span>리텐션 프로그램</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="true">
+                                                <p>
+                                                    <span>수수료</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04" aria-selected="true">
+                                                <p>
+                                                    <span>자금</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05" aria-selected="true">
+                                                <p>
+                                                    <span>추천한 사용자</span>
+                                                </p>
+                                            </button>
+                                            <button class="text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls="tab_con06" aria-selected="true">
+                                                <p>
+                                                    <span>캠페인</span>
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-12 md:col-span-9 lg:col-span-10">
+                                <div class="tab-content setting_right_wrap">
+                                    <div id="tab_con01" class="tab-pane leading-relaxed active w-full" role="tabpanel" aria-labelledby="tab01">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="max-w-[500px]">
+                                                <div class="video_wrapper">
+                                                    <iframe src="https://player.vimeo.com/video/531039335" frameborder="0"></iframe>
+                                                </div>
+                                            </div>
+                                            <p class="mt-2">Stake.com 의 제휴 프로그램에 참여하여 당사 브랜드를 추천하고 수익을 올리세요! 본인 링크로 접속하여 Stake.com에 가입하고 플레이하는 사용자 수만큼 제휴 수수료를 받을 수 있습니다.</p>
+                                            <p class="mt-2">
+                                                Stake.com 와 제휴를 한다는 건 여러분이 당사 카지노와 스포츠북에 있는 모든 베팅에 대해 수수료를 받는다는 의미입니다. 이는 기존 제휴 프로그램과 다르게, 승패유무에 관계없이 항상 같은 커미션을 받는다는 의미이기도
+                                                합니다.
+                                            </p>
+                                            <div class="flex justify-between items-end mt-4 flex-wrap">
+                                                <div>
+                                                    <p class="font-semibold text-sm">추천인 링크</p>
+                                                    <div class="input-group mt-2">
+                                                        <input type="text" class="form-control bgfull font-semibold" value="stake.com/?c=489w869845" />
+                                                        <button class="btn-gray px-3 le_no_radius tooltip" data-trigger="click" data-theme="light" title="복사되었습니다">
+                                                            <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-gray text-sm py-3 px-4 font-semibold mt-2">
+                                                        배너 다운로드 <svg class="svg-icon ml-1" style="flex-shrink: 0; font-size: 0.9em"><use xlink:href="#icon-popout"></use></svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab02">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base font-medium">
+                                            <p>
+                                                Stake.com의 최우선 순위는 항상 플레이어의 만족도였고, 앞으로도 항상 그럴 것입니다. 이것이 플레이어로서, 그리고 제휴사로서 플랫폼과 상호 작용하는 당사 사용자들을 위해 수행할 수 있는 장기 전략의 핵심입니다. 당사는
+                                                플레이어들에게 보답할 수 있는 독특한 프로그램과 캠페인으로 플레이어의 만족도를 높이기 위해 노력하고 있습니다.
+                                            </p>
+                                            <p class="mt-4">이 프로그램들은 플레이어에게 더 나은 겜블링 경험과, 제휴 수수료에 따른 수익을 전반적으로 증가시켜 줄 수 있는 추가적인 자금 및 인센티브를 제공합니다.</p>
+                                            <p class="mt-4">이 프로그램은 다음을 포함하고 있습니다:</p>
+                                            <ul class="list-disc pl-6">
+                                                <li class="mt-2">레이크백</li>
+                                                <li class="mt-2">주간 보너스</li>
+                                                <li class="mt-2">월간 보너스</li>
+                                                <li class="mt-2">시간별 / 일별 리로드</li>
+                                                <li class="mt-2">VIP 레벨 보상</li>
+                                            </ul>
+                                            <p class="mt-6">
+                                                이 독특한 접근방식을 통해, 여러분의 커미션은 이러한 비용들이 실현된 후의 하우스 엣지를 기준으로 삼게 됩니다. 플레이어가 어떤 혜택을 받느냐에 따라, 여러분이 받는 하우스 엣지 커미션은 당사 게임에서 광고했던 하우스
+                                                엣지보다 약 45%가 감소하게 됩니다.
+                                            </p>
+                                            <p class="mt-4">이러한 비용의 계산 방법에 대한 자세한 내용을 보려면 지원 팀에 문의하여 제휴 매니저에게 연락하세요.</p>
+                                            <p class="mt-4 p-2 rounded-md border border-dashed border-gray-300">
+                                                유지 프로그램은 스포츠북과 카지노의 제휴사에서 이용되고 있지만, 스포츠북 베팅에 대한 제휴 수수료를 계산하기 전에 비용이 이미 설정되어 있기 때문에 표준 비율을 3%의 추정 마진으로 설정할 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab03">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-base">
+                                            <div class="flex items-top justify-center">
+                                                <div class="w-1/2 pr-4">
+                                                    <h3 class="text-xl text-white font-bold">카지노</h3>
+                                                    <p class="mt-4 font-medium">하우스 엣지는 게임마다 각각 다릅니다. 다음 공식을 사용하여 수수료를 계산할 수 있습니다:</p>
+                                                    <p class="mt-4 rounded bg-grey-500 text-sm p-2">(Edge as decimal * wagered / 2) * commission rate</p>
+                                                </div>
+                                                <div class="w-1/2 pl-4 border-l border-gray-700">
+                                                    <h3 class="text-xl text-white font-bold">스포츠북</h3>
+                                                    <p class="mt-4 font-medium">모든 스포츠 베팅은 이론적으로 3%의 하우스 엣지가 적용됩니다. 다음 공식을 사용하여 수수료를 계산할 수 있습니다:</p>
+                                                    <p class="mt-4 rounded bg-grey-500 text-sm p-2">(0.03 * wagered / 2) * commission rate</p>
+                                                </div>
+                                            </div>
+                                            <p class="mt-4 p-2 rounded-md border border-dashed border-gray-300 text-sm">
+                                                특별한 환경 혹은 뛰어난 지원 범위를 가진 제휴자인 경우, 당사 지원 팀 에 문의하세요. 제휴 매니저와 맞춤형 프로그램을 협상할 수 있습니다. 여기에는 더 높은 수수료가 포함될 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con04" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab04">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                            <p class="font-bold">다음으로 정렬</p>
+                                            <select class="form-select w-[100px] text-white font-semibold">
+                                                <option value="">이용가능</option>
+                                                <option value="">수수료</option>
+                                                <option value="">출금됨</option>
+                                            </select>
+                                            <div class="overflow-x-scroll">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">이용가능</th>
+                                                            <th class="text-center">수수료</th>
+                                                            <th class="text-right">출금됨</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__01">
+                                                                    ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__01" class="inline-flex items-center gap-1">
+                                                                        ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__02">
+                                                                    ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__02" class="inline-flex items-center gap-1">
+                                                                        ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__03">
+                                                                    ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__03" class="inline-flex items-center gap-1">
+                                                                        ₹0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-inr"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__04">
+                                                                    CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__04" class="inline-flex items-center gap-1">
+                                                                        CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__05">
+                                                                    CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__05" class="inline-flex items-center gap-1">
+                                                                        CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__06">
+                                                                    CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__06" class="inline-flex items-center gap-1">
+                                                                        CA$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-cad"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__07">
+                                                                    R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__07" class="inline-flex items-center gap-1">
+                                                                        R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__08">
+                                                                    R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__08" class="inline-flex items-center gap-1">
+                                                                        R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <span class="inline-flex items-center gap-1 tooltip" data-theme="light" data-tooltip-content="#tooltip__09">
+                                                                    R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                </span>
+                                                                <div class="tooltip-content">
+                                                                    <div id="tooltip__09" class="inline-flex items-center gap-1">
+                                                                        R$0.00 <svg class="svg-icon"><use xlink:href="#icon-currency-brl"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <button class="btn-green font-medium px-20 py-3 opacity-60 hover:opacity-100">출금 가능 수수료</button>
+                                                <p>제휴 수수료를 사용 가능한 잔액으로 전송합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con05" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab05">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                            <div class="flex gap-2">
+                                                <div>
+                                                    <p class="font-bold">캠페인명</p>
+                                                    <select class="form-select w-[200px] text-white font-semibold">
+                                                        <option value="">gwera5816 (0 입금)</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <p class="font-bold">다음으로 정렬</p>
+                                                    <select class="form-select w-[200px] text-white font-semibold">
+                                                        <option value="">생성일</option>
+                                                        <option value="">입금 총계</option>
+                                                        <option value="">수수료</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="overflow-x-scroll">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">사용자명</th>
+                                                            <th class="text-center">가입되었습니다</th>
+                                                            <th class="text-center">총 입금액</th>
+                                                            <th class="text-center">마지막 입금</th>
+                                                            <th class="text-center">베팅</th>
+                                                            <th class="text-right">수수료</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left">-</td>
+                                                            <td class="text-center">-</td>
+                                                            <td class="text-center">-</td>
+                                                            <td class="text-center">-</td>
+                                                            <td class="text-center">-</td>
+                                                            <td class="text-right">-</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="flex justify-center mt-2 font-semibold">
+                                                <a class="p-2" href="javascript:;">이전</a>
+                                                <a class="p-2" href="javascript:;">다음</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab_con06" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab06">
+                                        <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                            <div class="flex gap-2 justify-around font-bold text-center flex-wrap">
+                                                <div class="min-w-[120px]">
+                                                    <p class="text-white">캠페인 조회 수</p>
+                                                    <span>0</span>
+                                                </div>
+                                                <div class="min-w-[120px]">
+                                                    <p class="text-white">추천인</p>
+                                                    <span>0</span>
+                                                </div>
+                                                <div class="min-w-[120px]">
+                                                    <p class="text-white">총 입금액</p>
+                                                    <span>0</span>
+                                                </div>
+                                                <div class="min-w-[120px]">
+                                                    <p class="text-white">특별 입금</p>
+                                                    <span>0</span>
+                                                </div>
+                                                <div class="min-w-[120px]">
+                                                    <p class="text-white">이용 가능</p>
+                                                    <span>
+                                                        0.00000000 <svg class="svg-icon inline-flex"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div id="faq-accordion-1" class="accordion mt-4">
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-1" class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                                            <p class="flex items-center font-bold w-full justify-between py-1">
+                                                                sbewt12
+                                                                <span class="flex mr-4 items-center font-normal">
+                                                                    수수료 : 0.00000000
+                                                                    <svg class="svg-icon w-3 h-3 ml-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                                </span>
+                                                            </p>
+                                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                                        <div class="p-4">
+                                                            <div class="flex font-semibold">
+                                                                <div class="flex w-1/2 flex-wrap">
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">캠페인 조회 수</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">캠추천인</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">총 입금액</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">특별 입금</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">수수료율</p>
+                                                                        <span>0.10</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex w-1/2 flex-wrap">
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">사용 가능한 수수료</p>
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">총 수수료</p>
+                                                                        <span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-group mt-2 w-full md:w-1/2">
+                                                                <input type="text" class="form-control bgfull font-semibold" value="stake.com/?c=7865j46" />
+                                                                <button class="btn-gray px-3 le_no_radius tooltip" data-trigger="click" data-theme="light" title="복사되었습니다">
+                                                                    <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div id="faq-accordion-content-2" class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                                            <p class="flex items-center font-bold w-full justify-between py-1">
+                                                                sbewt12
+                                                                <span class="flex mr-4 items-center font-normal">
+                                                                    수수료 : 0.00000000
+                                                                    <svg class="svg-icon w-3 h-3 ml-1"><use xlink:href="#icon-currency-btc"></use></svg>
+                                                                </span>
+                                                            </p>
+                                                            <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-2">
+                                                        <div class="p-4">
+                                                            <div class="flex font-semibold">
+                                                                <div class="flex w-1/2 flex-wrap">
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">캠페인 조회 수</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">캠추천인</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">총 입금액</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">특별 입금</p>
+                                                                        <span>0</span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">수수료율</p>
+                                                                        <span>0.10</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex w-1/2 flex-wrap">
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">사용 가능한 수수료</p>
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class="w-full md:w-1/2 mb-4">
+                                                                        <p class="text-white">총 수수료</p>
+                                                                        <span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-group mt-2 w-full md:w-1/2">
+                                                                <input type="text" class="form-control bgfull font-semibold" value="stake.com/?c=7865j46" />
+                                                                <button class="btn-gray px-3 le_no_radius tooltip" data-trigger="click" data-theme="light" title="복사되었습니다">
+                                                                    <svg class="svg-icon w-3.5 h-3.5"><use xlink:href="#icon-copy"></use></svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-center mt-4 font-semibold">
+                                                <a class="p-2" href="javascript:;">이전</a>
+                                                <a class="p-2" href="javascript:;">다음</a>
+                                            </div>
+                                            <button class="btn-gray p-3 px-4 font-bold" data-tw-toggle="modal" data-tw-target="#crecampaign_modal">새 캠페인 생성</button>
+                                        </div>
+                                        <!-- 캠페인생성 모달 -->
+                                        <div id="crecampaign_modal" class="modal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- BEGIN: Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
+                                                            <svg><use xlink:href="#icon-trophy"></use></svg>
+                                                            캠페인 생성
+                                                        </h2>
+                                                        <button data-tw-dismiss="modal">
+                                                            <svg><use xlink:href="#icon-cross"></use></svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="flex items-center font-medium">
+                                                            캠페인명
+                                                            <span class="text-[#ED4163]">*</span>
+                                                        </p>
+                                                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                                                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                                                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                                                            <span> 최소 문자 길이는 3입니다</span>
+                                                        </p>
+                                                        <p class="flex items-center font-medium mt-3">
+                                                            코드(캠페인 ID)
+                                                            <span class="text-[#ED4163]">*</span>
+                                                        </p>
+                                                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+
+                                                        <button class="btn-green w-full p-4 mt-4 font-bold text-base">캠페인 생성</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 끝 ** -->
+        </div>
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+    </body>
+</html>
