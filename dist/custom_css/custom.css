@@ -97,6 +97,10 @@ button.btn-gray {
     border: 0 none;
     border-radius: 3px;
 }
+button.btn-gray:hover {
+    background-color: #557086;
+}
+
 button.btn-green {
     border: 0 none;
     background-color: #00e701;
@@ -141,6 +145,10 @@ input.form-control.light {
 }
 .form-switch .form-check-input:checked {
     background: #00e701;
+}
+
+.le_no_radius {
+    border-radius: 0px 3px 3px 0 !important;
 }
 
 /*
@@ -272,7 +280,7 @@ input.form-control.light {
 
 /* 공통 : select 커스텀 */
 .select_custom {
-    z-index: 1;
+    z-index: 20;
     position: relative;
     display: inline-block;
 }
@@ -286,6 +294,12 @@ input.form-control.light {
     padding: 13px 16px;
     border-radius: 3px;
     background-color: #0f212e;
+}
+.select_custom .select_toggle_btn.gray {
+    background-color: var(--color-grey-400);
+}
+.select_custom .select_toggle_btn.gray:hover {
+    background-color: #557086;
 }
 .select_custom .select_toggle_btn p {
     display: flex;
@@ -318,7 +332,7 @@ input.form-control.light {
     font-size: 18px;
     color: #b1bad3;
 }
-.select_custom .select_toggle_btn.active > svg {
+.select_custom .select_toggle_btn.active svg:last-of-type {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -377,6 +391,9 @@ input.form-control.light {
 
 .select_custom .option_box.center p {
     justify-content: center;
+}
+.select_custom .option_box.between p {
+    justify-content: space-between;
 }
 .select_custom .option_box.img_option p {
     padding: 5px 12px;
