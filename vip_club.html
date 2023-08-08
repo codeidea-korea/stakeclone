@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <title>StakeClone</title>
+        <!-- ** css 시작 ** -->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <!-- 커스텀 css 추가 -->
+        <link rel="stylesheet" href="./dist/custom_css/custom.css" />
+        <!-- ** css 끝 ** -->
+    </head>
+
+    <body>
+        <!-- ** 페이지 로딩 ** -->
+        <div id="loadingContainer">
+            <svg width="25" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="rgb(30, 41, 59)" class="w-8 h-8">
+                <circle cx="15" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="105" cy="15" r="15">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+        <!-- ** 페이지 로딩 끝 ** -->
+
+        <div class="flex relative">
+            <!--  ** 사이드 메뉴 시작 ** -->
+            <div class="left_sidebar"></div>
+
+            <!--  ** 사이드 메뉴 끝 ** -->
+
+            <!--  ** 메인 보드 시작 ** -->
+            <div class="content">
+                <!-- ** 탑바 시작 ** -->
+                <!-- ** 탑바 끝 ** -->
+
+                <!-- ** 내용시작 ** -->
+                <div class="container_wrap overflow-y-scroll">
+                    <div class="flex items-center bg-grey-700">
+                        <div class="container flex py-10 lg:py-6 lg:py-12 items-center flex-wrap lg:flex-nowrap">
+                            <div class="block lg:hidden w-full">
+                                <img class="mx-auto w-[80px] block lg:hidden" src="./dist/custom_img/vip/vip_icon.avif" alt="" />
+                            </div>
+                            <div class="px-2 lg:px-0 mt-4 lg:mt-0">
+                                <h3 class="text-2xl font-bold">타의 추종을 불허하는 VIP 경험</h3>
+                                <p class="mt-4 text-grey-200 text-base font-medium">독점 혜택을 잠금 해제하고 아무런 조건 없이 즉시 인출 가능한 보너스를 받아 보세요</p>
+                                <div class="flex gap-2 mt-6">
+                                    <button class="btn-green p-3 px-4 font-medium">활성화</button>
+                                    <button class="btn-gray p-3 px-4 font-medium" onclick="rewordTop()">VIP 테이블 보기</button>
+                                </div>
+                            </div>
+                            <img class="mx-auto lg:mr-0 lg:ml-auto w-2/3 lg:w-1/3 hidden lg:block" src="./dist/custom_img/vip/vip_img.avif" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="py-12">
+                            <h4 class="text-lg font-bold text-white text-center">시작하기</h4>
+                            <p class="text-grey-200 text-base text-center font-medium mt-1">VIP가 되는 건 아주 쉽고, 보상이 가득한 과정입니다.</p>
+                            <div class="mt-10 flex gap-10 text-base flex-wrap md:flex-nowrap">
+                                <div class="w-full md:w-1/3">
+                                    <img src="./dist/custom_img/vip/vip_img01.jpg" alt="" />
+                                    <h5 class="mt-4 font-bold text-lg">1단계</h5>
+                                    <p class="mt-2 text-grey-200 font-medium">즉시 가입하고 카지노 혹은 스포츠 북에 베팅해 보세요.</p>
+                                </div>
+                                <div class="w-full md:w-1/3">
+                                    <img src="./dist/custom_img/vip/vip_img02.jpg" alt="" />
+                                    <h5 class="mt-4 font-bold text-lg">2단계</h5>
+                                    <p class="mt-2 text-grey-200 font-medium">모든 베팅은 VIP 진행도에 반영됩니다. 새로운 레벨에 도달하여 추가 혜택을 잠금 해제하세요.</p>
+                                </div>
+                                <div class="w-full md:w-1/3">
+                                    <img src="./dist/custom_img/vip/vip_img03.jpg" alt="" />
+                                    <h5 class="mt-4 font-bold text-lg">3단계</h5>
+                                    <p class="mt-2 text-grey-200 font-medium">즉시 보너스를 청구하세요. 일일, 주간 및 월간 보너스는 쉽고 간단하게 청구할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-12">
+                            <h4 class="text-lg font-bold text-white text-center">경험</h4>
+                            <p class="text-grey-200 text-base text-center font-medium mt-1">Stake는 지속적인 보너스를 기반으로 독특하고 타의 추종을 불허하는 경험을 제공합니다.</p>
+                            <div class="div slide_box">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="./dist/custom_img/vip/vip_img04.webp" alt="" />
+                                        <div class="px-12 mt-4">
+                                            <h3>부스트</h3>
+                                            <p>매주, 매월 최근 게임을 기반으로 한 새로운 보너스를 기대하세요. 더 많이 플레이할수록 더 많은 보너스를 받습니다.</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/custom_img/vip/vip_img05.webp" alt="" />
+                                        <div class="px-12 mt-4">
+                                            <h3>최근 플레이 보너스</h3>
+                                            <p>운이 나쁘셨나요? Stake는 레벨을 올릴 때마다 손실에 대한 페이백을 제공합니다.</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/custom_img/vip/vip_img06.webp" alt="" />
+                                        <div class="px-12 mt-4">
+                                            <h3>전용 VIP 호스트</h3>
+                                            <p>귀하의 베팅 요구 사항을 지원 및 제공할 전용 VIP 호스트를 수령하세요.</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/custom_img/vip/vip_img07.webp" alt="" />
+                                        <div class="px-12 mt-4">
+                                            <h3>레벨업</h3>
+                                            <p>새로운 레벨에 도달하고 보상을 받으세요. 레벨이 올라갈수록 레벨업 보상이 더 좋아집니다.</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/custom_img/vip/vip_img08.webp" alt="" />
+                                        <div class="px-12 mt-4">
+                                            <h3>Bespoke</h3>
+                                            <p>전용 VIP 호스트와 협력하여 게임 요구 사항에 맞는 혜택 제공</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                        <div class="py-12 overflow-hidden">
+                            <h4 class="text-lg font-bold text-white text-center">보상</h4>
+                            <p class="text-grey-200 text-base text-center font-medium mt-1">레벨이 올라갈수록 더 좋아지는 특별한 보상</p>
+                            <div class="reward_box text-base font-bold text-white mt-12" id="reword_box">
+                                <div class="sticky">VIP 레벨 비교</div>
+                                <div class="">
+                                    <svg class="svg-icon mr-2" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-bronze"></use></svg>브론즈
+                                </div>
+                                <div class="">
+                                    <div class="flex flex-col">
+                                        <span class="flex items-center">
+                                            <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>실버
+                                        </span>
+                                        <span class="flex items-center mt-1">
+                                            <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>골드
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon mr-2" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>플래티넘 I - III
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon mr-2" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>플래티넘 IV - VI
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon mr-2" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>다이아몬드
+                                </div>
+
+                                <div class="sticky">배팅 금액</div>
+                                <div class="">$10,000</div>
+                                <div class="">$50,000 - $100,000</div>
+                                <div class="">$250,000 - $100만</div>
+                                <div class="">$250만 - $1000만</div>
+                                <div class="">$25,000,000</div>
+
+                                <div class="sticky">월간 보너스</div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>
+                                    <svg class="svg-icon inline-flex" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">레벨 업 보너스</div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>
+                                    <svg class="svg-icon inline-flex" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">레이크백</div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>
+                                    <svg class="svg-icon inline-flex" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">주간 보너스</div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>
+                                    <svg class="svg-icon inline-flex" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">일일 보너스 / 리로드</div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">보너스 성장</div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon inline-flex mr-2" style="font-size: 1.5em"><use xlink:href="#icon-vip-silver"></use></svg>
+                                    <svg class="svg-icon inline-flex" style="font-size: 1.5em"><use xlink:href="#icon-vip-gold"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-1"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">전용 VIP 호스트</div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-platinum-4"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+
+                                <div class="sticky">맞춤형 보너스</div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon no_icon" style="font-size: 2.5em; color: var(--color-grey-600)"><use xlink:href="#icon-decrease"></use></svg>
+                                </div>
+                                <div class="">
+                                    <svg class="svg-icon" style="font-size: 1.5em; color: none"><use xlink:href="#icon-vip-diamond-4"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-12">
+                            <h4 class="text-lg font-bold text-white text-center">자주 묻는 질문</h4>
+                            <p class="text-grey-200 text-base text-center font-medium mt-1">수상 경력에 빛나는 지원 팀에 문의해 보세요.</p>
+                            <div class="grid grid-cols-12 gap-6 mt-4">
+                                <div class="col-span-12 md:col-span-3 lg:col-span-2 setting_left_wrap">
+                                    <ul class="bg-grey-700 py-2 rounded font-semibold setting_left_tab" role="tablist">
+                                        <li>
+                                            <button class="px-4 py-3 w-full text-left active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">일반</button>
+                                        </li>
+                                        <li>
+                                            <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false">혜택</button>
+                                        </li>
+                                        <li>
+                                            <button class="px-4 py-3 w-full text-left" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false">VIP 호스트</button>
+                                        </li>
+                                    </ul>
+                                    <div class="hidden">
+                                        <div class="flex items-center justify-center">
+                                            <div class="flex items-center">
+                                                <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
+                                                    <li id="vip01" class="nav-item" role="presentation">
+                                                        <button class="nav-link w-full py-3 px-5 gap-1 active" type="button" data-tw-toggle="pill" data-tw-target="#tab_con01" type="button" role="tab" aria-controls="tab_con01" aria-selected="true">
+                                                            <span class="flex items-center gap-1">일반</span>
+                                                        </button>
+                                                    </li>
+                                                    <li id="vip02" class="nav-item" role="presentation">
+                                                        <button class="nav-link w-full py-3 px-5 gap-1" type="button" data-tw-toggle="pill" data-tw-target="#tab_con02" type="button" role="tab" aria-controls="tab_con02" aria-selected="false">
+                                                            <span class="flex items-center gap-1">혜택</span>
+                                                        </button>
+                                                    </li>
+                                                    <li id="vip03" class="nav-item" role="presentation">
+                                                        <button class="nav-link w-full py-3 px-5 gap-1" type="button" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03" aria-selected="false">
+                                                            <span class="flex items-center gap-1">VIP 호스트</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12 md:col-span-9 lg:col-span-10">
+                                    <div class="tab-content setting_right_wrap">
+                                        <div id="tab_con01" class="tab-pane leading-relaxed active w-full" role="tabpanel" aria-labelledby="tab01">
+                                            <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                                <div id="faq-accordion-1" class="accordion mb-2">
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-1" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                                                <span class="flex items-center font-bold text-white"> Stake VIP 프로그램이 최고인 이유는 무엇인가요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                                            <p>
+                                                                Stake의 VIP 프로그램은 플레이어에게 제공하는 보너스가 굉장히 많으며, 이 때문에 최고의 온라인 카지노 경험으로 평가받고 있습니다.<br />
+                                                                또한 수상 경력에 빛나는 당사 지원 팀이 연중무휴 온라인 상태로 모든 질문에 답변해 드립니다. 우리는 전 세계 열정적인 갬블러 커뮤니티를 보유한 수많은 온라인 카지노 중에서 가장 높은 고객 만족도를
+                                                                자랑합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-2" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-2">
+                                                                <span class="flex items-center font-bold text-white"> Stake는 보너스로 얼마를 지급했을까요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-2">
+                                                            <p>
+                                                                우리는 10억 달러 이상의 보너스를 제공했습니다. 이는 당사가 최고의 온라인 VIP 프로그램을 보유하고 있다는 가장 큰 증거입니다.<br />
+
+                                                                우리는 진정으로 플레이어의 게임 플레이와 충성도에 대한 보상을 믿습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-3" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-3" aria-expanded="false" aria-controls="faq-accordion-collapse-3">
+                                                                <span class="flex items-center font-bold text-white"> $75,000 주간 복권에 참가하려면 어떻게 해야 하나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-3" data-tw-parent="#faq-accordion-3">
+                                                            <p>Stake에서 $1000만큼 플레이하면 추첨 티켓 한 장을 얻을 수 있습니다. 더 많이 베팅할수록 더 많은 티켓을 얻을 수 있고, 당첨 확률이 높아집니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-4" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-4" aria-expanded="false" aria-controls="faq-accordion-collapse-4">
+                                                                <span class="flex items-center font-bold text-white"> Stake 텔레그램 채널은 어디에 있나요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-4" data-tw-parent="#faq-accordion-4">
+                                                            <p>
+                                                                Stake 텔레그램 채널은 (@StakeCasino)입니다.
+                                                                <button class="block text-white font-bold">텔레그램을 다운로드했다면 여기에서 가입을 진행해 보세요.</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-5" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-5" aria-expanded="false" aria-controls="faq-accordion-collapse-5">
+                                                                <span class="flex items-center font-bold text-white"> Stake VIP 텔레그램 채널은 어디에서 찾을 수 있나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-5" data-tw-parent="#faq-accordion-5">
+                                                            <p>
+                                                                브론즈에 도달하면 Stake VIP 텔레그램 채널에 실시간 지원을 요청하여 추가할 수 있습니다.<br />
+                                                                또는 Stake 텔레그램 채널(@StakeCasino)에 가입하여 좀 더 자세한 정보를 확인할 수 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab03">
+                                            <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                                <div id="faq-accordion-1" class="accordion mb-2">
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-1" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                                                <span class="flex items-center font-bold text-white"> 최근 게임 플레이 보너스는 무엇인가요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                                            <p>호스트 또는 VIP 관리자의 재량에 따라 제공되는 보너스이며 상당한 양의 플레이어 베팅과 행운에 기반합니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-2" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-2">
+                                                                <span class="flex items-center font-bold text-white"> 레이크백이 무엇인가요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-2">
+                                                            <p>레이크백은 플레이어의 레이크(하우스 엣지) 중 귀하에게 환불된 비율입니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-3" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-3" aria-expanded="false" aria-controls="faq-accordion-collapse-3">
+                                                                <span class="flex items-center font-bold text-white"> 리로드란 무엇인가요? 리로드를 청구하려면 어떻게 해야 하나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-3" data-tw-parent="#faq-accordion-3">
+                                                            <p>
+                                                                리로드는 플레이어의 최근 활동을 기반으로 계산되는 보너스입니다. 플레이어는 매일, 매시간 또는 10분 리로드 간격 중에 선택할 수 있습니다.<br />
+
+                                                                화면 오른쪽 상단의 사용자 패널로 이동하여 VIP를 클릭하세요. 모드가 나타납니다. 리로드 탭을 클릭한 다음 리로드 보너스 버튼을 클릭하여 리로드 보너스를 청구하세요.<br />
+
+                                                                게임 플레이에 따라 호스트를 수령할 수 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-4" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-4" aria-expanded="false" aria-controls="faq-accordion-collapse-4">
+                                                                <span class="flex items-center font-bold text-white"> 월간 보너스는 언제로 예정되어 있나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-4" data-tw-parent="#faq-accordion-4">
+                                                            <p>
+                                                                월간 보너스는 한 달에 한 번 받을 수 있습니다. 날짜는 일반적으로 15일 전후입니다. 경우에 따라 조금 더 늦거나 더 빨라질 수 있습니다. Stake에서 가장 기대되는 보너스 중 하나입니다. 이메일로 안내하고
+                                                                있으니, 메일함에 메일이 없는 경우 스팸 메일함도 확인하여 보너스를 놓치지 마세요.<br />
+
+                                                                브론즈, 실버 및 골드 플레이어는 일일 리로드 형태로 보너스를 받으며, 플래티넘 및 다이아몬드 플레이어는 일회성 보너스 청구 형태로 보너스를 받습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-5" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-5" aria-expanded="false" aria-controls="faq-accordion-collapse-5">
+                                                                <span class="flex items-center font-bold text-white"> Stake VIP 텔레그램 채널은 어디에서 찾을 수 있나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-5" data-tw-parent="#faq-accordion-5">
+                                                            <p>
+                                                                먼저 오른쪽 상단에 있는 계정 페이지의 VIP 진행도가 몇 퍼센트가 남았는지 확인하세요. 새 레벨을 잠금 해제하려면 도박 요구 사항을 충족하고 100%로 만드세요.
+
+                                                                <button class="block text-white font-bold">자세히 알아보려면 여기를 클릭하세요</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-6" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-6" aria-expanded="false" aria-controls="faq-accordion-collapse-6">
+                                                                <span class="flex items-center font-bold text-white"> 레벨을 올리면 어떤 보상을 받나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-6" data-tw-parent="#faq-accordion-6">
+                                                            <p>
+                                                                레벨 업 보너스: 레벨을 올릴 때마다 커지는 고정 보너스입니다. 하지만 레벨 간 이익/손실에 따라 최근 게임 플레이 보너스의 형태로 맨 위에 보너스가 추가됩니다.<br />
+
+                                                                주간/월간 보너스: VIP 레벨에 맞는 기본 금액으로 계산됩니다. 해당 기간에 베팅한 금액의 $1,000마다 보너스를 받게 됩니다.<br />
+
+                                                                일일 보너스: 리로드가 만료되면 VIP 호스트를 통해 리로드가 갱신됩니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-5" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-5" aria-expanded="false" aria-controls="faq-accordion-collapse-5">
+                                                                <span class="flex items-center font-bold text-white"> 보너스는 어떻게 계산하나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-5" data-tw-parent="#faq-accordion-5">
+                                                            <p>
+                                                                보너스는 베팅 금액과 수익을 합쳐 계산됩니다. 우리는 플레이어가 승패에 관계없이 항상 보상을 받아야 하며, 지는 플레이어에게만 보상을 주는 건 불공평하다고 생각합니다. 하지만 운이 좋지 않았다면
+                                                                보너스를 받으실 수 있습니다!
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab_con03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab01">
+                                            <div class="bg-grey-700 text-grey-200 p-6 text-sm">
+                                                <div id="faq-accordion-1" class="accordion mb-2">
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-1" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-1" aria-expanded="false" aria-controls="faq-accordion-collapse-1">
+                                                                <span class="flex items-center font-bold text-white"> VIP 호스트가 나를 위해 무엇을 할 수 있나요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-1" data-tw-parent="#faq-accordion-1">
+                                                            <p>
+                                                                VIP 호스트는 게임 경험에 대한 보상을 책임지고 있습니다. 리로드 갱신을 지원하고, 레벨 업 진행도를 안내하고, 스포츠 한도를 검토하고, 가능한 경우 추가 보너스를 측정하고, 사이트에서 사용자가 겪는 모든
+                                                                문제를 해결합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-2" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-2" aria-expanded="false" aria-controls="faq-accordion-collapse-2">
+                                                                <span class="flex items-center font-bold text-white"> VIP 호스트가 배정되면 리로드가 지속적이고 갱신 가능한 혜택으로 바뀌게 되나요? </span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-2" data-tw-parent="#faq-accordion-2">
+                                                            <p>
+                                                                플래티넘 IV에 도달하고 호스트를 배정받으면 갱신할 수 있는 주간 리로드를 받게 됩니다. 주간 리로드가 만료되면 호스트에게 연락하여 다음 7일 동안의 리로드를 갱신할 수 있습니다.
+                                                                <br />
+                                                                리로드 금액은 주간 게임 활동을 기반으로 하며, 한 주간 수익 측면에서 운이 좋지 않았던 경우 추가 보상을 제공하는 것을 목표로 합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-3" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-3" aria-expanded="false" aria-controls="faq-accordion-collapse-3">
+                                                                <span class="flex items-center font-bold text-white"> VIP 호스트는 어떤 직업이며, 일반적인 실시간 지원 보조와 어떻게 다른가요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-3" data-tw-parent="#faq-accordion-3">
+                                                            <p>
+                                                                VIP 호스트는 플래티넘 IV 이상의 플레이어만 받을 수 있습니다. VIP 호스트는 VIP 프로그램에 대한 귀하의 질문에 답변하고, 귀하가 받을 자격이 있는 모든 보너스를 받고 있는지 확인합니다. VIP 호스트는
+                                                                귀하의 목적에 알맞은 보너스를 보장하는 동시에 플레이어에게 더 자주 더 많은 보너스를 보낼 수 있는 능력이 있습니다.
+                                                                <br />
+                                                                실시간 지원은 플랫폼에서 발생한 기술적인 문제를 지원합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-4" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-4" aria-expanded="false" aria-controls="faq-accordion-collapse-4">
+                                                                <span class="flex items-center font-bold text-white"> VIP 호스트는 언제 받을 수 있나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-4" data-tw-parent="#faq-accordion-4">
+                                                            <p>
+                                                                플레이어가 플래티넘 IV에 도달하면 VIP 호스트를 받을 수 있습니다. VIP 호스트는 고객님의 모든 문의사항을 돕고, 게임 경험을 안내하는 전담 지원 직원으로 활동하게 됩니다. 고객님의 최근 활동에 따라 자격
+                                                                여부도 결정됩니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div id="faq-accordion-content-5" class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-tw-toggle="collapse" data-tw-target="#faq-accordion-collapse-5" aria-expanded="false" aria-controls="faq-accordion-collapse-5">
+                                                                <span class="flex items-center font-bold text-white"> VIP 호스트가 휴가 중이면 어떻게 해야 하나요?</span>
+                                                                <svg class="svg-icon arrow"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div id="faq-accordion-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-accordion-content-5" data-tw-parent="#faq-accordion-5">
+                                                            <p>
+                                                                VIP 호스트에게 고유 VIP 호스팅 채널 링크를 요청해야 합니다. 요청하지 못한 경우 실시간 지원에 메시지를 보내면 VIP 백업 링크가 제공됩니다. 해당 백업 호스트는 호스트가 다시 돌아올 때까지 임시로
+                                                                제공됩니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-12">
+                            <div class="flex text-left flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <h4 class="text-lg font-bold text-white">질문이 더 있나요?</h4>
+                                    <p class="text-grey-200 font-medium mt-1">지식 가이드를 활용하거나 커뮤니티 포럼에 질문해 보세요.</p>
+                                    <button class="btn btn-primary mt-6">더 알아보기</button>
+                                </div>
+                                <div class="w-full md:w-1/2 pl-0 md:pl-12 md:border-l md:border-gray-700 mt-12 md:mt-0">
+                                    <h4 class="text-lg font-bold text-white">24시간, 실시간 고객 지원</h4>
+                                    <p class="text-grey-200 font-medium mt-1">실제 사람이 직접 지원 서비스를 제공합니다. 즉석 라이브 채팅과 이메일을 통해 설정하는 방법이나 발생한 문제를 해결해 드립니다.</p>
+                                    <button class="btn-gray mt-6 py-2 px-4" style="border-radius: 5px">우리와 채팅하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ** 내용 끝 ** -->
+
+                <!-- ** 푸터 시작 ** -->
+                <!-- ** 푸터 끝 ** -->
+            </div>
+            <!--  ** 메인 보드 끝 ** -->
+
+            <!--  ** 오른쪽 보드 시작 ** -->
+            <div class="right-sidebar text-white"></div>
+            <!--  ** 오른쪽 보드 시작 ** -->
+        </div>
+
+        <!-- ** JS 시작 ** -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/custom_js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".slide_box", {
+                slidesPerView: 1,
+                spaceBetween: 50,
+                loop: true,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 70,
+                    },
+                },
+            });
+            const rewordTop = () => {
+                console.log("dd");
+                var top = $("#reword_box").offset().top - 60;
+                console.log(top);
+                $(".container_wrap").animate({scrollTop: top}, 10);
+            };
+        </script>
+
+        <!-- ** 테이블 - slickGrid 시작 ** -->
+        <!-- 필수 jquery library -->
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+
+        <script>
+            // html load
+            // $(function () {
+            //     $(".left_sidebar").load("/_casino_left.html");
+            // });
+        </script>
+    </body>
+</html>

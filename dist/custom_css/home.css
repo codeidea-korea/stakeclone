@@ -86,6 +86,10 @@
 }
 
 /* 좌우 분리 */
+.setting_left_tab {
+    position: sticky;
+    top: 2em;
+}
 .setting_left_tab .active {
     border-left: 3px solid #1475e1;
     background-color: #071824;
@@ -249,4 +253,97 @@
 .modal-footer.nopadding {
     padding: 0 !important;
     border: 0 none !important;
+}
+
+/* vip slide */
+.slide_box {
+    overflow: hidden;
+    position: relative;
+    padding: 70px 35px;
+    margin-top: 30px;
+}
+.slide_box li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 400px;
+    background-color: var(--color-grey-700);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.slide_box li img {
+    width: 160px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+@media all and (min-width: calc(1024px)) {
+    .slide_box li.swiper-slide-active {
+        transform: scale(1.2);
+        background-color: var(--color-grey-500);
+    }
+}
+@media all and (max-width: calc(1024px)) {
+    .slide_box {
+        padding: 0px 20px;
+    }
+    .slide_box li {
+        background-color: var(--color-grey-500);
+    }
+    .slide_box .swiper-button-next,
+    .slide_box .swiper-button-prev {
+        display: block !important;
+    }
+}
+.slide_box li h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.slide_box li p {
+    color: var(--color-grey-200);
+    word-break: keep-all;
+}
+.slide_box .swiper-button-next {
+    text-align: right;
+    right: 0;
+}
+.slide_box .swiper-button-prev {
+    left: 0;
+}
+.slide_box .swiper-button-next:after,
+.slide_box .swiper-button-prev:after {
+    font-size: 10px;
+}
+
+.reward_box {
+    overflow-x: auto;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.reward_box > div {
+    width: 100%;
+    height: 100%;
+    min-width: 7rem;
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--color-grey-700);
+    text-align: center;
+}
+.reward_box > div.sticky {
+    position: sticky;
+    left: 0;
+}
+.reward_box > div svg {
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 }

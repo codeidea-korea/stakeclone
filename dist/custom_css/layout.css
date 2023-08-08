@@ -336,7 +336,7 @@
     background: url(../custom_img/casino-poker-cards.jpg) center center no-repeat;
     background-size: cover;
 }
-.side-nav .header_casino.active{
+.side-nav .header_casino.active {
     background: url(../custom_img/casino-poker-cards-green.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -376,9 +376,6 @@
         padding-right: 0;
     }
 
-    .content {
-        margin-left: 60px;
-    }
     .side-nav .side-menu {
         padding-left: 1.25rem;
     }
@@ -399,6 +396,11 @@
 }
 .content.fold {
     margin-left: 60px;
+}
+@media all and (max-width: calc(1279px)) {
+    .content {
+        margin-left: 60px;
+    }
 }
 
 @media all and (max-width: calc(767px)) {
@@ -443,7 +445,7 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 .right-sidebar .header_wrap .select_custom {
-    z-index: 2;
+    z-index: 22;
 }
 .right-sidebar .header_wrap .select_toggle_btn {
     background-color: transparent;
@@ -686,6 +688,10 @@
     justify-content: flex-end;
 }
 
+.right-sidebar .tab-content .tab-pane {
+    width: 100% !important;
+}
+
 /*
 #=========================================#
         모바일 메뉴 
@@ -742,8 +748,8 @@
         푸터
 #=========================================#
 */
-.footer{
-    margin-top:32px;
+.footer {
+    margin-top: 32px;
 }
 .footer .sitemap a svg {
     display: inline-block;
