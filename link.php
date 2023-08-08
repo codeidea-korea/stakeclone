@@ -102,7 +102,14 @@ echo txtRecord('./@record/');
 
 				<li class="mt30" data-label="게임">
 					<ul>
-						<li><a href="../stakeclone/casino/stake-originals.html" target="_blank" class="">Stake 오리지널</a></li>
+						<li>
+							<a href="../stakeclone/casino/stake-originals.html" target="_blank" class="">Stake 오리지널</a>
+							<ul>
+								<li>
+									<a href="../stakeclone/casino/casino_game_view.html" target="_blank" class="">게임_view (모든게임 공통)</a>
+								</li>
+							</ul>
+						</li>
 						<li><a href="../stakeclone/casino/stake-exclusives.html" target="_blank" class="">Stake 독점</a></li>
 						<li><a href="../stakeclone/casino/slots.html" target="_blank" class="">슬롯</a></li>
 						<li><a href="../stakeclone/casino/live-casino.html" target="_blank" class="">실시간 카지노</a></li>
@@ -124,27 +131,6 @@ echo txtRecord('./@record/');
 					</ul>
 				</li>
 
-				<li class="mt30" data-label="스폰서쉽">
-					<ul>
-						<li><a href="../stakeclone/sponsor_drake.html" target="_blank" class="">drake</a></li>
-						<li><a href="../stakeclone/sponsor_everton.html" target="_blank" class="">에버튼 풋볼 클럽</a></li>
-						<li><a href="../stakeclone/sponsor_alfa-romeo-f1.html" target="_blank" class="">Alfa Romeo F1 팀 Stake</a></li>
-						<li><a href="../stakeclone/sponsor_adesanya.html" target="_blank" class="">이스라엘 아데산야</a></li>
-						<li><a href="../stakeclone/sponsor_fittipaldi.html" target="_blank" class="">Fittipaldi 형제</a></li>
-						<li><a href="../stakeclone/sponsor_brazil-rugby.html" target="_blank" class="">브라질 럭비 리그</a></li>
-						<li><a href="../stakeclone/sponsor_gabigol.html.html" target="_blank" class="">Gabigol</a></li>
-						<li><a href="../stakeclone/sponsor_sergio.html" target="_blank" class="">세르히오 아구에로</a></li>
-						<li><a href="../stakeclone/sponsor_alexa.html" target="_blank" class="">알렉사 그라소</a></li>
-						<li><a href="../stakeclone/sponsor_jailton.html" target="_blank" class="">자일턴 알메이다</a></li>
-						<li><a href="../stakeclone/sponsor_ufc.html" target="_blank" class="">UFC</a></li>
-						<li><a href="../stakeclone/sponsor_inoue.html" target="_blank" class="">일본 복싱</a></li>
-						<li><a href="../stakeclone/sponsor_volleyboll.html" target="_blank" class="">지금 베팅하세요! 배구 네이션스 리그</a></li>
-						<li><a href="../stakeclone/sponsor_gilbert.html" target="_blank" class="">길버트 번즈</a></li>
-					</ul>
-				</li>
-
-				<li class="mt30"><a href="../stakeclone/casino/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
-				
 				<li class="mt30" data-label="프로필">
 					<ul>
 						<li><a href="#">지갑</a></li>
@@ -176,6 +162,46 @@ echo txtRecord('./@record/');
 						</li>
 					</ul>
 				</li>
+
+				<li class="mt30" data-label="제휴">
+					<ul>
+						<li><a href="#" target="_blank" class="">제휴</a></li>
+					</ul>
+				</li>
+
+				<li class="mt30" data-label="블로그">
+					<ul>
+						<li>
+							<a href="../stakeclone/blog.html" target="_blank" class="">블로그</a>
+							<ul>
+								<li><a href="../stakeclone/blog_sub.html" target="_blank" class="">블로그-sub</a></li>
+								<li><a href="../stakeclone/blog_view.html" target="_blank" class="">블로그-view</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li class="mt30" data-label="스폰서쉽">
+					<ul>
+						<li><a href="../stakeclone/sponsor_drake.html" target="_blank" class="">drake</a></li>
+						<li><a href="../stakeclone/sponsor_everton.html" target="_blank" class="">에버튼 풋볼 클럽</a></li>
+						<li><a href="../stakeclone/sponsor_alfa-romeo-f1.html" target="_blank" class="">Alfa Romeo F1 팀 Stake</a></li>
+						<li><a href="../stakeclone/sponsor_adesanya.html" target="_blank" class="">이스라엘 아데산야</a></li>
+						<li><a href="../stakeclone/sponsor_fittipaldi.html" target="_blank" class="">Fittipaldi 형제</a></li>
+						<li><a href="../stakeclone/sponsor_brazil-rugby.html" target="_blank" class="">브라질 럭비 리그</a></li>
+						<li><a href="../stakeclone/sponsor_gabigol.html.html" target="_blank" class="">Gabigol</a></li>
+						<li><a href="../stakeclone/sponsor_sergio.html" target="_blank" class="">세르히오 아구에로</a></li>
+						<li><a href="../stakeclone/sponsor_alexa.html" target="_blank" class="">알렉사 그라소</a></li>
+						<li><a href="../stakeclone/sponsor_jailton.html" target="_blank" class="">자일턴 알메이다</a></li>
+						<li><a href="../stakeclone/sponsor_ufc.html" target="_blank" class="">UFC</a></li>
+						<li><a href="../stakeclone/sponsor_inoue.html" target="_blank" class="">일본 복싱</a></li>
+						<li><a href="../stakeclone/sponsor_volleyboll.html" target="_blank" class="">지금 베팅하세요! 배구 네이션스 리그</a></li>
+						<li><a href="../stakeclone/sponsor_gilbert.html" target="_blank" class="">길버트 번즈</a></li>
+					</ul>
+				</li>
+
+				<li class="mt30"><a href="../stakeclone/casino/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
+				
 			</ul>
 		</li>
 	</ul>

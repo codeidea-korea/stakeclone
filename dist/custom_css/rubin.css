@@ -423,3 +423,83 @@
     .mobile_game_view{display: grid; grid-template-columns: minmax(100px,40%) auto;}
     .box_con{display: none;}
     .box_con.active{display: block;}
+
+
+
+
+    /*
+    #=========================================#
+            블로그
+    #=========================================#
+    */
+    .blog_top{
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: start;
+        flex-direction: row;
+        transition:all 0.3s;
+    }
+    .blog_top img{
+        transition:all 0.3s;
+    }
+    .blog_top:hover img{
+        transform: translateY(-10px);
+    }
+    .list_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+        min-width: 0;
+    }
+
+    @media (max-width: 1024px){
+        .blog_top{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /*
+    #=========================================#
+            메인
+    #=========================================#
+    */
+    .content_title.main_title{
+        background-color: var(--color-grey-700);
+        height:296px;
+    }
+
+    .progress_arrow svg{
+        transition: all 0.3s;
+    }
+    .progress_arrow:hover svg{
+        margin-left:8px;
+    }
+    .header_img{
+        position:relative;
+    }
+    .header_img .header_main_img{
+        position:relative;
+        z-index: 1;
+    }
+    .header_img::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        right: 75%;
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image:url(/stakeclone/dist/custom_img/main_top_bg.svg);
+        z-index: 0;
+    }
+    .list_hover img{
+        transition: all 0.3s;
+    }
+    .list_hover:hover svg{
+        color:#fff;
+    }
+
+    .list_hover:hover img{
+        transform: translateY(-10px);
+    }
+    
