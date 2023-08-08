@@ -186,3 +186,67 @@
     right: 10px;
     top: calc(50% - 7px);
 }
+
+/* 베팅 모달 */
+
+.betting_num ul {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.betting_num li {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #2f4553;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+.betting_num li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    transition: all 0.4s;
+}
+.betting_num li.active:before {
+    height: 100%;
+}
+.betting_num li:hover:before {
+    height: 100%;
+}
+.betting_num li.green:before {
+    background-color: #00e403;
+}
+.betting_num li.gray:before {
+    background-color: #406c82;
+}
+.betting_num li.yellow:before {
+    background-color: #fde905;
+}
+.betting_num li.purple:before {
+    background-color: #7f46fd;
+}
+.betting_num li.white:before {
+    background-color: #d5e8f2;
+}
+.betting_num li.orange:before {
+    background-color: #fca32f;
+}
+.betting_num li span {
+    position: relative;
+    z-index: 2;
+}
+
+.modal-footer.nopadding {
+    padding: 0 !important;
+    border: 0 none !important;
+}
