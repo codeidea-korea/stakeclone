@@ -207,7 +207,7 @@ echo txtRecord('./@record/');
 
 				<li class="mt30" data-label="Stake 세이프">
 					<ul>
-						<li><a href="../stakeclone/casino/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
+						<li><a href="../stakeclone/stake_safe.html" target="_blank" class="">Stake 세이프</a></li>
 					</ul>
 				</li>
 				
