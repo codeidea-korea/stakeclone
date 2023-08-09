@@ -13,11 +13,22 @@ fetch("/stakeclone/_svg_reset.html")
         console.log(error);
     });
 
-// 왼쪽메뉴 로드
+// 왼쪽메뉴 로드 (카지노)
 fetch("/stakeclone/_casino_left.html")
     .then((response) => response.text())
     .then((htmlData) => {
         const left = document.querySelector(".left_sidebar");
+        left.innerHTML = htmlData;
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// 왼쪽메뉴 로드 (메인)
+fetch("/stakeclone/_main_left.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        const left = document.querySelector(".main_sidebar");
         left.innerHTML = htmlData;
     })
     .catch((error) => {

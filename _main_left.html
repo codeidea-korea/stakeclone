@@ -1,0 +1,396 @@
+<!-- pc : 사이드메뉴 -->
+<nav class="side-nav h-full">
+    <div class="flex items-center justify-center header_flex_card mx-3">
+        <!-- 접기 버튼 -->
+        <div class="fold_btn intro-x flex items-center">
+            <button class="w-14 h-16 flex items-center justify-center flex-shrink-0">
+                <svg class="svg-icon"><use xlink:href="#icon-menu"></use></svg>
+            </button>
+        </div>
+        <div class="flex gap-2 w-full flex_card">
+            <a href="/stakeclone/casino/home.html" class="header_casino flex items-center justify-center h-9 w-full rounded-md">
+                <span class="text-white font-extrabold">CASINO</span>
+            </a>
+            <a href="" class="header_sports flex items-center justify-center h-9 w-full rounded-md">
+                <span class="text-white font-extrabold">SPORTS</span>
+            </a>
+        </div>
+    </div>
+    <div class="scroll-section pt-2 pb-5">
+        <!-- 첫번째 nav 섹션 -->
+
+        <!-- 공통 -->
+        <ul>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-user"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-extrabold">
+                        Profile
+                        <div class="side-menu__sub-icon w-6 h-6 bg-grey-400 rounded-full flex items-center justify-center">
+                            <svg class="svg-icon" style="transform: rotate(270deg); font-size: var(--text-size-md); color: var(--color-neutral-white); margin-right: 0; font-size: var(--text-size-sm)"><use xlink:href="#icon-arrowdown"></use></svg>
+                        </div>
+                    </div>
+                </a>
+                <ul class="border-t-2 border-b-2 border-grey-400" style="display: none">
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#wallet_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-coins"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">지갑</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#vault_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-vault"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">금고</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#vip_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-trophy"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">VIP</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#statistics_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-stats"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">통계</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu" onclick="rightClick('notifi_right')">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-list"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">Notification</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-sports"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">스포츠 베팅</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/setting.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-gear"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">설정</div>
+                        </a>
+                    </li>
+                    <li class="border-t-2 border-grey-400">
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#logout_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-exit"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">로그아웃</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-promotions"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-extrabold">
+                        프로모션
+                        <div class="side-menu__sub-icon w-6 h-6 bg-grey-400 rounded-full flex items-center justify-center">
+                            <svg class="svg-icon" style="transform: rotate(270deg); font-size: var(--text-size-md); color: var(--color-neutral-white); margin-right: 0; font-size: var(--text-size-sm)"><use xlink:href="#icon-arrowdown"></use></svg>
+                        </div>
+                    </div>
+                </a>
+                <ul class="border-t-2 border-b-2 border-grey-400" style="display: none">
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#ticket_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-coupon"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">$75,000 주간 복권</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu" data-tw-toggle="modal" data-tw-target="#races_modal">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-races"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">$100,000 레이스 - 24시간</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-trophy"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">실용적 드롭 & 승리</div>
+                        </a>
+                    </li>
+                    <li class="border-t-2 border-grey-400">
+                        <a href="/stakeclone/promotions.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-promotions"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">모두 보기</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li class="side-nav__devider my-6"></li> -->
+            <li>
+                <a href="/stakeclone/affiliate.html" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-affiliate"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">제휴</div>
+                </a>
+            </li>
+            <li>
+                <a href="/stakeclone/vip_club.html" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-trophy"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">VIP 클럽</div>
+                </a>
+            </li>
+            <li>
+                <a href="/stakeclone/blog.html" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-news"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">블로그</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://stakecommunity.com/" target="_blank" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-chat"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">포럼</div>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 두번째 nav 섹션 -->
+        <ul>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-sponsorships"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">
+                        스폰서쉽
+                        <div class="side-menu__sub-icon w-6 h-6 bg-grey-400 rounded-full flex items-center justify-center">
+                            <svg class="svg-icon" style="transform: rotate(270deg); font-size: var(--text-size-md); color: var(--color-neutral-white); margin-right: 0; font-size: var(--text-size-sm)"><use xlink:href="#icon-arrowdown"></use></svg>
+                        </div>
+                    </div>
+                </a>
+                <ul class="border-t-2 border-b-2 border-grey-400" style="display: none">
+                    <li>
+                        <a href="/stakeclone/sponsor_drake.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-drake"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">Drake</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_everton.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-soccer"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">에버튼 풋볼 클럽</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_alfa-romeo-f1.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-alfa-romeo"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">Alfa Romeo F1 팀 Stake</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_adesanya.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-mma"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">이스라엘 아데산야</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_fittipaldi.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-motorsport"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">Fittipaldi 형제</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_brazil-rugby.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-rugby-league"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">브라질 럭비 리그</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_gabigol.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-gabigol"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">Gabigol</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_sergio.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-soccer"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">세르히오 아구에로</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_alexa.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-mma"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">알렉사 그라소</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_jailton.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-almeida"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">자일턴 알메이다</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_ufc.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-ufc"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">UFC</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_inoue.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-boxing"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">일본 복싱</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_volleyboll.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-volleyball"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold ellipsis">지금 베팅하세요! 배구 네이션스 리그</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stakeclone/sponsor_gilbert.html" class="side-menu">
+                            <div class="side-menu__icon">
+                                <svg class="svg-icon"><use xlink:href="#icon-mma"></use></svg>
+                            </div>
+                            <div class="side-menu__title font-extrabold">길버트 번즈</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li class="side-nav__devider my-6"></li> -->
+            <li>
+                <a href="/stakeclone/stake_safe.html" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-verify"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">Stake 세이프</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-support"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">실시간 지원</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;.html" class="side-menu">
+                    <div class="side-menu__icon">
+                        <svg class="svg-icon"><use xlink:href="#icon-language"></use></svg>
+                    </div>
+                    <div class="side-menu__title font-bold">
+                        Languate: 한국어
+                        <div class="side-menu__sub-icon w-6 h-6 bg-grey-400 rounded-full flex items-center justify-center">
+                            <svg class="svg-icon" style="transform: rotate(270deg); font-size: var(--text-size-md); color: var(--color-neutral-white); margin-right: 0; font-size: var(--text-size-sm)"><use xlink:href="#icon-arrowdown"></use></svg>
+                        </div>
+                    </div>
+                </a>
+                <ul class="border-t-2 border-b-2 border-grey-400" style="display: none">
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"><span class="block w-2 h-2 ml-4 bg-slate-500 rounded-full"></span></div>
+                            <div class="side-menu__title font-semibold text-xs">English</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"><span class="block w-2 h-2 ml-4 bg-slate-500 rounded-full"></span></div>
+                            <div class="side-menu__title font-semibold text-xs">Español</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 모바일 -->
+<div class="mo_quick">
+    <ul class="flex items-center justify-betwwen h-full">
+        <li onclick="rightClick('menu_right')">
+            <a href="javascript:;">
+                <svg class="svg-icon" style="width: 1rem; height: 1rem"><use xlink:href="#icon-browse"></use></svg>
+                Browse
+            </a>
+        </li>
+        <li class="on" onclick="rightClick('close')">
+            <a href="javascript:;">
+                <svg class="svg-icon" style="width: 1rem; height: 1rem"><use xlink:href="#icon-casino"></use></svg>
+                카지노
+            </a>
+        </li>
+        <li onclick="rightClick('mo_batting_right')">
+            <a href="javascript:;">
+                <svg class="svg-icon" style="width: 1rem; height: 1rem"><use xlink:href="#icon-list"></use></svg>
+                베팅
+            </a>
+        </li>
+        <li onclick="rightClick('close')">
+            <a href="javascript:;">
+                <svg class="svg-icon" style="width: 1rem; height: 1rem"><use xlink:href="#icon-sports"></use></svg>
+                스포츠
+            </a>
+        </li>
+        <li onclick="rightClick('chatting_right')">
+            <a href="javascript:;">
+                <svg class="svg-icon" style="width: 1rem; height: 1rem"><use xlink:href="#icon-chat"></use></svg>
+                채팅
+            </a>
+        </li>
+    </ul>
+</div>
