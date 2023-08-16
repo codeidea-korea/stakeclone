@@ -35,6 +35,22 @@ fetch("/stakeclone/_main_left.html")
         console.log(error);
     });
 
+// 왼쪽메뉴 로드 (스포츠)
+fetch("/stakeclone/_sports_left.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        const left = document.querySelector(".left_sidebar2");
+        left.innerHTML = htmlData;
+
+        $(".side-menu.dividend_btn").on("click", function () {
+            $(this).addClass("active").parent().siblings().find("a").removeClass("active");
+            $(".side-menu__title .dividend_text").text($(this).text());
+        });
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 // 탑바 로드
 fetch("/stakeclone/_top_bar.html")
     .then((response) => response.text())
@@ -437,3 +453,14 @@ const customJquery = () => {
             });
     });
 };
+
+function toggleHandle(item) {
+    const hiddenItems = document.querySelectorAll(`.${item}`);
+    hiddenItems.forEach((item) => {
+        if (item.classList.contains("hidden")) {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
+}

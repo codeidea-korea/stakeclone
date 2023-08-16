@@ -453,3 +453,65 @@ input.form-control.light {
 .select_custom .option_box.input_option input[type="checkbox"]:checked + b {
     background: #2f4553 url("/stakeclone/dist/custom_img/check_icon.svg") no-repeat center center / 75%;
 }
+
+/*
+#=========================================#
+        스포츠 탭 커스텀
+#=========================================#
+*/
+.tab-content .tab-pane {
+    width: 100% !important;
+}
+
+.sports-tabs {
+    padding: 20px 8px 5px;
+    background-color: #0f212e;
+    border-radius: 10px;
+}
+.sports-tabs .nav {
+    padding: 0;
+}
+.nav.nav-link-tabs .nav-item .nav-link {
+    position: relative;
+    color: var(--color-grey-200);
+    border: 0 none;
+}
+.nav.nav-link-tabs .nav-item .nav-link:hover,
+.nav.nav-link-tabs .nav-item .nav-link.active {
+    color: #fff;
+}
+.nav.nav-link-tabs .nav-item .nav-link.active {
+    border: 0 none;
+}
+.nav.nav-link-tabs .nav-item .nav-link.active:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 6px);
+    top: -20px;
+    width: 12px;
+    height: 6px;
+    border-radius: 0 0 100% 100%;
+    background-color: #1475e1;
+}
+.nav.nav-link-tabs .nav-item .nav-link > div {
+    position: relative;
+}
+.nav.nav-link-tabs .nav-item .nav-link > div span {
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    z-index: 1;
+    background-color: #071824;
+    color: #b1bad3;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.nav.nav-link-tabs .nav-item .nav-link.active > div span {
+    background-color: #4391e7;
+    color: #04172d;
+}
+.nav.nav-link-tabs .nav-item .nav-link.active:before {
+    background-color: #4391e7;
+}

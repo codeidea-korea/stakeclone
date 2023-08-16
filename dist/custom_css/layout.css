@@ -357,9 +357,40 @@
     background: url(../custom_img/sports-balls.jpg) center center no-repeat;
     background-size: cover;
 }
+.side-nav .header_sports.active,
 .side-nav .header_sports:hover {
     background: url(../custom_img/sports-balls-orange.jpg) center center no-repeat;
     background-size: cover;
+}
+.side-menu.dividend_btn {
+    position: relative;
+}
+.side-menu.dividend_btn:before {
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #557086;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.4s;
+}
+.side-menu.dividend_btn.active:hover:before,
+.side-menu.dividend_btn:hover:before {
+    opacity: 0.8;
+}
+.side-menu.dividend_btn.active:after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
 }
 @media all and (max-width: calc(1279px)) {
     .side-nav {
