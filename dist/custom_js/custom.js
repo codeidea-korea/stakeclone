@@ -464,3 +464,35 @@ function toggleHandle(item) {
         }
     });
 }
+function toggleGrid(item) {
+    const gridList = document.querySelectorAll(`#${item} .sports_detail`);
+    gridList.forEach((item) => {
+        if (item.classList.contains("grid3")) {
+            item.classList.remove("grid3");
+        } else {
+            item.classList.add("grid3");
+        }
+    });
+}
+
+// 스포츠 리스트 js
+$(".sports_list dt").on("click", function () {
+    $(this).toggleClass("fold");
+    $(this).next().toggle();
+});
+$(".sports_list dd .sports_detail .outcomes button, .sports_list dd .sports_detail .grid3_outcomes button").on("click", function () {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+    } else {
+        $(this).addClass("active");
+        if (!$(".right-sidebar").hasClass("on")) {
+            $(".right-sidebar").addClass("on");
+            $(".content").addClass("right_open");
+            $(`.right-sidebar > div`).hide();
+            $(`.right-sidebar .batting_right`).show();
+        } else {
+            $(`.right-sidebar > div`).hide();
+            $(`.right-sidebar .batting_right`).show();
+        }
+    }
+});
