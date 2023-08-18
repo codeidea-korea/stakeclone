@@ -150,6 +150,20 @@ echo txtRecord('./@record/');
 						<li><a href="../stakeclone/casino/provider.html" target="_blank" class="">제공자</a></li>
 					</ul>
 				</li>
+            </ul>
+        </li>
+        <li class="mt50" data-label="공통">
+            <ul>
+				<li data-label="프로필">
+					<ul>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#wallet_modal">지갑</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vault_modal">금고</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vip_modal">VIP</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#statistics_modal">통계</button></li>
+						<li><a href="../stakeclone/setting.html">설정</a></li>
+						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#logout_modal">로그아웃</button></li>
+					</ul>
+				</li>
 
                 <li class="mt30" data-label="프로모션">
 					<ul>
@@ -170,22 +184,7 @@ echo txtRecord('./@record/');
 						</li>
 					</ul>
 				</li>
-            </ul>
-        </li>
-        <li class="mt50" data-label="공통">
-            <ul>
-				<li data-label="프로필">
-					<ul>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#wallet_modal">지갑</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vault_modal">금고</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vip_modal">VIP</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#statistics_modal">통계</button></li>
-						<li><a href="../stakeclone/setting.html">설정</a></li>
-						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#logout_modal">로그아웃</button></li>
-					</ul>
-				</li>
 
-				
 
 				<li class="mt30" data-label="제휴">
 					<ul>

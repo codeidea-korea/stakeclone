@@ -502,21 +502,23 @@
     justify-content: flex-start;
 }
 .right-sidebar .right_content .right_scroll {
+    width: 100%;
     padding: 5px 15px;
     min-height: 0;
     transform: translateZ(0);
     overflow-y: scroll;
-    height:100%;
+    height: 100%;
     overflow-anchor: none;
     overscroll-behavior: contain;
 }
-.right-sidebar .right_content .right_scroll .tab-content {
-    height:100%;
+.right-sidebar .right_content .right_scroll .tab-content,
+.right-sidebar .right_content .right_scroll .tab-content > div {
+    height: 100%;
 }
 .right-sidebar .empty_box {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    height:100%;
+    height: 100%;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -533,6 +535,100 @@
 .right-sidebar .footer {
     position: relative;
     background-color: var(--color-grey-500);
+}
+
+.right_batting_list {
+    color: rgb(var(--color-slate-300));
+}
+.right_batting_list:not(.type02) + .right_batting_list:not(.type02) {
+    margin-top: 20px;
+}
+.right_batting_list.type02 + .right_batting_list.type02 {
+    margin-top: 9px;
+}
+
+.right_batting_list dt {
+    position: relative;
+    padding: 8px 12px;
+    background-color: var(--color-grey-400);
+    font-size: 12px;
+    font-weight: 500;
+}
+.right_batting_list dt.bg_red {
+    background-color: #5d0718;
+}
+.right_batting_list dt span {
+    display: inline-flex;
+    padding: 0 5px;
+    background-color: #e9113c;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+.right_batting_list dd {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: flex-end;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "total total total total total total"
+        "title title title title title payout"
+        "bottomm bottomm bottomm bottomm bottomm bottomm"
+        "bottomm bottomm bottomm bottomm bottomm bottomm";
+    padding: 8px 12px;
+    background-color: var(--color-grey-500);
+}
+.right_batting_list dd:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 6px;
+    background: radial-gradient(circle, transparent, transparent 50%, var(--color-grey-500) 50%, var(--color-grey-500) 100%) 0px 1px/0.7rem 0.7rem repeat-x;
+}
+.right_batting_list.type02:not(:first-of-type) dt:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 100%;
+    height: 6px;
+    background: radial-gradient(circle, transparent, transparent 50%, var(--color-grey-400) 50%, var(--color-grey-400) 100%) 0px -6px/0.7rem 0.7rem repeat-x;
+}
+.right_batting_list.type02:not(:first-of-type) dt.bg_red:after {
+    background: radial-gradient(circle, transparent, transparent 50%, #5d0718 50%, #5d0718 100%) 0px -6px/0.7rem 0.7rem repeat-x;
+}
+.right_batting_list dd .total {
+    grid-area: total;
+}
+.right_batting_list dd .title {
+    grid-area: title;
+    color: #fff;
+}
+.right_batting_list dd .payout {
+    grid-area: payout;
+    color: #4391e7;
+    font-weight: bold;
+}
+.right_batting_list dd .bottom {
+    grid-area: bottomm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right_batting_list dd .bottom .input_box {
+    position: relative;
+}
+.right_batting_list dd .bottom .input_box svg {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 7px);
+}
+.right_batting_list dd svg {
+    display: inline-flex;
 }
 
 @media all and (max-width: calc(1024px)) {
@@ -648,17 +744,6 @@
 .right-sidebar .chatting_footer button:hover {
     opacity: 1;
 }
-.right-sidebar .batting_right .right_content .tab-content {
-    /* justify-content: flex-start; */
-}
-/* .right-sidebar .batting_right .empty_box {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    height:100%;
-    justify-content: center;
-    min-height:150px;;
-} */
 .right-sidebar .batting_footer svg {
     stroke-width: 0;
 }
@@ -698,6 +783,7 @@
 .right-sidebar .menu_right .right_content .right_scroll .side-menu:active {
     scale: 1;
 }
+
 .right-sidebar .batting_table table {
     width: 100%;
     color: #b1bad3;

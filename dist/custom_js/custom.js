@@ -496,3 +496,15 @@ $(".sports_list dd .sports_detail .outcomes button, .sports_list dd .sports_deta
         }
     }
 });
+
+// 모바일 메뉴
+function mobileMenu(item) {
+    // mo_casino_menu, mo_sports_menu
+    if (item == "mo_casino_menu") {
+        $(`.menu_right .right_content .${item}`).removeClass("hidden");
+        $(`.menu_right .right_content .mo_sports_menu`).addClass("hidden");
+    } else {
+        $(`.menu_right .right_content .${item}`).removeClass("hidden");
+        $(`.menu_right .right_content .mo_casino_menu`).addClass("hidden");
+    }
+}
