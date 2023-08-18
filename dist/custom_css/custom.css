@@ -533,6 +533,14 @@ input.form-control.light {
 .sports_list + .sports_list {
     margin-top: 10px;
 }
+.sports_list.type02 > dt {
+    background-color: #071e2a;
+}
+.sports_list.type02 > dd {
+    border-top: 0 none;
+    padding: 10px;
+    background-color: #1a2c38;
+}
 .sports_list dt {
     padding: 12px 16px;
     background-color: var(--color-grey-500);
@@ -562,7 +570,7 @@ input.form-control.light {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-areas:
-        "set set line line line line winner winner winner winner line2 line2"
+        "set set set set line line winner winner winner winner line2 line2"
         "teams teams teams score score outcomes outcomes outcomes outcomes outcomes outcomes market"
         "teams teams teams score score outcomes outcomes outcomes outcomes outcomes outcomes market";
     align-items: center;
@@ -651,9 +659,9 @@ input.form-control.light {
     grid-area: outcomes;
 }
 .sports_list dd .sports_detail .outcomes p:first-of-type {
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .sports_list dd .sports_detail .outcomes button {
     width: 100%;
@@ -673,7 +681,7 @@ input.form-control.light {
 .sports_list dd .sports_detail .outcomes button:disabled p:last-of-type {
     opacity: 0.4;
 }
-.sports_list dd .sports_detail .outcomes button:not(:disabled):hover {
+.sports_list dd .sports_detail .outcomes button:not(:disabled):not(.active):hover {
     background-color: #082f5a;
 }
 .sports_list dd .sports_detail .outcomes button.active {
@@ -911,11 +919,11 @@ input.form-control.light {
         display: none;
     }
     .sports_list dd .sports_detail .teams {
-        display:flex;
-        gap:5px;
+        display: flex;
+        gap: 5px;
     }
     .sports_list dd .sports_detail .teams p:last-of-type:before {
-        content:'-'
+        content: "-";
     }
 }
 

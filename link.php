@@ -201,7 +201,7 @@ echo txtRecord('./@record/');
 				<li class="mt30" data-label="블로그">
 					<ul>
 						<li>
-							<a href="../stakeclone/affiliate.html.html" target="_blank" class="">블로그</a>
+							<a href="../stakeclone/blog.html" target="_blank" class="">블로그</a>
 							<ul>
 								<li><a href="../stakeclone/blog_sub.html" target="_blank" class="">블로그-sub</a></li>
 								<li><a href="../stakeclone/blog_view.html" target="_blank" class="">블로그-view</a></li>

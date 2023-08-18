@@ -508,3 +508,16 @@ function mobileMenu(item) {
         $(`.menu_right .right_content .mo_casino_menu`).addClass("hidden");
     }
 }
+
+// 북마크
+$(".bookmark").on("click", function () {
+    if ($(this).find("use").attr("xlink:href") == "#icon-favourite") {
+        $(this).find("use").attr("xlink:href", "#icon-favourited");
+    } else {
+        $(this).find("use").attr("xlink:href", "#icon-favourite");
+    }
+});
+// function bookmarkHandle() {
+//     console.log($(this).find("use").attr("xlink:href"));
+//     $(this).find("use").attr("xlink:href", "#icon-favourited");
+// }
