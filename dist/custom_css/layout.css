@@ -506,12 +506,20 @@
     min-height: 0;
     transform: translateZ(0);
     overflow-y: scroll;
+    height:100%;
     overflow-anchor: none;
     overscroll-behavior: contain;
 }
+.right-sidebar .right_content .right_scroll .tab-content {
+    height:100%;
+}
 .right-sidebar .empty_box {
+    display:flex;
+    flex-direction: column;
+    height:100%;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 .right-sidebar .empty_box .alarm_icon {
     transform: rotate(90deg);
@@ -640,6 +648,17 @@
 .right-sidebar .chatting_footer button:hover {
     opacity: 1;
 }
+.right-sidebar .batting_right .right_content .tab-content {
+    /* justify-content: flex-start; */
+}
+/* .right-sidebar .batting_right .empty_box {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    justify-content: center;
+    min-height:150px;;
+} */
 .right-sidebar .batting_footer svg {
     stroke-width: 0;
 }

@@ -80,6 +80,26 @@ echo txtRecord('./@record/');
 				<li><button class="draggable_modal_open pop-modal">실시간통계</button></li>
 			</ul>
 		</li>
+        <li class="mt50" data-label="sports">
+            <ul>
+                <li><a href="../stakeclone/sports/home.html" target="_blank" class="">스포츠 홈</a></li>
+                <li class="mt30" data-label="실시간 경기">
+					<ul>
+						<li><a href="../stakeclone/sports/live.html" target="_blank" class="">실시간 경기</a></li>
+					</ul>
+				</li>
+                <li class="mt30" data-label="곧 시작하는 경기">
+					<ul>
+						<li><a href="../stakeclone/sports/upcoming.html" target="_blank" class="">곧 시작하는 경기</a></li>
+					</ul>
+				</li>
+                <li class="mt30" data-label="내 베팅">
+					<ul>
+						<li><a href="../stakeclone/sports/betting.html" target="_blank" class="">내 베팅</a></li>
+					</ul>
+				</li>
+            </ul>
+        </li>
 		<li class="mt50" data-label="casino">
 			<ul>
 				<li><a href="../stakeclone/casino/home.html" target="_blank" class="">카지노 홈</a></li>
@@ -131,18 +151,7 @@ echo txtRecord('./@record/');
 					</ul>
 				</li>
 
-				<li class="mt30" data-label="프로필">
-					<ul>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#wallet_modal">지갑</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vault_modal">금고</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vip_modal">VIP</button></li>
-						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#statistics_modal">통계</button></li>
-						<li><a href="../stakeclone/setting.html">설정</a></li>
-						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#logout_modal">로그아웃</button></li>
-					</ul>
-				</li>
-
-				<li class="mt30" data-label="프로모션">
+                <li class="mt30" data-label="프로모션">
 					<ul>
 						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#races_modal">$75,000 주간 복권</button></li>
 						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#ticket_modal">$100,000 레이스 - 24시간</button></li>
@@ -161,6 +170,22 @@ echo txtRecord('./@record/');
 						</li>
 					</ul>
 				</li>
+            </ul>
+        </li>
+        <li class="mt50" data-label="공통">
+            <ul>
+				<li data-label="프로필">
+					<ul>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#wallet_modal">지갑</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vault_modal">금고</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#vip_modal">VIP</button></li>
+						<li><button  class="pop-modal" data-tw-toggle="modal" data-tw-target="#statistics_modal">통계</button></li>
+						<li><a href="../stakeclone/setting.html">설정</a></li>
+						<li><button class="pop-modal" data-tw-toggle="modal" data-tw-target="#logout_modal">로그아웃</button></li>
+					</ul>
+				</li>
+
+				
 
 				<li class="mt30" data-label="제휴">
 					<ul>

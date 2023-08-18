@@ -650,6 +650,11 @@ input.form-control.light {
 .sports_list dd .sports_detail .outcomes {
     grid-area: outcomes;
 }
+.sports_list dd .sports_detail .outcomes p:first-of-type {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
 .sports_list dd .sports_detail .outcomes button {
     width: 100%;
     padding: 7px 10px;
@@ -732,7 +737,7 @@ input.form-control.light {
     grid-template-rows: repeat(3, auto);
     row-gap: 4px;
     grid-template-areas:
-        "set set line line line line line title1 title1 title1 title2 title2 title2 title3 title3 title3 line2"
+        "set set set line line line line title1 title1 title1 title2 title2 title2 title3 title3 title3 line2"
         "teams teams teams teams score score score outcomes1 outcomes1 outcomes1 outcomes2 outcomes2 outcomes2 outcomes3 outcomes3 outcomes3 market"
         "teams teams teams teams score score score outcomes1 outcomes1 outcomes1 outcomes2 outcomes2 outcomes2 outcomes3 outcomes3 outcomes3 market"
         "summary summary summary summary summary summary summary outcomes1 outcomes1 outcomes1 outcomes2 outcomes2 outcomes2 outcomes3 outcomes3 outcomes3 market";
@@ -904,6 +909,13 @@ input.form-control.light {
     }
     .sports_list dd .sports_detail .teams .grid_summary {
         display: none;
+    }
+    .sports_list dd .sports_detail .teams {
+        display:flex;
+        gap:5px;
+    }
+    .sports_list dd .sports_detail .teams p:last-of-type:before {
+        content:'-'
     }
 }
 

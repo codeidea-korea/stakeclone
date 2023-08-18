@@ -13,11 +13,13 @@
             </div>
         </div>
     </div>
-    <div class="right_content empty_box">
+    <div class="right_content">
         <div class="right_scroll p-2">
-            <svg class="svg-icon alarm_icon mx-auto"><use xlink:href="#icon-empty-promotions"></use></svg>
-            <p class="font-bold">이용 가능 알림이 없습니다</p>
-            <p class="text-[#b1bad3]">상호 작용이 여기 표시됩니다.</p>
+            <div class="empty_box">
+                <svg class="svg-icon alarm_icon mx-auto"><use xlink:href="#icon-empty-promotions"></use></svg>
+                <p class="font-bold">이용 가능 알림이 없습니다</p>
+                <p class="text-[#b1bad3]">상호 작용이 여기 표시됩니다.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -411,18 +413,45 @@
             <button class="font-bold active_eff">모두 지우기</button>
         </div>
     </div>
-    <div class="right_content empty_box">
+    <div class="right_content">
         <div class="right_scroll p-2">
             <div class="tab-content">
                 <div id="tab_con01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab01">
-                    <svg class="svg-icon alarm_icon mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
-                    <p class="font-bold">베팅 슬립이 비어 있습니다</p>
-                    <button class="active_eff text-[#b1bad3]">지금 베팅하세요!</button>
+                    <!-- <div class="text-center empty_box">
+                        <svg class="svg-icon alarm_icon mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
+                        <p class="font-bold">베팅 슬립이 비어 있습니다</p>
+                        <button class="active_eff text-[#b1bad3]">지금 베팅하세요!</button>
+                    </div> -->
+                    <dl>
+                        <dt>
+                            <div><span>실시간</span> 세인트루이스 카디널스 - 뉴욕메츠</div>
+                            <button><svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg></button>
+                        </dt>
+                        <dd>
+                            <div class="total">합계(연장전 포함)</div>
+                            <div class="title">오벼7</div>
+                            <div class="payout">
+                                <span>5/4</span>
+                            </div>
+                            <div class="bottom">
+                                <div class="input_box">
+                                    <input type="text" class="input" value="0.00000000">
+                                    <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg>
+                                </div>
+                                <div>
+                                    <span>예상 당첨 금액</span>
+                                    <span>0.000000000 <svg class="svg-icon"><use xlink:href="#icon-currency-btc"></use></svg></span>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
                 </div>
                 <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab02">
-                    <svg class="svg-icon alarm_icon mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
-                    <p class="font-bold">베팅 슬립이 비어 있습니다</p>
-                    <button class="active_eff text-[#b1bad3]">지금 베팅하세요!</button>
+                    <div class="empty_box">
+                        <svg class="svg-icon alarm_icon mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
+                        <p class="font-bold">베팅 슬립이 비어 있습니다</p>
+                        <button class="active_eff text-[#b1bad3]">지금 베팅하세요!</button>
+                    </div>
                 </div>
             </div>
         </div>
