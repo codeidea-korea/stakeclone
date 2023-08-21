@@ -57,18 +57,34 @@
             <!-- ** 내용시작 ** -->
             <div class="container_wrap overflow-y-scroll">
          
-
-           
                 <!--  ** 게임 탭 컨텐츠 영역 ** -->
                 <div class="container mt-6">
-                    <div class="flex justify-between items-center mt-5">
-                        <h2 class="text-lg font-semibold gap-2"> 
-                            <a href="javascript:;" class="inline-flex items-center gap-2 scale">
-                                <svg class="svg-icon"><use xlink:href="#icon-in-play"></use></svg>실시간 경기
+                    <h2 class="flex gap-4">
+                        <a href="/stakeclone/sports/home.html" class="btn bg-[#0f212e] py-3 px-5 border-0">
+                            <svg class="svg-icon"><use xlink:href="#icon-arrow-left"></use></svg>
+                        </a>
+                        <div class="flex">
+                            <a href="javascript:;" class="btn bg-[#0f212e] py-3 px-7 border-0 active_eff rounded-e-none" >
+                                테니스
                             </a>
-                        </h2>
+                            <a href="javascript:;" class="btn bg-[#0f212e] py-3 px-7 border-0 active_eff rounded-none btn_slash" >
+                                ATP
+                            </a>
+                            <button class="btn bg-[#0f212e] py-3 px-7 border-0 rounded-s-none btn_slash" disabled>
+                                ATP 윈스턴 살렘, 미국 남자 단식
+                            </button>
+                        </div>
+                    </h2>
+                    <div class="flex justify-between flex-wrap gap-4 items-center mt-5 mb-5">
+                        <div class="flex items-center">
+                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2">
+                                <li class="nav-item"> <a href="/stakeclone/sports/tennis_live.html" class="nav-link w-full py-3 px-5 gap-1 active"><span class="flex items-center gap-1"></svg>라이브 & 예정</span></a></li>
+                                <li class="nav-item"> <a href="/stakeclone/sports/tennis_outright.html" class="nav-link w-full py-3 px-5 gap-1"><span class="flex items-center gap-1"></svg>아웃라이트</span></a></li>
+                                <li class="nav-item"> <a href="/stakeclone/sports/tennis_all.html" class="nav-link w-full py-3 px-5 gap-1"><span class="flex items-center gap-1"></svg>모두 테니스</span></a></li>
+                            </ul>
+                        </div>
                         <div class="flex gap-2 items-center hidden gridtoggle5">
-                            <a href="javascript:;" class="content-or-loader svelte-1uofbko tooltip p-2" data-theme="light" title="표준" onclick="javascript:toggleHandle('gridtoggle5'); toggleGrid('sports_grid05')">
+                            <a href="javascript:;" class="content-or-loader svelte-1uofbko tooltip p-2" data-theme="light" title="표준" onclick="javascript:toggleHandle('gridtoggle5'); toggleGrid('sports_grid01')">
                                 <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-viewtoggler1"></use></svg>
                             </a>
                             <div class="select_custom">
@@ -81,7 +97,7 @@
                             </div>
                         </div>
                         <div class="flex gap-2 items-center gridtoggle5">
-                            <a href="javascript:;" class="content-or-loader svelte-1uofbko tooltip p-2 opacity-60" data-theme="light" title="3줄" onclick="javascript:toggleHandle('gridtoggle5'); toggleGrid('sports_grid05')" >
+                            <a href="javascript:;" class="content-or-loader svelte-1uofbko tooltip p-2 opacity-60" data-theme="light" title="3줄" onclick="javascript:toggleHandle('gridtoggle5'); toggleGrid('sports_grid01')" >
                                 <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-viewtoggler2"></use></svg>
                             </a>
                             <div class="select_custom">
@@ -111,555 +127,382 @@
                             </div>
                         </div>
                     </div>
-                    <div class="overflow-x-scroll mt-4 sports-tabs">
-                        <ul class="nav nav-link-tabs sports-tabs" role="tablist">
-                            <li id="upcoming_tab01" class="nav-item" role="presentation">
-                                <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="true">
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-all-sports"></use></svg>
-                                        <span>1446</span>
+
+                    <div id="sports_grid01">
+                        <dl class="sports_list">
+                            <dt class="flex justify-between items-center">
+                                <h3 class="font-semibold flex gap-2 items-center">ATP 윈스턴 살렘, 미국 남자 단식</h3>
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-1 bg-grey-400 text-xs rounded-full font-bold">2</span>
+                                    <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                </div>
+                            </dt>
+                            <dd class="!pt-0">
+                                <div class="bg-grey-400 px-5 py-1 text-grey-200 text-xs">2023년 8월 21일</div>
+                                <div class="sports_detail text-grey-200">
+                                    <h4 class="set flex gap-2">
+                                        <span>실시간</span> 2세트
+                                        <p class="flex gap-2 font-bold">2-3<b class="text-yellow-500">1-0</b></p>
+                                    </h4>
+                                    <div class="line"></div>
+                                    <div class="line2"></div>
+                                    <div class="teams">
+                                        <p class="flex gap-2 items-center">스트롬바치스, 로베르트 <svg class="server-icon"><use xlink:href="#icon-tennis"></use></svg></p>
+                                        <p class="flex gap-2 items-center">무, 타오</p>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">모두</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-soccer"></use></svg>
-                                        <span>640</span>
+                                    <div class="flex score justify-end">
+                                        <div class="flex font-bold">
+                                            <div>
+                                                <p>2</p>
+                                                <p>3</p>
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-yellow-500">1</p>
+                                                <p class="text-yellow-500">0</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 ml-2 mr-2 flex flex-col">
+                                            <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                                <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                            </button>
+                                            <button class="tooltip mt-3 draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                                <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">축구</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-baseball"></use></svg>
-                                        <span>19</span>
+                                    <p class="grid3_title1"><span class="block truncate">승자</span></p>
+                                    <p class="grid3_title2"><span class="block truncate">2nd번 세트 - 승자</span></p>
+                                    <p class="grid3_title3"><span class="block truncate">총 게임수</span></p>
+                                    <p class="winner text-center">승자</p>
+                                    <div class="outcomes flex justify-center gap-2">
+                                        <button>
+                                            <p>스트롬바치스, 로베르트</p>
+                                            <p class="text-blue-500">57/4 <svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg></p>
+                                        </button>
+                                        <button>
+                                            <p>무, 타오</p>
+                                            <p class="text-blue-500">1/100 <svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg></p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">야구</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-tennis"></use></svg>
-                                        <span>206</span>
+
+                                    <div class="grid3_outcomes outcomes1">
+                                        <button class="flex justify-between">
+                                            <p>스트롬</p>
+                                            <p class="text-blue-500"> 29/50</p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>무,</p>
+                                            <p class="text-blue-500"> 67/50</p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">테니스</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-basketball"></use></svg>
-                                        <span>26</span>
+                                    <div class="grid3_outcomes outcomes2">
+                                        <button class="flex justify-between">
+                                            <p>스트롬</p>
+                                            <p class="text-blue-500"> 31/25 </p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>무,</p>
+                                            <p class="text-blue-500"> 43/20 </p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">농구</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-american-football"></use></svg>
-                                        <span>98</span>
+                                    <div class="grid3_outcomes outcomes3">
+                                        <button class="flex justify-between">
+                                            <p>오 22.5/p>
+                                            <p class="text-blue-500"> 47/100</p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>언 22.5</p>
+                                            <p class="text-blue-500"> 31/20</p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">미식축구</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-table-tennis"></use></svg>
-                                        <span>11</span>
+    
+                                    <div class="market">
+                                        <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                            <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                        </button>
+                                        <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                            <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                        </button>
+                                        <a href="javascript:;" class="flex justify-center font-bold">+24</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">탁구</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-mma"></use></svg>
-                                        <span>46</span>
+                                    <div class="grid_summary truncate">
+                                        <a href="javascript:;">테니스</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">챌린지</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">ATP Challenger Zhuhai, China Men Singles</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">MMA</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-aussie-rules"></use></svg>
-                                        <span>18</span>
+                                </div>
+
+                                <div class="sports_detail text-grey-200">
+                                    <h4 class="set flex gap-2">
+                                        <span>실시간</span> 1세트
+                                        <p class="flex gap-2 font-bold">2-3<b class="text-yellow-500">0-0</b></p>
+                                    </h4>
+                                    <div class="line"></div>
+                                    <div class="line2"></div>
+                                    <div class="teams">
+                                        <p class="flex gap-2 items-center">리, 호앙 남</p>
+                                        <p class="flex gap-2 items-center">카를로브시키, 에브게니 <svg class="server-icon"><use xlink:href="#icon-tennis"></use></svg></p>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">오지 룰스</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-beach-volley"></use></svg>
-                                        <span>4</span>
+                                    <div class="flex score justify-end">
+                                        <div class="flex font-bold">
+                                            <div>
+                                                <p>2</p>
+                                                <p>3</p>
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-yellow-500">0</p>
+                                                <p class="text-yellow-500">0</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 ml-2 mr-2 flex flex-col">
+                                            <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                                <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                            </button>
+                                            <button class="tooltip mt-3 draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                                <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">비치발리볼</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-boxing"></use></svg>
-                                        <span>22</span>
+                                    <p class="grid3_title1"><span class="block truncate">승자</span></p>
+                                    <p class="grid3_title2"><span class="block truncate">1st번 세트 - 승자</span></p>
+                                    <p class="grid3_title3"><span class="block truncate">총 게임수</span></p>
+                                    <p class="winner text-center">승자</p>
+                                    <div class="outcomes flex justify-center gap-2">
+                                        <button disabled>
+                                            <p>리, 호앙 남</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500">57/4 <svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg></p> -->
+                                        </button>
+                                        <button disabled>
+                                            <p>카를로브시키, 에브게니</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500">1/100 <svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg></p> -->
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">권투</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-cricket"></use></svg>
-                                        <span>34</span>
+                                    <div class="grid3_outcomes outcomes1">
+                                        <button class="flex justify-between" disabled>
+                                            <p>리,</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 29/50</p> -->
+                                        </button>
+                                        <button class="flex justify-between" disabled>
+                                            <p>카를로</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 67/50</p> -->
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">크리켓</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-counter-strike"></use></svg>
-                                        <span>26</span>
+                                    <div class="grid3_outcomes outcomes2">
+                                        <button class="flex justify-between" disabled>
+                                            <p>리,</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 31/25 </p> -->
+                                        </button>
+                                        <button class="flex justify-between" disabled>
+                                            <p>리,</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 43/20 </p> -->
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">CS:GO</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-darts"></use></svg>
-                                        <span>33</span>
+                                    <div class="grid3_outcomes outcomes3">
+                                        <button class="flex justify-between" disabled>
+                                            <p>오 22.5</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 47/100</p> -->
+                                        </button>
+                                        <button class="flex justify-between" disabled>
+                                            <p>오 22.5</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500"> 31/20</p> -->
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">다트</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-dota-2"></use></svg>
-                                        <span>18</span>
+    
+                                    <div class="market">
+                                        <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                            <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                        </button>
+                                        <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                            <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                        </button>
+                                        <a href="javascript:;" class="flex justify-center font-bold">+24</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">도타2</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-fifa"></use></svg>
-                                        <span>10</span>
+                                    <div class="grid_summary truncate">
+                                        <a href="javascript:;">테니스</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">챌린지</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">ATP Challenger Zhuhai, China Men Singles</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">FIFA</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-handball"></use></svg>
-                                        <span>13</span>
+                                </div>
+
+                                <div class="bg-grey-400 px-5 py-1 text-grey-200 text-xs">2023년 8월 22일</div>
+                                <div class="sports_detail text-grey-200">
+                                    <h4 class="set flex gap-2 items-center">
+                                        <svg height="40" width="40" viewBox="0 0 20 20" class="svelte-l8nfzs"><circle r="10" cx="10" cy="10" fill="#72ACED"></circle><circle r="5" cx="10" cy="10" fill="transparent" stroke="#105EB4" stroke-width="10.5" stroke-dasharray="calc(65 * 31.4 / 100) 31.4" transform="rotate(-90) translate(-20)"></circle></svg>
+                                        시작 21분 후
+                                    </h4>
+                                    <div class="line"></div>
+                                    <div class="line2"></div>
+                                    <div class="teams">
+                                        <p class="flex gap-2 items-center">테, 리겔</p>
+                                        <p class="flex gap-2 items-center">Sekulic, Philip</p>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">핸드볼</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-ice-hockey"></use></svg>
-                                        <span>62</span>
+                                    <div class="flex score justify-end">
+                                        <div class="flex font-bold">
+                                            <!-- <div>
+                                                <p>2</p>
+                                                <p>5</p>
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-yellow-500">0</p>
+                                                <p class="text-yellow-500">0</p>
+                                            </div> -->
+                                        </div>
+                                        <div class="mt-1 ml-2 mr-2 flex flex-col">
+                                            <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                                <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                            </button>
+                                            <button class="tooltip mt-3 draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                                <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">아이스 하키</p>
-                                </button> 
-                            </li><li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-kings-of-glory"></use></svg>
-                                        <span>10</span>
+                                    <p class="grid3_title1"><span class="block truncate">승자</span></p>
+                                    <p class="grid3_title2"><span class="block truncate">1st번 세트 - 승자</span></p>
+                                    <p class="grid3_title3"><span class="block truncate">총 게임수</span></p>
+                                    <p class="winner text-center">승자</p>
+                                    <div class="outcomes flex justify-center gap-2">
+                                        <button>
+                                            <p>테, 리겔</p>
+                                            <p class="text-blue-500">57/4 <svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg></p>
+                                        </button>
+                                        <button>
+                                            <p>Sekulic, Philip</p>
+                                            <p class="text-blue-500">1/100 <svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg></p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">영광의 왕</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-league-of-legends"></use></svg>
-                                        <span>17</span>
+                                    <div class="grid3_outcomes outcomes1">
+                                        <button class="flex justify-between">
+                                            <p>테, 리겔</p>
+                                            <p class="text-blue-500"> 29/50</p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>SEK</p>
+                                            <p class="text-blue-500"> 67/50</p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">리그 오브 레전드</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-mobile-legends"></use></svg>
-                                        <span>19</span>
+                                    <div class="grid3_outcomes outcomes2">
+                                        <button class="flex justify-between">
+                                            <p>테, 리겔</p>
+                                            <p class="text-blue-500"> 31/25 </p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>SEK</p>
+                                            <p class="text-blue-500"> 43/20 </p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">모바일 레전드</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-nba2k"></use></svg>
-                                        <span>2</span>
+                                    <div class="grid3_outcomes outcomes3">
+                                        <button disabled class="rock"><svg class="svg-icon svelte-kjfvep custom-cursor-default-hover"><use xlink:href="#icon-locked"></use></svg></button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">NBA2K</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-overwatch"></use></svg>
-                                        <span>3</span>
+                                    <div class="market">
+                                        <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                            <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                        </button>
+                                        <!-- <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                            <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                        </button> -->
+                                        <a href="javascript:;" class="flex justify-center font-bold">+24</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">오버워치</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-pesapallo"></use></svg>
-                                        <span>3</span>
+                                    <div class="grid_summary truncate">
+                                        <a href="javascript:;">테니스</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">챌린지</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">ATP Challenger Zhuhai, China Men Singles</a>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">페사팔로</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-rainbow-six"></use></svg>
-                                        <span>1</span>
+                                </div>
+
+                                <div class="sports_detail text-grey-200">
+                                    <h4 class="set flex gap-2">
+                                        8월 22일 (화) 오전 4:00
+                                        <!-- <p class="flex gap-2 font-bold"><b>0-1</b><b class="text-yellow-500">0-1</b></p> -->
+                                    </h4>
+                                    <div class="line"></div>
+                                    <div class="line2"></div>
+                                    <div class="teams">
+                                        <p class="flex gap-2 items-center">싱클라이어, 콜린</p>
+                                        <p class="flex gap-2 items-center">Borg, Leo</p>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">레인보우 식스</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-rugby"></use></svg>
-                                        <span>58</span>
+                                    <div class="flex score justify-end">
+                                        <div class="flex font-bold">
+                                            <!-- <div>
+                                                <p>2</p>
+                                                <p>5</p>
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-yellow-500">0</p>
+                                                <p class="text-yellow-500">0</p>
+                                            </div> -->
+                                        </div>
+                                        <div class="mt-1 ml-2 mr-2 flex flex-col">
+                                            <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                                <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">럭비</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-snooker"></use></svg>
-                                        <span>24</span>
+                                    <p class="grid3_title1"><span class="block truncate">승자</span></p>
+                                    <p class="grid3_title2"><span class="block truncate">1st번 세트 - 승자</span></p>
+                                    <p class="grid3_title3"><span class="block truncate">총 게임수</span></p>
+                                    <p class="winner text-center">승자</p>
+                                    <div class="outcomes flex justify-center gap-2">
+                                        <button disabled>
+                                            <p>싱클라이어, 콜린</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500">57/4 <svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg></p> -->
+                                        </button>
+                                        <button disabled>
+                                            <p>Borg, Leo</p>
+                                            <p>베팅 일시중지</p>
+                                            <!-- <p class="text-blue-500">1/100 <svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg></p> -->
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">스누커</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-starcraft-1"></use></svg>
-                                        <span>5</span>
+                                    <div class="grid3_outcomes outcomes1">
+                                        <button disabled class="rock"><svg class="svg-icon svelte-kjfvep custom-cursor-default-hover"><use xlink:href="#icon-locked"></use></svg></button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">스타크래프트</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-valorant"></use></svg>
-                                        <span>4</span>
+                                    <div class="grid3_outcomes outcomes2">
+                                        <button class="flex justify-between">
+                                            <p>싱클라</p>
+                                            <p class="text-blue-500"> 31/25 </p>
+                                        </button>
+                                        <button class="flex justify-between">
+                                            <p>BOR</p>
+                                            <p class="text-blue-500"> 43/20 </p>
+                                        </button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">발로란트</p>
-                                </button> 
-                            </li>
-                            <li id="upcoming_tab01" class="nav-item" role="presentation"> 
-                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#upcoming_tab01_1" type="button" role="tab" aria-controls="upcoming_tab01_1" aria-selected="false"> 
-                                    <div>
-                                        <svg class="svg-icon w-7 h-7 mx-auto" ><use xlink:href="#icon-volleyball"></use></svg>
-                                        <span>9</span>
+                                    <div class="grid3_outcomes outcomes3">
+                                        <button disabled class="rock"><svg class="svg-icon svelte-kjfvep custom-cursor-default-hover"><use xlink:href="#icon-locked"></use></svg></button>
                                     </div>
-                                    <p class="mt-2 text-xs font-semibold whitespace-nowrap">배구</p>
-                                </button> 
-                            </li>
-                        </ul>
+                                    <div class="market">
+                                        <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
+                                            <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
+                                        </button>
+                                        <!-- <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
+                                            <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
+                                        </button> -->
+                                        <a href="javascript:;" class="flex justify-center font-bold">+24</a>
+                                    </div>
+                                    <div class="grid_summary truncate">
+                                        <a href="javascript:;">테니스</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">챌린지</a>
+                                        <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
+                                        <a href="javascript:;">ATP Challenger Zhuhai, China Men Singles</a>
+                                    </div>
+                            </dd>
+                        </dl>
                     </div>
-                    <div class="tab-content mt-5" id="sports_grid05">
-                        <div id="upcoming_tab01_1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="example-1-tab-5">
-                            <dl class="sports_list">
-                                <dt class="flex justify-between items-center">
-                                    <h3 class="font-semibold">미국 / MLB</h3>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2 py-1 bg-grey-400 text-xs rounded-full font-bold">2</span>
-                                        <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
-                                    </div>
-                                </dt>
-                                <dd>
 
-                                    <div class="sports_detail grid3 text-grey-200">
-                                        <h4 class="set flex gap-2 items-center">
-                                            <span>실시간</span>4th Inning Bottom
-                                            <p class="flex gap-2 font-bold"><b class="text-yellow-500">0-1</b></p>
-                                        </h4>
-                                        <div class="line"></div>
-                                        <div class="line2"></div>
-                                        <div class="teams">
-                                            <p class="flex gap-2 items-center">세인트루이스 카디널즈</p>
-                                            <p class="flex gap-2 items-center">뉴욕메츠</p>
-                                            <div class="grid_summary truncate">
-                                                <a href="javascript:;">야구</a>
-                                                <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                                <a href="javascript:;">미국</a>
-                                                <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                                <a href="javascript:;">MLB</a>
-                                            </div>
-                                        </div>
-                                        <div class="flex score justify-end">
-                                            <div class="flex font-bold">
-                                                <!-- <div>
-                                                    <p>4</p>
-                                                    <p>2</p>
-                                                </div> -->
-                                                <div class="ml-2">
-                                                    <p class="text-yellow-500">0</p>
-                                                    <p class="text-yellow-500">2</p>
-                                                </div>
-                                            </div>
-                                            <div class="mt-1 ml-2 mr-2 flex flex-col">
-                                                <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
-                                                    <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
-                                                </button>
-                                                <button class="tooltip mt-3 draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
-                                                    <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <p class="grid3_title1"><span class="block truncate">합계(연장전 포함)</span></p>
-                                        <p class="grid3_title2"><span class="block truncate">승자(연장전 포함)</span></p>
-                                        <p class="grid3_title3"><span class="block truncate">핸디캡(연장전 포함)</span></p>
-                                        <p class="winner text-center">승자(연장전 포함)</p>
-                                        <div class="outcomes flex justify-center gap-2">
-                                            <button>
-                                                <p>세인트루이스 카디널즈</p>
-                                                <p class="text-blue-500">3/2</p>
-                                            </button>
-                                            <button>
-                                                <p>뉴욕메츠</p>
-                                                <p class="text-blue-500">1/2</p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes1">
-                                            <button class="flex justify-between" disabled>
-                                                <p>오 6.5</p>
-                                                <p class="opacity-60">베팅 일시중지</p>
-                                            </button>
-                                            <button class="flex justify-between" disabled>
-                                                <p>연 6.5</p>
-                                                <p class="opacity-60"> 베팅 일시중지 </p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes2">
-                                            <button class="flex justify-between">
-                                                <p>STL</p>
-                                                <p class="text-blue-500"> 3/2 </p>
-                                            </button>
-                                            <button class="flex justify-between">
-                                                <p>MYM</p>
-                                                <p class="text-blue-500"> 1/1 </p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes3">
-                                            <button class="flex justify-between">
-                                                <p>1.5</p>
-                                                <p class="text-blue-500"> 3/2 </p>
-                                            </button>
-                                            <button class="flex justify-between">
-                                                <p>-1.5</p>
-                                                <p class="text-blue-500"> 1/1 </p>
-                                            </button>
-                                        </div>
-                                        <div class="market">
-                                            <svg class="svg-icon"><use xlink:href="#icon-stats"></use></svg>
-                                            <a href="javascript:;" class="flex justify-center font-bold">+37</a>
-                                        </div>
-                                        <div class="grid_summary truncate">
-                                            <a href="javascript:;">야구</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">미국</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">MLB</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="sports_detail text-grey-200">
-                                        <h4 class="set flex gap-2">
-                                            <span>실시간</span> 2세트
-                                            <p class="flex gap-2 font-bold"><b>0-1</b><b class="text-yellow-500">0-1</b></p>
-                                        </h4>
-                                        <div class="line"></div>
-                                        <div class="line2"></div>
-                                        <div class="teams">
-                                            <p class="flex gap-2 items-center">메르텐스, 엘리스</p>
-                                            <p class="flex gap-2 items-center">
-                                                보우즈코바, 마리에
-                                                <svg class="server-icon"><use xlink:href="#icon-tennis"></use></svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex score justify-end">
-                                            <div class="flex font-bold">
-                                                <div>
-                                                    <p>4</p>
-                                                    <p>2</p>
-                                                </div>
-                                                <div class="ml-2">
-                                                    <p class="text-yellow-500">0</p>
-                                                    <p class="text-yellow-500">1</p>
-                                                </div>
-                                            </div>
-                                            <div class="mt-1 ml-2 mr-2 flex flex-col">
-                                                <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
-                                                    <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
-                                                </button>
-                                                <button class="tooltip mt-3 draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
-                                                    <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <p class="grid3_title1"><span class="block truncate">세트 핸디캡</span></p>
-                                        <p class="grid3_title2"><span class="block truncate">승자</span></p>
-                                        <p class="grid3_title3"><span class="block truncate">{!setnr} 세트 게임 {gamenr} - 승자</span></p>
-                                        <p class="winner text-center">승자</p>
-                                        <div class="outcomes flex justify-center gap-2">
-                                            <button>
-                                                <p>메르텐스, 엘리스</p>
-                                                <p class="text-blue-500">3/2</p>
-                                            </button>
-                                            <button>
-                                                <p>보우즈코바, 마리에</p>
-                                                <p class="text-blue-500">1/2</p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes1">
-                                            <button disabled class="rock"><svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-locked"></use></svg></button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes2">
-                                            <button class="flex justify-between">
-                                                <p>메르텐스, 엘리스</p>
-                                                <p class="text-blue-500"> 3/2 </p>
-                                            </button>
-                                            <button class="flex justify-between">
-                                                <p>보우즈코바, 마리에</p>
-                                                <p class="text-blue-500"> 1/1 </p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes3">
-                                            <button disabled class="rock"><svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-locked"></use></svg></button>
-                                        </div>
-                                        <div class="market">
-                                            <svg class="svg-icon"><use xlink:href="#icon-stats"></use></svg>
-                                            <a href="javascript:;" class="flex justify-center font-bold">+26</a>
-                                        </div>
-                                        <div class="grid_summary truncate">
-                                            <a href="javascript:;">테니스</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">챌린지 여자</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">WTA 125K Barranquilla, Colombia Women Singles</a>
-                                        </div>
-                                    </div>
-                                    <div class="sports_detail text-grey-200">
-                                        <h4 class="set flex gap-2">
-                                            <span>실시간</span> 1세트
-                                            <p class="flex gap-2 font-bold"><b>0-1</b><b class="text-yellow-500">0-1</b></p>
-                                        </h4>
-                                        <div class="line"></div>
-                                        <div class="line2"></div>
-                                        <div class="teams">
-                                            <p class="flex gap-2 items-center">세리프, 마얄
-                                                <svg class="server-icon"><use xlink:href="#icon-tennis"></use></svg>
-                                            </p>
-                                            <p class="flex gap-2 items-center">
-                                                가우프, 코리
-                                            </p>
-                                        </div>
-                                        <div class="flex score justify-end">
-                                            <div class="flex font-bold">
-                                                <div>
-                                                    <p>2</p>
-                                                    <p>5</p>
-                                                </div>
-                                                <div class="ml-2">
-                                                    <p class="text-yellow-500">0</p>
-                                                    <p class="text-yellow-500">0</p>
-                                                </div>
-                                            </div>
-                                            <div class="mt-1 ml-2 mr-2 flex flex-col">
-                                                <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
-                                                    <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <p class="grid3_title1"><span class="block truncate">세트 핸디캡</span></p>
-                                        <p class="grid3_title2"><span class="block truncate">승자</span></p>
-                                        <p class="grid3_title3"><span class="block truncate">{!setnr} 세트 게임 {gamenr} - 승자</span></p>
-                                        <p class="winner text-center">승자</p>
-                                        <div class="outcomes flex justify-center gap-2">
-                                            <button>
-                                                <p>세리프, 마얄</p>
-                                                <p class="text-blue-500">57/4 <svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg></p>
-                                            </button>
-                                            <button>
-                                                <p>가우프, 코리</p>
-                                                <p class="text-blue-500">1/100 <svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg></p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes1">
-                                            <button disabled  class="rock"><svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-locked"></use></svg></button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes2">
-                                            <button class="flex justify-between">
-                                                <p>세리프, 마얄</p>
-                                                <p class="text-blue-500"><svg class="svg-icon inline-flex decrease"><use xlink:href="#icon-odd-up"></use></svg> 57/4 </p>
-                                            </button>
-                                            <button class="flex justify-between">
-                                                <p>가우프, 코리</p>
-                                                <p class="text-blue-500"><svg class="svg-icon inline-flex incresed"><use xlink:href="#icon-odd-down"></use></svg> 1/100</p>
-                                            </button>
-                                        </div>
-                                        <div class="grid3_outcomes outcomes3">
-                                            <button disabled  class="rock"><svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-locked"></use></svg></button>
-                                        </div>
-
-                                        <div class="market">
-                                            <svg class="svg-icon"><use xlink:href="#icon-stats"></use></svg>
-                                            <a href="javascript:;" class="flex justify-center font-bold">+24</a>
-                                        </div>
-                                        <div class="grid_summary truncate">
-                                            <a href="javascript:;">테니스</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">챌린지 여자</a>
-                                            <svg class="svg-icon"><use xlink:href="#icon-breadcrumb"></use></svg>
-                                            <a href="javascript:;">WTA 125K Barranquilla, Colombia Women Singles</a>
-                                        </div>
-                                    </div>
-
-                                </dd>
-                            </dl>
-                            <dl class="sports_list">
-                                <dt class="flex justify-between items-center">
-                                    <h3 class="font-semibold">서인도제도 / Caribbean Premier League</h3>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2 py-1 bg-grey-400 text-xs rounded-full font-bold">0</span>
-                                        <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
-                                    </div>
-                                </dt>
-                                <dd>
-                                    <p class="p-2 px-4 font-semibold text-grey-200">진행 중인 경기가 없습니다.</p>
-                                </dd>
-                            </dl>
-                            
-                        </div>
-                    </div>
                 </div>
                 <!--  ** 게임 탭 컨텐츠 영역 꿑 ** -->
 

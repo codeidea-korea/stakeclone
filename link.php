@@ -98,6 +98,35 @@ echo txtRecord('./@record/');
 						<li><a href="../stakeclone/sports/betting.html" target="_blank" class="">내 베팅</a></li>
 					</ul>
 				</li>
+                <li class="mt30" data-label="인기스포츠">
+					<ul>
+                        <li data-label="축구">
+                            <ul>
+                                <li><a href="../stakeclone/sports/soccer_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li>
+                                    <a href="../stakeclone/sports/soccer_outright.html" target="_blank" class="">Outrights</a>
+                                    <ul>
+                                        <li><a href="../stakeclone/sports/soccer_outright_noresult.html" target="_blank" class="">Outrights - 결과 없을때</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../stakeclone/sports/soccer_all.html" target="_blank" class="">모두축구</a></li>
+                                <li><a href="../stakeclone/sports/soccer_major.html" target="_blank" class="">메이저리그 축구</a></li>
+                                <li><a href="../stakeclone/sports/soccer_premier.html" target="_blank" class="">프리미어 리그</a></li>
+                                <li><a href="../stakeclone/sports/soccer_laliga.html" target="_blank" class="">라리가</a></li>
+                            </ul>
+                        </li>
+                        <li class="mt30" data-label="테니스">
+                            <ul>
+                                <li><a href="../stakeclone/sports/tennis_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li><a href="../stakeclone/sports/tennis_outright.html" target="_blank" class="">Outrights</a></li>
+                                <li><a href="../stakeclone/sports/tennis_all.html" target="_blank" class="">모두테니스</a></li>
+                                <li><a href="../stakeclone/sports/tennis_winston.html" target="_blank" class="">ATP 윈스턴 살렘, 미국 남자 단식</a></li>
+                                <li><a href="../stakeclone/sports/tennis_challenger.html" target="_blank" class="">ATP Challenger Zhuhai, China Men Singles</a></li>
+                                <li><a href="../stakeclone/sports/tennis_cleveland.html" target="_blank" class="">WTA Cleveland, USA Women Singles</a></li>
+                            </ul>
+                        </li>
+					</ul>
+				</li>
             </ul>
         </li>
 		<li class="mt50" data-label="casino">

@@ -85,6 +85,7 @@ input[type="text"].input {
 input[type="text"].input.half {
     width: 50%;
 }
+a.active_eff:active,
 button.active_eff:active {
     transform: scale(0.95);
 }
@@ -133,6 +134,23 @@ input.form-control.light {
     input[type="text"].input.half {
         width: 100%;
     }
+}
+
+input[type="checkbox"].custom {
+    display: none;
+}
+input[type="checkbox"].custom + i {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    border: 2px solid #557086;
+    background-color: #557086;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+input[type="checkbox"].custom:checked + i {
+    background: #557086 url("/stakeclone/dist/custom_img/check_icon.svg") no-repeat center center / 75%;
 }
 
 /* switch */
@@ -564,6 +582,10 @@ input.form-control.light {
     background-color: var(--color-grey-500);
     border-top: 2px solid var(--color-grey-400);
 }
+.sports_list dd.bg-dark {
+    border-top: 2px solid var(--color-grey-400);
+    background-color: var(--color-grey-800);
+}
 .sports_list dd .sports_detail {
     display: grid;
     grid-gap: 0.5rem;
@@ -655,6 +677,9 @@ input.form-control.light {
 .sports_list dd .sports_detail .score p {
     width: 20px;
 }
+.sports_list dd .sports_detail .score p + p {
+    margin-top: 5px;
+}
 .sports_list dd .sports_detail .outcomes {
     grid-area: outcomes;
 }
@@ -664,7 +689,7 @@ input.form-control.light {
     white-space: nowrap;
 }
 .sports_list dd .sports_detail .outcomes button {
-    width: 100%;
+    width: 50%;
     padding: 7px 10px;
     background-color: var(--color-grey-900);
     border-radius: 3px;
@@ -793,6 +818,7 @@ input.form-control.light {
     gap: 8px;
 }
 .sports_list dd .sports_detail .grid3_outcomes button {
+    align-items: center;
     width: 100%;
     height: 100%;
     padding: 7px 10px;
@@ -840,6 +866,12 @@ input.form-control.light {
 .sports_list dd .sports_detail .grid_summary > * {
     display: inline;
 }
+.sports_list dd .sports_detail .grid_summary a:first-of-type {
+    color: #fff;
+}
+.sports_list dd .sports_detail .grid_summary a:hover {
+    color: #fff;
+}
 .sports_list dd .sports_detail.grid3 .grid3_title1,
 .sports_list dd .sports_detail.grid3 .grid3_title2,
 .sports_list dd .sports_detail.grid3 .grid3_title3,
@@ -859,13 +891,19 @@ input.form-control.light {
     display: none;
 }
 
+.sports_list dd .sports_detail.out_detail {
+    display: block;
+}
+.sports_list dd .sports_detail.out_detail .grid_summary {
+    display: block;
+}
 @media all and (max-width: 767px) {
     .sports_list dd .sports_detail {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr auto;
         grid-row-gap: 4px;
         grid-template-areas:
-            "set set set market market market"
+            "set set set set market market"
             "teams teams teams teams teams teams"
             "winner winner winner winner winner winner "
             "outcomes outcomes outcomes outcomes outcomes outcomes"
@@ -897,7 +935,7 @@ input.form-control.light {
         grid-template-rows: 1fr auto;
         grid-row-gap: 4px;
         grid-template-areas:
-            "set set set market market market"
+            "set set set set market market"
             "teams teams teams teams teams teams"
             "title1 title1 title1 title1 title1 title1 "
             "outcomes1 outcomes1 outcomes1 outcomes1 outcomes1 outcomes1"
@@ -955,4 +993,43 @@ input.form-control.light {
 }
 .draggable3_modal_header {
     cursor: move;
+}
+
+/* 스포츠 > 모두 탭 */
+.check_list_box {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 6px;
+}
+.check_list_box .check_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background-color: #2f4553;
+    box-shadow: 0rem 0.0625rem 0.1875rem #00000033, 0rem 0.0625rem 0.125rem #0000001f;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.check_list_box .check_btn label {
+    display: flex;
+}
+
+/* 스포츠 페이지 상단 - 슬래시 */
+.btn_slash {
+    position: relative;
+}
+.btn_slash:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 170%;
+    margin: -31px 1px;
+    background-color: var(--color-grey-600);
+    transform: skew(-20deg);
 }
