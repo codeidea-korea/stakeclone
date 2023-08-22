@@ -517,7 +517,3 @@ $(".bookmark").on("click", function () {
         $(this).find("use").attr("xlink:href", "#icon-favourite");
     }
 });
-// function bookmarkHandle() {
-//     console.log($(this).find("use").attr("xlink:href"));
-//     $(this).find("use").attr("xlink:href", "#icon-favourited");
-// }

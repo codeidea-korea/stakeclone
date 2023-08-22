@@ -125,6 +125,34 @@ echo txtRecord('./@record/');
                                 <li><a href="../stakeclone/sports/tennis_cleveland.html" target="_blank" class="">WTA Cleveland, USA Women Singles</a></li>
                             </ul>
                         </li>
+                        <li class="mt30" data-label="야구">
+                            <ul>
+                                <li><a href="../stakeclone/sports/baseball_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li><a href="../stakeclone/sports/baseball_outright.html" target="_blank" class="">Outrights</a></li>
+                                <li><a href="../stakeclone/sports/baseball_all.html" target="_blank" class="">모두 야구</a></li>
+                                <li><a href="../stakeclone/sports/baseball_mlb.html" target="_blank" class="">MLB</a></li>
+                                <li><a href="../stakeclone/sports/baseball_profess.html" target="_blank" class="">프로페셔널 야구</a></li>
+                                <li><a href="../stakeclone/sports/baseball_kbo.html" target="_blank" class="">KBO 야구</a></li>
+                            </ul>
+                        </li>
+                        <li class="mt30" data-label="미식축구">
+                            <ul>
+                                <li><a href="../stakeclone/sports/football_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li><a href="../stakeclone/sports/football_outright.html" target="_blank" class="">Outrights</a></li>
+                                <li><a href="../stakeclone/sports/football_all.html" target="_blank" class="">모두 미식축구</a></li>
+                                <li><a href="../stakeclone/sports/football_nfl.html" target="_blank" class="">NFL 프리시즌</a></li>
+                                <li><a href="../stakeclone/sports/football_cfl.html" target="_blank" class="">CFL</a></li>
+                            </ul>
+                        </li>
+                        <li class="mt30" data-label="농구">
+                            <ul>
+                                <li><a href="../stakeclone/sports/basketball_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li><a href="../stakeclone/sports/basketball_outright.html" target="_blank" class="">Outrights</a></li>
+                                <li><a href="../stakeclone/sports/basketball_all.html" target="_blank" class="">모두 농구</a></li>
+                                <li><a href="../stakeclone/sports/basketball_wnba.html" target="_blank" class="">WNBA</a></li>
+                                <li><a href="../stakeclone/sports/basketball_inter.html" target="_blank" class="">국제 친선경기</a></li>
+                            </ul>
+                        </li>
 					</ul>
 				</li>
             </ul>
