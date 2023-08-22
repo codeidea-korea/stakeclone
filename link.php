@@ -98,6 +98,11 @@ echo txtRecord('./@record/');
 						<li><a href="../stakeclone/sports/betting.html" target="_blank" class="">내 베팅</a></li>
 					</ul>
 				</li>
+                <li class="mt30" data-label="쿠폰">
+					<ul>
+						<li><a href="../stakeclone/sports/coupon.html" target="_blank" class="">쿠폰</a></li>
+					</ul>
+				</li>
                 <li class="mt30" data-label="인기스포츠">
 					<ul>
                         <li data-label="축구">

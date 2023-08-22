@@ -169,6 +169,31 @@ input[type="checkbox"].custom:checked + i {
     border-radius: 0px 3px 3px 0 !important;
 }
 
+.form-check-input[type="checkbox"]:disabled:not(:checked) {
+    background-color: #2f4553;
+}
+.form-check-input[type="checkbox"]:disabled:not(:checked):before {
+    opacity: 0.5;
+}
+
+.animate-blink {
+    animation: blink 2s infinite linear;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+input[type="range"] {
+    width: 100%;
+    background-color: #00e701;
+}
 /*
 #=========================================#
         로딩
@@ -546,6 +571,7 @@ input[type="checkbox"].custom:checked + i {
 #=========================================#
 */
 .sports_list {
+    position: relative;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.04);
 }
 .sports_list + .sports_list {
@@ -897,6 +923,21 @@ input[type="checkbox"].custom:checked + i {
 .sports_list dd .sports_detail.out_detail .grid_summary {
     display: block;
 }
+
+.sports_list .btn_abs {
+    position: absolute;
+    right: 40px;
+    top: 2px;
+}
+.sports_list .btn_abs button {
+    padding: 10px 5px;
+    color: #b1bad3;
+    font-weight: bold;
+}
+.sports_list .btn_abs .active {
+    color: #fff;
+}
+
 @media all and (max-width: 767px) {
     .sports_list dd .sports_detail {
         grid-template-columns: repeat(6, 1fr);
@@ -1004,6 +1045,7 @@ input[type="checkbox"].custom:checked + i {
     gap: 10px;
     padding: 6px;
 }
+.check_list_btn,
 .check_list_box .check_btn {
     display: flex;
     align-items: center;
@@ -1016,6 +1058,34 @@ input[type="checkbox"].custom:checked + i {
 }
 .check_list_box .check_btn label {
     display: flex;
+}
+
+.check_list_btn {
+    width: 100%;
+}
+
+.check_list_btn,
+.check_list_box.dark_ver .check_btn {
+    justify-content: space-between;
+    padding: 5px 16px;
+    background-color: var(--color-grey-900);
+}
+.check_list_btn:hover,
+.check_list_box.dark_ver .check_btn:hover {
+    background-color: var(--color-grey-800);
+}
+.check_list_btn span:last-of-type,
+.check_list_box.dark_ver .check_btn span:last-of-type {
+    color: #4391e7;
+}
+.check_list_btn.active,
+.check_list_box.dark_ver .check_btn.active {
+    background-color: #1475e1;
+    color: #000;
+}
+.check_list_btn.active span:last-of-type,
+.check_list_box.dark_ver .check_btn.active span:last-of-type {
+    color: #fff;
 }
 
 /* 스포츠 페이지 상단 - 슬래시 */
