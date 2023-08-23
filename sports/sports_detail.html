@@ -121,6 +121,48 @@
                                                 </span>
                                             </button>
                                         </li>
+                                        <li id="tab03" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con03" type="button" role="tab" aria-controls="tab_con03"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    골
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li id="tab04" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con04" type="button" role="tab" aria-controls="tab_con04"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    전반전
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li id="tab05" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con05" type="button" role="tab" aria-controls="tab_con05"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    아시안 라인
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li id="tab06" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls="tab_con06"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    득점자
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li id="tab07" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    스페셜
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li id="tab08" class="nav-item" role="presentation">
+                                            <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08"aria-selected="false">
+                                                <span class="flex items-center gap-1 whitespace-nowrap">
+                                                    미닛 마켓
+                                                </span>
+                                            </button>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -140,7 +182,7 @@
 
                             <div class="mt-6">
                                 <div class="tab-content">
-                                    <div id="tab_con01" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab01">
+                                    <div id="tab_con01" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab01">
                                         
                                         <dl class="sports_list">
                                             <dt class="flex justify-between items-center">
@@ -734,14 +776,149 @@
                                                 </div>
                                             </dd>
                                         </dl>
-
+                                        <dl class="sports_list">
+                                            <dt class="flex justify-between items-center">
+                                                <h3 class="font-semibold flex gap-2 items-center">하프타임/풀타임</h3>
+                                                <div class="flex items-center gap-2">
+                                                    <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                </div>
+                                            </dt>
+                                            <dd>
+                                                <div class="btn_abs">
+                                                    <button class="toggle_btn4 active" onclick="javascript:toggleHandle('toggle_table4'); classToggle('toggle_btn4')">선택</button>
+                                                    <button class="toggle_btn4" onclick="javascript:toggleHandle('toggle_table4'); classToggle('toggle_btn4')">모두</button>
+                                                </div>
+                                                <div class="toggle_table4">
+                                                    <div class="check_list_box dark_ver">
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="0">첼시/첼시</option>
+                                                            <option value="1">첼시/드로</option>
+                                                            <option value="2">첼시/루튼 타운</option>
+                                                            <option value="3">드로/첼시</option>
+                                                            <option value="4">드로/드로</option>
+                                                            <option value="5">드로/루튼 타운</option>
+                                                            <option value="6">루튼 타운/첼시</option>
+                                                            <option value="7">루튼 타운/드로</option>
+                                                            <option value="8">루튼 타운/루튼 타운</option>
+                                                        </select>
+                                                        <button class="check_btn">
+                                                            <span>첼시/첼시</span>
+                                                            <span>61/100</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="toggle_table4 hidden">
+                                                    <div class="check_list_box dark_ver">
+                                                        <button class="check_btn">
+                                                            <span>첼시/첼시</span>
+                                                            <span>20/1</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>첼시/드로</span>
+                                                            <span>34/5</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>첼시/루튼 타운</span>
+                                                            <span>26/5</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>드로/첼시</span>
+                                                            <span>31/5</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>드로/드로</span>
+                                                            <span>10/1</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>드로/루튼 타운</span>
+                                                            <span>27/1</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>루튼 타운/첼시</span>
+                                                            <span>11/1</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>루튼 타운/드로</span>
+                                                            <span>39/5</span>
+                                                        </button>
+                                                        <button class="check_btn">
+                                                            <span>루튼 타운/루튼 타운</span>
+                                                            <span>9/1</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </dl>
                                     </div>
-                                    <div id="tab_con02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab02">
-                                        탮222
+                                    <div id="tab_con02" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab02">
+
+                                        <dl class="sports_list !sticky top-0 z-10">
+                                            <dt class="flex justify-between items-center">
+                                                <h3 class="font-semibold flex gap-2 items-center text-base">총 확률: 
+                                                    <b class="text-blue-400 text-sm">1199731/1216769</b>
+                                                    <b class="text-red-600 text-sm">이 조합은 불가능합니다.</b>
+                                                </h3>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-primary" disabled>베팅 슬립에 추가</button>
+                                                    <button class="btn btn-gray">모두 지우기</button>
+                                                    <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                </div>
+                                            </dt>
+                                            <dd>
+                                                <div class="flex justify-between px-4 py-2 text-base border-b-2 border-gray-700">
+                                                    <b>1x2 - 드로</b>
+                                                    <button class="text-sm text-slate-400"><svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg></button>
+                                                </div>
+                                                <div class="flex justify-between px-4 py-2 text-base border-b-2 border-gray-700">
+                                                    <b>토탈 - 언더 2.5</b>
+                                                    <button class="text-sm text-slate-400"><svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg></button>
+                                                </div>
+                                                <div class="flex justify-between px-4 py-2 text-base">
+                                                    <b>더블 기회 - 드로 또는 루튼 타운</b>
+                                                    <button class="text-sm text-slate-400"><svg class="svg-icon"><use xlink:href="#icon-cross"></use></svg></button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="sports_list">
+                                            <dt class="flex justify-between items-center">
+                                                <h3 class="font-semibold flex gap-2 items-center">1x2</h3>
+                                                <div class="flex items-center gap-2">
+                                                    <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
+                                                </div>
+                                            </dt>
+                                            <dd>
+                                                <div class="check_list_box dark_ver">
+                                                    <button class="check_btn" disabled>
+                                                        <span>첼시</span>
+                                                        <span>1/4</span>
+                                                    </button>
+                                                    <button class="check_btn">
+                                                        <span>드로</span>
+                                                        <span>24/5</span>
+                                                    </button>
+                                                    <button class="check_btn">
+                                                        <span>루튼 타운</span>
+                                                        <span>10/1</span>
+                                                    </button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div id="tab_con03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab03">
+                                    </div>
+                                    <div id="tab_con04" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab04">
+                                    </div>
+                                    <div id="tab_con05" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab05">
+                                    </div>
+                                    <div id="tab_con06" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab06">
+                                    </div>
+                                    <div id="tab_con07" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab07">
+                                    </div>
+                                    <div id="tab_con08" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab08">
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <!-- 우측 컨텐츠 -->

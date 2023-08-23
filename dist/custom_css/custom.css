@@ -1088,6 +1088,12 @@ input[type="range"] {
     color: #fff;
 }
 
+.check_list_btn:disabled,
+.check_list_box.dark_ver .check_btn:disabled {
+    opacity:0.5;
+}
+
+
 /* 스포츠 페이지 상단 - 슬래시 */
 .btn_slash {
     position: relative;
