@@ -1037,6 +1037,7 @@ input[type="range"] {
 }
 
 /* 스포츠 > 모두 탭 */
+.btn_radio_box,
 .check_list_box {
     /* display: flex;
     flex-wrap: wrap; */
@@ -1046,6 +1047,7 @@ input[type="range"] {
     padding: 6px;
 }
 .check_list_btn,
+.btn_radio_box .check_btn,
 .check_list_box .check_btn {
     display: flex;
     align-items: center;
@@ -1065,32 +1067,47 @@ input[type="range"] {
 }
 
 .check_list_btn,
+.btn_radio_box .check_btn,
 .check_list_box.dark_ver .check_btn {
     justify-content: space-between;
     padding: 5px 16px;
     background-color: var(--color-grey-900);
 }
 .check_list_btn:hover,
+.btn_radio_box .check_btn:hover,
 .check_list_box.dark_ver .check_btn:hover {
     background-color: var(--color-grey-800);
 }
+.check_list_btn.of_list_btn {
+    padding:5px;
+}
+.check_list_btn.of_list_btn span:first-of-type{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
 .check_list_btn span:last-of-type,
+.btn_radio_box .check_btn span:last-of-type,
 .check_list_box.dark_ver .check_btn span:last-of-type {
     color: #4391e7;
 }
 .check_list_btn.active,
+.btn_radio_box .check_btn.active,
 .check_list_box.dark_ver .check_btn.active {
     background-color: #1475e1;
     color: #000;
 }
 .check_list_btn.active span:last-of-type,
+.btn_radio_box .check_btn.active span:last-of-type ,
 .check_list_box.dark_ver .check_btn.active span:last-of-type {
     color: #fff;
 }
 
 .check_list_btn:disabled,
+.btn_radio_box .check_btn:disabled,
 .check_list_box.dark_ver .check_btn:disabled {
     opacity:0.5;
+    cursor:default;
 }
 
 
@@ -1108,4 +1125,13 @@ input[type="range"] {
     margin: -31px 1px;
     background-color: var(--color-grey-600);
     transform: skew(-20deg);
+}
+
+@media all and (max-width:767px){
+    .history_nav > * {
+        display:none;
+    }
+    .history_nav > *:last-child {
+        display:block;
+    }
 }

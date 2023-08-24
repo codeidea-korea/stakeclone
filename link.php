@@ -107,7 +107,12 @@ echo txtRecord('./@record/');
 					<ul>
                         <li data-label="축구">
                             <ul>
-                                <li><a href="../stakeclone/sports/soccer_live.html" target="_blank" class="">Live & Upcoming</a></li>
+                                <li>
+                                    <a href="../stakeclone/sports/soccer_live.html" target="_blank" class="">Live & Upcoming</a>
+                                    <ul>
+                                        <li><a href="../stakeclone/sports/sports_detail.html" target="_blank" class="">sports view (모든 스포츠 공통)</a></li>
+                                    </ul>
+                                </li>
                                 <li>
                                     <a href="../stakeclone/sports/soccer_outright.html" target="_blank" class="">Outrights</a>
                                     <ul>

@@ -528,3 +528,15 @@ $(".bookmark").on("click", function () {
         $(this).find("use").attr("xlink:href", "#icon-favourite");
     }
 });
+
+
+// 스포츠 버튼 클릭시 다른 버튼 disabled : 박스에 .btn_radio_box
+$('.btn_radio_box button').on('click',function(){
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active")
+        $(this).siblings('button').prop('disabled',false)
+    } else {
+        $(this).addClass("active");
+        $(this).siblings('button').prop('disabled',true)
+    }
+})
