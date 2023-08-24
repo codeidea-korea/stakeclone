@@ -88,91 +88,14 @@
                     </div>
                     <div class="tab-content">
                         <div id="tab_mybet01" class="tab-pane leading-relaxed active" aria-labelledby="mybet01">
-                            <div class="grid grid-cols-1 md:grid-cols-2 mt-4 text-slate-300 gap-4">
-                                <dl>
-                                    <dt class="flex items-center justify-between bg-grey-400 p-2 px-4 rounded-t-md">
-                                        <p>오후 4:02 2023. 8. 24.</p>
-                                        <button  data-tw-toggle="modal" data-tw-target="#sports_betting_modal"><svg class="svg-icon"><use xlink:href="#icon-details"></use></svg></button>
-                                    </dt>
-                                    <dd class="bg-grey-500 receipt_bottom">
-                                        <div class="p-2 px-4">
-                                            <div>
-                                                <p class="font-bold text-white">마츠이 T / 우에스키 K - Strombachs R / Zhu E</p>
-                                                <p>승자</p>
-                                            </div>
-                                            <div class="flex justify-between items-center">
-                                                <p class="font-bold text-white">마츠이 T / 우에스키 K</p>
-                                                <p class="font-bold text-white">2.00</p>
-                                            </div>
-                                            <div class="flex justify-between items-center">
-                                                <div class="flex gap-3">
-                                                    <span class="inline-flex items-center px-1 text-white bg-red-600 rounded text-xs font-bold">실시간</span>
-                                                    2세트 
-                                                    <p class="flex gap-2 font-bold">6-6<b class="text-yellow-500">1-0</b></p>
-                                                </div>
-                                                <div class="flex gap-3">
-                                                    <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
-                                                        <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
-                                                    </button>
-                                                    <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
-                                                        <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
-                                                    </button>
-                                                    <button class="tooltip score_toggle_btn" data-theme="light" title="점수">
-                                                        <svg class="svg-icon"><use xlink:href="#icon-scoreboard"></use></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center justify-between">
-                                            <span class="w-1/3 h-[2px] bg-grey-400"></span>
-                                            <img alt="stake logo" class="logo" draggable="false" src="https://stake.com/_app/immutable/assets/stake-dark.0aaa7847.svg">
-                                            <span class="w-1/3 h-[2px] bg-grey-400"></span>
-                                        </div>
-                                        <div class="p-2 px-4">
-                                            <div class="flex items-center justify-between">
-                                                <span class="text-[#b1bad3]">배당률</span>
-                                                <span class="flex items-center font-bold text-blue-400">
-                                                    2.00
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center justify-between">
-                                                <span class="text-[#b1bad3]">Stake</span>
-                                                <span class="flex items-center font-bold">
-                                                    0.00000000
-                                                    <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center justify-between mt-1">
-                                                <span class="text-[#b1bad3]">예상 당첨 금액 </span>
-                                                <span class="flex items-center font-bold">
-                                                    0.00000000
-                                                    <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                                                </span>
-                                            </div>
-                                            <button class="btn btn-gray w-full mt-2 font-bold py-4">캐시아웃 0.000000018 <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg></button>
-                                        </div>
-                                    </dd>
-                                    <dd class="score_box hidden">
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-800 text-center">
-                                            <div class="col-span-3 p-2 text-left">2세트</div>
-                                            <div class="p-2">1st</div>
-                                            <div class="p-2">2nd</div>
-                                            <div class="p-2"><svg class="svg-icon inline-flex"><use xlink:href="#icon-tennis"></use></svg></div>
-                                        </div>
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-700 text-center">
-                                            <div class="col-span-3 p-2 text-left">마츠이 T / 우에스키 K</div>
-                                            <div class="p-2">7</div>
-                                            <div class="p-2">6</div>
-                                            <div class="p-2 bg-blue-400">2</div>
-                                        </div>
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-700 text-center">
-                                            <div class="col-span-3 p-2 text-left">Strombachs R / Zhu E</div>
-                                            <div class="p-2">6</div>
-                                            <div class="p-2">4</div>
-                                            <div class="p-2 bg-grey-400">0</div>
-                                        </div>
-                                    </dd>
-                                </dl>
+                            <div class="text-center">
+                                <svg class="svg-icon w-28 h-40 mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
+                                <button class="active_eff text-[#b1bad3]">활성화된 베팅이 없습니다</button>
+                                <p class="font-bold">지금 베팅하세요!</p>
+                                <div class="flex items-center justify-center gap-5 mt-6">
+                                    <button><span class="font-semibold text-grey-300">이전</span></button>
+                                    <button><span class="font-semibold text-grey-300">다음</span></button>
+                                </div>
                             </div>
                         </div>
                         <div id="tab_mybet02" class="tab-pane leading-relaxed " aria-labelledby="mybet02">
@@ -1236,80 +1159,6 @@
                 <a href="javascript:;" class="font-bold text-grey-200 hover:text-white">타아포에, 프란세스 - 와린카, 스탄</a>          
             </div>
         </div>
-
-
-        <!-- 스포츠 베팅 모달 -->
-        <div id="sports_betting_modal" class="modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content"> <!-- BEGIN: Modal Header -->
-                    <div class="modal-header">
-                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
-                            <svg class="svg-icon svelte-kjfvep">
-                                <use xlink:href="#icon-list"></use>
-                            </svg>
-                            베팅
-                        </h2>
-                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="flex justify-center font-bold text-white text-base">
-                            Keno
-                        </div>
-                        <div class="flex justify-center gap-2">
-                            <span class="font-bold text-white text-base">ID 172,830,473,102</span>
-                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사되었습니다,채팅창에 공유해보세요!"><svg><use xlink:href="#icon-copy"></use></svg></button>
-                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사하고 온라인에 공유해보세요"><svg><use xlink:href="#icon-hyperlink"></use></svg></button>
-                        </div>
-                        <div class="flex items-center justify-center mt-3">
-                            <div class="flex items-center gap-1">
-                                <svg class="tooltip" data-theme="light" title="Platinum III">
-                                    <use xlink:href="#icon-vip-platinum-3"></use>
-                                </svg>
-                                <svg class="tooltip" data-theme="light" title="Highroller">
-                                    <use xlink:href="#icon-emoji-highroller"></use>
-                                </svg>
-                                <div class="flex items-center">
-                                    <button class="scale">
-                                        <span class="font-semibold">asket8888</span>
-                                    </button>
-                                    <span>에 의해 배치되었습니다</span>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="text-center mt-1">에 2023. 8. 6. 에서 오후 7:50</div>
-                        <div class="p-3 bg-grey-700 rounded-md mt-3">
-                            <div class="flex flex-col md:flex-row items-center justify-center">
-                                <div class="flex flex-col justify-center items-center p-2 w-full">
-                                    <span class="font-semibold">배팅</span>
-                                    <div class="flex items-center justify-center gap-1">
-                                        <span class="text-white font-semibold">11343.912345</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col justify-center items-center border-t border-b md:border-t-0 md:border-b-0 md:border-l md:border-r border-gray-600 p-2 w-full">
-                                    <span class="font-semibold">승수</span>
-                                    <div class="flex items-center justify-center">
-                                        <span class="text-white font-semibold">3.35×</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col justify-center items-center p-2 w-full">
-                                    <span class="font-semibold">지불금</span>
-                                    <div class="flex items-center justify-center gap-1">
-                                        <span class="text-green-400 font-semibold">37985.424132</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mt-3">
-                            <button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition text-white scale"><span>Keno 플레이</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 게임 모달 끝-->
-
-
 
         <!--  ** 모달영역 끝 ** -->
 

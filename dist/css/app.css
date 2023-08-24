@@ -1728,6 +1728,9 @@ select{
 .col-span-3{
     grid-column: span 3 / span 3;
 }
+.col-span-2{
+    grid-column: span 2 / span 2;
+}
 .-m-4{
     margin: -1rem;
 }
@@ -1996,6 +1999,15 @@ select{
 .h-screen{
     height: 100vh;
 }
+.h-\[1px\]{
+    height: 1px;
+}
+.h-\[460px\]{
+    height: 460px;
+}
+.h-\[2px\]{
+    height: 2px;
+}
 .max-h-80{
     max-height: 20rem;
 }
@@ -2004,6 +2016,9 @@ select{
 }
 .max-h-\[240px\]{
     max-height: 240px;
+}
+.max-h-\[460px\]{
+    max-height: 460px;
 }
 .min-h-screen{
     min-height: 100vh;
@@ -2206,6 +2221,9 @@ select{
 }
 .grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 .grid-rows-6{
     grid-template-rows: repeat(6, minmax(0, 1fr));
@@ -2510,6 +2528,18 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-green-600{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 184 1 / var(--tw-bg-opacity));
+}
+.bg-green-500{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 231 1 / var(--tw-bg-opacity));
+}
+.bg-blue-400{
+    --tw-bg-opacity: 1;
+    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
 .p-0{
     padding: 0px;
 }
@@ -2622,6 +2652,18 @@ select{
 .py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+.\!py-4{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.\!py-2{
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+.\!py-3{
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
 }
 .\!pt-0{
     padding-top: 0px !important;
@@ -2874,6 +2916,10 @@ select{
 .text-slate-700{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-700) / var(--tw-text-opacity));
+}
+.text-slate-300{
+    --tw-text-opacity: 1;
+    color: rgb(var(--color-slate-300) / var(--tw-text-opacity));
 }
 .text-opacity-70{
     --tw-text-opacity: 0.7;
@@ -12332,6 +12378,10 @@ html body{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.hover\:bg-green-700:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 138 1 / var(--tw-bg-opacity));
+}
 .hover\:text-grey-400:hover{
     --tw-text-opacity: 1;
     color: rgb(47 69 83 / var(--tw-text-opacity));
@@ -12512,6 +12562,9 @@ html body{
     }
     .lg\:w-2\/4{
         width: 50%;
+    }
+    .lg\:grid-cols-3{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .lg\:flex-row{
         flex-direction: row;

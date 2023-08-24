@@ -55,11 +55,43 @@ fetch("/stakeclone/_sports_left.html")
 fetch("/stakeclone/_top_bar.html")
     .then((response) => response.text())
     .then((html) => {
-        $(".content").prepend(html);
+        if(!$('.content').hasClass('logout')){
+            $(".content").prepend(html);
+        }
     })
     .catch((error) => {
         console.log(error);
     });
+
+// 탑바 로드 - 로그인 전
+fetch("/stakeclone/_top_bar_logout.html")
+    .then((response) => response.text())
+    .then((html) => {
+        $(".content.logout").prepend(html);
+
+        // 비밀번호 가리기 눌렀을때
+        $('.password_onoff').on('click',function(){
+            var type = $(this).siblings('input').attr('type')
+            if(type == "password"){
+                $(this).siblings('input').attr('type','text')
+            }else{
+                $(this).siblings('input').attr('type',"password")
+            }
+        })
+
+        // 코드 선택했을 때, input 보이기.
+        $('#code_check').on('change',function(){
+            if($(this).prop("checked")){
+                $('#code_check_input').show()
+            }else{
+                $('#code_check_input').hide()
+            }
+        })
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 
 // 오른쪽 바 로드
 fetch("/stakeclone/_right_bar.html")
@@ -539,4 +571,10 @@ $('.btn_radio_box button').on('click',function(){
         $(this).addClass("active");
         $(this).siblings('button').prop('disabled',true)
     }
+})
+
+// 내 베팅 > 점수 토글
+$('.score_toggle_btn').on("click",function(){
+    $(this).toggleClass('text-white')
+    $(this).parents('dl').find('.score_box').toggle();
 })

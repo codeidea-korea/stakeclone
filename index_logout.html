@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="utf-8" />
-    <link href="../dist/custom_img/stake_favicon.png" rel="shortcut icon" />
+    <link href="./dist/custom_img/stake_favicon.png" rel="shortcut icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <title>StakeClone</title>
     <!-- ** css 시작 ** -->
-    <link rel="stylesheet" href="../dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/app.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <!-- 커스텀 css 추가 -->
-    <link rel="stylesheet" href="../dist/custom_css/custom.css" />
+    <link rel="stylesheet" href="./dist/custom_css/custom.css" />
     <!-- ** css 끝 ** -->
 </head>
 
@@ -46,205 +46,153 @@
 
     <div class="flex relative">
         <!--  ** 사이드 메뉴 시작 ** -->
-        <div class="left_sidebar2"></div>
+        <div class="main_sidebar"></div>
+
         <!--  ** 사이드 메뉴 끝 ** -->
 
         <!--  ** 메인 보드 시작 ** -->
-        <div class="content">
+        <div class="content logout">
             <!-- ** 탑바 시작 ** -->
             <!-- ** 탑바 끝 ** -->
 
             <!-- ** 내용시작 ** -->
             <div class="container_wrap overflow-y-scroll">
-         
-
-           
-                <!--  ** 게임 탭 컨텐츠 영역 ** -->
-                <div class="container mt-8 mb-8">
-                    <h2 class="text-lg font-semibold gap-2"> 
-                        <a href="javascript:;" class="inline-flex items-center gap-2 scale">
-                            <svg><use xlink:href="#icon-betslip"></use></svg> 내 베팅
-                        </a>
-                    </h2>
-                    <div class="flex mt-5">
-                        <div class="overflow-auto md:overflow-x-scroll">
-                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2 w-[620px] md:w-auto" role="tablist">
-                                <li id="mybet01" class="nav-item" role="presentation">
-                                    <button class="nav-link w-full py-3 px-5 active" data-tw-toggle="pill" data-tw-target="#tab_mybet01" type="button" role="tab" aria-controls="tab_mybet01" aria-selected="true">
-                                        <span class="flex items-center gap-1 whitespace-nowrap">
-                                            활성화
-                                        </span>
-                                    </button>
-                                </li>
-                                <li id="mybet02" class="nav-item" role="presentation">
-                                    <button class="nav-link w-full py-3 px-5" data-tw-toggle="pill" data-tw-target="#tab_mybet02" type="button" role="tab" aria-controls="tab_mybet02" aria-selected="false">
-                                        <span class="flex items-center gap-1 whitespace-nowrap">
-                                            완료되었습니다.
-                                        </span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-content">
-                        <div id="tab_mybet01" class="tab-pane leading-relaxed active" aria-labelledby="mybet01">
-                            <div class="grid grid-cols-1 md:grid-cols-2 mt-4 text-slate-300 gap-4">
-                                <dl>
-                                    <dt class="flex items-center justify-between bg-grey-400 p-2 px-4 rounded-t-md">
-                                        <p>오후 4:02 2023. 8. 24.</p>
-                                        <button  data-tw-toggle="modal" data-tw-target="#sports_betting_modal"><svg class="svg-icon"><use xlink:href="#icon-details"></use></svg></button>
-                                    </dt>
-                                    <dd class="bg-grey-500 receipt_bottom">
-                                        <div class="p-2 px-4">
-                                            <div>
-                                                <p class="font-bold text-white">마츠이 T / 우에스키 K - Strombachs R / Zhu E</p>
-                                                <p>승자</p>
+                <div class="flex items-center content_title main_title">
+                    <div class="container flex items-center">
+                        <div class="flex items-center h-[296px] w-full">
+                            <div class="flex flex-col w-full xl:max-w-[360px] relative z-10">
+                                <h1 class="text-xl text-white font-bold">다시 방문해 주셔서 감사합니다, 홍길동</h1>
+                                <div class="flex flex-col mt-3 gap-3">
+                                    <div class="flex items-center">
+                                        <button>
+                                            <div class="flex items-center gap-1 progress_arrow">
+                                                <span class="text-white font-bold">내 VIP 진행도</span>
+                                                <span class="text-grey-200"><svg><use xlink:href="#icon-forward"></use></svg></span>
                                             </div>
-                                            <div class="flex justify-between items-center">
-                                                <p class="font-bold text-white">마츠이 T / 우에스키 K</p>
-                                                <p class="font-bold text-white">2.00</p>
-                                            </div>
-                                            <div class="flex justify-between items-center">
-                                                <div class="flex gap-3">
-                                                    <span class="inline-flex items-center px-1 text-white bg-red-600 rounded text-xs font-bold">실시간</span>
-                                                    2세트 
-                                                    <p class="flex gap-2 font-bold">6-6<b class="text-yellow-500">1-0</b></p>
-                                                </div>
-                                                <div class="flex gap-3">
-                                                    <button class="tooltip draggable2_modal_open" data-theme="light" title="실시간 통계">
-                                                        <svg class="svg-icon" ><use xlink:href="#icon-stats"></use></svg>
-                                                    </button>
-                                                    <button class="tooltip draggable3_modal_open" data-theme="light" title="실시간 스트리밍">
-                                                        <svg class="svg-icon"><use xlink:href="#icon-live"></use></svg>
-                                                    </button>
-                                                    <button class="tooltip score_toggle_btn" data-theme="light" title="점수">
-                                                        <svg class="svg-icon"><use xlink:href="#icon-scoreboard"></use></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                        </button>
+                                        <div class="ml-auto">
+                                            <span class="text-white font-bold">0.00%</span>
                                         </div>
-                                        <div class="flex items-center justify-between">
-                                            <span class="w-1/3 h-[2px] bg-grey-400"></span>
-                                            <img alt="stake logo" class="logo" draggable="false" src="https://stake.com/_app/immutable/assets/stake-dark.0aaa7847.svg">
-                                            <span class="w-1/3 h-[2px] bg-grey-400"></span>
+                                    </div>
+                                    <div class="progress_bar_wrap">
+                                        <div class="bar bg-grey-400">
+                                            <div class="progress_bar bg-green-400" style="right:80%;"></div>
                                         </div>
-                                        <div class="p-2 px-4">
-                                            <div class="flex items-center justify-between">
-                                                <span class="text-[#b1bad3]">배당률</span>
-                                                <span class="flex items-center font-bold text-blue-400">
-                                                    2.00
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center justify-between">
-                                                <span class="text-[#b1bad3]">Stake</span>
-                                                <span class="flex items-center font-bold">
-                                                    0.00000000
-                                                    <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center justify-between mt-1">
-                                                <span class="text-[#b1bad3]">예상 당첨 금액 </span>
-                                                <span class="flex items-center font-bold">
-                                                    0.00000000
-                                                    <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg>
-                                                </span>
-                                            </div>
-                                            <button class="btn btn-gray w-full mt-2 font-bold py-4">캐시아웃 0.000000018 <svg class="svg-icon ml-2"><use xlink:href="#icon-currency-btc"></use></svg></button>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <svg  class="text-grey-200" style="stroke:none"><use xlink:href="#icon-vip-none"></use></svg>
+                                            <span class="text-grey-200 text-base font-bold">없음</span>
                                         </div>
-                                    </dd>
-                                    <dd class="score_box hidden">
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-800 text-center">
-                                            <div class="col-span-3 p-2 text-left">2세트</div>
-                                            <div class="p-2">1st</div>
-                                            <div class="p-2">2nd</div>
-                                            <div class="p-2"><svg class="svg-icon inline-flex"><use xlink:href="#icon-tennis"></use></svg></div>
+                                        <div class="flex items-center gap-1 ml-auto">
+                                            <svg style="stroke:none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                                            <span class="text-grey-200 text-base font-bold">브론즈</span>
                                         </div>
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-700 text-center">
-                                            <div class="col-span-3 p-2 text-left">마츠이 T / 우에스키 K</div>
-                                            <div class="p-2">7</div>
-                                            <div class="p-2">6</div>
-                                            <div class="p-2 bg-blue-400">2</div>
-                                        </div>
-                                        <div class="relative z-10 grid grid-cols-6 bg-grey-700 text-center">
-                                            <div class="col-span-3 p-2 text-left">Strombachs R / Zhu E</div>
-                                            <div class="p-2">6</div>
-                                            <div class="p-2">4</div>
-                                            <div class="p-2 bg-grey-400">0</div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div id="tab_mybet02" class="tab-pane leading-relaxed " aria-labelledby="mybet02">
-                            <div class="text-center">
-                                <svg class="svg-icon w-28 h-40 mx-auto" style="transform: rotate(0)"><use xlink:href="#icon-empty-betslip"></use></svg>
-                                <button class="active_eff text-[#b1bad3]">정산된 베팅이 없습니다</button>
-                                <p class="font-bold">지금 베팅하세요!</p>
-                                <div class="flex items-center justify-center gap-5 mt-6">
-                                    <button><span class="font-semibold text-grey-300">이전</span></button>
-                                    <button><span class="font-semibold text-grey-300">다음</span></button>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="header_img ml-auto h-full hidden xl:block">
+                                <img class="h-full header_main_img" src="./dist/custom_img/welcome_top_ko.avif" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--  ** 게임 탭 컨텐츠 영역 꿑 ** -->
+                <div class="container mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a href="/stakeclone/casino/home.html" class="list_hover flex flex-col gap-4 flex-grow">
+                            <div class="flex items-center gap-1 text-grey-200">
+                                <svg class="w-4 h-4"><use xlink:href="#icon-casino"></use></svg>
+                                <span class="text-white text-lg font-bold">카지노</span>
+                            </div>
+                            <div>
+                                <img class="rounded-md overflow-hidden" src="./dist/custom_img/welcome-casino-ko.avif" alt="">
+                            </div>
+                            <div class="flex flex-col flex-grow">
+                                <p class="text-base text-white font-bold">온라인 암호화폐 카지노의 선두주자</p>
+                                <p class="text-grey-200 mt-1">Stake는 공정하고 재미있는 온라인 도박 경험을 제공합니다. 다양한 카지노 게임을 즐겨보세요. 브라우저에서 Stake 오리지널의 슬롯, 라이브 카지노, 블랙잭, 바카라, 룰렛, 수천 개의 클래식 카지노 게임을 바로 플레이해 보세요.</p>
+                            </div>
+                            <button onclick="window.location.href='/stakeclone/casino/home.html'" class="bg-blue-600 hover:bg-blue-700 rounded-md font-bold font-base p-3 w-full text-white scale transition-all">카지노로 이동하기</button>
+                        </a>
+                        <a href="javascript:;" class="list_hover flex flex-col gap-4 flex-grow">
+                            <div class="flex items-center gap-1 text-grey-200">
+                                <svg class="w-4 h-4"><use xlink:href="#icon-casino"></use></svg>
+                                <span class="text-white text-lg font-bold">스포츠</span>
+                            </div>
+                            <div>
+                                <img class="rounded-md overflow-hidden" src="./dist/custom_img/welcome-sports-ko.avif" alt="">
+                            </div>
+                            <div class="flex flex-col flex-grow">
+                                <p class="text-base text-white font-bold">최고의 암호화폐 스포츠 베팅 온라인</p>
+                                <p class="text-grey-200 mt-1">스포츠 베팅 플랫폼에서 전 세계의 좋아하는 팀, 선수 및 리그에 베팅해 보세요. 최고의 스포츠 베팅을 경험하려면 MMA, 농구, 축구 등 라이브 스포츠에 있는 광범위한 스포츠 베팅 옵션 및 마켓에서 베팅을 즐기세요.</p>
+                            </div>
+                            <button class="bg-blue-600  hover:bg-blue-700 rounded-md font-bold font-base p-3 w-full text-white scale transition-all">스포츠북으로 이동</button>
+                        </a>
+                    </div>
+                </div> 
 
-                <!--  ** 배팅 탭 영역 ** -->
-                <div class="container flex gap-10 mt-6">
+                <div class="container mt-6">
+                    <div class="bg-grey-700 rounded-md">
+                        <div class="flex flex-row-reverse lg:flex-row justify-between items-center p-4 lg:p-0">
+                            <div class="pl-0 lg:pl-4"><a href="/stakeclone/sponsor_drake.html" class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition">더 알아보기</a></div>
+                            <img class="h-[45px] pl-0 lg:pl-32" src="./dist/custom_img/sponsor/drake.svg" alt="">
+                            <img class="hidden lg:inline-block h-[80px] pr-4" src="./dist/custom_img/drake-banner.avif" alt="">
+                        </div>
+                    </div>
+
+                    <div class="bg-grey-700 rounded-md mt-6">
+                        <div class="flex flex-col lg:flex-row justify-between items-center p-4">
+                            <span class="text-base font-bold text-white">암호화폐가 없으세요? 전혀 문제 없습니다.</span>
+                            <div class="grid grid-cols-4 gap-4 items-center justify-items-center py-3 lg:py-0">
+                                <img class="max-h-[22px] lg:max-h-[45px]" src="./dist/custom_img/marstercard.svg" alt="">
+                                <img class="max-h-[22px] lg:max-h-[45px]" src="./dist/custom_img/applepay.svg" alt="">
+                                <img class="max-h-[22px] lg:max-h-[45px]" src="./dist/custom_img/googlepay.svg" alt="">
+                                <img class="max-h-[22px] lg:max-h-[45px]" src="./dist/custom_img/samsungpay.svg" alt="">
+                            </div>
+                            <div><button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition" data-tw-toggle="modal" data-tw-target="#wallet_modal">암호화폐 구매</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-6">
                     <div class="flex items-center w-full">
                         <div class="flex items-center">
-                            <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2" role="tablist">
-                                <li id="tab07" class="nav-item" role="presentation">
-                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
-                                        data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07"
-                                        aria-selected="false"><span
-                                            class="flex items-center gap-1"></svg>모든배팅</span></button>
-                                </li>
-                                <li id="tab08" class="nav-item" role="presentation">
-                                    <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill"
-                                        data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08"
-                                        aria-selected="true"><span class="flex items-center gap-1">고액배팅</span></button>
-                                </li>
-                                <li id="tab09" class="nav-item" role="presentation">
-                                    <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill"
-                                        data-tw-target="#tab_con09" type="button" role="tab" aria-controls="tab_con09"
-                                        aria-selected="false"><span class="flex items-center gap-1">레이스 랭킹<span
-                                                class="w-2 h-2 rounded-full bg-green-400"></span></span></button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="hidden md:flex items-center ml-auto">
-                            <button class="ghost_mode p-4 tooltip" data-theme="light" title="유령모드 시작"><span class=""><svg>
-                                        <use xlink:href="#icon-ghost-mode"></use>
-                                    </svg></span></button>
-                            <select name="" id="" class="form-select custom">
-                                <option value="">0</option>
-                                <option value="">10</option>
-                                <option value="">20</option>
-                                <option value="">30</option>
-                                <option value="">40</option>
-                            </select>
+                            <div class="md:overflow-auto overflow-x-scroll flex">
+                                <ul class="nav nav-boxed-tabs p-1 rounded-full gap-2 w-auto shrink-0" role="tablist">
+                                    <li id="tab06" class="nav-item" role="presentation">
+                                        <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill" data-tw-target="#tab_con06" type="button" role="tab" aria-controls=tab_con06" aria-selected="true">
+                                        <span class="flex items-center gap-1 ">카지노 베팅</span>
+                                    </button>
+                                    </li>
+                                    <li id="tab07" class="nav-item" role="presentation">
+                                        <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con07" type="button" role="tab" aria-controls="tab_con07" aria-selected="false">
+                                            <span class="flex items-center gap-1">스포츠 배팅</span>
+                                        </button>
+                                    </li>
+                                    <li id="tab08" class="nav-item" role="presentation">
+                                        <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_con08" type="button" role="tab" aria-controls="tab_con08" aria-selected="false">
+                                            <span class="flex items-center gap-1">레이스 랭킹<span class="w-2 h-2 rounded-full bg-green-400"></span></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="container">
                     <div class="tab-content">
-
-                        <div id="tab_con07" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab07">
+                        <div id="tab_con06" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab06">
                             <div class="overflow-x-scroll">
                                 <table class="table table-striped">
-                                    <thead>
+                                    <thead class="whitespace-nowrap">
                                         <tr>
-                                            <th class="text-left">이벤트</th>
+                                            <th class="text-left">게임</th>
                                             <th class="text-center">사용자</th>
                                             <th class="text-center">시간</th>
-                                            <th class="text-right">배당률</th>
                                             <th class="text-right">배팅금액</th>
+                                            <th class="text-right">승수</th>
+                                            <th class="text-right">지불금</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="whitespace-nowrap">
                                         <tr>
                                             <td>
                                                 <div class="flex items-center gap-1 justify-start">
@@ -268,11 +216,6 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="flex items-center justify-end">
-                                                    <span>19/50</span>
-                                                </div>
-                                            </td>
-                                            <td>
                                                 <div class="flex items-center gap-1 justify-end">
                                                     <span>2001.99999800</span>
                                                     <span title="btc" style="max-width: 12ch;"><svg
@@ -281,7 +224,21 @@
                                                         </svg></span>
                                                 </div>
                                             </td>
-                                            
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -303,12 +260,6 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="flex items-center justify-end">
-                                                    <span>55364649/1250000	
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>
                                                 <div class="flex items-center gap-1 justify-end">
                                                     <span>2001.99999800</span>
                                                     <span title="btc" style="max-width: 12ch;"><svg
@@ -317,35 +268,46 @@
                                                         </svg></span>
                                                 </div>
                                             </td>
-                                            
+                                            <td>
+                                                <div class="flex items-center justify-end">
+                                                    <span>31.30</span>
+                                                    <span>×</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="text-green-400">6506.4999934</span>
+                                                    <span title="btc" style="max-width: 12ch;"><svg
+                                                            class="svg-icon svelte-kjfvep">
+                                                            <use xlink:href="#icon-currency-btc"></use>
+                                                        </svg></span>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
-                        <div id="tab_con08" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tab08">
+                        <div id="tab_con07" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab07">
                             <div class="overflow-x-scroll">
                                 <table class="table table-striped">
-                                    <thead>
+                                    <thead class="whitespace-nowrap">
                                         <tr>
                                             <th class="text-left">이벤트</th>
                                             <th class="text-center">사용자</th>
                                             <th class="text-center">시간</th>
                                             <th class="text-right">배당률</th>
-                                            <th class="text-right">배팅금액</th>
+                                            <th class="text-right">배팅 금액</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="whitespace-nowrap">
                                         <tr>
                                             <td>
                                                 <div class="flex items-center gap-1 justify-start">
-                                                    <svg class="svg-icon svelte-kjfvep">
-                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    <svg>
+                                                        <use xlink:href="#icon-soccer"></use>
                                                     </svg>
-                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
-                                                        <span class="text-white font-semibold">Keno</span>
-                                                    </a>
+                                                    <span class="text-white font-semibold truncate max-w-[103px]">FC 아스타나 - 루도고레츠</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -363,36 +325,35 @@
                                             </td>
                                             <td>
                                                 <div class="flex items-center justify-end">
-                                                    <span>141/100</span>
+                                                    <span>31.30</span>
+                                                    <span>×</span>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="flex items-center gap-1 justify-end">
-                                                    <span>2001.99999800</span>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="">6506.4999934</span>
                                                     <span title="btc" style="max-width: 12ch;"><svg
                                                             class="svg-icon svelte-kjfvep">
                                                             <use xlink:href="#icon-currency-btc"></use>
                                                         </svg></span>
                                                 </div>
                                             </td>
-                                            
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="flex items-center gap-1 justify-start">
-                                                    <svg class="svg-icon svelte-kjfvep">
-                                                        <use xlink:href="#icon-stake-game-keno"></use>
+                                                    <svg>
+                                                        <use xlink:href="#icon-table-tennis"></use>
                                                     </svg>
-                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#game_modal" >
-                                                        <span class="text-white font-semibold">Keno</span>
-                                                    </a>
+                                                    <span class="text-white font-semibold truncate max-w-[103px]">블링카, 미첼 - Podsiadlo, Maciej</span>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="flex items-center justify-center">
-                                                    <a href="javascript:;" class="scale" data-tw-toggle="modal" data-tw-target="#user_modal">
-                                                        <span class="text-white font-semibold">SyztmzTV</span>
-                                                    </a>
+                                                <div class="flex items-center justify-center gap-1">
+                                                    <svg class="svg-icon svelte-kjfvep" style="color: inherit;">
+                                                        <use xlink:href="#icon-ghost-mode"></use>
+                                                    </svg>
+                                                    <span class="font-semibold">숨겨짐</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -400,15 +361,15 @@
                                                     <span>오후 2:29</span>
                                                 </div>
                                             </td>
-
                                             <td>
                                                 <div class="flex items-center justify-end">
-                                                    <span>491/400</span>
+                                                    <span>31.30</span>
+                                                    <span>×</span>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="flex items-center gap-1 justify-end">
-                                                    <span>2001.99999800</span>
+                                                <div class="flex items-center justify-end gap-1">
+                                                    <span class="">6506.4999934</span>
                                                     <span title="btc" style="max-width: 12ch;"><svg
                                                             class="svg-icon svelte-kjfvep">
                                                             <use xlink:href="#icon-currency-btc"></use>
@@ -420,14 +381,13 @@
                                 </table>
                             </div>
                         </div>
-
-                        <div id="tab_con09" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab09">
-                            <div class="flex items-center p-3 border-b border-grey-400">
+                        <div id="tab_con08" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab08">
+                            <div class="flex items-center p-3 border-b border-grey-400 w-full">
                                 <button class="flex items-center gap-2 scale">
                                     <svg>
                                         <use xlink:href="#icon-races"></use>
                                     </svg>
-                                    <span class="font-bold">$10M Birthday Race</span>
+                                    <span class="font-bold">$100,000 레이스 - 24시간</span>
                                 </button>
                                 <button class="flex items-center gap-2 ml-auto scale draggable_modal_open">
                                     <svg>
@@ -680,12 +640,9 @@
                                 </table>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <!--  ** 배팅 탭 영역 끝 ** -->
-
-
+                <!-- 공통 : select 커스텀 끝 -->
             </div>
             <!-- ** 내용 끝 ** -->
 
@@ -697,8 +654,6 @@
         <!--  ** 오른쪽 보드 시작 ** -->
         <div class="right-sidebar text-white"></div>
         <!--  ** 오른쪽 보드 끝 ** -->
-
-
 
         <!--  ** 모달영역 시작 ** -->
         <!-- 유저모달 -->
@@ -735,7 +690,7 @@
                                     <use xlink:href="#icon-coins"></use>
                                 </svg>
                             </button>
-                            <button class="ignore-mode scale p-4" id="Ignore">
+                            <button class="scale p-4">
                                 <svg>
                                     <use xlink:href="#icon-friend-ignored"></use>
                                 </svg>
@@ -748,7 +703,7 @@
                                         <li id="tab10" class="nav-item" role="presentation">
                                             <button class="nav-link w-full py-3 px-5 gap-1 active" data-tw-toggle="pill"
                                                 data-tw-target="#tab_con10" type="button" role="tab"
-                                                aria-controls="tab_con10" aria-selected="true"><span
+                                                aria-controls=tab_con10" aria-selected="true"><span
                                                     class="flex items-center gap-1 "></svg>통계</span></button>
                                         </li>
                                         <li id="tab11" class="nav-item" role="presentation">
@@ -847,14 +802,14 @@
                                 </div>
                                 <div class="overflow-x-scroll">
                                     <table class="table table-striped">
-                                        <thead class="whitespace-nowrap">
+                                        <thead>
                                             <tr>
                                                 <th class="text-left">게임</th>
                                                 <th class="text-center">제공자</th>
                                                 <th class="text-right">트로피</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="whitespace-nowrap">
+                                        <tbody>
                                             <tr>
                                                 <td>
                                                     <a href="javascript:;">
@@ -1017,14 +972,14 @@
                         </div>
                         <div class="text-center mt-1">에 2023. 8. 6. 에서 오후 7:50</div>
                         <div class="p-3 bg-grey-700 rounded-md mt-3">
-                            <div class="flex flex-col md:flex-row items-center justify-center">
+                            <div class="flex items-center justify-center">
                                 <div class="flex flex-col justify-center items-center p-2 w-full">
                                     <span class="font-semibold">배팅</span>
                                     <div class="flex items-center justify-center gap-1">
                                         <span class="text-white font-semibold">11343.912345</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
                                     </div>
                                 </div>
-                                <div class="flex flex-col justify-center items-center border-t border-b md:border-t-0 md:border-b-0 md:border-l md:border-r border-gray-600 p-2 w-full">
+                                <div class="flex flex-col justify-center items-center border-l border-r border-gray-600 p-2 w-full">
                                     <span class="font-semibold">승수</span>
                                     <div class="flex items-center justify-center">
                                         <span class="text-white font-semibold">3.35×</span>
@@ -1046,6 +1001,7 @@
             </div>
         </div>
 
+
         <!-- 유령모드 얼럿 -->
         <div class="ghost_alert alert flex items-center mb-2" id="Ghost_alert">
             <div class="p-4">
@@ -1060,34 +1016,14 @@
                         <!-- <p>베팅이 현재 공개 상태입니다.</p> -->
                     </div>
                     <button type="button" class="ghost-btn-close text-white ml-auto p-4">
-                        <i data-lucide="x" class="w-4 h-4" style="stroke:currentColor"></i> 
+                        <i data-lucide="x" class="w-4 h-4"></i> 
                     </button> 
                 </div>
             </div>
         </div>
 
-         <!-- 사용자 무시 얼럿 -->
-         <div class="ignore alert flex items-center mb-2" id="Ignore_alert">
-            <div class="p-4">
-                <svg class=" text-red-500 w-5 h-5"><use xlink:href="#icon-unfriend"></use></svg>
-                <!-- <svg class=" text-red-400"><use xlink:href="#icon-add-friend"></use></svg> -->
-            </div>
-           
-            <div class="bg-grey-400">
-                <div class="flex items-center">
-                    <div class="p-4">
-                        <p class="font-semibold text-base">사용자가 무시되었습니다</p>
-                        <!-- <p class="font-semibold text-base">사용자가 무시 상태가 해제 되었습니다</p> -->
-                    </div>
-                    <button type="button" class="ignore-btn-close text-white ml-auto p-4">
-                        <i data-lucide="x" class="w-4 h-4" style="stroke:currentColor"></i> 
-                    </button> 
-                </div>
-            </div>
-        </div>
-
-        <!-- 실시간 통계 모달 -->
-        <div class="draggable_modal w-[280px] transition-all">
+         <!-- 실시간 통계 모달 -->
+         <div class="draggable_modal w-[280px] transition-all">
             <div class="draggable_modal_header px-3 py-2 flex items-center bg-grey-600 rounded-t-md">
                 <div class="flex items-center gap-1">
                     <span><svg><use xlink:href="#icon-stats"></use></svg></span>
@@ -1181,14 +1117,14 @@
                         <div class="select_custom">
                             <button class="select_toggle_btn" style="padding:0;height:auto;">
                                 <p>
-                                    <span class="text-sm">$10M Birthday Race</span>
+                                    <span class="text-sm">$100,000 레이스 - 24시간</span>
                                     <svg class="svg-icon"><use xlink:href="#icon-arrowdown"></use></svg>
                                 </p>
                             </button>
                             <div class="option_box click_option">
                                 <button class="active">
                                     <p>
-                                        <span>$10M Birthday Race</span>
+                                        <span>$100,000 레이스 - 24시간</span>
                                     </p>
                                 </button>
                             </div>
@@ -1200,131 +1136,19 @@
                 </div>
             </div>
         </div>
-
-        <!-- 스포츠 - 실시간 통계 모달 -->
-        <div class="draggable2_modal w-[400px] transition-all">
-            <div class="draggable2_modal_header px-3 py-2 flex items-center bg-grey-600 rounded-t-md">
-                <div class="flex items-center gap-1">
-                    <span><svg><use xlink:href="#icon-stats"></use></svg></span>
-                    <span>실시간 통계</span>
-                </div>
-                <button class="draggable2_modal_close ml-auto"><svg><use xlink:href="#icon-cross"></use></svg></button>
-            </div>
-            <div class="bg-grey-800 py-3">     
-            </div>
-            <div class="bg-grey-400 rounded-b-md py-1 px-2">
-                <a href="javascript:;" class="font-bold text-grey-200 hover:text-white">타아포에, 프란세스 - 와린카, 스탄</a>          
-            </div>
-        </div>
-
-        <!-- 스포츠 - 실시간 스트리밍 모달 -->
-        <div class="draggable3_modal w-[400px] transition-all">
-            <div class="draggable3_modal_header px-3 py-2 flex items-center bg-grey-600 rounded-t-md justify-between">
-                <div class="flex items-center gap-1">
-                    <span><svg><use xlink:href="#icon-stats"></use></svg></span>
-                    <span>실시간 스트리밍</span>
-                </div>
-                <div class="flex gap-2">
-                    <button class=" fullscreen_btn"><svg><use xlink:href="#icon-fullscreen"></use></svg></button>
-                    <button class="draggable3_modal_close ml-auto"><svg><use xlink:href="#icon-cross"></use></svg></button>
-                </div>
-            </div>
-            <div class="bg-grey-800 py-12 text-center">  
-                귀하의 지역에서는 스트리밍이 불가능합니다   
-            </div>
-            <div class="bg-grey-400 rounded-b-md py-1 px-2">
-                <a href="javascript:;" class="font-bold text-grey-200 hover:text-white">타아포에, 프란세스 - 와린카, 스탄</a>          
-            </div>
-        </div>
-
-
-        <!-- 스포츠 베팅 모달 -->
-        <div id="sports_betting_modal" class="modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content"> <!-- BEGIN: Modal Header -->
-                    <div class="modal-header">
-                        <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
-                            <svg class="svg-icon svelte-kjfvep">
-                                <use xlink:href="#icon-list"></use>
-                            </svg>
-                            베팅
-                        </h2>
-                        <button data-tw-dismiss="modal"><svg><use xlink:href="#icon-cross"></use></svg></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="flex justify-center font-bold text-white text-base">
-                            Keno
-                        </div>
-                        <div class="flex justify-center gap-2">
-                            <span class="font-bold text-white text-base">ID 172,830,473,102</span>
-                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사되었습니다,채팅창에 공유해보세요!"><svg><use xlink:href="#icon-copy"></use></svg></button>
-                            <button class="tooltip scale" data-trigger="click" data-theme="light" title="복사하고 온라인에 공유해보세요"><svg><use xlink:href="#icon-hyperlink"></use></svg></button>
-                        </div>
-                        <div class="flex items-center justify-center mt-3">
-                            <div class="flex items-center gap-1">
-                                <svg class="tooltip" data-theme="light" title="Platinum III">
-                                    <use xlink:href="#icon-vip-platinum-3"></use>
-                                </svg>
-                                <svg class="tooltip" data-theme="light" title="Highroller">
-                                    <use xlink:href="#icon-emoji-highroller"></use>
-                                </svg>
-                                <div class="flex items-center">
-                                    <button class="scale">
-                                        <span class="font-semibold">asket8888</span>
-                                    </button>
-                                    <span>에 의해 배치되었습니다</span>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="text-center mt-1">에 2023. 8. 6. 에서 오후 7:50</div>
-                        <div class="p-3 bg-grey-700 rounded-md mt-3">
-                            <div class="flex flex-col md:flex-row items-center justify-center">
-                                <div class="flex flex-col justify-center items-center p-2 w-full">
-                                    <span class="font-semibold">배팅</span>
-                                    <div class="flex items-center justify-center gap-1">
-                                        <span class="text-white font-semibold">11343.912345</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col justify-center items-center border-t border-b md:border-t-0 md:border-b-0 md:border-l md:border-r border-gray-600 p-2 w-full">
-                                    <span class="font-semibold">승수</span>
-                                    <div class="flex items-center justify-center">
-                                        <span class="text-white font-semibold">3.35×</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col justify-center items-center p-2 w-full">
-                                    <span class="font-semibold">지불금</span>
-                                    <div class="flex items-center justify-center gap-1">
-                                        <span class="text-green-400 font-semibold">37985.424132</span><svg><use xlink:href="#icon-currency-trx"></use></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mt-3">
-                            <button class="hover:bg-grey-300 bg-grey-400 py-3 px-4 rounded-md font-semibold transition text-white scale"><span>Keno 플레이</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 게임 모달 끝-->
-
-
-
         <!--  ** 모달영역 끝 ** -->
 
     </div>
     <!-- ** JS 시작 ** -->
     <script
         src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script src="../dist/js/app.js"></script>
-    <script src="../dist/custom_js/custom.js"></script>
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/custom_js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- ** 테이블 - slickGrid 시작 ** -->
-
     <!-- 필수 jquery library -->
-    <script src="../dist/js/jquery-1.12.4.js"></script>
-    <script src="../dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
 
     <script>
         const swiper = new Swiper('.headerSwiper', {
@@ -1356,6 +1180,122 @@
             }
         });
 
+        const gamSwiper = createSwiper('.gamSwiper', '.gam-swiper-button-next', '.gam-swiper-button-prev');
+        const slotSwiper = createSwiper('.slotSwiper', '.slot-swiper-button-next', '.slot-swiper-button-prev');
+        const providersSwiper = createSwiper('.providersSwiper', '.providers-swiper-button-next', '.providers-swiper-button-prev');
+        const livecasinoSwiper = createSwiper('.livecasinoSwiper', '.livecasino-swiper-button-next', '.livecasino-swiper-button-prev');
+        const gameshowsSwiper = createSwiper('.gameshowsSwiper', '.gameshows-swiper-button-next', '.gameshows-swiper-button-prev');
+        const tablegamesSwiper = createSwiper('.tablegamesSwiper', '.tablegames-swiper-button-next', '.tablegames-swiper-button-prev');
+        const newreleasesSwiper = createSwiper('.newreleasesSwiper', '.newreleases-swiper-button-next', '.newreleases-swiper-button-prev');
+
+        const swipers = [
+            gamSwiper, slotSwiper, providersSwiper, livecasinoSwiper,
+            gameshowsSwiper, tablegamesSwiper, newreleasesSwiper
+        ];
+
+        // 초기 투명도 설정
+        updateSwipersOpacity(swipers, 0.3);
+
+        // 화면 크기가 변경될 때마다 투명도 업데이트
+        window.addEventListener('resize', () => {
+            updateSwipersOpacity(swipers, 0.3);
+        });
+
+        function setOpacity(swiper, opacity) {
+            // 모든 슬라이드의 투명도를 기본값 1로 설정
+            if (swiper && swiper.slides && swiper.slides.length) {
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.opacity = 1;
+                }
+            }
+
+            // 끝에 도달하지 않았으면, 마지막 보이는 슬라이드의 투명도를 설정
+            // 단, 화면 크기가 768 이하일 때는 투명도를 항상 1로 설정
+            if (!swiper.isEnd && window.innerWidth > 769) {
+                if (swiper && swiper.slides && swiper.slides.length && swiper.params && swiper.params.slidesPerView) {
+                    const lastVisibleSlideIndex = Math.floor(swiper.activeIndex + swiper.params.slidesPerView - 0.5);
+                    if (lastVisibleSlideIndex < swiper.slides.length) {
+                        swiper.slides[lastVisibleSlideIndex].style.opacity = opacity;
+                    }
+                }
+            }
+        }
+
+        function updateSwipersOpacity(swipers, opacity) {
+            swipers.forEach(swiper => {
+                setOpacity(swiper, opacity);
+            });
+        }
+
+        // 초기 투명도 설정
+        updateSwipersOpacity(swipers, 0.3);
+
+        // 화면 크기가 변경될 때마다 투명도 업데이트
+        window.addEventListener('resize', () => {
+            updateSwipersOpacity(swipers, 0.3);
+        });
+
+
+        function updateNavigationButtons(swiper, nextButtonClass, prevButtonClass) {
+            const nextButton = document.querySelector(nextButtonClass);
+            const prevButton = document.querySelector(prevButtonClass);
+
+            if (swiper.isBeginning) {
+                prevButton.style.opacity = 0.3;
+            } else {
+                prevButton.style.opacity = 1;
+            }
+
+            if (swiper.isEnd) {
+                nextButton.style.opacity = 0.3;
+            } else {
+                nextButton.style.opacity = 1;
+            }
+        }
+
+        function createSwiper(containerClass, nextButtonClass, prevButtonClass) {
+            return new Swiper(containerClass, {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 10,
+                freeMode: true,
+                navigation: {
+                    nextEl: nextButtonClass,
+                    prevEl: prevButtonClass,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5.5,
+                        slidesPerGroup: 5.5,
+                        spaceBetween: 20
+                    },
+                    1280: {
+                        slidesPerView: 7.5,
+                        slidesPerGroup: 7.5,
+                        spaceBetween: 20
+                    }
+                },
+
+                on: {
+                    init: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    },
+                    slideChangeTransitionStart: function () {
+                        setOpacity(this, 1);
+                    },
+                    slideChangeTransitionEnd: function () {
+                        setOpacity(this, 0.3);
+                        updateNavigationButtons(this, nextButtonClass, prevButtonClass);
+                    }
+                }
+            });
+        }
 
         $(document).ready(function() {
             $('.ghost_mode').click(function() {
@@ -1366,17 +1306,8 @@
             });
         });
 
-        $(document).ready(function() {
-            $('.ignore-mode').click(function() {
-                $('#Ignore_alert').addClass('show');
-            });
-            $('.ignore-btn-close').click(function(){
-                $('#Ignore_alert').removeClass('show');
-            });
-        });
-        
-        // 드래그
-        $(document).ready(function() {
+         // 드래그
+         $(document).ready(function() {
             const DraggModal = $(".draggable_modal");
             
             $('.draggable_modal_open').on('click', function() {
@@ -1420,65 +1351,7 @@
                     DraggModal.removeClass('show');
                 }
             });
-
-
-
-            const DraggModal2 = $(".draggable2_modal");
-            
-            $('.draggable2_modal_open').on('click', function() {
-                DraggModal2.addClass('show');
-
-                // show 클래스가 추가된 후 300ms 지연
-                setTimeout(function() {
-                    DraggModal2.removeClass('transition-all');
-                }, 200);
-            });
-            
-            DraggModal2.draggable({ handle: ".draggable2_modal_header" });
-            
-            $('.draggable2_modal_close').on('click', function() {
-                DraggModal2.removeClass('show');
-                DraggModal2.addClass('transition-all');
-            });
-
-
-            const DraggModal3 = $(".draggable3_modal");
-            
-            $('.draggable3_modal_open').on('click', function() {
-                DraggModal3.addClass('show');
-
-                // show 클래스가 추가된 후 300ms 지연
-                setTimeout(function() {
-                    DraggModal3.removeClass('transition-all');
-                }, 200);
-            });
-            
-            DraggModal3.draggable({ handle: ".draggable3_modal_header" });
-            
-            $('.draggable3_modal_close').on('click', function() {
-                DraggModal3.removeClass('show');
-                DraggModal3.addClass('transition-all');
-            });
-
-            $('.fullscreen_btn').on('click',function(){
-                if(DraggModal3.css('width') == "400px"){
-                    DraggModal3.css('width',"40vw")
-                }else{
-                    DraggModal3.css('width',"400px")
-                }
-            })
-
-            
         });
-
-        // a태그 내부 버튼 a태그 이벤트 억제
-        $(document).ready(function() {
-            $('.prevention').on('click', function(e) {
-                e.preventDefault();
-            });
-        });
-
-        
     </script>
 </body>
 

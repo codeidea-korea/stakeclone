@@ -1,0 +1,287 @@
+<div class="top-bar flex items-center justify-between">
+    <div class="container relative flex items-center justify-between">
+        <a href="javascript:;" class="logo text-white">
+            <img src="/stakeclone/dist/custom_img/logo.svg" alt="" />
+        </a>
+
+        <!-- 로그인 전 : S -->
+        <div>
+            <button class="btn btn-dark text-white w-24 mr-1" data-tw-toggle="modal" data-tw-target="#login_modal" >로그인</button>
+            <button class="btn btn-primary w-24" data-tw-toggle="modal" data-tw-target="#join_modal" data-tw-dismiss="modal">가입하기</button>
+        </div>
+        <!-- 로그인 전 : E -->
+    </div>
+</div>
+
+
+
+<!-- 로그인 모달 -->
+<div id="login_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-lg mr-auto flex items-center gap-2 justify-center w-full">
+                    로그인
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-grey-200 text-base">
+                    <div>
+                        <p class="text-sm font-semibold">이메일 또는 사용자명 <span class="text-[#ED4163]">*</span></p>
+                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 최소 문자 길이는 3입니다</span>
+                        </p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-semibold">비밀번호 <span class="text-[#ED4163]">*</span></p>
+                        <div class="relative">
+                            <input type="password" class="input mt-1 form-control pr-10 font-semibold" />
+                            <button class="absolute top-4 right-4 password_onoff"><svg class="svg-icon"><use xlink:href="#icon-friend-unignored"></use></svg></button>
+                        </div>
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 최소 문자 길이는 6입니다</span>
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-green-500 py-3 px-4 rounded-md text-black font-semibold w-full text-base"><span>로그인</span></button>
+                    </div>
+                    <div class="mt-4 flex gap-4 items-center justify-center">
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                        <p class="text-sm">OR</p>
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                    </div>
+                    <div class="mt-4 grid grid-cols-4 gap-2">
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-facebook"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-google"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-line"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-twitch"></use></svg></button>
+                    </div>
+                    <div class="mt-4 text-center text-sm">
+                        <button class="scale text-white font-semibold" data-tw-toggle="modal" data-tw-target="#findpassword_modal" data-tw-dismiss="modal">비밀번호를 잊어버렸습니다</button>
+                        <div class="mt-4">
+                            계정이 없으신가요?
+                            <button class="scale text-white font-semibold" data-tw-toggle="modal" data-tw-target="#join_modal" data-tw-dismiss="modal">회원가입</button>
+                        </div>
+                        <div class="mt-4 text-xs">
+                            Stake는 hCaptcha로 보호되고 있습니다. hCaptcha <a href="javascript:;" class="hover:text-white">개인정보 보호 정책</a> 및 <a href="javascript:;" class="hover:text-white">서비스 약관</a> 가 적용됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 비밀번호 찾기 모달 -->
+<div id="findpassword_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-base mr-auto flex items-center gap-2 ">
+                    <svg class="svg-icon svelte-kjfvep"><use xlink:href="#icon-gear"></use></svg>
+                    비밀번호를 잊어버렸습니다.
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-grey-200 text-base">
+                    <div>
+                        <p class="text-sm font-semibold">이메일  <span class="text-[#ED4163]">*</span></p>
+                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 이메일 형식에 올바르지 않은 글자가 포함되어 있습니다.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button class="bg-green-500 py-3 px-4 rounded-md text-black font-semibold w-full text-base"><span>비밀번호 복구</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 회원가입 모달 -->
+<div id="join_modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-lg mr-auto flex items-center gap-2 justify-center w-full">
+                    계정 생성
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-grey-200 text-base">
+                    <div class="text-center font-bold">
+                        단계 1/2: 세부 정보 입력
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-semibold">이메일 <span class="text-[#ED4163]">*</span></p>
+                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 지원하지 않는 이메일 도메인</span>
+                        </p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-semibold">사용자명 <span class="text-[#ED4163]">*</span></p>
+                        <input type="text" class="input mt-1 form-control pr-10 font-semibold" />
+                        <p class="text-xs flex items-center mt-1">
+                            <span> 사용자명은 3자 이상이어야 합니다.</span>
+                        </p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-semibold">비밀번호 <span class="text-[#ED4163]">*</span></p>
+                        <div class="relative">
+                            <input type="password" class="input mt-1 form-control pr-10 font-semibold" />
+                            <button class="absolute top-4 right-4 password_onoff"><svg class="svg-icon"><use xlink:href="#icon-friend-unignored"></use></svg></button>
+                        </div>
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 비밀번호는 8자 이상이어야 합니다.</span>
+                        </p>
+                        <p class="text-xs flex items-center mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-check"></use></svg>
+                            <span> 소문자와 대문자를 포함해야 합니다</span>
+                        </p>
+                        <p class="text-xs flex items-center mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-check"></use></svg>
+                            <span> 숫자가 최소 1개 이상이어야 합니다</span>
+                        </p>
+                        <p class="text-xs flex items-center mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-check"></use></svg>
+                            <span> 최소 8자 이상</span>
+                        </p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-semibold">생일 <span class="text-[#ED4163]">*</span></p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <input type="text" class="input mt-1 form-control pr-10 font-semibold" placeholder="DD" />
+                            <select name="" id="" class="form-select mt-1">
+                                <option value="">월</option>
+                            </select>
+                            <input type="text" class="input mt-1 form-control pr-10 font-semibold" placeholder="YYYY" />
+                        </div>
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 생년월일을 입력하세요</span>
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="custom line" id="code_check">
+                            <i></i>
+                            <label for="code_check" class="cursor-pointer text-sm font-semibold">코드(선택 사항)</label>
+                        </div>
+                        <div id="code_check_input" class="hidden">
+                            <input type="text" class="input mt-1 form-control pr-10 font-semibold"  />
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-green-500 py-3 px-4 rounded-md text-black font-semibold w-full text-base" data-tw-toggle="modal" data-tw-target="#join_modal2" data-tw-dismiss="modal"><span>계속하기</span></button>
+                    </div>
+                    <div class="mt-4 flex gap-4 items-center justify-center">
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                        <p class="text-sm">OR</p>
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                    </div>
+                    <div class="mt-4 grid grid-cols-4 gap-2">
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-facebook"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-google"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-line"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-twitch"></use></svg></button>
+                    </div>
+                    <div class="mt-4 text-center text-sm">
+                        <div class="mt-4">
+                            이미 계정이 있으신가요?
+                            <button class="scale text-white font-semibold" data-tw-toggle="modal" data-tw-target="#login_modal">로그인</button>
+                        </div>
+                        <div class="mt-4 text-xs">
+                            Stake는 hCaptcha로 보호되고 있습니다. hCaptcha <a href="javascript:;" class="hover:text-white">개인정보 보호 정책</a> 및 <a href="javascript:;" class="hover:text-white">서비스 약관</a> 가 적용됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 회원가입 모달 step 2 -->
+<div id="join_modal2" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+                <h2 class="font-semibold text-lg mr-auto flex items-center gap-2 justify-center w-full">
+                    계정 생성
+                </h2>
+                <button data-tw-dismiss="modal">
+                    <svg><use xlink:href="#icon-cross"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-grey-200 text-base">
+                    <div class="flex items-center justify-between text-center font-bold">
+                        <button data-tw-toggle="modal" data-tw-target="#join_modal" data-tw-dismiss="modal"><svg class="svg-icon"><use xlink:href="#icon-back"></use></svg></button>
+                        <p>단계 2/2: 이용 약관을 읽고 동의하십시오.</p>
+                        <button></button>
+                    </div>
+                    <div class="mt-2 overflow-y-auto bg-grey-500 h-[460px] p-3 rounded">
+                        이용약관 내용 들어가는 곳
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="custom line" id="agree">
+                            <i></i>
+                            <label for="agree" class="cursor-pointer text-sm font-semibold">이용약관을 읽었고 이에 동의합니다.</label>
+                        </div>
+                        <p class="text-xs flex items-center text-rose-400 mt-1">
+                            <svg class="svg-icon mr-1"><use xlink:href="#icon-error"></use></svg>
+                            <span> 이용 약관 전체를 읽고 끝까지 스크롤하여 동의하십시오.</span>
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-green-500 py-3 px-4 rounded-md text-black font-semibold w-full text-base"><span>활성화</span></button>
+                    </div>
+                    <div class="mt-4 flex gap-4 items-center justify-center">
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                        <p class="text-sm">OR</p>
+                        <p class="w-20 h-[1px] bg-grey-400"></p>
+                    </div>
+                    <div class="mt-4 grid grid-cols-4 gap-2">
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-facebook"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-google"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-line"></use></svg></button>
+                        <button class="btn btn-gray !py-3"><svg class="svg-icon"><use xlink:href="#icon-twitch"></use></svg></button>
+                    </div>
+                    <div class="mt-4 text-center text-sm">
+                        <div class="mt-4">
+                            이미 계정이 있으신가요?
+                            <button class="scale text-white font-semibold" data-tw-toggle="modal" data-tw-target="#login_modal">로그인</button>
+                        </div>
+                        <div class="mt-4 text-xs">
+                            Stake는 hCaptcha로 보호되고 있습니다. hCaptcha <a href="javascript:;" class="hover:text-white">개인정보 보호 정책</a> 및 <a href="javascript:;" class="hover:text-white">서비스 약관</a> 가 적용됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

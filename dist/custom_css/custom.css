@@ -149,6 +149,9 @@ input[type="checkbox"].custom + i {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
+input[type="checkbox"].custom.line + i {
+    background-color: #0f212e;
+}
 input[type="checkbox"].custom:checked + i {
     background: #557086 url("/stakeclone/dist/custom_img/check_icon.svg") no-repeat center center / 75%;
 }
@@ -1134,4 +1137,19 @@ input[type="range"] {
     .history_nav > *:last-child {
         display:block;
     }
+}
+
+/* 내 베팅 > 하단 영수증 처리 */
+.receipt_bottom {
+    position:relative;
+}
+.receipt_bottom:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 6px;
+    background: radial-gradient(circle, transparent, transparent 50%, var(--color-grey-500) 50%, var(--color-grey-500) 100%) 0px 1px/0.7rem 0.7rem repeat-x;
+
 }
