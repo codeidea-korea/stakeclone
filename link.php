@@ -175,7 +175,7 @@ echo txtRecord('./@record/');
                         </li>
 					</ul>
 				</li>
-                <li class="mt30" data-label="인기스포츠">
+                <li class="mt30" data-label="All Esports">
 					<ul>
                         <li><a href="../stakeclone/sports/esports_dota2.html" target="_blank" class="">도타2</a></li>
                         <li><a href="../stakeclone/sports/esports_rainbow-six.html" target="_blank" class="">레인보우 식스</a></li>
@@ -189,6 +189,24 @@ echo txtRecord('./@record/');
                         <li><a href="../stakeclone/sports/esports_halo.html" target="_blank" class="">후광</a></li>
                         <li><a href="../stakeclone/sports/esports_counter-strike.html" target="_blank" class="">CS:GO</a></li>
                         <li><a href="../stakeclone/sports/esports_fifa.html" target="_blank" class="">FIFA</a></li>
+                    </ul>
+                </li>
+                <li class="mt30" data-label="모든스포츠">
+					<ul>
+                        <li><a href="../stakeclone/sports/sports_gaelic-football.html" target="_blank" class="">게일식 풋볼</a></li>
+                        <li><a href="../stakeclone/sports/sports_gaelic-hurling.html" target="_blank" class="">게일식 헐링</a></li>
+                        <li><a href="../stakeclone/sports/sports_golf.html" target="_blank" class="">골프</a></li>
+                        <li><a href="../stakeclone/sports/sports_boxing.html" target="_blank" class="">권투</a></li>
+                        <li><a href="../stakeclone/sports/sports_basketball.html" target="_blank" class="">농구</a></li>
+                        <li><a href="../stakeclone/sports/sports_darts.html" target="_blank" class="">다트</a></li>
+                        <li><a href="../stakeclone/sports/sports_lacrosse.html" target="_blank" class="">라크로스</a></li>
+                        <li><a href="../stakeclone/sports/sports_rugby.html" target="_blank" class="">럭비</a></li>
+                        <li><a href="../stakeclone/sports/sports_american-football.html" target="_blank" class="">미식축구</a></li>
+                        <li><a href="../stakeclone/sports/sports_biathlon.html" target="_blank" class="">바이애슬론</a></li>
+                        <li><a href="../stakeclone/sports/sports_volleyball.html" target="_blank" class="">배구</a></li>
+                        <li><a href="../stakeclone/sports/sports_bowls.html" target="_blank" class="">보울스</a></li>
+                        <li><a href="../stakeclone/sports/sports_cycling.html" target="_blank" class="">사이클</a></li>
+                        <li><a href="../stakeclone/sports/sports_snooker.html" target="_blank" class="">스누커</a></li>
                     </ul>
                 </li>
             </ul>

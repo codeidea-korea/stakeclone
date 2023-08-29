@@ -60,6 +60,27 @@
 .wallet_search p:last-of-type svg {
     stroke-width: 0;
 }
+.top-bar .alarm_top {
+    position:relative;
+}
+.top-bar .alarm_top.on:before {
+    content:'';
+    position:absolute;
+    right:0px; top:0px;
+    width:7px;
+    height:7px;
+    border:1.5px solid #1a2c38;
+    background-color: rgb(31 255 32);
+    border-radius:50%;
+}
+.alarm_dot {
+    display:inline-flex;
+    width:4px;
+    height:4px;
+    margin-right:5px;
+    background-color: rgb(31 255 32);
+    border-radius:50%;
+}
 @media all and (max-width: calc(1260px)) {
     .content.right_open .top-bar .wallet_btn span {
         display: none;
