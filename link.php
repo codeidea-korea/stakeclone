@@ -197,16 +197,35 @@ echo txtRecord('./@record/');
                         <li><a href="../stakeclone/sports/sports_gaelic-hurling.html" target="_blank" class="">게일식 헐링</a></li>
                         <li><a href="../stakeclone/sports/sports_golf.html" target="_blank" class="">골프</a></li>
                         <li><a href="../stakeclone/sports/sports_boxing.html" target="_blank" class="">권투</a></li>
-                        <li><a href="../stakeclone/sports/sports_basketball.html" target="_blank" class="">농구</a></li>
+                        <li><a href="../stakeclone/sports/basketball_live.html" target="_blank" class="">농구</a></li>
                         <li><a href="../stakeclone/sports/sports_darts.html" target="_blank" class="">다트</a></li>
                         <li><a href="../stakeclone/sports/sports_lacrosse.html" target="_blank" class="">라크로스</a></li>
                         <li><a href="../stakeclone/sports/sports_rugby.html" target="_blank" class="">럭비</a></li>
-                        <li><a href="../stakeclone/sports/sports_american-football.html" target="_blank" class="">미식축구</a></li>
+                        <li><a href="../stakeclone/sports/football_live.html" target="_blank" class="">미식축구</a></li>
                         <li><a href="../stakeclone/sports/sports_biathlon.html" target="_blank" class="">바이애슬론</a></li>
                         <li><a href="../stakeclone/sports/sports_volleyball.html" target="_blank" class="">배구</a></li>
                         <li><a href="../stakeclone/sports/sports_bowls.html" target="_blank" class="">보울스</a></li>
                         <li><a href="../stakeclone/sports/sports_cycling.html" target="_blank" class="">사이클</a></li>
                         <li><a href="../stakeclone/sports/sports_snooker.html" target="_blank" class="">스누커</a></li>
+                        <li><a href="../stakeclone/sports/sports_squash.html" target="_blank" class="">스쿼시</a></li>
+                        <li><a href="../stakeclone/sports/sports_skijumping.html" target="_blank" class="">스키점프</a></li>
+                        <li><a href="../stakeclone/sports/sports_stock-car-racing.html" target="_blank" class="">스톡 카 레이싱</a></li>
+                        <li><a href="../stakeclone/sports/sports_politics.html" target="_blank" class="">스페셜</a></li>
+                        <li><a href="../stakeclone/sports/sports_ice-hockey.html" target="_blank" class="">아이스 하키</a></li>
+                        <li><a href="../stakeclone/sports/sports_alpine-skiing.html" target="_blank" class="">알파인 스키</a></li>
+                        <li><a href="../stakeclone/sports/baseball_live.html" target="_blank" class="">야구</a></li>
+                        <li><a href="../stakeclone/sports/sports_aussie-rules.html" target="_blank" class="">오지룰스</a></li>
+                        <li><a href="../stakeclone/sports/sports_motocycle-racing.html" target="_blank" class="">오토바이 경주</a></li>
+                        <li><a href="../stakeclone/sports/soccer_live.html" target="_blank" class="">축구</a></li>
+                        <li><a href="../stakeclone/sports/sports_cross-country.html" target="_blank" class="">크로스 컵트리</a></li>
+                        <li><a href="../stakeclone/sports/sports_cricket.html" target="_blank" class="">크리켓</a></li>
+                        <li><a href="../stakeclone/sports/sports_table-tennis.html" target="_blank" class="">탁구</a></li>
+                        <li><a href="../stakeclone/sports/tennis_live.html" target="_blank" class="">테니스</a></li>
+                        <li><a href="../stakeclone/sports/sports_pesapallo.html" target="_blank" class="">페사팔로</a></li>
+                        <li><a href="../stakeclone/sports/sports_formula.html" target="_blank" class="">포뮬러 1</a></li>
+                        <li><a href="../stakeclone/sports/sports_futsal.html" target="_blank" class="">풋살</a></li>
+                        <li><a href="../stakeclone/sports/sports_handball.html" target="_blank" class="">핸드볼</a></li>
+                        <li><a href="../stakeclone/sports/sports_mma.html" target="_blank" class="">MMA</a></li>
                     </ul>
                 </li>
             </ul>

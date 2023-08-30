@@ -288,6 +288,13 @@
 .side-nav .side-menu .side-menu--active.side-menu--open {
     background-color: var(--color-grey-400);
 }
+.side-nav .side-menu.side-menu--open,
+.side-nav .side-menu__sub-open {
+    background-color:#213743
+}
+.side-nav .side-menu.side-menu--active {
+    background-color: #2f4553;
+}
 
 .side-nav.fold {
     width: 60px;

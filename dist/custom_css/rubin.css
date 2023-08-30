@@ -148,8 +148,9 @@
     
     /* 얼럿 */
     .ghost_alert{
+        z-index:10001;
         top: 74px;
-        left:-300px;
+        left:-100%;
         background:var(--color-grey-500);
         padding:0;
         border:none;

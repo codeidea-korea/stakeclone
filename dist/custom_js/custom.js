@@ -46,6 +46,28 @@ fetch("/stakeclone/_sports_left.html")
             $(this).addClass("active").parent().siblings().find("a").removeClass("active");
             $(".side-menu__title .dividend_text").text($(this).text());
         });
+
+        $(".side-menu").each(function () {
+            var href = $(this).attr("href");
+            // 현재 페이지의 URL 기반으로 절대 경로 생성
+            var absoluteHref = window.location.pathname;
+
+            if(href == absoluteHref){
+                $(this).addClass("side-menu--active");
+                $(this).parents('ul').addClass("side-menu__sub-open").show();
+                $(this).parents('ul').prev('a').addClass('side-menu--open')
+                $(this).parents('ul').prev('a').find('.side-menu__sub-icon').addClass('rotate-90 bg-blue-600').removeClass('bg-grey-400')
+            }
+
+
+            // console.log("Current URL:", currentURL); // 현재 URL 로깅
+            // console.log("Absolute Href value:", absoluteHref); // 절대 경로 값 로깅
+
+            // if (currentURL === absoluteHref) {
+            //     $(this).addClass("side-menu--active");
+            //     $(this).parents().addClass("side-menu__sub-open");
+            // }
+        });
     })
     .catch((error) => {
         console.log(error);
@@ -58,6 +80,15 @@ fetch("/stakeclone/_top_bar.html")
         if(!$('.content').hasClass('logout')){
             $(".content").prepend(html);
         }
+
+        $(document).ready(function() {
+            $('.statistics_btn').click(function() {
+                $('#statistics_alert').addClass('show');
+            });
+            $('.statistics_btn-close').click(function(){
+                $('#statistics_alert').removeClass('show');
+            });
+        });
     })
     .catch((error) => {
         console.log(error);

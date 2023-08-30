@@ -265,7 +265,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="dropdown-item">
+                            <a href="/stakeclone/sports/betting.html" class="dropdown-item">
                                 <svg class="svg-icon mr-2"><use xlink:href="#icon-sports"></use></svg>
                                 스포츠 베팅
                             </a>
@@ -2598,29 +2598,45 @@
             <div class="modal-header">
                 <h2 class="font-semibold text-base mr-auto flex items-center gap-2">
                     <svg class="svg-icon svelte-kjfvep">
-                        <use xlink:href="#icon-list"></use>
+                        <use xlink:href="#icon-stats"></use>
                     </svg>
-                    SyztmzTV
+                    Statistics
                 </h2>
                 <button data-tw-dismiss="modal">
                     <svg><use xlink:href="#icon-cross"></use></svg>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="flex items-center justify-center">
-                    <div class="flex items-center gap-1">
-                        <svg class="tooltip" data-theme="light" title="Platinum III">
-                            <use xlink:href="#icon-vip-platinum-3"></use>
-                        </svg>
-                        <svg class="tooltip" data-theme="light" title="Highroller">
-                            <use xlink:href="#icon-emoji-highroller"></use>
-                        </svg>
-                        <button class="scale">
-                            <span class="font-semibold">asket8888</span>
+                <div class="text-left text-lg font-semibold">asket8888</div>
+                <div class="text-left text-xs font-semibold">가입 날짜 2020년 8월 31일</div>
+                <div class="flex flex-col mt-3 gap-3 text-sm">
+                    <div class="flex items-center">
+                        <button>
+                            <div class="flex items-center gap-1 progress_arrow">
+                                <span class="text-white font-bold">내 VIP 진행도</span>
+                            </div>
                         </button>
+                        <div class="ml-auto">
+                            <span class="text-white font-bold">0.00%</span>
+                        </div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div class="bar bg-grey-400">
+                            <div class="progress_bar bg-green-400" style="right:80%;"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <div class="flex items-center gap-1">
+                            <svg  class="text-grey-200" style="stroke:none"><use xlink:href="#icon-vip-none"></use></svg>
+                            <span class="text-grey-200 font-bold">없음</span>
+                        </div>
+                        <div class="flex items-center gap-1 ml-auto">
+                            <svg style="stroke:none"><use xlink:href="#icon-vip-bronze"></use></svg>
+                            <span class="text-grey-200 font-bold">브론즈</span>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center text-xs font-semibold mt-2">가입 날짜 2020년 8월 31일</div>
+
                 <div class="flex items-center justify-center mt-4">
                     <div class="flex items-center">
                         <div class="flex items-center">
@@ -2642,7 +2658,7 @@
                                 </li>
                                 <li id="statistics04" class="nav-item" role="presentation">
                                     <button class="nav-link w-full py-3 px-5 gap-1" data-tw-toggle="pill" data-tw-target="#tab_statistics04" type="button" role="tab" aria-controls="tab_statistics04" aria-selected="false">
-                                        <span class="flex items-center gap-1">경품</span>
+                                        <span class="flex items-center gap-1">래플</span>
                                     </button>
                                 </li>
                             </ul>
@@ -2719,9 +2735,17 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="mt-2">
+                            <button class="btn btn-gray w-full py-4 statistics_btn">통계 요청</button>
+                            <p class="mt-2 text-center">통계 요청은 24시간 동안 5번만 가능합니다.</p>
+                        </div>
                     </div>
                     <div id="tab_statistics02" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab11">
-                        <div class="flex items-center justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-2 items-center font-semibold text-base text-white">
+                                <svg class="svg-icon text-slate-500"><use xlink:href="#icon-trophy"></use></svg>
+                                Luckiest 승리
+                            </div>
                             <select name="" id="" class="form-select custom w-28">
                                 <option value="">최고의 행운</option>
                                 <option value="">가장 큰</option>
@@ -2802,7 +2826,12 @@
                         </div>
                     </div>
                     <div id="tab_statistics03" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tab12">
-                        <div class="overflow-x-scroll">
+                        <!-- 값 없을때 -->
+                        <div class="text-center p-2">
+                            <svg class="svg-icon w-24 h-24 nostroke mx-auto"><use xlink:href="#icon-empty-data-race"></use></svg>
+                            <p>해당 사용자는 확인할 수 있는 통계가 없습니다.</p>
+                        </div>
+                        <!-- <div class="overflow-x-scroll">
                             <table class="table table-striped">
                                 <thead class="whitespace-nowrap">
                                     <tr>
@@ -2854,7 +2883,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> -->
                         <div class="flex items-center justify-center gap-5 mt-4">
                             <button><span class="font-semibold">이전</span></button>
                             <button><span class="font-semibold text-white">다음</span></button>
@@ -2865,49 +2894,26 @@
                             <table class="table table-striped">
                                 <thead class="whitespace-nowrap">
                                     <tr>
-                                        <th class="text-left">경품 이름</th>
+                                        <th class="text-left">래플 이름</th>
                                         <th class="text-center">날짜</th>
-                                        <th class="text-center">포지션</th>
-                                        <th class="text-right">상금</th>
+                                        <th class="text-right">티켓</th>
                                     </tr>
                                 </thead>
                                 <tbody class="whitespace-nowrap">
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-1 justify-start">
-                                                <span>$100,000 레이스 - 24시간</span>
+                                                <span>$75,000 주간 복권</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="flex items-center justify-center gap-1">
-                                                <span>2023. 8. 3.</span>
+                                                <span>2023년 9월 2일</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="flex items-center justify-center gap-1">
-                                                <span>25th</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="flex justify-end">
-                                                <a href="javascript:;" data-theme="light" data-tooltip-content="#custom-content-tooltip" class="tooltip inline-flex items-center gap-1">
-                                                    <span class="">US$200.00</span>
-                                                    <span title="usd" style="max-width: 12ch">
-                                                        <svg class="">
-                                                            <use xlink:href="#icon-currency-usd"></use>
-                                                        </svg>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="tooltip-content">
-                                                <div id="custom-content-tooltip" class="relative flex items-center py-1 gap-1">
-                                                    <span class="">US$200.00</span>
-                                                    <span title="usd" style="max-width: 12ch">
-                                                        <svg class="">
-                                                            <use xlink:href="#icon-currency-usd"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
+                                                <span>0</span>
                                             </div>
                                         </td>
                                     </tr>
@@ -2921,6 +2927,27 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- 통계요청 얼럿 -->
+<div class="ghost_alert alert flex items-center mb-2" id="statistics_alert">
+    <div class="p-4">
+        <svg class=" text-green-400"><use xlink:href="#icon-mail"></use></svg>
+    </div>
+   
+    <div class="bg-grey-400">
+        <div class="flex items-center">
+            <div class="p-4">
+                <p class="font-semibold">통계요청</p>
+                <p>이메일에서 통계 분석 내역을 확인하세요.</p>
+                <!-- <p>베팅이 현재 공개 상태입니다.</p> -->
+            </div>
+            <button type="button" class="statistics_btn-close text-white ml-auto p-4">
+                <!-- <i data-lucide="x" class="flex w-4 h-4"></i>  -->
+                <svg class="svg-icon w-4 h-4"><use xlink:href="#icon-cross"></use></svg>
+            </button> 
         </div>
     </div>
 </div>
